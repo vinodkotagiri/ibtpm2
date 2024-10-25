@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import NavbarComponent from './components/NavbarComponent'
 import ScheduleComponent from './components/ScheduleComponent'
 import GanttChartComponent from './components/GanttChartComponent'

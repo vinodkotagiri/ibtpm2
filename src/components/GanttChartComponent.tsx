@@ -1,13 +1,12 @@
-import React from 'react'
-import { Chart } from 'react-google-charts';
+import { Task } from '../constants/interfaces';
 import schedule from '../constants/schedule';
 import { Gantt, ViewMode } from 'gantt-task-react';
 const GanttChartComponent = () => {
   // Function to transform schedule data to match gantt-task-react format
-  const transformScheduleToTasks = (schedule) => {
-    const tasks = [];
+  const transformScheduleToTasks = (schedule: Array<object>) => {
+    const tasks:Array<Task> = [];
 
-    const addTask = (task) => {
+    const addTask = (task:Task) => {
       const transformedTask = {
         id: `${task.id}`,
         name: task.name,

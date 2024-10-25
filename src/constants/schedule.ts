@@ -1,4 +1,6 @@
-const schedule = [
+import { Task } from "./interfaces";
+
+const schedule:Task = [
   {
     id: 1,
     name: "Pre-Construction",
