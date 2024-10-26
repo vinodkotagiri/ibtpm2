@@ -16,6 +16,7 @@ const App = () => {
     </div>
 
     <ul className="menu bg-base-200 lg:menu-horizontal rounded-box w-full">
+      <div className='flex items-center justify-between'>
       <li className='flex items-center justify-center'>
         <button className='flex items-center justify-center' onClick={() => handleViewChange(0)}>
           <FontAwesomeIcon icon={faCalendarDays} />
@@ -36,6 +37,8 @@ const App = () => {
           Estimation
         </button>
       </li>
+      </div>
+
     </ul>
 
     {currentView === 0 && <ScheduleComponent />}

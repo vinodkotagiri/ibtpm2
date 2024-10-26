@@ -1,72 +1,102 @@
 import React, { useState } from 'react';
-import schedule from '../constants/schedule';
+import { Task } from '../constants/interfaces';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { updateTaskStartDate } from '../app/features/scheduleSlice';
 
-// Function to generate lighter shades of a color
-const getShade = (color: string, level: number) => {
-  const opacity = 1 - level * 0.5;
-  return `rgba(${parseInt(color.slice(1, 3), 16)}, ${parseInt(color.slice(3, 5), 16)}, ${parseInt(color.slice(5, 7), 16)}, ${opacity})`;
-};
+const ScheduleComponent: React.FC = () => {
+  const [ collapsed, setCollapsed ] = useState<{ [ key: string ]: boolean }>( {} );
+  const { tasks } = useAppSelector( state => state.schedule );
+  const dispatch=useAppDispatch()
+  const colorPalette = [ '#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7' ];
 
-const ScheduleComponent = () => {
-  const [openRows, setOpenRows] = useState<{ [key: number]: boolean }>({});
-  let mainColor = '#f2e3c6'; // Base color for the main task
+  const buildTaskTree = ( tasks: Task[] ) => {
+    const taskMap: { [ id: string ]: Task & { children: Task[] } } = {};
+    const rootTasks: ( Task & { children: Task[] } )[] = [];
 
-  // Toggle row collapse/expand state
-  const toggleRow = (id: number) => {
-    setOpenRows((prev) => ({ ...prev, [id]: !prev[id] }));
+    tasks.forEach( task => {
+      taskMap[ task.id ] = { ...task, children: [] };
+    } );
+
+    tasks.forEach( task => {
+      if ( task.parent && taskMap[ task.parent ] ) {
+        taskMap[ task.parent ].children.push( taskMap[ task.id ] );
+      } else {
+        rootTasks.push( taskMap[ task.id ] );
+      }
+    } );
+
+    return rootTasks;
   };
 
-  const renderTask = (task: any, level: number = 0) => {
-    if (task.color) mainColor = task.color;
-    return (
-      <React.Fragment key={task.id}>
-        <tr className={`level-${level}`} style={{ backgroundColor: getShade(mainColor, level) }}>
-          <th style={{width: 15}}>{task.id}</th>
-          <td className=''>
-            <button className='btn btn-active btn-ghost hover:scale-110'>
-          {task.name}
-            <span>
-            {task.subTasks && task.subTasks.length > 0 && (
-              <button className="btn btn-xs btn-ghost" onClick={() => toggleRow(task.id)}>
-                <FontAwesomeIcon icon={openRows[task.id] ? faChevronUp : faChevronDown} />
-              </button>
-            )}
-            </span>
-            </button>
-          
-          </td>
-          <td  style={{width: 30}}>{task.start}</td>
-          <td style={{width: 30}}>{task.end}</td>
-          <td style={{width: 15}}>{task.duration}</td>
-          <td style={{width: 30}}>{task.cost}</td>
-          <td></td>
-          
-        </tr>
-        {/* Recursively render sub-tasks if the row is open */}
-        {openRows[task.id] &&
-          task.subTasks &&
-          task.subTasks.map((subTask: any) => renderTask(subTask, level + 1))}
-      </React.Fragment>
-    );
+  const nestedTasks = buildTaskTree( tasks );
+
+  const toggleCollapse = ( taskId: string ) => {
+    setCollapsed( prev => ( { ...prev, [ taskId ]: !prev[ taskId ] } ) );
   };
 
+  const getShade = ( baseColor: string, level: number ) => {
+    const shadeFactor = 0.1 * level;
+    return `rgba(${ parseInt( baseColor.slice( 1, 3 ), 16 ) }, ${ parseInt(
+      baseColor.slice( 3, 5 ),
+      16
+    ) }, ${ parseInt( baseColor.slice( 5, 7 ), 16 ) }, ${ 1 - shadeFactor })`;
+  };
+
+  const renderTasks = ( tasks: ( Task & { children: Task[] } )[], level = 0, baseColorIndex = 0 ) => {
+    return tasks.map( ( task, index ) => {
+      const color = getShade( colorPalette[ baseColorIndex ], level );
+      const nextBaseColorIndex = task.children.length > 0 ? ( baseColorIndex + 1 ) % colorPalette.length : baseColorIndex;
+
+      return (
+        <React.Fragment key={ task.id }>
+          <tr style={ { backgroundColor: color } }>
+            <td style={ { paddingLeft: `${ level * 20 }px` } }>
+              <span className="ml-2">{ task.id }</span>
+              { task.children.length > 0 && (
+                <FontAwesomeIcon icon={ collapsed[ task.id ] ? faChevronCircleDown : faChevronCircleUp } className='ml-2 cursor-pointer' size='lg' color='#00000095' onClick={ () => toggleCollapse( task.id ) } />
+              ) }
+            </td>
+            <td>{ task.name }</td>
+            <td>
+              <div className="tooltip  tooltip-right z-50" data-tip="Please select start date">
+                <input type='date' className='input input-ghost cursor-pointer' onChange={ e => handleStartDateChange(task.id,e.target.value)} value={task.start}/>
+              </div>
+            </td>
+            <td>{ task.end }</td>
+            <td>{ task.duration }</td>
+            <td>{ task.strategy }</td>
+            <td>{ task.progress }</td>
+            <td>{ task.cost }</td>
+          </tr>
+          { !collapsed[ task.id ] &&
+            task.children.length > 0 &&
+            renderTasks( task.children, level + 1, nextBaseColorIndex ) }
+        </React.Fragment>
+      );
+    } );
+  };
+  
+  function handleStartDateChange(id,date) {
+    dispatch(updateTaskStartDate({ id: id, newDate: date }))
+  }
   return (
-    <div className="table-container w-screen" style={{ overflow: 'auto', maxHeight: '100vh' }}>
-      <table className="table table-sm w-full">
+    <div className="overflow-x-auto p-1">
+      <table className="table table-lg w-full">
         <thead>
-          <tr className="sticky-header">
+          <tr>
             <th>ID</th>
             <th>Task Name</th>
             <th>Start</th>
             <th>End</th>
             <th>Duration</th>
+            <th>Strategy</th>
+            <th>Progress</th>
             <th>Cost</th>
-            <th>Comments</th>
           </tr>
         </thead>
-        <tbody>{schedule.map((task) => renderTask(task))}</tbody>
+        <tbody>{ renderTasks( nestedTasks ) }</tbody>
       </table>
     </div>
   );
