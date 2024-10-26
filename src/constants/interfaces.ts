@@ -15,7 +15,7 @@ export type Task={
   parent?:string
 }
 
-export type Estimate{
+export type Estimate={
   id:string
   name:string
   resource:string
