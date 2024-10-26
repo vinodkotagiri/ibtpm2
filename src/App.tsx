@@ -4,6 +4,7 @@ import ScheduleComponent from './components/ScheduleComponent'
 import GanttChartComponent from './components/GanttChartComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays, faChartGantt, faMoneyBillTrendUp } from '@fortawesome/free-solid-svg-icons'
+import EstimationComponent from './components/EstimationComponent'
 
 const App = () => {
   const [currentView, setCurrentView] = useState<number>(0);
@@ -43,7 +44,7 @@ const App = () => {
 
     {currentView === 0 && <ScheduleComponent />}
     {currentView === 1 && <GanttChartComponent />}
-
+    {currentView === 2 && <EstimationComponent />}
   </div>
   )
 }

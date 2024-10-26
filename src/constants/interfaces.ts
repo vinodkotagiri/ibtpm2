@@ -1,3 +1,4 @@
+import { CurrencyUnits, ResourceUnits } from "./scheduleTypes"
 
 export type Task={
   id:string
@@ -14,5 +15,17 @@ export type Task={
   parent?:string
 }
 
+export type Estimate{
+  id:string
+  name:string
+  resource:string
+  qty:number
+  resourceUnits:ResourceUnits
+  unitCost:number
+  totalCost:number
+  currency:CurrencyUnits
+}
+
 export type Strategy='FF'|'SF'|'FS'|'SS'
 export type TaskType='task'|'project'|'milestone'
+
