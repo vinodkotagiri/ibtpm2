@@ -17,12 +17,13 @@ export type Task={
 
 export type Estimate={
   id:string
-  name:string
+  itemDescription:string
+  task:string
   resource:string
   qty:number
   resourceUnits:ResourceUnits
   unitCost:number
-  totalCost:number
+  totalCost?:number
   currency:CurrencyUnits
 }
 

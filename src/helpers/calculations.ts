@@ -1,3 +1,5 @@
+import { Strategy } from "../constants/interfaces";
+
 // Helper function to calculate end date based on start date and duration
 function calculateEndDate ( startDate, durationDays ) {
   const start = new Date( startDate );
@@ -118,4 +120,51 @@ function updateProjectsStats ( tasks ) {
   }
 
   return tasks
+}
+
+export function calculateStartDateAndEndDates(
+  previousStart: string,
+  previousEnd: string,
+  duration: number,
+  strategy: Strategy
+): [string, string] {
+  const start = new Date(previousStart);
+  const end = new Date(previousEnd);
+
+  let startDate: Date;
+  let endDate: Date;
+
+  switch (strategy) {
+    case 'FF':
+      // Finish-to-Finish: End date of current task matches the end date of the previous task
+      endDate = end;
+      startDate = new Date(end);
+      startDate.setDate(end.getDate() - duration);
+      break;
+
+    case 'FS':
+      // Finish-to-Start: Start date of current task matches the end date of the previous task
+      startDate = end;
+      endDate = new Date(startDate);
+      endDate.setDate(startDate.getDate() + duration);
+      break;
+
+    case 'SS':
+      // Start-to-Start: Start date of current task matches the start date of the previous task
+      startDate = start;
+      endDate = new Date(startDate);
+      endDate.setDate(startDate.getDate() + duration);
+      break;
+
+    case 'SF':
+      // Start-to-Finish: End date of current task matches the start date of the previous task
+      endDate = start;
+      startDate = new Date(endDate);
+      startDate.setDate(endDate.getDate() - duration);
+      break;
+
+    default:
+      throw new Error(`Invalid strategy: ${strategy}`);
+  }
+  return [formatDate(startDate), formatDate(endDate)];
 }
