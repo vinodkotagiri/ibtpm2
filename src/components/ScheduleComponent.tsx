@@ -82,10 +82,10 @@ const ScheduleComponent: React.FC = () => {
     dispatch(updateTaskStartDate({ id: id, newDate: date }))
   }
   return (
-    <div className="overflow-x-auto p-1">
+    <div className="table-container w-screen" style={{ overflow: 'auto', maxHeight: '100vh' }}>
       <table className="table table-lg w-full">
         <thead>
-          <tr>
+          <tr className="sticky-header">
             <th>ID</th>
             <th>Task Name</th>
             <th>Start</th>

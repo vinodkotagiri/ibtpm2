@@ -1,4 +1,4 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import NavbarComponent from './components/NavbarComponent'
 import ScheduleComponent from './components/ScheduleComponent'
 import GanttChartComponent from './components/GanttChartComponent'
@@ -12,7 +12,7 @@ import { useAppSelector } from './app/hooks'
 
 const App = () => {
   const [currentView, setCurrentView] = useState<number>(0);
-  const {tasks} = useAppSelector(state => state.schedule)
+  const { tasks } = useAppSelector(state => state.schedule)
   function handleViewChange(view: number) {
     setCurrentView(view)
   }
@@ -23,39 +23,45 @@ const App = () => {
 
     <ul className="menu bg-base-200 lg:menu-horizontal rounded-box w-full">
       <div className='flex items-center justify-between'>
-      <li className='flex items-center justify-center'>
-        <button className='flex items-center justify-center' onClick={() => handleViewChange(0)}>
-          <FontAwesomeIcon icon={faCalendarDays} />
-          Schedule
-        </button>
-      </li>
-      <div className="divider divider-horizontal"></div>
-      <li>
-        <button className='flex items-center justify-center' onClick={() => handleViewChange(1)}>
-          <FontAwesomeIcon icon={faChartGantt} />
-          Gantt Chart
-        </button>
-      </li>
-      <div className="divider divider-horizontal"></div>
-      <li>
-        <button className='flex items-center justify-center' onClick={() => handleViewChange(2)}>
-          <FontAwesomeIcon icon={faMoneyBillTrendUp} />
-          Estimation
-        </button>
-      </li>
-      <li className='ml-60'>
-        <button disabled={tasks[0].start.length===0}  className='disabled:bg-slate-400 disabled:text-slate-500 disabled:cursor-none flex items-center justify-center bg-primary text-slate-200 hover:text-green-500 hover:bg-slate-800' onClick={()=>document.getElementById('my_modal_1').showModal()}>
-          <FontAwesomeIcon icon={faFileCirclePlus} />
-          Add Task
-        </button>
-      </li>
+        <li className='flex items-center justify-center'>
+          <button className='flex items-center justify-center' onClick={() => handleViewChange(0)}>
+            <FontAwesomeIcon icon={faCalendarDays} />
+            Schedule
+          </button>
+        </li>
+        <div className="divider divider-horizontal"></div>
+        <li>
+          <button className='flex items-center justify-center' onClick={() => handleViewChange(1)}>
+            <FontAwesomeIcon icon={faChartGantt} />
+            Gantt Chart
+          </button>
+        </li>
+        <div className="divider divider-horizontal"></div>
+        <li>
+          <button className='flex items-center justify-center' onClick={() => handleViewChange(2)}>
+            <FontAwesomeIcon icon={faMoneyBillTrendUp} />
+            Estimation
+          </button>
+        </li>
+        <li className='ml-60'>
+          <button disabled={tasks[0].start.length === 0} className='disabled:bg-slate-400 disabled:text-slate-500 disabled:cursor-none flex items-center justify-center bg-primary text-slate-200 hover:text-green-500 hover:bg-slate-800' onClick={() => document.getElementById('my_modal_1').showModal()}>
+            <FontAwesomeIcon icon={faFileCirclePlus} />
+            Add Task
+          </button>
+        </li>
       </div>
     </ul>
     <AddTaskComponent />
+    <div className='h-screen w-screen overflow-auto'>
 
-    {currentView === 0 && <ScheduleComponent />}
-    {currentView === 1 && <GanttChartComponent />}
-    {currentView === 2 && <EstimationComponent />}
+      {currentView === 0 && <ScheduleComponent />}
+    </div>
+    <div className='h-screen w-screen overflow-auto'>
+      {currentView === 1 && <GanttChartComponent />}
+    </div>
+    <div className='h-screen w-screen overflow-auto'>
+      {currentView === 2 && <EstimationComponent />}
+    </div>
   </div>
   )
 }
