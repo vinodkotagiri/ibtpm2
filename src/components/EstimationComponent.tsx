@@ -6,6 +6,7 @@ const EstimationComponent = () => {
     <div className='h-screen w-screen overflow-auto px-3 table-lg table-zebra'>
       <table className='table'>
         <thead>
+          <tr>
           <th>ID</th>
           <th>Item</th>
           <th>Task</th>
@@ -14,7 +15,8 @@ const EstimationComponent = () => {
           <th>Units</th>
           <th>Unit Cost</th>
           <th>Total Cost</th>
-          <th>Currency</th>
+          <th>Currency</th>       
+          </tr>
         </thead>
         <tbody>
         { estimate.map( item => (

@@ -15,24 +15,26 @@ const GanttChartComponent = () => {
       start: new Date(task.start || Date.now()), // Default to now if no start date
       end: new Date(task.end || Date.now() + task.duration * 86400000), // Duration in days
       type: task.type === 'project' ? 'project' : 'task',
-      progress: task.progress,
+      progress: 45,
       isDisabled: false,
       dependencies: task.dependencies,
     }));
   };
 
   const ganttTasks = formatTasks();
+  console.log('ganttTasks',ganttTasks)
   return (
-    <div className='h-screen overflow-auto'>
+    <div className='h-full w-full'>
     {/* View mode selection buttons */}
     <div className="flex gap-2 mb-4 fixed right-0 top-20 px-3">
       <button className="btn btn-sm bg-red-400" onClick={() => setViewMode(ViewMode.Day)}>Day</button>
       <button className="btn btn-sm bg-yellow-400" onClick={() => setViewMode(ViewMode.Week)}>Week</button>
       <button className="btn btn-sm bg-purple-400" onClick={() => setViewMode(ViewMode.Month)}>Month</button>
     </div>
-
     {/* Gantt chart */}
+    <div className='h-full w-full overflow-auto'>
     <Gantt tasks={ganttTasks} viewMode={viewMode} />
+    </div>
   </div>
   )
 }

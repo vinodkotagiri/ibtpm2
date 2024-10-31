@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { Task } from '../constants/interfaces'
 import { useAppSelector } from '../app/hooks'
 import { calculateStartDateAndEndDates } from '../helpers/calculations'
 
 const AddTaskComponent = () => {
-  const [ data, setData ] = useState<Task>({cost:0,duration:0,end:'',id:'',name:'',parent:'',progress:0,start:'',strategy:'',type:'task'})
+  const [ data, setData ] = useState<Task>({cost:0,duration:0,end:'',id:'',name:'',parent:'',progress:0,start:'',strategy:'FS',type:'task'})
   const { tasks } = useAppSelector( state => state.schedule )
   const [dependencies,setDependencies]=useState([])
   function handleAddTask () { 
@@ -19,17 +19,14 @@ const AddTaskComponent = () => {
   useEffect(()=>{
     if(data?.id && data?.duration &&data?.strategy){
       const previousTaskId=parseInt(data.id.split('T')[1])-1
-      if(previousTaskId>0){
-        const previousTask=tasks.find(task=>task.id===`${data.parent}T${previousTaskId}`)
+        let previousTask=tasks.find(task=>task.id===`${data.parent}T${previousTaskId}`)
+        if(!previousTaskId){
+          previousTask=tasks.find(task=>task.id===data.parent)
+        }
         const [start,end]=calculateStartDateAndEndDates(previousTask?.start,previousTask?.end,data?.duration,data?.strategy)
         setData({...data,start,end})
-      }
     }
   },[data?.id,data?.duration,data?.strategy])
-  
-  useEffect(()=>{
-    
-  },[])
 
   return (
     <dialog id="my_modal_1" className="modal">

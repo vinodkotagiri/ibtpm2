@@ -58,13 +58,14 @@ const ScheduleComponent: React.FC = () => {
                 <FontAwesomeIcon icon={ collapsed[ task.id ] ? faChevronCircleDown : faChevronCircleUp } className='ml-2 cursor-pointer' size='lg' color='#00000095' onClick={ () => toggleCollapse( task.id ) } />
               ) }
             </td>
+            <td className='font-semibold italic capitalize' style={{color:task.type==='project'?"blue":"green"}}>{task.type}</td>
             <td>{ task.name }</td>
             <td>
               <div className="tooltip  tooltip-right z-50" data-tip="Please select start date">
                 <input type='date' className='input input-ghost cursor-pointer' onChange={ e => handleStartDateChange(task.id,e.target.value)} value={task.start}/>
               </div>
             </td>
-            <td>{ task.end }</td>
+            <td><input disabled type='date' className='input input-ghost disabled:border-none disabled:bg-transparent disabled:cursor-auto disabled:text-black' value={task.end}/></td>
             <td>{ task.duration }</td>
             <td>{ task.strategy }</td>
             <td>{ task.progress }</td>
@@ -83,10 +84,11 @@ const ScheduleComponent: React.FC = () => {
   }
   return (
     <div className="table-container w-screen" style={{ overflow: 'auto', maxHeight: '100vh' }}>
-      <table className="table table-lg w-full">
+      <table className="table table-lg w-full overflow-auto">
         <thead>
           <tr className="sticky-header">
             <th>ID</th>
+            <th>Type</th>
             <th>Task Name</th>
             <th>Start</th>
             <th>End</th>

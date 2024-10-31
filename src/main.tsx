@@ -4,8 +4,8 @@ import './index.css'
 import App from './App.tsx'
 import { Provider } from 'react-redux';
 import store from './app/store.ts';
-import "gantt-task-react/dist/index.css";
 import { Toaster } from 'react-hot-toast';
+import "gantt-task-react/dist/index.css";
 
 createRoot( document.getElementById( 'root' )! ).render(
   <StrictMode>

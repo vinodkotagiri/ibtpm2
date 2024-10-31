@@ -20,48 +20,41 @@ const App = () => {
     <div className='sticky top-0 left-0 z-50'>
       <NavbarComponent />
     </div>
-
+    <AddTaskComponent />
     <ul className="menu bg-base-200 lg:menu-horizontal rounded-box w-full">
       <div className='flex items-center justify-between'>
         <li className='flex items-center justify-center'>
-          <button className='flex items-center justify-center' onClick={() => handleViewChange(0)}>
+          <button className=' btn flex items-center justify-center ' style={{ color: currentView === 0 ? 'green' : 'inherit' }} onClick={() => handleViewChange(0)}>
             <FontAwesomeIcon icon={faCalendarDays} />
             Schedule
           </button>
         </li>
         <div className="divider divider-horizontal"></div>
         <li>
-          <button className='flex items-center justify-center' onClick={() => handleViewChange(1)}>
+          <button className=' btn flex items-center justify-center ' style={{ color: currentView === 1 ? 'green' : 'inherit' }}  onClick={() => handleViewChange(1)}>
             <FontAwesomeIcon icon={faChartGantt} />
             Gantt Chart
           </button>
         </li>
         <div className="divider divider-horizontal"></div>
         <li>
-          <button className='flex items-center justify-center' onClick={() => handleViewChange(2)}>
+          <button className=' btn flex items-center justify-center ' style={{ color: currentView === 2 ? 'green' : 'inherit' }}  onClick={() => handleViewChange(2)}>
             <FontAwesomeIcon icon={faMoneyBillTrendUp} />
             Estimation
           </button>
         </li>
         <li className='ml-60'>
-          <button disabled={tasks[0].start.length === 0} className='disabled:bg-slate-400 disabled:text-slate-500 disabled:cursor-none flex items-center justify-center bg-primary text-slate-200 hover:text-green-500 hover:bg-slate-800' onClick={() => document.getElementById('my_modal_1').showModal()}>
+          <button disabled={tasks[0].start.length === 0} className='disabled:bg-slate-400 disabled:text-slate-500 disabled:cursor-none flex items-center justify-center bg-accent  text-slate-800 btn hover:text-green-500 hover:bg-slate-800' onClick={() => document.getElementById('my_modal_1').showModal()}>
             <FontAwesomeIcon icon={faFileCirclePlus} />
             Add Task
           </button>
         </li>
       </div>
     </ul>
-    <AddTaskComponent />
-    <div className='h-screen w-screen overflow-auto'>
-
-      {currentView === 0 && <ScheduleComponent />}
-    </div>
-    <div className='h-screen w-screen overflow-auto'>
+      {currentView === 0&& <ScheduleComponent />}
       {currentView === 1 && <GanttChartComponent />}
-    </div>
-    <div className='h-screen w-screen overflow-auto'>
       {currentView === 2 && <EstimationComponent />}
-    </div>
+
   </div>
   )
 }
