@@ -1,19 +1,31 @@
 import  { useEffect, useState } from 'react'
 import { Task } from '../constants/interfaces'
-import { useAppSelector } from '../app/hooks'
+import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { calculateStartDateAndEndDates } from '../helpers/calculations'
 import toast from 'react-hot-toast'
+import { addNewTask } from '../app/features/scheduleSlice'
 
 const AddTaskComponent = () => {
   const [ data, setData ] = useState<Task>({cost:0,duration:0,end:'',id:'',name:'',parent:'',progress:0,start:'',strategy:'FS',type:'task'})
   const { tasks } = useAppSelector( state => state.schedule )
+  const dispatch=useAppDispatch()
   const [dependencies,setDependencies]=useState([])
-  function handleAddTask () { 
-    if(!data.strategy) return toast.error('Please enter name')
-    if(!data.type) return toast.error('Please select type')
-    if(!data.parent) return toast.error('Please select a Parent')
-    if(!data.strategy) return toast.error('Please select a Strategy')
-    if(!(data.type=='task'&& data.duration)) return toast.error('Please enter  duration')
+  function handleAddTask (e) { 
+    if(!data.name) {e.preventDefault(); return toast.error('Please enter name')}
+    if(!data.type) { e.preventDefault();return toast.error('Please select type')}
+    if(!data.parent){ e.preventDefault(); return toast.error('Please select a Parent')}
+    if(!data.strategy){ e.preventDefault(); return toast.error('Please select a Strategy')}
+    if(!(data.type=='task'&& data.duration)) { e.preventDefault();return toast.error('Please enter  duration')}
+    const parentIndex=tasks.findIndex(task=>task.id===data.parent)
+    if(parentIndex<0) { e.preventDefault();return toast.error('Parent not found')}
+    const previousTaskId=parseInt(data.id.split('T')[1])
+    let previousTaskIndex=tasks.findIndex(task=>task.id===`${data.parent}T${previousTaskId}`)
+    let taskIndex=1
+    if(previousTaskIndex>=0){
+      taskIndex=parseInt(previousTaskIndex)+1
+    }
+    dispatch(addNewTask({newTask:data,index:taskIndex}))
+    toast.success(`TasK ${data.id} added successfully to Project ${data.parent}`)
   }
   function handleSelectParentTask (id:string) {
     const childrenTasksCount = tasks.filter(task=>task.parent===id&&task.type!=='project').length
@@ -56,7 +68,7 @@ const AddTaskComponent = () => {
         <input disabled type='date' placeholder='Finish Date'value={data?.end}  className='input input-bordered w-1/2'/>
         </div>
         <input type="number" placeholder="Duration (Days)" className="input input-bordered w-full max-w-xs" onChange={e=>setData({...data,duration:parseInt(e.target.value)})}/>
-        <select className='select w-full max-w-xs input-bordered' onChange={e=>setData({...data,strategy:e.target.value})}>
+        <select className='select w-full max-w-xs input-bordered' defaultValue={data?.strategy} onChange={e=>setData({...data,strategy:e.target.value})}>
           <option disabled selected>Select Strategy</option>
             <option  value='FS'>FF</option>
             <option  value='FS'>FS</option>

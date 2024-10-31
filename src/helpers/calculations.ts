@@ -34,8 +34,6 @@ export function calculateStartDateAndEndDates(
   duration: number,
   strategy: Strategy
 ): [string, string] {
-  console.log('previousStart',previousStart)
-  console.log('previousEnd',previousEnd)
   const start = new Date(previousStart);
   const end = new Date(previousEnd);
 
@@ -74,7 +72,6 @@ export function calculateStartDateAndEndDates(
     default:
       throw new Error(`Invalid strategy: ${strategy}`);
   }
-  console.log(startDate, endDate);
   return [formatDate(startDate), formatDate(endDate)];
 }
 

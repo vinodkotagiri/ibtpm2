@@ -18,8 +18,12 @@ const scheduleSlice = createSlice( {
      // Recalculate the entire task schedule based on updated start date)
      state.tasks = updateTaskDates(state.tasks);
     },
+    addNewTask(state, action) {
+      const {newTask,index} = action.payload
+      state.tasks.splice(index,0,newTask)
+    }
   }
 } )
 
-export const {updateTaskStartDate} = scheduleSlice.actions
+export const {updateTaskStartDate,addNewTask} = scheduleSlice.actions
 export default scheduleSlice.reducer
