@@ -2,13 +2,18 @@ import  { useEffect, useState } from 'react'
 import { Task } from '../constants/interfaces'
 import { useAppSelector } from '../app/hooks'
 import { calculateStartDateAndEndDates } from '../helpers/calculations'
+import toast from 'react-hot-toast'
 
 const AddTaskComponent = () => {
   const [ data, setData ] = useState<Task>({cost:0,duration:0,end:'',id:'',name:'',parent:'',progress:0,start:'',strategy:'FS',type:'task'})
   const { tasks } = useAppSelector( state => state.schedule )
   const [dependencies,setDependencies]=useState([])
   function handleAddTask () { 
-
+    if(!data.strategy) return toast.error('Please enter name')
+    if(!data.type) return toast.error('Please select type')
+    if(!data.parent) return toast.error('Please select a Parent')
+    if(!data.strategy) return toast.error('Please select a Strategy')
+    if(!(data.type=='task'&& data.duration)) return toast.error('Please enter  duration')
   }
   function handleSelectParentTask (id:string) {
     const childrenTasksCount = tasks.filter(task=>task.parent===id&&task.type!=='project').length
