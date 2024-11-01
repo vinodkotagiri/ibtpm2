@@ -9,7 +9,7 @@ const AddTaskComponent = () => {
   const [ data, setData ] = useState<Task>({cost:0,duration:0,end:'',id:'',name:'',parent:'',progress:0,start:'',strategy:'FS',type:'task'})
   const { tasks } = useAppSelector( state => state.schedule )
   const dispatch=useAppDispatch()
-  const [dependencies,setDependencies]=useState([])
+  // const [dependencies,setDependencies]=useState([])
   function handleAddTask (e) { 
     if(!data.name) {e.preventDefault(); return toast.error('Please enter name')}
     if(!data.type) { e.preventDefault();return toast.error('Please select type')}
@@ -19,7 +19,7 @@ const AddTaskComponent = () => {
     const parentIndex=tasks.findIndex(task=>task.id===data.parent)
     if(parentIndex<0) { e.preventDefault();return toast.error('Parent not found')}
     const previousTaskId=parseInt(data.id.split('T')[1])
-    let previousTaskIndex=tasks.findIndex(task=>task.id===`${data.parent}T${previousTaskId}`)
+    const previousTaskIndex=tasks.findIndex(task=>task.id===`${data.parent}T${previousTaskId}`)
     let taskIndex=1
     if(previousTaskIndex>=0){
       taskIndex=parseInt(previousTaskIndex)+1
@@ -33,17 +33,25 @@ const AddTaskComponent = () => {
     setData({...data,id:taskId,parent:id})
   }
 
-  useEffect(()=>{
-    if(data?.id && data?.duration &&data?.strategy){
-      const previousTaskId=parseInt(data.id.split('T')[1])-1
-        let previousTask=tasks.find(task=>task.id===`${data.parent}T${previousTaskId}`)
-        if(!previousTaskId){
-          previousTask=tasks.find(task=>task.id===data.parent)
-        }
-        const [start,end]=calculateStartDateAndEndDates(previousTask?.start,previousTask?.end,data?.duration,data?.strategy)
-        setData({...data,start,end})
+  useEffect(() => {
+    if (data?.id && data?.duration && data?.strategy) {
+      const previousTaskId = parseInt(data.id.split('T')[1]) - 1;
+      let previousTask = tasks.find(task => task.id === `${data.parent}T${previousTaskId}`);
+      
+      if (!previousTask) {
+        previousTask = tasks.find(task => task.id === data.parent);
+      }
+  
+      const [start, end] = calculateStartDateAndEndDates(
+        previousTask?.start,
+        previousTask?.end,
+        data.duration,
+        data.strategy
+      );
+  
+      setData(d => ({ ...d, start, end })); // Functional update to avoid including `data` in dependencies
     }
-  },[data?.id,data?.duration,data?.strategy])
+  }, [data?.id, data?.parent, data?.duration, data?.strategy, tasks]);
 
   return (
     <dialog id="my_modal_1" className="modal">

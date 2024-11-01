@@ -7,7 +7,6 @@ import { faCalendarDays, faChartGantt, faMoneyBillTrendUp } from '@fortawesome/f
 import EstimationComponent from './components/EstimationComponent'
 import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons/faFileCirclePlus'
 import AddTaskComponent from './components/AddTaskComponent'
-import toast from 'react-hot-toast'
 import { useAppSelector } from './app/hooks'
 
 const App = () => {

@@ -45,7 +45,7 @@ const ScheduleComponent: React.FC = () => {
   };
 
   const renderTasks = ( tasks: ( Task & { children: Task[] } )[], level = 0, baseColorIndex = 0 ) => {
-    return tasks.map( ( task, index ) => {
+    return tasks.map( ( task ) => {
       const color = getShade( colorPalette[ baseColorIndex ], level );
       const nextBaseColorIndex = task.children.length > 0 ? ( baseColorIndex + 1 ) % colorPalette.length : baseColorIndex;
 
