@@ -1,4 +1,5 @@
-import { Strategy, Task } from '../constants/interfaces';
+import { currencies } from '../constants/currency';
+import { Strategy, Task } from '../constants/types';
 
 export function updateTaskDates(tasks: Task[]): Task[] {
   let previousStartDate = tasks[0].start;
@@ -103,3 +104,30 @@ function calculateProjectDatesAndDurations(tasks:Task[]):Task[]{
 
   return tasks
 }
+
+export function calculateTotalResourceCost(tasks: Task[]): Task[]{
+  for(const task of tasks){
+    if(task.type=='task' && task?.resources?.length){
+      task.resources.forEach(resource=>resource.totalCost=resource.rate*resource.quantity)
+      task.cost=task.resources.reduce((acc,curr)=>acc+curr.totalCost,0)      
+    }
+  }
+  for(let i=tasks.length-1;i>=0;i--){
+    if(tasks[i].type === 'project'){
+      const childTasks=tasks.filter(t=>t.parent===tasks[i].id)
+      if(childTasks.length){
+        let totalCost=0
+        for(const childTask of childTasks){
+          totalCost+=childTask.cost
+        }
+        tasks[i].cost=totalCost
+      }
+    }
+  }
+  return tasks
+}
+
+
+export const getCurrencySymbol = (currencyCode: string): string => {
+  return currencies[currencyCode] || currencyCode;
+};

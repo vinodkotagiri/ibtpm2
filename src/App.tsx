@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import NavbarComponent from './components/NavbarComponent'
 import ScheduleComponent from './components/ScheduleComponent'
 import GanttChartComponent from './components/GanttChartComponent'
@@ -8,13 +8,20 @@ import EstimationComponent from './components/EstimationComponent'
 import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons/faFileCirclePlus'
 import AddTaskComponent from './components/AddTaskComponent'
 import { useAppSelector } from './app/hooks'
+import toast from 'react-hot-toast'
+import CurrencyChangerComponent from './components/CurrencyChangerComponent'
 
 const App = () => {
   const [currentView, setCurrentView] = useState<number>(0);
   const { tasks } = useAppSelector(state => state.schedule)
+  const [hasStartDate,setHasStartDate]=useState(false)
   function handleViewChange(view: number) {
+    if(!hasStartDate && view!=0) return toast.error('Please add start date')
     setCurrentView(view)
   }
+  useEffect(()=>{
+    setHasStartDate(tasks[0].start!=='')
+  },[tasks])
   return (<div className='h-screen min-w-screen overflow-hidden'>
     <div className='sticky top-0 left-0 z-50'>
       <NavbarComponent />
@@ -53,7 +60,9 @@ const App = () => {
       {currentView === 0&& <ScheduleComponent />}
       {currentView === 1 && <GanttChartComponent />}
       {currentView === 2 && <EstimationComponent />}
-
+      {currentView != 1?<div className='z-50 fixed top-[75px] right-16'>
+      <CurrencyChangerComponent/>
+      </div>:''}
   </div>
   )
 }

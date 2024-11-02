@@ -1,5 +1,5 @@
 import  { useEffect, useState } from 'react'
-import { Task } from '../constants/interfaces'
+import { Task } from '../constants/types'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { calculateStartDateAndEndDates } from '../helpers/calculations'
 import toast from 'react-hot-toast'

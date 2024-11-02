@@ -1,4 +1,6 @@
-import {Task} from './interfaces'
+import { MachinaryRates } from './rates'
+import {Task} from './types'
+
 const tasks:Task[]=[
   {
     id:'P0',
@@ -39,7 +41,8 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'P1'
+    parent:'P1',
+    resources:[],
   },
   {
     id:'P11T1',
@@ -109,7 +112,11 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'C01',
+    resources:[
+      {id:'C02E1',resource:'DailyMachinery',description:'Excavator',rate:MachinaryRates.Excavator.Daily,units:'Day',quantity:2,totalCost:0},
+      {id:'C02E2',resource:'MonthlyMachinery',description:'Dozer',rate:MachinaryRates.Dozer.Monthly,units:'Month',quantity:1,totalCost:0},
+    ],
   },  
   {
     id:'C03',

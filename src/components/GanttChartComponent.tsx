@@ -30,6 +30,7 @@ const GanttChartComponent = () => {
       <button className="btn btn-sm bg-red-400" onClick={() => setViewMode(ViewMode.Day)}>Day</button>
       <button className="btn btn-sm bg-yellow-400" onClick={() => setViewMode(ViewMode.Week)}>Week</button>
       <button className="btn btn-sm bg-purple-400" onClick={() => setViewMode(ViewMode.Month)}>Month</button>
+      <button className="btn btn-sm bg-indigo-400" onClick={() => setViewMode(ViewMode.Year)}>Year</button>
     </div>
     {/* Gantt chart */}
     <div className='h-full w-full overflow-auto'>

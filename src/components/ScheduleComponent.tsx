@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Task } from '../constants/interfaces';
+import { Task } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +7,7 @@ import { updateTaskStartDate } from '../app/features/scheduleSlice';
 
 const ScheduleComponent: React.FC = () => {
   const [ collapsed, setCollapsed ] = useState<{ [ key: string ]: boolean }>( {} );
-  const { tasks } = useAppSelector( state => state.schedule );
+  const { tasks,currencyCode } = useAppSelector( state => state.schedule );
   const dispatch=useAppDispatch()
   const colorPalette = [ '#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7' ];
 
@@ -69,7 +69,7 @@ const ScheduleComponent: React.FC = () => {
             <td>{ task.duration }</td>
             <td>{ task.strategy }</td>
             <td>{ task.progress }</td>
-            <td>{ task.cost }</td>
+            {task.cost ?<td className='font-semibold'>{ currencyCode+' '+ task.cost }</td>:<td></td>}
           </tr>
           { !collapsed[ task.id ] &&
             task.children.length > 0 &&
