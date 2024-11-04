@@ -1,8 +1,13 @@
 import { MachinaryRates } from './rates'
-import { ConcreteRates } from './rates'
 import { MasonRates } from './rates'
 import { HelperRates } from './rates'
 import {Task} from './types'
+
+import { ConcreteRates } from './rates'
+import { SteelRates } from './rates'
+import { FormworkRates } from './rates'
+
+
 
 const tasks:Task[]=[
   {
@@ -145,7 +150,7 @@ const tasks:Task[]=[
     parent:'C02',
     resources:[
       {id:'C02E1',resource:'DailyMason',description:'Fencing',rate:MachinaryRates.Excavator.Daily,units:'Day',quantity:2,totalCost:0},
-      {id:'C02E2',resource:'DailyHelper',description:'Clean-up',rate:MachinaryRates.Dozer.Monthly,units:'Day',quantity:2,totalCost:0},
+      {id:'C02E2',resource:'DailyHelper',description:'Clean-up',rate:MachinaryRates.Dozer.Daily,units:'Day',quantity:2,totalCost:0},
     ],
   },
   {
@@ -163,7 +168,7 @@ const tasks:Task[]=[
     parent:'C02',
     resources:[
       {id:'C02E3',resource:'DailyMachinery',description:'Excavator',rate:MachinaryRates.Excavator.Daily,units:'Day',quantity:2,totalCost:0},
-      {id:'C02E4',resource:'MonthlyMachinery',description:'Dozer',rate:MachinaryRates.Dozer.Monthly,units:'Month',quantity:1,totalCost:0},
+      {id:'C02E4',resource:'MonthlyMachinery',description:'Dozer',rate:MachinaryRates.Dozer.Daily,units:'Month',quantity:1,totalCost:0},
     ],
   },
   {
@@ -181,7 +186,7 @@ const tasks:Task[]=[
     parent:'C02',
     resources:[
       {id:'C02E5',resource:'DailyMason',description:'Fencing',rate:MasonRates.Mason.Daily,units:'Day',quantity:2,totalCost:0},
-      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Monthly,units:'Day',quantity:2,totalCost:0},
+      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Daily,units:'Day',quantity:2,totalCost:0},
     ],
   },
   {
@@ -199,7 +204,7 @@ const tasks:Task[]=[
     parent:'C02',
     resources:[
       {id:'C02E5',resource:'DailyMason',description:'Termite',rate:MasonRates.Mason.Daily,units:'Day',quantity:1,totalCost:0},
-      {id:'C02E6',resource:'DailyHelper',description:'Termite',rate:HelperRates.Helper.Monthly,units:'Day',quantity:2,totalCost:0},
+      {id:'C02E6',resource:'DailyHelper',description:'Termite',rate:HelperRates.Helper.Daily,units:'Day',quantity:2,totalCost:0},
     ],
   },
   {
@@ -211,14 +216,14 @@ const tasks:Task[]=[
     cost:0,
     strategy:'FS',
     dependencies:['C06'],
-    type:'project',
+    type:'task',
     progress:0,
     hideChildren:false,
     parent:'C02',
     resources:[
-      {id:'C02E7',resource:'concretecum',description:'PCC',rate:ConcreteRates.M10pcc.Cum,units:'Cum',quantity:1,totalCost:0},
-      {id:'C02E8',resource:'concretecum',description:'PCC',rate:ConcreteRates.M10pcc.Cum,units:'Cum',quantity:2,totalCost:0},
-      {id:'C02E9',resource:'concretecum',description:'PCC',rate:ConcreteRates.M10pcc.Cum,units:'Cum',quantity:2,totalCost:0},
+      {id:'C02E7',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:1,totalCost:0},
+      {id:'C02E8',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:2,totalCost:0},
+      {id:'C02E9',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:2,totalCost:0},
     ],
   },
   {
@@ -261,7 +266,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'F00'
+    parent:'F00'    
   },
   {
     id:'FT01',
@@ -275,7 +280,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'F01'
+    parent:'F01',
+    resources:[
+      {id:'F1',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:1,totalCost:0},
+      {id:'F2',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:2,totalCost:0},
+      {id:'F3',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:2,totalCost:0},
+    ],
   },
   {
     id:'FT02',
@@ -289,7 +299,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'F01'
+    parent:'F01',
+    resources:[
+      {id:'F4',resource:'TonSteel',description:'Dia8',rate:SteelRates.Dia8.Ton,units:'Ton',quantity:0.3,totalCost:0},
+      {id:'F5',resource:'TonSteel',description:'Dia8',rate:SteelRates.Dia8.Ton,units:'Ton',quantity:0.3,totalCost:0},
+      {id:'F6',resource:'TonSteel',description:'Dia12',rate:SteelRates.Dia12.Ton,units:'Ton',quantity:0.5,totalCost:0},
+    ],
   },
   {
     id:'FT03',
@@ -303,7 +318,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'F01'
+    parent:'F01',
+    resources:[
+      {id:'F7',resource:'CumtFormwork',description:'Footing',rate:FormworkRates.Footing.Cumt,units:'Cumt',quantity:0.3,totalCost:0},
+      {id:'F8',resource:'CumtFormwork',description:'Footing',rate:FormworkRates.Footing.Cumt,units:'Cumt',quantity:0.3,totalCost:0},
+      {id:'F9',resource:'CumtFormwork',description:'Footing',rate:FormworkRates.Footing.Cumt,units:'Cumt',quantity:0.5,totalCost:0},
+    ],
   },
   {
     id:'F02',
