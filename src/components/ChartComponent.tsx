@@ -1,6 +1,4 @@
-import React from 'react'
 import Chart from 'react-google-charts'
-import { LineChart } from '../constants/charts'
 
 const ChartComponent = ({chart}) => {
   return (
