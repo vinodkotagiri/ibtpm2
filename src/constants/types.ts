@@ -1,10 +1,10 @@
-type MasonType='DailyMason'|'WeeklyMason'|'MonthlyMason'|'ContractMason'|'PerSqftMason'|'PerCumMason'|'PerHourMason'
-type HelperType='DailyHelper'|'WeeklyHelper'|'MonthlyHelper'|'ContractHelper'|'PerSqftHelper'|'PerCumHelper'|'PerHourHelper'|'PerMTHelper'
+type MasonType='DailyMason'|'WeeklyMason'|'MonthlyMason'|'ContractMason'|'PerSqftMason'|'PerCumMason'|'PerHourMason'|'HourlyMason'
+type HelperType='DailyHelper'|'WeeklyHelper'|'MonthlyHelper'|'ContractHelper'|'PerSqftHelper'|'PerCumHelper'|'PerHourHelper'|'PerMTHelper'|'HourlyHelper'
 type MachinaryType='DailyMachinery'|'WeeklyMachinery'|'MonthlyMachinery'|'ContractMachinery'|'PerSqftMachinery'|'PerCumMachinery'|"PerMT"|"PerHourMachinery"
 type BarBenderType='DailyBarbender'|'WeeklyBarbender'|'MonthlyBarbender'|'ContractBarbender'|'PerMTBarbender'|'PerCumBarbender'
 type ConcreteType='sftConcrete'|'CumConcrete'|'cftConcrete'
-type SteelType='SqftSteel'|'kgsSteel'|'TonSteel'|'MTSteel'
-type FormworkType='SqftFormwork'|'CuftFormwork'|'SqmtFormwork'|'CumtFormwork'
+type SteelType='SqftSteel'|'KgsSteel'|'TonSteel'|'MTSteel'
+type FormworkType='SqftFormwork'|'CuftFormwork'|'SqmFormwork'|'CumFormwork'
 type redbrickType='redbricknos'
 type flyashbrickType='flyashbricknos'
 type ccbrickType='ccbricknos'
@@ -12,7 +12,7 @@ type ccbrickType='ccbricknos'
 
 export type Strategy='FF'|'SF'|'FS'|'SS'
 export type TaskType='task'|'project'|'milestone'
-export type ResourceUnits='Hour'|'Day'|'Week'|'Month'|'Contract'|'Sqft'|'Cum'|'MT'|'Kgs'|'Ton'|'Cuft'|'Sqmt'|'Cumt'
+export type ResourceUnits='Hour'|'Day'|'Week'|'Month'|'Contract'|'Sqft'|'Cum'|'MT'|'Kgs'|'Ton'|'Cuft'|'Sqmt'
 export type CurrencyUnits = 
   | "USD" | "EUR" | "GBP" | "INR" | "JPY" | "CNY" | "AUD" | "CAD" | "CHF"
   | "SEK" | "NZD" | "ZAR" | "MXN" | "SGD" | "HKD" | "NOK" | "KRW" | "TRY"

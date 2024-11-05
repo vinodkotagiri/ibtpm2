@@ -102,49 +102,49 @@ export const ConcreteRates = {
 export const SteelRates = {
   Dia6:{
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 50,
     Ton: 65000,
     MT: 1.2
   },
   Dia8:{    
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 55,
     Ton: 75000,
     MT: 1.2
   },
   Dia10:{    
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 60,
     Ton: 85000,
     MT: 1.2
   },
   Dia12:{    
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 65,
     Ton: 95000,
     MT: 1.2
   },
   Dia14:{    
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 70,
     Ton: 105000,
     MT: 1.2
   },
   Dia16:{    
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 75,
     Ton: 115000,
     MT: 1.2
   },
   Dia18:{    
     Sqft: 0.05,
-    kgs: 3500,
+    Kgs: 80,
     Ton: 120000,
     MT: 1.2
   },
   Dia20:{    
     Sqft: 0.05,
-    kgs: 125000,
+    Kgs: 85,
     Ton: 1.2,
     MT: 1.2
   },
@@ -153,58 +153,58 @@ export const SteelRates = {
 
 export const FormworkRates = {
   Footing:{
-    Sqft: 100,
-    Cuft: 300,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 200,
+    Cuft: 900,
+    Sqm: 1500,
+    Cum: 1500
   },
   Column:{    
-    Sqft: 100,
-    Cuft: 300,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 250,
+    Cuft: 950,
+    Sqm: 1800,
+    Cum: 1800
   },
   Beam:{    
-    Sqft: 100,
-    Cuft: 400,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 300,
+    Cuft: 1000,
+    Sqm: 2000,
+    Cum: 2000
   },
   Slab:{    
-    Sqft: 100,
-    Cuft: 500,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 400,
+    Cuft: 1200,
+    Sqm: 2200,
+    Cum: 2200
   },
   Staircase:{    
-    Sqft: 100,
-    Cuft: 300,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 300,
+    Cuft: 1000,
+    Sqm: 1800,
+    Cum: 1800
   },
   Wall:{    
-    Sqft: 100,
-    Cuft: 400,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 400,
+    Cuft: 1200,
+    Sqm: 2900,
+    Cum: 2900
   },
   FootingColumn:{    
-    Sqft: 100,
-    Cuft: 400,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 250,
+    Cuft: 1100,
+    Sqm: 3000,
+    Cum: 3000
   },
   Lintel:{    
-    Sqft: 100,
-    Cuft: 200,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqft: 200,
+    Cuft:1100,
+    Sqm: 1000,
+    Cum: 3000
   },
   Overhang:{    
-    Sqft: 100,
+    Sqft: 300,
     Cuft: 500,
-    Sqmt: 1000,
-    Cumt: 3000
+    Sqm: 1000,
+    Cum: 3000
   },
 
 }
