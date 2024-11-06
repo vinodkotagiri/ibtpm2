@@ -1,3 +1,4 @@
+import store, { RootState } from './../app/store';
 import { MachinaryRates } from './rates'
 import { MasonRates } from './rates'
 import { HelperRates } from './rates'
@@ -6,8 +7,12 @@ import {Task} from './types'
 import { ConcreteRates } from './rates'
 import { SteelRates } from './rates'
 import { FormworkRates } from './rates'
-
-
+import {RootState} from '../app/store'
+const state=store.getState()
+const {drawingData}=state.drawing
+const {
+excavationArea
+}=drawingData
 
 const tasks:Task[]=[
   {

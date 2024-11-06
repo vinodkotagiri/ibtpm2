@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import scheduleReducer from './features/scheduleSlice'
+import drawingReducer from './features/drawingSlice'
 const store=configureStore({
   reducer:{
-    schedule:scheduleReducer
+    schedule:scheduleReducer,
+    drawing:drawingReducer
   }
 })
 
