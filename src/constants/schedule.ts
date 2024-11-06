@@ -7,7 +7,8 @@ import {Task} from './types'
 import { ConcreteRates } from './rates'
 import { SteelRates } from './rates'
 import { FormworkRates } from './rates'
-import {RootState} from '../app/store'
+import { FillingRates } from './rates'
+
 const state=store.getState()
 const {drawingData}=state.drawing
 const {
@@ -172,8 +173,10 @@ const tasks:Task[]=[
     hideChildren:false,
     parent:'C02',
     resources:[
-      {id:'C02E3',resource:'DailyMachinery',description:'Excavator',rate:MachinaryRates.Excavator.Daily,units:'Day',quantity:2,totalCost:0},
-      {id:'C02E4',resource:'MonthlyMachinery',description:'Dozer',rate:MachinaryRates.Dozer.Daily,units:'Month',quantity:1,totalCost:0},
+      {id:'C02E3',resource:'DailyMachinery',description:'Cft',rate:MachinaryRates.Excavator.Daily,units:'Day',quantity:excavationArea*3,totalCost:0},
+      {id:'C02E4',resource:'MonthlyMachinery',description:'Cft',rate:MachinaryRates.Dozer.Daily,units:'Month',quantity:1,totalCost:0},
+      {id:'C02E1',resource:'DailyMason',description:'Excavation',rate:MachinaryRates.Excavator.Daily,units:'Day',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Daily,units:'Day',quantity:2,totalCost:0},
     ],
   },
   {
@@ -226,7 +229,9 @@ const tasks:Task[]=[
     hideChildren:false,
     parent:'C02',
     resources:[
-      {id:'C02E7',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:0.2,totalCost:0},      
+      {id:'C02E7',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:0.35,totalCost:0},      
+      {id:'C02E5',resource:'DailyMason',description:'pcc',rate:MasonRates.Mason.Daily,units:'Day',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'DailyHelper',description:'pcc',rate:HelperRates.Helper.Daily,units:'Day',quantity:2,totalCost:0},
     ],
   },
   {
@@ -286,8 +291,8 @@ const tasks:Task[]=[
     parent:'F01',
     resources:[
       {id:'F1',resource:'CumConcrete',description:'M15pcc',rate:ConcreteRates.M15pcc.Cum,units:'Cum',quantity:0.2,totalCost:0},      
-      {id:'C02E5',resource:'HourlyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
-      {id:'C02E6',resource:'HourlyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},
+      {id:'C02E5',resource:'HourlyMason',description:'pcc',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'HourlyHelper',description:'pcc',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},
     ],
   },
   {
@@ -1746,8 +1751,7 @@ const tasks:Task[]=[
     resources:[
       {id:'F7',resource:'CumConcrete',description:'1x1x0.5',rate:ConcreteRates.M20.Cum,units:'Cum',quantity:0.5,totalCost:0},
       {id:'C02E5',resource:'DailyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Day',quantity:1,totalCost:0},
-      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},
-      
+      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},      
     ],
   },
 
@@ -1764,7 +1768,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08'
+    parent:'C08',
+    resources:[
+      {id:'F7',resource:'CumSoil',description:'1x1x0.5',rate:FillingRates.Soil.Cum,units:'Cum',quantity:0.5,totalCost:0},
+      {id:'C02E5',resource:'DailyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Day',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},      
+    ],
   },
   {
     id:'C12',

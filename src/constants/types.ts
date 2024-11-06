@@ -8,6 +8,7 @@ type FormworkType='SqftFormwork'|'CuftFormwork'|'SqmFormwork'|'CumFormwork'
 type redbrickType='redbricknos'
 type flyashbrickType='flyashbricknos'
 type ccbrickType='ccbricknos'
+type FillingType='CumSoil'|'CumSand'|'CumAggregate'
 
 
 export type Strategy='FF'|'SF'|'FS'|'SS'
@@ -24,7 +25,7 @@ export type CurrencyUnits =
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
 
 export type ResourceType=MasonType|HelperType|MachinaryType|BarBenderType|ConcreteType|SteelType|redbrickType|flyashbrickType|ccbrickType
-|FormworkType
+|FormworkType|FillingType
 
 export type Task={
   id:string

@@ -6,8 +6,10 @@ const drawingSlice = createSlice({
     drawingData: {
       plotLength: 0,
       plotWidth: 0,
+      plotArea: 0,
       builtLength: 0,
       builtWidth: 0,
+      builtupArea: 0,
       excavationArea: 0,
       excavationDepth:0,
       groundFloorArea: 0,
