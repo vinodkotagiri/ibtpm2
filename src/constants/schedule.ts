@@ -1849,9 +1849,9 @@ const tasks:Task[]=[
     hideChildren:false,
     parent:'C08',
     resources:[
-      {id:'F7',resource:'CumFormwork',description:'1x1x0.5',rate:FormworkRates.Footing.Cum,units:'Cum',quantity:builtupPerimeter*0.3,totalCost:0}, 
-      {id:'C02E5',resource:'HourlyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
-      {id:'C02E6',resource:'HourlyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},     
+      {id:'F7',resource:'CumFormwork',description:'1x1x0.5',rate:FormworkRates.Footing.Cum,units:'Cum',quantity:(builtupPerimeter*0.3)*2,totalCost:0}, 
+      {id:'C02E5',resource:'HourlyMason',description:'CarpenterMason',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'HourlyHelper',description:'CarpenterHelper',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},     
     ],
   },
   {
@@ -1866,7 +1866,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08'
+    parent:'C08',
+    resources:[
+      {id:'F7',resource:'CumConcrete',description:'0.3x0.3x0.3',rate:ConcreteRates.M25.Cum,units:'Cum',quantity:0.5,totalCost:0},
+      {id:'C02E5',resource:'HourlyMason',description:'Mason',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'HourlyHelper',description:'Helper',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},     
+    ],
   },
   {
     id:'C17',
