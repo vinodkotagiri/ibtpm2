@@ -1,6 +1,6 @@
 type MasonType='DailyMason'|'WeeklyMason'|'MonthlyMason'|'ContractMason'|'PerSqftMason'|'PerCumMason'|'PerHourMason'|'HourlyMason'
 type HelperType='DailyHelper'|'WeeklyHelper'|'MonthlyHelper'|'ContractHelper'|'PerSqftHelper'|'PerCumHelper'|'PerHourHelper'|'PerMTHelper'|'HourlyHelper'
-type MachinaryType='DailyMachinery'|'WeeklyMachinery'|'MonthlyMachinery'|'ContractMachinery'|'PerSqftMachinery'|'PerCumMachinery'|"PerMT"|"PerHourMachinery"
+type MachinaryType='DailyMachinery'|'DailyCompaction'|'WeeklyMachinery'|'MonthlyMachinery'|'ContractMachinery'|'PerSqftMachinery'|'PerCumMachinery'|"PerMT"|"PerHourMachinery"
 type BarBenderType='DailyBarbender'|'WeeklyBarbender'|'MonthlyBarbender'|'ContractBarbender'|'PerMTBarbender'|'PerCumBarbender'
 type ConcreteType='sftConcrete'|'CumConcrete'|'cftConcrete'
 type SteelType='SqftSteel'|'KgsSteel'|'TonSteel'|'MTSteel'
@@ -8,7 +8,7 @@ type FormworkType='SqftFormwork'|'CuftFormwork'|'SqmFormwork'|'CumFormwork'
 type redbrickType='redbricknos'
 type flyashbrickType='flyashbricknos'
 type ccbrickType='ccbricknos'
-type FillingType='CumSoil'|'CumSand'|'CumAggregate'
+type FillingType='CumSoil'|'CumSand'|'CumAggregate'|'CumStone'
 
 
 export type Strategy='FF'|'SF'|'FS'|'SS'

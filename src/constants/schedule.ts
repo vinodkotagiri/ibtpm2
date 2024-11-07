@@ -1,4 +1,4 @@
-import store, { RootState } from './../app/store';
+import store from './../app/store';
 import { MachinaryRates } from './rates'
 import { MasonRates } from './rates'
 import { HelperRates } from './rates'
@@ -8,12 +8,13 @@ import { ConcreteRates } from './rates'
 import { SteelRates } from './rates'
 import { FormworkRates } from './rates'
 import { FillingRates } from './rates'
+import { BarBenderRates } from './rates'
 
 const state=store.getState()
 const {drawingData}=state.drawing
-const {
-excavationArea
-}=drawingData
+const {excavationArea}=drawingData
+const {plotArea}=drawingData
+const {builtupPerimeter}=drawingData
 
 const tasks:Task[]=[
   {
@@ -1770,9 +1771,11 @@ const tasks:Task[]=[
     hideChildren:false,
     parent:'C08',
     resources:[
-      {id:'F7',resource:'CumSoil',description:'1x1x0.5',rate:FillingRates.Soil.Cum,units:'Cum',quantity:0.5,totalCost:0},
+      {id:'F7',resource:'CumSoil',description:'1x1x0.5',rate:FillingRates.Soil.Cum,units:'Cum',quantity:plotArea*0.3,totalCost:0},
       {id:'C02E5',resource:'DailyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Day',quantity:1,totalCost:0},
-      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},      
+      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},            
+      {id:'C02E7',resource:'DailyCompaction',description:'Manual',rate:MachinaryRates.Compaction.Hourly,units:'Day',quantity:2,totalCost:0},      
+      {id:'C02E6',resource:'DailyHelper',description:'Curing',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},      
     ],
   },
   {
@@ -1801,7 +1804,14 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08'
+    parent:'C08',
+    resources:[
+      {id:'F7',resource:'CumStone',description:'1x1x0.5',rate:FillingRates.Stone.Cum,units:'Cum',quantity:plotArea*0.3,totalCost:0},
+      {id:'C02E5',resource:'DailyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Day',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'DailyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},            
+      {id:'C02E7',resource:'DailyCompaction',description:'Manual',rate:MachinaryRates.Compaction.Hourly,units:'Day',quantity:2,totalCost:0},      
+      {id:'C02E6',resource:'DailyHelper',description:'Curing',rate:HelperRates.Helper.Hourly,units:'Day',quantity:2,totalCost:0},      
+    ],  
   },
   {
     id:'C14',
@@ -1815,7 +1825,15 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08'
+    parent:'C08',
+    resources:[
+      {id:'BS1',resource:'KgsSteel',description:'1x1x0.5',rate:SteelRates.Dia8.Kgs,units:'Kgs',quantity:builtupPerimeter*0.3,totalCost:0},
+      {id:'BS2',resource:'KgsSteel',description:'1x1x0.5',rate:SteelRates.Dia8.Kgs,units:'Kgs',quantity:4,totalCost:0},
+      {id:'BS3',resource:'KgsSteel',description:'1x1x0.5',rate:SteelRates.Dia12.Kgs,units:'Kgs',quantity:8,totalCost:0},
+      {id:'BS4',resource:'KgsSteel',description:'dia16',rate:BarBenderRates.Hourly,units:'Hour',quantity:8,totalCost:0},
+      {id:'BS5',resource:'HourlyMason',description:'steelfixer',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
+      {id:'BS6',resource:'HourlyHelper',description:'helper',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},
+    ],
   },
   {
     id:'C15',
@@ -1829,7 +1847,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08'
+    parent:'C08',
+    resources:[
+      {id:'F7',resource:'CumFormwork',description:'1x1x0.5',rate:FormworkRates.Footing.Cum,units:'Cum',quantity:builtupPerimeter*0.3,totalCost:0}, 
+      {id:'C02E5',resource:'HourlyMason',description:'PCC',rate:MasonRates.Mason.Hourly,units:'Hour',quantity:1,totalCost:0},
+      {id:'C02E6',resource:'HourlyHelper',description:'Clean-up',rate:HelperRates.Helper.Hourly,units:'Hour',quantity:2,totalCost:0},     
+    ],
   },
   {
     id:'C16',

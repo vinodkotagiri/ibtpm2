@@ -249,10 +249,16 @@ export const FillingRates = {
     Cum: 300
   },  
   Aggregate:{    
-    Sqft: 2.5,
-    Cuft: 22,
-    Sqm: 20,
-    Cum: 800
+    Sqft: 1.5,
+    Cuft: 20,
+    Sqm: 15,
+    Cum: 400
+  },  
+  Stone:{    
+    Sqft: 3.5,
+    Cuft: 24,
+    Sqm: 25,
+    Cum: 820
   }  
 
 }
