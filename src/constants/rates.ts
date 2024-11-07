@@ -4,9 +4,9 @@ export const MasonRates = {
   Weekly: 1400*6,
   Monthly: 1400*24,
   Contract: 100,
-  Hourly: 150,
-  Sqft: 350,
-  Cum: 350
+  Hourly: 180,
+  Sqft: 25,
+  Cum: 35
 }
 }
 export const HelperRates = {
@@ -16,31 +16,51 @@ export const HelperRates = {
   Monthly: 1000*24,
   Contract: 100,
   Hourly: 150,
-  Sqft: 350,
-  Cum: 350,
-  MT: 350
+  Sqft: 15,
+  Cum: 25,
+  MT: 35
 }
 }
 export const MachinaryRates = {
   Excavator:{
-    Daily: 1250,
-    Weekly: 8500,
-    Monthly: 21000,
-    Contract: 150,
-    Hourly: 0.25,
-    Sqft: 0.05,
-    Cum: 0.8,
-    MT: 1.2
+    Daily: 1500,
+    Weekly: 6000,
+    Monthly: 25000,
+    Contract: 5000,
+    Hourly: 150,
+    Sqft: 15,
+    Cum: 20,
+    MT: 30
   },
   Dozer:{
-    Daily: 1,
-    Weekly: 10,
-    Monthly: 100,
-    Contract: 150,
-    Hourly: 0.25,
-    Sqft: 0.05,
-    Cum: 0.8,
-    MT: 1.2
+    Daily: 1000,
+    Weekly: 4000,
+    Monthly: 16000,
+    Contract: 8000,
+    Hourly: 150,
+    Sqft: 15,
+    Cum: 20,
+    MT: 30
+  },
+  Compaction:{
+    Daily: 1000,
+    Weekly: 4000,
+    Monthly: 16000,
+    Contract: 7000,
+    Hourly: 150,
+    Sqft: 15,
+    Cum: 20,
+    MT: 30
+  },
+  Mechanicalcompaction:{
+    Daily: 2500,
+    Weekly: 12500,
+    Monthly: 50000,
+    Contract: 15000,
+    Hourly: 900,
+    Sqft: 500,
+    Cum: 550,
+    MT: 1000
   },
 }
 
@@ -158,6 +178,12 @@ export const FormworkRates = {
     Sqm: 1500,
     Cum: 1500
   },
+  Plinth:{
+    Sqft: 200,
+    Cuft: 900,
+    Sqm: 1500,
+    Cum: 1500
+  },
   Column:{    
     Sqft: 250,
     Cuft: 950,
@@ -206,5 +232,33 @@ export const FormworkRates = {
     Sqm: 1000,
     Cum: 3000
   },
+
+}
+
+export const FillingRates = {
+  Sand:{
+    Sqft: 200,
+    Cuft: 450,
+    Sqm:  250,
+    Cum:  350
+  },
+  Soil:{    
+    Sqft: 250,
+    Cuft: 350,
+    Sqm: 200,
+    Cum: 300
+  },  
+  Aggregate:{    
+    Sqft: 1.5,
+    Cuft: 20,
+    Sqm: 15,
+    Cum: 400
+  },  
+  Stone:{    
+    Sqft: 3.5,
+    Cuft: 24,
+    Sqm: 25,
+    Cum: 820
+  }  
 
 }
