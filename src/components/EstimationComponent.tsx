@@ -68,9 +68,10 @@ const EstimationComponent: React.FC = () => {
   };
 
   const renderResources = (resources: Resource[], level: number, color: string) => {
-    const resourceColor = getShade(color, level + 1); // Slightly lighter shade for resources
+    // const resourceColor = getShade(color, level + 1); // Slightly lighter shade for resources
+
     return resources.map(resource => (
-      <tr key={resource.id} style={{ backgroundColor: resourceColor }}>
+      <tr key={resource.id} style={{backgroundColor:'#aaf'}}>
         <td>{resource.id}</td>
         <td></td> {/* Empty cell for alignment */}
         <td>{resource.resource}</td>
@@ -96,7 +97,7 @@ const EstimationComponent: React.FC = () => {
 
       return (
         <React.Fragment key={task.id}>
-          <tr style={{ backgroundColor: color }}>
+          <tr style={{ backgroundColor: task.type === 'project' ? 'lightgray' : color }}>
             <td>
               <span>{task.id}</span>
               {task.children.length > 0 && (
@@ -134,9 +135,9 @@ const EstimationComponent: React.FC = () => {
 
   return (
     <div className="table-container w-screen pb-24 relative" style={{ overflow: 'auto', maxHeight: '100vh' }}>
-      <table className="table table-lg w-full overflow-auto">
+      <table className="table table-lg w-full overflow-auto table-zebra">
         <thead>
-          <tr className="sticky-header">
+          <tr className="sticky-header" >
             <th>Resource ID</th>
             <th>Task Name</th>
             <th>Resource</th>
