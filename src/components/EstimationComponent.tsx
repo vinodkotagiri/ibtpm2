@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Task, Resource } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,10 +6,11 @@ import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-
 
 const EstimationComponent: React.FC = () => {
   const [collapsed, setCollapsed] = useState<{ [key: string]: boolean }>({});
-  const { tasks,currencyCode } = useAppSelector(state => state.schedule);
+  const { tasks, currencyCode } = useAppSelector(state => state.schedule);
   const dispatch = useAppDispatch();
   const colorPalette = ['#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7'];
 
+  // Build task tree function
   const buildTaskTree = (tasks: Task[]) => {
     const taskMap: { [id: string]: Task & { children: Task[] } } = {};
     const rootTasks: (Task & { children: Task[] })[] = [];
@@ -31,8 +32,31 @@ const EstimationComponent: React.FC = () => {
 
   const nestedTasks = buildTaskTree(tasks);
 
+  // Initialize collapsed state only once, when tasks data changes
+  useEffect(() => {
+    const initialCollapsedState: { [key: string]: boolean } = {};
+
+    // Set initial state to collapsed for tasks with children
+    nestedTasks.forEach(task => {
+      if (task.children.length > 0) {
+        initialCollapsedState[task.id] = true; // Collapsed by default if it has children
+      }
+    });
+
+    // Set collapsed state only if it's different from the previous state
+    setCollapsed(prev => {
+      if (JSON.stringify(prev) !== JSON.stringify(initialCollapsedState)) {
+        return { ...prev, ...initialCollapsedState };
+      }
+      return prev;
+    });
+  }, []); // Only runs once when nestedTasks changes
+
   const toggleCollapse = (taskId: string) => {
-    setCollapsed(prev => ({ ...prev, [taskId]: !prev[taskId] }));
+    setCollapsed(prev => ({
+      ...prev,
+      [taskId]: !prev[taskId], // Toggle collapse for the task
+    }));
   };
 
   const getShade = (baseColor: string, level: number) => {
@@ -54,15 +78,21 @@ const EstimationComponent: React.FC = () => {
         <td>{resource.rate}</td>
         <td>{resource.quantity}</td>
         <td>{resource.units}</td>
-        {resource.totalCost?<td>{currencyCode +' '+resource.totalCost}</td>:<td></td>}
+        {resource.totalCost ? (
+          <td>{currencyCode + ' ' + resource.totalCost}</td>
+        ) : (
+          <td></td>
+        )}
       </tr>
     ));
   };
 
+  // Recursive function to render tasks and their children
   const renderTasks = (tasks: (Task & { children: Task[] })[], level = 0, baseColorIndex = 0) => {
     return tasks.map(task => {
       const color = getShade(colorPalette[baseColorIndex], level);
-      const nextBaseColorIndex = task.children.length > 0 ? (baseColorIndex + 1) % colorPalette.length : baseColorIndex;
+      const nextBaseColorIndex =
+        task.children.length > 0 ? (baseColorIndex + 1) % colorPalette.length : baseColorIndex;
 
       return (
         <React.Fragment key={task.id}>
@@ -72,9 +102,9 @@ const EstimationComponent: React.FC = () => {
               {task.children.length > 0 && (
                 <FontAwesomeIcon
                   icon={collapsed[task.id] ? faChevronCircleDown : faChevronCircleUp}
-                  className='ml-2 cursor-pointer'
-                  size='lg'
-                  color='#00000095'
+                  className="ml-2 cursor-pointer"
+                  size="lg"
+                  color="#00000095"
                   onClick={() => toggleCollapse(task.id)}
                 />
               )}
@@ -85,11 +115,15 @@ const EstimationComponent: React.FC = () => {
             <td></td>
             <td></td>
             <td></td>
-            {task.cost?<td className='font-semibold'>{currencyCode+' '+task.cost}</td>:<td></td>}
+            {task.cost ? (
+              <td className="font-semibold">{currencyCode + ' ' + task.cost}</td>
+            ) : (
+              <td></td>
+            )}
           </tr>
-          {!collapsed[task.id] &&
-            task.resources &&
-            renderResources(task.resources, level, color)}
+          {/* Render resources for the task */}
+          {!collapsed[task.id] && task.resources && renderResources(task.resources, level, color)}
+          {/* Render children tasks recursively */}
           {!collapsed[task.id] &&
             task.children.length > 0 &&
             renderTasks(task.children, level + 1, nextBaseColorIndex)}
@@ -115,7 +149,6 @@ const EstimationComponent: React.FC = () => {
         </thead>
         <tbody>{renderTasks(nestedTasks)}</tbody>
       </table>
-    
     </div>
   );
 };

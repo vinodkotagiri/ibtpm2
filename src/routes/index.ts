@@ -1,3 +1,4 @@
+import UnitsConverter from "../components/UnitsConverter";
 import DashboardView from "../Views/DashboardView";
 import DetailedView from "../Views/DetailedView";
 import HomeView from "../Views/HomeView";
@@ -17,5 +18,6 @@ export const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+    // component:UnitsConverter
   }
 ]
