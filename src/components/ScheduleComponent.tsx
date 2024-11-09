@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Task } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { updateTaskStartDate } from '../app/features/scheduleSlice';
+import resources from '../constants/resources';
 
 const ScheduleComponent: React.FC = () => {
   const [ collapsed, setCollapsed ] = useState<{ [ key: string ]: boolean }>( {} );
@@ -43,6 +44,7 @@ const ScheduleComponent: React.FC = () => {
       16
     ) }, ${ parseInt( baseColor.slice( 5, 7 ), 16 ) }, ${ 1 - shadeFactor })`;
   };
+
 
   const renderTasks = ( tasks: ( Task & { children: Task[] } )[], level = 0, baseColorIndex = 0 ) => {
     return tasks.map( ( task ) => {

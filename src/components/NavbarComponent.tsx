@@ -1,12 +1,19 @@
 import React from 'react'
+import UnitsToggler from './UnitsToggler'
+import { useNavigate } from 'react-router-dom'
 
 const NavbarComponent = () => {
+  const navigate=useNavigate()
   return (
     <div className="navbar  bg-light-primary z-50">
     <div className="flex-1">
       <a className="btn btn-ghost text-xl">IBT</a>
     </div>
     <div className="flex-none gap-2">
+      <div className='mx-3 h-full flex items-center justify-center'>
+        <button className='btn btn-primary' onClick={()=>{navigate('/schedule')}}>Schedule</button>
+        <UnitsToggler/>
+      </div>
       <div className="form-control">
         <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
       </div>

@@ -3,11 +3,13 @@ import { Route, Routes } from 'react-router-dom'
 import { routes } from './routes'
 import { loadDrawingData } from './helpers/loadDrawingData'
 import { useEffect } from 'react'
+import { useAppSelector } from './app/hooks'
 
 const App = () => {
+  const {units}=useAppSelector(state=>state.schedule)
   useEffect(() => {
     loadDrawingData()
-  }, [])
+  }, [units])
   return (<div className='h-screen min-w-screen overflow-hidden'>
     <div className='sticky top-0 left-0 z-50 h-[64px]'>
       <NavbarComponent />

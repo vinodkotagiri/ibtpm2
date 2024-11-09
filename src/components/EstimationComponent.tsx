@@ -3,13 +3,17 @@ import { Task, Resource } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { updateAllResources } from '../app/features/scheduleSlice';
 
 const EstimationComponent: React.FC = () => {
   const [collapsed, setCollapsed] = useState<{ [key: string]: boolean }>({});
-  const { tasks, currencyCode } = useAppSelector(state => state.schedule);
+  const { tasks, currencyCode,units } = useAppSelector(state => state.schedule);
+  const [nestedTasks,setNestedTasks]=useState([])
   const dispatch = useAppDispatch();
   const colorPalette = ['#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7'];
-
+  useEffect(()=>{
+    dispatch(updateAllResources())
+  },[units])
   // Build task tree function
   const buildTaskTree = (tasks: Task[]) => {
     const taskMap: { [id: string]: Task & { children: Task[] } } = {};
@@ -30,7 +34,9 @@ const EstimationComponent: React.FC = () => {
     return rootTasks;
   };
 
-  const nestedTasks = buildTaskTree(tasks);
+  useEffect(()=>{
+    setNestedTasks(buildTaskTree(tasks))
+  },[tasks,units])
 
   // Initialize collapsed state only once, when tasks data changes
   useEffect(() => {
@@ -50,7 +56,7 @@ const EstimationComponent: React.FC = () => {
       }
       return prev;
     });
-  }, []); // Only runs once when nestedTasks changes
+  }, [tasks]); // Only runs once when nestedTasks changes
 
   const toggleCollapse = (taskId: string) => {
     setCollapsed(prev => ({
