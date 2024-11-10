@@ -3,13 +3,16 @@ import { Route, Routes } from 'react-router-dom'
 import { routes } from './routes'
 import { loadDrawingData } from './helpers/loadDrawingData'
 import { useEffect } from 'react'
-import { useAppSelector } from './app/hooks'
+import { useAppDispatch } from './app/hooks'
+import { updateAllResources } from './app/features/scheduleSlice'
 
 const App = () => {
-  const {units}=useAppSelector(state=>state.schedule)
+
+  const dispatch = useAppDispatch();
   useEffect(() => {
     loadDrawingData()
-  }, [units])
+    dispatch(updateAllResources())
+  }, [])
   return (<div className='h-screen min-w-screen overflow-hidden'>
     <div className='sticky top-0 left-0 z-50 h-[64px]'>
       <NavbarComponent />

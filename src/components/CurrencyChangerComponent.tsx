@@ -7,7 +7,6 @@ import { setCurrency } from '../app/features/scheduleSlice';
 const CurrencyChangerComponent = () => {
   const dispatch=useAppDispatch()
   function handleCurrencyChange(e){
-    console.log('e.',e.target.value)
     dispatch(setCurrency(e.target.value))
   }
   return (

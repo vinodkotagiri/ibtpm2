@@ -22,7 +22,7 @@ const GanttChartComponent = () => {
   };
 
   const ganttTasks = formatTasks();
-  console.log('ganttTasks',ganttTasks)
+
   return (
     <div className='h-full w-full'>
     {/* View mode selection buttons */}

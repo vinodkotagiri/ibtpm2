@@ -18,21 +18,22 @@ const initialState: ScheduleState = {
   currencyCode:getCurrencySymbol('INR'),
   drawingData: {
     currentUnits:'imperial',
-    plotLength: 0,
-    plotWidth: 0,
-    plotArea: 0,
-    plotPerimeter: 0,
-    builtLength: 0,
-    builtWidth: 0,
-    builtupArea: 0,
-    builtupPerimeter: 0,
-    excavationArea: 0,
-    excavationDepth:0,
-    groundFloorArea: 0,
-    firstFloorArea: 0,
-    secondFloorArea:0,
-    thirdFloorArea:0,
-    fourthFloorArea:0,
+    plotLength: 50,
+    plotWidth: 50,
+    plotArea: 50,
+    plotPerimeter: 50,
+    builtLength: 50,
+    builtWidth: 50,
+    builtupArea: 50,
+    slabThickness:0.15,
+    builtupPerimeter: 50,
+    excavationArea: 1000,
+    excavationDepth:30,
+    groundFloorArea: 30,
+    firstFloorArea: 30,
+    secondFloorArea:30,
+    thirdFloorArea:30,
+    fourthFloorArea:30,
     groundFloorWalls:[{length:0, thickness:0}],
     firstFloorWalls:[{length:0, thickness:0}],
     secondFloorWalls:[{length:0, thickness:0}],
@@ -67,68 +68,57 @@ const scheduleSlice = createSlice( {
     },
     updateAllResources(state){
       state.tasks=state.tasks.map(task=>{
-        task.resources=getResources(task.id,state.drawingData)
+        if(task.resources?.length){
+          task.resources=getResources(task.id,state.drawingData,task.resources)
+        }else{
+          task.resources=getResources(task.id,state.drawingData)
+        }
         return task
       })
       state.tasks=calculateTotalResourceCost(state.tasks)
     },
     updateDrawingData(state,action){ 
       let {drawingData}=action.payload
-      if(state.units==='imperial' && drawingData.currentUnits=="SI"){
-        drawingData.currentUnits="imperial"
-        drawingData.plotLength=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.plotLength})
-        drawingData.plotWidth=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.plotWidth})
-        drawingData.builtLength=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.builtLength})
-        drawingData.builtWidth=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.builtWidth})
-        drawingData.plotArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.plotArea})
-        drawingData.builtupArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.builtupArea})
-        drawingData.plotPerimeter=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.plotPerimeter})
-        drawingData.builtupPerimeter=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.builtupPerimeter})
-        drawingData.excavationArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.excavationArea})
-        drawingData.excavationDepth=convertUnits({fromUnit:"m",toUnit:"ft",value:drawingData.excavationDepth})
-        drawingData.groundFloorArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.groundFloorArea})
-        drawingData.firstFloorArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.firstFloorArea})
-        drawingData.secondFloorArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.secondFloorArea})
-        drawingData.thirdFloorArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.thirdFloorArea})
-        drawingData.fourthFloorArea=convertUnits({fromUnit:"m2",toUnit:"ft2",value:drawingData.fourthFloorArea})
-        drawingData.groundFloorWalls=drawingData.groundFloorWalls.map(wall=>convertUnits({fromUnit:"m",toUnit:"ft",value:wall.length}))
-        drawingData.firstFloorWalls=drawingData.firstFloorWalls.map(wall=>convertUnits({fromUnit:"m",toUnit:"ft",value:wall.length}))
-        drawingData.secondFloorWalls=drawingData.secondFloorWalls.map(wall=>convertUnits({fromUnit:"m",toUnit:"ft",value:wall.length}))
-        drawingData.thirdFloorWalls=drawingData.thirdFloorWalls.map(wall=>convertUnits({fromUnit:"m",toUnit:"ft",value:wall.length}))
-        drawingData.fourthFloorWalls=drawingData.fourthFloorWalls.map(wall=>convertUnits({fromUnit:"m",toUnit:"ft",value:wall.length}))
-      }
-      else if(state.units==='SI' && drawingData.currentUnits=="imperial"){
-        drawingData.currentUnits="SI"
-        drawingData.plotLength=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotLength})
-        drawingData.plotWidth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotWidth})
-        drawingData.builtLength=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtLength})
-        drawingData.builtWidth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtWidth})
-        drawingData.plotArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.plotArea})
-        drawingData.builtupArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.builtupArea})
-        drawingData.plotPerimeter=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotPerimeter})
-        drawingData.builtupPerimeter=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtupPerimeter})
-        drawingData.excavationArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.excavationArea})
-        drawingData.excavationDepth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.excavationDepth})
-        drawingData.groundFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.groundFloorArea})
-        drawingData.firstFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.firstFloorArea})
-        drawingData.secondFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.secondFloorArea})
-        drawingData.thirdFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.thirdFloorArea})
-        drawingData.fourthFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.fourthFloorArea})
-        drawingData.groundFloorWalls=drawingData.groundFloorWalls.map(wall=>convertUnits({fromUnit:"ft",toUnit:"m",value:wall.length}))
-        drawingData.firstFloorWalls=drawingData.firstFloorWalls.map(wall=>convertUnits({fromUnit:"ft",toUnit:"m",value:wall.length}))
-        drawingData.secondFloorWalls=drawingData.secondFloorWalls.map(wall=>convertUnits({fromUnit:"ft",toUnit:"m",value:wall.length}))
-        drawingData.thirdFloorWalls=drawingData.thirdFloorWalls.map(wall=>convertUnits({fromUnit:"ft",toUnit:"m",value:wall.length}))
-        drawingData.fourthFloorWalls=drawingData.fourthFloorWalls.map(wall=>convertUnits({fromUnit:"ft",toUnit:"m",value:wall.length}))
-      }
       state.drawingData=drawingData
-     updateAllResources()
+       state.tasks=state.tasks.map(task=>{
+        if(task.resources?.length){
+          task.resources=getResources(task.id,state.drawingData,task.resources)
+        }else{
+          task.resources=getResources(task.id,state.drawingData)
+        }
+        return task
+      })
+      state.tasks=calculateTotalResourceCost(state.tasks)
     },
     setUnits(state,action){
       state.units=action.payload
       updateDrawingData({drawingData:state.drawingData})
+    },
+    updateTaskField(state,action){
+      const {id,field,value}=action.payload
+      state.tasks=state.tasks.map(task=>{
+        if(task?.resources?.length){
+          task.resources=task.resources.map(resource=>{
+            if(resource.id===id){
+              resource[field]=value
+            }
+            return resource
+          })
+        }
+        return task
+      })
+      state.tasks=state.tasks.map(task=>{
+        if(task.resources?.length){
+          task.resources=getResources(task.id,state.drawingData,task.resources)
+        }else{
+          task.resources=getResources(task.id,state.drawingData)
+        }
+        return task
+      })
+      state.tasks=calculateTotalResourceCost(state.tasks)
     }
   }
 } )
 
-export const {updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits} = scheduleSlice.actions
+export const {updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
 export default scheduleSlice.reducer

@@ -1,17 +1,18 @@
 import { updateDrawingData } from "../app/features/scheduleSlice";
 import store from "../app/store";
 import { DrawingData } from "../constants/types";
+import convertUnits from "./converisons";
 
 export const loadDrawingData = () => {
     let data: string = localStorage.getItem( 'state' );
 
     if ( data ) {
         let parsedData: any = JSON.parse( data );
-        const drawingData: DrawingData = {
+        let drawingData: DrawingData = {
             currentUnits:"imperial",
             excavationArea: parsedData.drawing.PLOT.AREA as number,
             excavationDepth:3,
-
+            slabThickness:6,
             plotLength: parsedData.drawing.PLOT.LENGTH  as number,
             plotWidth: parsedData.drawing.PLOT.BREADTH  as number,
             plotArea: parsedData.drawing.PLOT.AREA  as number,
@@ -34,6 +35,27 @@ export const loadDrawingData = () => {
             thirdFloorWalls:[{length:0, thickness:0}],
             fourthFloorWalls:[{length:0, thickness:0}],
         }
+        drawingData=convertDataToSI(drawingData)
         store.dispatch(updateDrawingData({drawingData}));
     }
+}
+
+function convertDataToSI(drawingData:DrawingData){
+    drawingData.plotLength=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotLength})
+    drawingData.plotWidth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotWidth})
+    drawingData.builtLength=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtLength})
+    drawingData.builtWidth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtWidth})
+    drawingData.plotArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.plotArea})
+    drawingData.builtupArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.builtupArea})
+    drawingData.slabThickness=convertUnits({fromUnit:"in",toUnit:"m",value:drawingData.slabThickness})
+    drawingData.plotPerimeter=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotPerimeter})
+    drawingData.builtupPerimeter=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtupPerimeter})
+    drawingData.excavationArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.excavationArea})
+    drawingData.excavationDepth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.excavationDepth})
+    drawingData.groundFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.groundFloorArea})
+    drawingData.firstFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.firstFloorArea})
+    drawingData.secondFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.secondFloorArea})
+    drawingData.thirdFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.thirdFloorArea})
+    drawingData.fourthFloorArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.fourthFloorArea})
+    return drawingData
 }
