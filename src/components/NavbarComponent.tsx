@@ -12,7 +12,7 @@ const NavbarComponent = () => {
     <div className="flex-none gap-2">
       <div className='mx-3 h-full flex items-center justify-center'>
         <button className='btn btn-primary' onClick={()=>{navigate('/schedule')}}>Schedule</button>
-        <UnitsToggler/>
+        {/* <UnitsToggler/> */}
       </div>
       <div className="form-control">
         <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />

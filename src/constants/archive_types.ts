@@ -1,6 +1,6 @@
 type MasonType = 'DailyMason' | 'WeeklyMason' | 'MonthlyMason' | 'ContractMason' | 'PerSqftMason' | 'PerCumMason' | 'PerHourMason' | 'HourlyMason'
 type HelperType = 'DailyHelper' | 'WeeklyHelper' | 'MonthlyHelper' | 'ContractHelper' | 'PerSqftHelper' | 'PerCumHelper' | 'PerHourHelper' | 'PerMTHelper' | 'HourlyHelper'
-type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 'MonthlyMachinery' | 'ContractMachinery' | 'PerSqftMachinery' | 'PerCumMachinery' | "PerMT" | "PerHourMachinery"
+export type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 'MonthlyMachinery' | 'ContractMachinery' | 'PerSqftMachinery' | 'PerCumMachinery' | "PerMT" | "PerHourMachinery"
 type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' | 'ContractBarbender' | 'PerMTBarbender' | 'PerCumBarbender'
 type ConcreteType = 'sftConcrete' | 'CumConcrete' | 'cftConcrete'
 type SteelType = 'SqftSteel' | 'KgsSteel' | 'TonSteel' | 'MTSteel'
@@ -24,8 +24,7 @@ export type CurrencyUnits =
   | "JOD" | "ALL" | "RSD" | "ISK" | "BGN" | "HRK" | "GEL" | "TND" | "AZN"
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
 
-export type ResourceType = MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | redbrickType | flyashbrickType | ccbrickType
-  | FormworkType | FillingType
+ 
 
 export type Task = {
   id: string
@@ -48,11 +47,6 @@ export type Resource = {
   resource: ResourceType
   description: string
   rate: number
-  length?:number
-  breadth?:number
-  thickness?:number
-  diameter?:number
-  noOfBars?:number
   quantity: number
   units: ResourceUnits
   totalCost: number
@@ -70,7 +64,6 @@ export type DrawingData = {
   builtupPerimeter: number,
   excavationArea: number,
   excavationDepth: number,
-  slabThickness:number
   groundFloorArea: number,
   firstFloorArea: number,
   secondFloorArea: number,
@@ -82,3 +75,10 @@ export type DrawingData = {
   thirdFloorWalls: [ { length: number, thickness: number } ],
   fourthFloorWalls: [ { length: number, thickness: number } ],
 }
+
+export type MaterialType=ConcreteType | SteelType | redbrickType | flyashbrickType | ccbrickType
+| FormworkType | FillingType
+
+export type ManpowerType=MasonType | HelperType | BarBenderType
+
+export type ResourceType=MaterialType|ManpowerType|MachinaryType

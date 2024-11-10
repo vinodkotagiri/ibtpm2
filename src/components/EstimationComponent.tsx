@@ -3,17 +3,25 @@ import { Task, Resource } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { updateAllResources } from '../app/features/scheduleSlice';
+import { updateTaskField } from '../app/features/scheduleSlice';
 
 const EstimationComponent: React.FC = () => {
   const [collapsed, setCollapsed] = useState<{ [key: string]: boolean }>({});
-  const { tasks, currencyCode,units } = useAppSelector(state => state.schedule);
+  const { tasks, currencyCode } = useAppSelector(state => state.schedule);
+  const [currentTasks,setCurrentTasks]=useState([])
+
   const [nestedTasks,setNestedTasks]=useState([])
   const dispatch = useAppDispatch();
   const colorPalette = ['#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7'];
+  
   useEffect(()=>{
-    dispatch(updateAllResources())
-  },[units])
+    setCurrentTasks(tasks)
+  },[tasks])
+
+  function handleChange(e,id,field:string) {
+    dispatch(updateTaskField({ id: id, field: field, value: e.target.valueAsNumber }))
+  }
+
   // Build task tree function
   const buildTaskTree = (tasks: Task[]) => {
     const taskMap: { [id: string]: Task & { children: Task[] } } = {};
@@ -36,7 +44,7 @@ const EstimationComponent: React.FC = () => {
 
   useEffect(()=>{
     setNestedTasks(buildTaskTree(tasks))
-  },[tasks,units])
+  },[currentTasks,])
 
   // Initialize collapsed state only once, when tasks data changes
   useEffect(() => {
@@ -56,7 +64,7 @@ const EstimationComponent: React.FC = () => {
       }
       return prev;
     });
-  }, [tasks]); // Only runs once when nestedTasks changes
+  }, []); // Only runs once when nestedTasks changes
 
   const toggleCollapse = (taskId: string) => {
     setCollapsed(prev => ({
@@ -77,13 +85,18 @@ const EstimationComponent: React.FC = () => {
     // const resourceColor = getShade(color, level + 1); // Slightly lighter shade for resources
 
     return resources.map(resource => (
-      <tr key={resource.id} style={{backgroundColor:'#aaf'}}>
+      <tr key={resource.id} style={{backgroundColor:'#fff'}}>
         <td>{resource.id}</td>
         <td></td> {/* Empty cell for alignment */}
         <td>{resource.resource}</td>
         <td>{resource.description}</td>
-        <td>{resource.rate}</td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.length} disabled={!resource?.length} onChange={e => handleChange(e,resource.id,'length')}/></td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.breadth} disabled={!resource?.length} onChange={e => handleChange(e,resource.id,'breadth')}/></td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.thickness} disabled={!resource?.thickness} onChange={e => handleChange(e,resource.id,'thickness')}/></td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.diameter} disabled={!resource?.diameter} onChange={e => handleChange(e,resource.id,'diameter')}/></td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.noOfBars} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'noOfBars')}/></td>
         <td>{resource.quantity}</td>
+        <td>{resource.rate}</td>
         <td>{resource.units}</td>
         {resource.totalCost ? (
           <td>{currencyCode + ' ' + resource.totalCost}</td>
@@ -103,7 +116,7 @@ const EstimationComponent: React.FC = () => {
 
       return (
         <React.Fragment key={task.id}>
-          <tr style={{ backgroundColor: task.type === 'project' ? 'lightgray' : color }}>
+          <tr style={{ backgroundColor: task.type === 'project' ? '#bff' : '#fff' }}>
             <td>
               <span>{task.id}</span>
               {task.children.length > 0 && (
@@ -118,6 +131,11 @@ const EstimationComponent: React.FC = () => {
             </td>
             <td>{task.name}</td>
             <td></td> {/* Empty cell for alignment */}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -148,10 +166,15 @@ const EstimationComponent: React.FC = () => {
             <th>Task Name</th>
             <th>Resource</th>
             <th>Description</th>
-            <th>Rate</th>
+            <th>Length</th>
+            <th>Breadth</th>  
+            <th>Thickness</th>
+            <th>Diameter</th>
+            <th>NoOfBars</th>
             <th>Quantity</th>
+            <th>Rate</th>
             <th>Units</th>
-            <th>Total Cost</th>
+            <th>Cost</th>
           </tr>
         </thead>
         <tbody>{renderTasks(nestedTasks)}</tbody>
