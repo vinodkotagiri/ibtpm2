@@ -1,10 +1,10 @@
-type MasonType = 'DailyMason' | 'WeeklyMason' | 'MonthlyMason' | 'ContractMason' | 'PerSqftMason' | 'PerCumMason' | 'PerHourMason' | 'HourlyMason'
-type HelperType = 'DailyHelper' | 'WeeklyHelper' | 'MonthlyHelper' | 'ContractHelper' | 'PerSqftHelper' | 'PerCumHelper' | 'PerHourHelper' | 'PerMTHelper' | 'HourlyHelper'
-type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 'MonthlyMachinery' | 'ContractMachinery' | 'PerSqftMachinery' | 'PerCumMachinery' | "PerMT" | "PerHourMachinery"
+type MasonType = 'DailyMason' | 'WeeklyMason' | 'MonthlyMason' | 'ContractMason' | 'PerSftMason' | 'PerCumMason' | 'PerHourMason' | 'HourlyMason'
+type HelperType = 'DailyHelper' | 'WeeklyHelper' | 'MonthlyHelper' | 'ContractHelper' | 'PerSftHelper' | 'PerCumHelper' | 'PerHourHelper' | 'PerMTHelper' | 'HourlyHelper'
+type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 'MonthlyMachinery' | 'ContractMachinery' | 'PerSftMachinery' | 'PerCumMachinery' | "PerMT" | "PerHourMachinery"
 type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' | 'ContractBarbender' | 'PerMTBarbender' | 'PerCumBarbender'
-type ConcreteType = 'sftConcrete' | 'CumConcrete' | 'cftConcrete'
-type SteelType = 'SqftSteel' | 'KgsSteel' | 'TonSteel' | 'MTSteel'
-type FormworkType = 'SqftFormwork' | 'CuftFormwork' | 'SqmFormwork' | 'CumFormwork'
+type ConcreteType = 'sftConcrete' | 'CumConcrete' | 'CftConcrete'
+type SteelType = 'SftSteel' | 'KgsSteel' | 'TonSteel' | 'MTSteel'
+type FormworkType = 'SftFormwork' | 'CftFormwork' | 'SqmFormwork' | 'CumFormwork'
 type redbrickType = 'redbricknos'
 type flyashbrickType = 'flyashbricknos'
 type ccbrickType = 'ccbricknos'
@@ -13,7 +13,7 @@ type FillingType = 'CumSoil' | 'CumSand' | 'CumAggregate' | 'CumStone'
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'
-export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sqft' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cuft' | 'Sqmt'
+export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
 export type CurrencyUnits =
   | "USD" | "EUR" | "GBP" | "INR" | "JPY" | "CNY" | "AUD" | "CAD" | "CHF"
   | "SEK" | "NZD" | "ZAR" | "MXN" | "SGD" | "HKD" | "NOK" | "KRW" | "TRY"

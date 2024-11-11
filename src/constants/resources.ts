@@ -28,8 +28,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       {
         "id": "C3",
         "resource": "DailyMachinery",
-        "description": "Cft",
-        "rate": MachinaryRates.Excavator.Sqft,
+        "description": "Cum",
+        "rate": MachinaryRates.Excavator.Sft,
         "units": "Day",
         "quantity": excavationArea / 3,
         "totalCost": 0
@@ -37,7 +37,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       {
         "id": "C4",
         "resource": "MonthlyMachinery",
-        "description": "Cft",
+        "description": "Cum",
         "rate": MachinaryRates.Dozer.Daily,
         "units": "Month",
         "quantity": 1,
