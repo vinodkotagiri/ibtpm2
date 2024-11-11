@@ -4,10 +4,10 @@ import { DrawingData } from "../constants/types";
 import convertUnits from "./converisons";
 
 export const loadDrawingData = () => {
-    let data: string = localStorage.getItem( 'state' );
+    const data: string = localStorage.getItem( 'state' );
 
     if ( data ) {
-        let parsedData: any = JSON.parse( data );
+        const parsedData: any = JSON.parse( data );
         let drawingData: DrawingData = {
             currentUnits:"imperial",
             excavationArea: parsedData.drawing.PLOT.AREA as number,
@@ -47,7 +47,7 @@ function convertDataToSI(drawingData:DrawingData){
     drawingData.builtWidth=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtWidth})
     drawingData.plotArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.plotArea})
     drawingData.builtupArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.builtupArea})
-    drawingData.slabThickness=convertUnits({fromUnit:"in",toUnit:"m",value:drawingData.slabThickness})
+    drawingData.slabThickness=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.slabThickness})
     drawingData.plotPerimeter=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.plotPerimeter})
     drawingData.builtupPerimeter=convertUnits({fromUnit:"ft",toUnit:"m",value:drawingData.builtupPerimeter})
     drawingData.excavationArea=convertUnits({fromUnit:"ft2",toUnit:"m2",value:drawingData.excavationArea})

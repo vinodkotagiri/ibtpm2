@@ -3,7 +3,7 @@ import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
   const { excavationArea, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness } = drawingData
-  let resources: Record<string, Array<Resource>> = {
+  const resources: Record<string, Array<Resource>> = {
     "C03": [
       {
         "id": "C1",
@@ -69,7 +69,12 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Fencing",
         "rate": MasonRates.Mason.Daily,
         "units": "Day",
-        "quantity": 2,
+        length: 10,
+        breadth:20,
+        area:0,
+        perimeter:0,
+        thickness:3, // height of fencing
+        "quantity": 0,
         "totalCost": 0
       },
       {
@@ -573,11 +578,21 @@ function updateQuantities ( resources ) {
     if ( resource?.length && resource?.breadth && resource.thickness ) {
       resource.quantity = resource.length * resource.breadth * resource.thickness
       resource.quantity = resource.quantity.toFixed( 2 )
+      resource.area=(resource.length*resource.breadth).toFixed(2)
     }
     if ( resource?.diameter && resource?.noOfBars && resource.length ) {
       const { diameter, noOfBars, length } = resource
       resource.quantity = ( Math.pow( diameter, 2 ) * length * noOfBars ) / 162;
       resource.quantity = resource.quantity.toFixed( 2 )
+      // resource.area=(resource.length*resource.breadth).toFixed(2)
+    }
+
+    if(resource?.perimeter!=undefined && resource?.length && resource.breadth ){
+      resource.perimeter=(resource.length+resource.breadth)*2
+      resource.area=resource.length*resource.breadth
+      if(resource?.thickness){
+        resource.quantity=resource.perimeter*resource.thickness
+      }
     }
   }
   return resources

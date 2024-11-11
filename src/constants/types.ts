@@ -52,6 +52,8 @@ export type Resource = {
   breadth?:number
   thickness?:number
   diameter?:number
+  area?:number
+  perimeter?:number
   noOfBars?:number
   quantity: number
   units: ResourceUnits

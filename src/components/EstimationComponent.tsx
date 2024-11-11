@@ -95,11 +95,13 @@ const EstimationComponent: React.FC = () => {
         <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.thickness} disabled={!resource?.thickness} onChange={e => handleChange(e,resource.id,'thickness')}/></td>
         <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.diameter} disabled={!resource?.diameter} onChange={e => handleChange(e,resource.id,'diameter')}/></td>
         <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.noOfBars} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'noOfBars')}/></td>
+        <td>{resource.area}</td>
+        <td>{resource.perimeter}</td>
         <td>{resource.quantity}</td>
         <td>{resource.rate}</td>
         <td>{resource.units}</td>
         {resource.totalCost ? (
-          <td>{currencyCode + ' ' + resource.totalCost}</td>
+          <td>{currencyCode + ' ' + resource.totalCost.toFixed(2)}</td>
         ) : (
           <td></td>
         )}
@@ -140,8 +142,10 @@ const EstimationComponent: React.FC = () => {
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             {task.cost ? (
-              <td className="font-semibold">{currencyCode + ' ' + task.cost}</td>
+              <td className="font-semibold">{currencyCode + ' ' + task.cost.toFixed(2)}</td>
             ) : (
               <td></td>
             )}
@@ -158,7 +162,7 @@ const EstimationComponent: React.FC = () => {
   };
 
   return (
-    <div className="table-container w-screen pb-24 relative" style={{ overflow: 'auto', maxHeight: '100vh' }}>
+    <div className="overflow-auto table-container w-screen min-h-screen pb-24 relative" style={{ overflow: 'auto', maxHeight: '100vh' }}>
       <table className="table table-lg w-full overflow-auto table-zebra">
         <thead>
           <tr className="sticky-header" >
@@ -171,6 +175,8 @@ const EstimationComponent: React.FC = () => {
             <th>Thickness</th>
             <th>Diameter</th>
             <th>NoOfBars</th>
+            <th>Area</th>
+            <th>Perimeter</th>
             <th>Quantity</th>
             <th>Rate</th>
             <th>Units</th>
