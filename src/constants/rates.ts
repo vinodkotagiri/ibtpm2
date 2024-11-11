@@ -1,3 +1,37 @@
+export const FencingRates = {
+  Fencing:{
+  Daily: 1400,
+  Weekly: 1400*6,
+  Monthly: 1400*24,
+  Contract: 100,
+  Hourly: 180,
+  Sft: 15,
+  Sqm: 45
+}
+}
+export const ShoringRates = {
+  Shoring:{
+  Daily: 1400,
+  Weekly: 1400*6,
+  Monthly: 1400*24,
+  Contract: 100,
+  Hourly: 180,
+  Sft: 12,
+  Sqm: 35
+}
+}
+export const TermiteRates = {
+  Termite:{
+  Daily: 1400,
+  Weekly: 1400*6,
+  Monthly: 1400*24,
+  Contract: 100,
+  Hourly: 180,
+  Sft: 16,
+  Sqm: 185
+}
+}
+
 export const MasonRates = {
   Mason:{
   Daily: 1400,
