@@ -1438,7 +1438,7 @@ const tasks:Task[]=[
   },
   {
     id:'C12',
-    name:'Plinth & Ground',
+    name:'Plinth Beam Length',
     start:'',
     end:'',
     duration:0,
@@ -1751,7 +1751,20 @@ const tasks:Task[]=[
   },
 
   //Breadth// Plinth Beam Breadth wise  between columns
-
+  {
+    id:'C13',
+    name:'Plinth Beam Breadth',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'C08'
+  },
   {
     id:'PT1B0',
     name:'Plinth Beam Type-1 : B/2 x 0.23 x 0.23',
@@ -1764,7 +1777,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C12'
+    parent:'C13'
   },
   {
     id:'PT1B1',
@@ -1839,7 +1852,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C12'
+    parent:'C13'
   },
   {
     id:'PT2B1',
@@ -1914,7 +1927,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C12'
+    parent:'C13'
   },
   {
     id:'PT3B1',
@@ -1989,7 +2002,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C12'
+    parent:'C13'
   },
   {
     id:'PT4B1',
