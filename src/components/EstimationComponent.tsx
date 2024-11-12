@@ -145,6 +145,7 @@ const EstimationComponent: React.FC = () => {
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
             {task.cost ? (
               <td className="font-semibold">{currencyCode + ' ' + task.cost.toFixed(2)}</td>
             ) : (
@@ -178,6 +179,7 @@ const EstimationComponent: React.FC = () => {
             <th>NoOfBars</th>
             <th>Area</th>
             <th>Perimeter</th>
+            <th>Numbers Required</th>
             <th>Quantity</th>
             <th>Rate</th>
             <th>Units</th>
