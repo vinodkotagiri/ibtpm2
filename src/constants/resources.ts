@@ -860,6 +860,10 @@ function updateQuantities ( resources ) {
         resource.quantity=resource.perimeter*resource.thickness
       }
     }
+
+    if(resource?.numbersRequired!=undefined && resource?.numbersRequired>0){
+      resource.quantity=resource.numbersRequired*resource.quantity
+    }
   }
   return resources
 }

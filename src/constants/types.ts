@@ -58,6 +58,7 @@ export type Resource = {
   area?:number
   perimeter?:number
   noOfBars?:number
+  numbersRequired?:number
   quantity: number
   units: ResourceUnits
   totalCost: number

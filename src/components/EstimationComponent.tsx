@@ -97,6 +97,7 @@ const EstimationComponent: React.FC = () => {
         <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.noOfBars} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'noOfBars')}/></td>
         <td>{resource.area}</td>
         <td>{resource.perimeter}</td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.numbersRequired} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'numbersRequired')}/></td>
         <td>{resource.quantity}</td>
         <td>{resource.rate}</td>
         <td>{resource.units}</td>
