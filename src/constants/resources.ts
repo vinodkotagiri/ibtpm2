@@ -1,4 +1,4 @@
-import { MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, WoodFormworkRates,MetalFormworkRates,FillingRates, BarBenderRates,FencingRates,ShoringRates,TermiteRates } from './rates'
+import { MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, WoodFormworkRates,MetalFormworkRates,FillingRates, BarBenderRates,FencingRates,ShoringRates,TermiteRates,WaterRates } from './rates'
 import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
@@ -13,10 +13,10 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Survery",
         "rate": FencingRates.Fencing.Sft,
         "units": "Sft",
-        length: 10,
-        breadth:20,
-        area:0,        
+        length:0,
+        breadth:0,        
         thickness:3, // height of fencing
+        area:0,        
         "quantity": 0,
         "totalCost": 0
       }
@@ -29,8 +29,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Fencing",
         "rate": FencingRates.Fencing.Sqm,
         "units": "Sqm",
-        length: 10,
-        breadth:20,
+        length:0,
+        breadth:0,
         area:0,
         perimeter:0,
         thickness:3, // height of fencing
@@ -53,7 +53,10 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "resource": "DailyMachinery",
         "description": "Cum",
         "rate": MachinaryRates.Excavator.Sft,
-        "units": "Day",
+        "units": "Day",         
+        length: 0,
+        breadth:0,               
+        thickness:3, // height of excavation
         "quantity": excavationArea,
         "totalCost": 0
       },
@@ -92,8 +95,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Shoring",
         "rate": ShoringRates.Shoring.Sft,
         "units": "Day",
-        length: 10,
-        breadth:20,
+        length: 0,
+        breadth:0,
         area:0,        
         thickness:3, // height of fencing
         "quantity": 0,
@@ -116,8 +119,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Termite",
         "rate": TermiteRates.Termite.Sft,
         "units": "Day",
-        length: 10,
-        breadth:20,
+        length: 0,
+        breadth:0,
         thickness:1, // height of fencing
         area:0, 
         "quantity": 1,
@@ -136,15 +139,15 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     "C07": [
       {
         "id": "C11",
-        "resource": "CumConcrete",
-        "description": "M15",
-        length: builtLength,
-        breadth: builtWidth,
-        thickness: 0.1,
-        area:0,        
+        "resource": "SftWater",
+        "description":"Curing Water",        
+        "rate": WaterRates.Water.Sft,
+        "units": "Sft",
+        length: 10,
+        breadth: 20,
+        thickness: 0.3,
+        area:0,                       
         "quantity": 0, // Will be calculated automatically
-        "rate": ConcreteRates.M15pcc.Cum,
-        "units": "Cum",
         "totalCost": 0
       },
       {
@@ -170,7 +173,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       {
         "id": "F1",
         "resource": "CumConcrete",
-        "description": "PccbaseM15",
+        "description": "Concrete Screed",
         "rate": ConcreteRates.M15pcc.Cum,
         "units": "Cum",
         length: 1.2,
@@ -202,7 +205,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     "FT02": [
       { id: 'F4', resource: 'KgsSteel', description: 'Stirrups&Hooks', length: 0.5, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 1.2, diameter: 10, noOfBars: 6, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 1.2, diameter: 10, noOfBars: 6, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 1.2, diameter: 12, noOfBars: 6, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -227,7 +230,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
     "FT202": [
       { id: 'F4', resource: 'KgsSteel', description: 'Stirrups&Hooks', length: 0.6, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 1.5, diameter: 12, noOfBars: 8, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 1.5, diameter: 10, noOfBars: 8, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 1.5, diameter: 12, noOfBars: 8, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
@@ -279,7 +282,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     "FT402": [
       { id: 'F4', resource: 'KgsSteel', description: 'Stirrups&Hooks', length: 0.7, diameter: 8, noOfBars:6, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 2.0, diameter: 10, noOfBars: 10, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 2.0, diameter: 10, noOfBars: 10, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 2.0, diameter: 12, noOfBars: 10, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -305,7 +308,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
     "FT502": [
       { id: 'F4', resource: 'KgsSteel', description: 'Stirrups&Hooks', length: 0.8, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 2.5, diameter: 12, noOfBars: 12, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 2.5, diameter: 12, noOfBars: 10, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 2.5, diameter: 12, noOfBars: 12, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
@@ -333,8 +336,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     "FT602": [
       { id: 'F4', resource: 'KgsSteel', description: 'Stirrups&Hooks', length: 1.0, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 3.0, diameter: 16, noOfBars: 12, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 3.0, diameter: 16, noOfBars: 12, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 3.0, diameter: 10, noOfBars: 12, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 3.0, diameter: 12, noOfBars: 12, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -394,7 +397,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT1L4": [
-      { id: 'F12', resource: 'CumConcrete', description: 'M25Concrete', length: 0, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumConcrete', description: 'M25Concrete', length: 0, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -422,7 +425,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT2L4": [
-      { id: 'F12', resource: 'CumConcrete', description: 'M25Concrete', length: 0, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumConcrete', description: 'M25Concrete', length: 0, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -509,7 +512,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT1B4": [
-      { id: 'F12', resource: 'CumConcrete', description: 'M25Concrete', length: 0, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumConcrete', description: 'M20Concrete', length: 0, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -537,7 +540,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT2B4": [
-      { id: 'F12', resource: 'CumConcrete', description: 'M25Concrete', length: 0, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumConcrete', description: 'M20Concrete', length: 0, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],

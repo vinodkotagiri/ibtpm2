@@ -13,6 +13,7 @@ type FillingType = 'CumSoil' | 'CumSand' | 'CumAggregate' | 'CumStone'
 type FencingType = 'SqmFencing' | 'SftFencing'
 type ShoringType = 'SqmShoring' | 'SftShoring'
 type TermiteType = 'SqmTermite' | 'SftTermite'
+type WaterType = 'SqmWater' | 'SftWater'| 'LtrWater'| 'CumWater'| 'ContractWater'| 'HourlyWater'| 'DailyWater'| 'WeeklyWater'
 
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
@@ -29,7 +30,7 @@ export type CurrencyUnits =
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
 
 export type ResourceType = MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | redbrickType | flyashbrickType | ccbrickType
-  | WoodFormworkType |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType
+  | WoodFormworkType |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType
 
 export type Task = {
   id: string

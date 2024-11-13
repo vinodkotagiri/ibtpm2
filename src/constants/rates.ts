@@ -109,6 +109,19 @@ export const BarBenderRates = {
   MT: 1.2
 }
 
+export const WaterRates = {
+  Water:{
+  Daily: 1200,
+  Weekly: 10,
+  Monthly: 100,
+  Contract: 150,
+  Hourly: 0.25,
+  Sft: 5,
+  Sqm: 45,
+  Cum: 350,
+  Ltr: 0.35
+}
+}
 export const ConcreteRates = {
   M10pcc:{
     Sft: 0.05,
