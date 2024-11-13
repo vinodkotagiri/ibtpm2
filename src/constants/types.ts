@@ -4,7 +4,8 @@ type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 
 type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' | 'ContractBarbender' | 'PerMTBarbender' | 'PerCumBarbender'
 type ConcreteType = 'sftConcrete' | 'CumConcrete' | 'CftConcrete'
 type SteelType = 'SftSteel' | 'KgsSteel' | 'TonSteel' | 'MTSteel'
-type FormworkType = 'SftFormwork' | 'CftFormwork' | 'SqmFormwork' | 'CumFormwork'
+type WoodFormworkType = 'SftFormwork' | 'CftFormwork' | 'SqmFormwork' | 'CumFormwork'
+type MetalFormworkType = 'SftFormwork' | 'CftFormwork' | 'SqmFormwork' | 'CumFormwork'
 type redbrickType = 'redbricknos'
 type flyashbrickType = 'flyashbricknos'
 type ccbrickType = 'ccbricknos'
@@ -28,7 +29,7 @@ export type CurrencyUnits =
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
 
 export type ResourceType = MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | redbrickType | flyashbrickType | ccbrickType
-  | FormworkType | FillingType |FencingType |ShoringType |TermiteType
+  | WoodFormworkType |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType
 
 export type Task = {
   id: string

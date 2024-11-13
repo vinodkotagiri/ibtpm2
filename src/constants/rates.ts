@@ -205,66 +205,117 @@ export const SteelRates = {
 
 }
 
-export const FormworkRates = {
+export const WoodFormworkRates = {
   Footing:{
-    Sft: 200,
-    Cft: 900,
-    Sqm: 1500,
-    Cum: 1500
+    Sft: 50,
+    Cft: 1200,
+    Sqm: 540,
+    Cum: 40000
   },
   Plinth:{
-    Sft: 200,
-    Cft: 900,
-    Sqm: 1500,
-    Cum: 1500
+    Sft: 60,
+    Cft: 1600,
+    Sqm: 650,
+    Cum: 50000
   },
   Column:{    
-    Sft: 250,
-    Cft: 950,
-    Sqm: 1800,
-    Cum: 1800
+    Sft: 70,
+    Cft: 1400,
+    Sqm: 750,
+    Cum: 50000
   },
   Beam:{    
-    Sft: 300,
-    Cft: 1000,
-    Sqm: 2000,
-    Cum: 2000
+    Sft: 60,
+    Cft: 1600,
+    Sqm: 650,
+    Cum: 50000
   },
   Slab:{    
-    Sft: 400,
-    Cft: 1200,
-    Sqm: 2200,
-    Cum: 2200
+    Sft: 70,
+    Cft: 1400,
+    Sqm: 750,
+    Cum: 50000
   },
   Staircase:{    
-    Sft: 300,
-    Cft: 1000,
-    Sqm: 1800,
-    Cum: 1800
+    Sft: 60,
+    Cft: 1600,
+    Sqm: 650,
+    Cum: 50000
   },
-  Wall:{    
-    Sft: 400,
-    Cft: 1200,
-    Sqm: 2900,
-    Cum: 2900
+  Shearwall:{    
+    Sft: 80,
+    Cft: 1600,
+    Sqm: 860,
+    Cum: 55000
   },
   FootingColumn:{    
-    Sft: 250,
-    Cft: 1100,
-    Sqm: 3000,
-    Cum: 3000
+    Sft: 65,
+    Cft: 1300,
+    Sqm: 650,
+    Cum: 45000
   },
   Lintel:{    
-    Sft: 200,
-    Cft:1100,
-    Sqm: 1000,
-    Cum: 3000
+    Sft: 50,
+    Cft: 1200,
+    Sqm: 540,
+    Cum: 40000
+  },  
+}
+
+export const MetalFormworkRates = {
+  Footing:{
+    Sft: 80,
+    Cft: 2300,
+    Sqm: 860,
+    Cum: 70000
   },
-  Overhang:{    
-    Sft: 300,
-    Cft: 500,
-    Sqm: 1000,
-    Cum: 3000
+  Plinth:{
+    Sft: 90,
+    Cft: 2800,
+    Sqm: 970,
+    Cum: 85000
+  },
+  Column:{    
+    Sft: 100,
+    Cft: 3000,
+    Sqm: 1080,
+    Cum: 90000
+  },
+  Beam:{    
+    Sft: 100,
+    Cft: 2800,
+    Sqm: 1080,
+    Cum: 80000
+  },
+  Slab:{    
+    Sft: 110,
+    Cft: 3000,
+    Sqm: 1200,
+    Cum: 90000
+  },
+  Staircase:{    
+    Sft: 100,
+    Cft: 3000,
+    Sqm: 1080,
+    Cum: 90000
+  },
+  Shearwall:{    
+    Sft: 130,
+    Cft: 3200,
+    Sqm: 1400,
+    Cum: 100000
+  },
+  FootingColumn:{    
+    Sft: 90,
+    Cft: 2600,
+    Sqm: 950,
+    Cum: 80000
+  },
+  Lintel:{    
+    Sft: 80,
+    Cft: 2300,
+    Sqm: 860,
+    Cum: 70000
   },
 
 }
