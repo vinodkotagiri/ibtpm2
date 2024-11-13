@@ -9,6 +9,55 @@ export const FencingRates = {
   Sqm: 45
 }
 }
+export const ExcavationMachineRates = {
+  Backhoe:{    
+    Hourly: 1500,
+    Cft: 0,
+    Cum: 0,  
+  },
+  Excavator:{    
+    Hourly: 2250,
+    Cft: 0,
+    Cum: 0,  
+  },
+  Soft:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 170,  
+},
+  Medium:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 270,  
+},
+  Hard:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 440,  
+},
+  Foundation:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 225,  
+},
+  Utilities:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 125,  
+},
+}
+export const ExcavationManualRates = {
+  ToolsExcavation:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 425,  
+},
+  LaborTrench:{    
+  Hourly: 0,
+  Cft: 0,
+  Cum: 325,  
+},  
+}
 export const ShoringRates = {
   Shoring:{
   Daily: 1400,
@@ -358,5 +407,183 @@ export const FillingRates = {
     Sqm: 25,
     Cum: 820
   }  
-
 }
+
+export const RedclayBrickRates = {
+  inch6:{
+    Sft: 70,    
+    Cum: 5600
+  },
+  inch9:{    
+    Sft: 100,    
+    Cum: 6250
+  },  
+  inch12:{    
+    Sft: 129,    
+    Cum: 6600  
+  }  
+}
+export const FlyAshBrickRates = {
+  inch6:{
+    Sft: 60,    
+    Cum: 4500
+  },
+  inch9:{    
+    Sft: 80,    
+    Cum: 4800
+  },  
+  inch12:{    
+    Sft: 100,    
+    Cum: 5500  
+  }  
+}
+export const CCBlockRates = {
+  inch6:{
+    Sft: 45,    
+    Cum: 4100
+  },
+  inch9:{    
+    Sft: 70,    
+    Cum: 4500
+  },  
+  inch12:{    
+    Sft: 90,    
+    Cum: 5000  
+  }  
+}
+
+export const PlasterFCManualRates = {
+  mm6:{
+    Sft: 10,    
+    Sqm: 125,    
+    Cum: 7500
+  },
+  mm8:{
+    Sft: 15,    
+    Sqm: 150,    
+    Cum: 7800
+  },
+  
+  mm10:{    
+    Sft: 15,    
+    Sqm: 150,    
+    Cum: 8000
+  },  
+  mm12:{    
+    Sft: 20,    
+    Sqm: 200,    
+    Cum: 9500
+  },  
+  mm15:{    
+    Sft: 20,    
+    Sqm: 200,    
+    Cum: 1000  
+  },
+  mm20:{    
+    Sft: 25,    
+    Sqm: 250,    
+    Cum: 11500  
+  }  
+}
+
+export const PlasterFCMachineRates = {
+  mm6:{
+    Sft: 9,    
+    Sqm: 100,    
+    Cum: 5500
+  },
+  mm8:{
+    Sft: 12,    
+    Sqm: 120,    
+    Cum: 7000
+  },
+  
+  mm10:{    
+    Sft: 13,    
+    Sqm: 130,    
+    Cum: 7500
+  },  
+  mm12:{    
+    Sft: 18,    
+    Sqm: 180,    
+    Cum: 8500
+  },  
+  mm15:{    
+    Sft: 18,    
+    Sqm: 180,    
+    Cum: 9000  
+  },
+  mm20:{    
+    Sft: 22,    
+    Sqm: 220,    
+    Cum: 10000  
+  }  
+}
+
+export const PlasterSCManualRates = {
+  mm6:{
+    Sft: 8,    
+    Sqm: 80,    
+    Cum: 5500
+  },
+  mm8:{
+    Sft: 12,    
+    Sqm: 120,    
+    Cum: 7000
+  },
+  
+  mm10:{    
+    Sft: 12,    
+    Sqm: 120,    
+    Cum: 7000
+  },  
+  mm12:{    
+    Sft: 15,    
+    Sqm: 150,    
+    Cum: 8500
+  },  
+  mm15:{    
+    Sft: 15,    
+    Sqm: 150,    
+    Cum: 8500  
+  },
+  mm20:{    
+    Sft: 20,    
+    Sqm: 180,    
+    Cum: 9500  
+  }  
+}
+export const PlasterSCMachineRates = {
+  mm6:{
+    Sft: 6,    
+    Sqm: 60,    
+    Cum: 5000
+  },
+  mm8:{
+    Sft: 10,    
+    Sqm: 100,    
+    Cum: 6500
+  },
+  
+  mm10:{    
+    Sft: 10,    
+    Sqm: 100,    
+    Cum: 6500
+  },  
+  mm12:{    
+    Sft: 14,    
+    Sqm: 140,    
+    Cum: 7500
+  },  
+  mm15:{    
+    Sft: 14,    
+    Sqm: 140,    
+    Cum: 8000  
+  },
+  mm20:{    
+    Sft: 16,    
+    Sqm: 160,    
+    Cum: 9000  
+  }  
+}
+
