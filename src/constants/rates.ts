@@ -642,3 +642,49 @@ export const SewerS80PVCRates = {
   }  
 }
 
+export const CPVCRates = {
+  mm15:{
+    ft: 22,    
+    m: 70,        
+  },
+  mm20:{
+    ft: 26,    
+    m: 85,        
+  },
+  
+  mm32:{    
+    ft: 55,    
+    m: 175,        
+  },    
+}
+export const PPRRates = {
+  mm20:{
+    ft: 15,    
+    m: 50,        
+  },
+  mm25:{
+    ft: 25,    
+    m: 80,        
+  },
+  
+  mm40:{    
+    ft: 50,    
+    m: 160,        
+  },    
+}
+export const GIRates = {
+  mm15:{
+    ft: 40,    
+    m: 125,        
+  },
+  mm20:{
+    ft: 60,    
+    m: 200,        
+  },
+  
+  mm40:{    
+    ft: 110,    
+    m: 350,        
+  },    
+}
+

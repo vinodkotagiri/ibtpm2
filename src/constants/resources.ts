@@ -1,4 +1,4 @@
-import { MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, WoodFormworkRates,MetalFormworkRates,FillingRates, 
+import { MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, WoodFormworkRates,MetalFormworkRates,FillingRates, CPVCRates,PPRRates,GIRates,
   SewerS40PVCRates,SewerS80PVCRates, PlasterFCManualRates,PlasterFCMachineRates,PlasterSCManualRates,PlasterSCMachineRates,BarBenderRates,FencingRates,ShoringRates,
   TermiteRates,WaterRates,ExcavationMachineRates,ExcavationManualRates,RedclayBrickRates,FlyAshBrickRates,CCBlockRates } from './rates'
 import { DrawingData, Resource } from './types'
@@ -723,9 +723,20 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'ST79', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'ST710', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
-
-
   //underground Water tank //
+
+  //Water tank plumbing pipes//    
+    "WTPL2": [
+      { id: 'WTP11', resource: 'ftmm20CPVC', description: 'Plumbing', length: 5, breadth:5, thickness: 3, area:0,  rate:  CPVCRates.mm20.m, units: 'm', quantity: 0, totalCost: 0 },    
+      { id: 'WTP12', resource: 'DailyMason', description: 'Plumbing', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+      { id: 'WTP13', resource: 'DailyHelper', description: 'Plumbing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
+    ],
+    "WTPL3": [
+      { id: 'WTP21', resource: 'ftmm32CPVC', description: 'Plumbing', length: 5, breadth:5, thickness: 3, area:0,  rate:  CPVCRates.mm32.m, units: 'm', quantity: 0, totalCost: 0 },    
+      { id: 'WTP22', resource: 'DailyMason', description: 'Plumbing', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+      { id: 'WTP23', resource: 'DailyHelper', description: 'Plumbing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
+    ],   
+  //Water tank plumbing pipes//
 
     //Filling//
 
