@@ -587,3 +587,58 @@ export const PlasterSCMachineRates = {
   }  
 }
 
+export const SewerS40PVCRates = {
+  mm12:{
+    ft: 15,    
+    m: 50,        
+  },
+  mm25:{
+    ft: 23,    
+    m: 75,        
+  },
+  
+  mm50:{    
+    ft: 40,    
+    m: 125,        
+  },  
+  mm100:{    
+    ft: 75,    
+    m: 250,        
+  },  
+  mm150:{    
+    ft: 125,    
+    m: 425,        
+  },
+  mm200:{    
+    ft: 210,    
+    m: 700,        
+  }  
+}
+export const SewerS80PVCRates = {
+  mm12:{
+    ft: 22,    
+    m: 75,        
+  },
+  mm25:{
+    ft: 40,    
+    m: 125,        
+  },
+  
+  mm50:{    
+    ft: 70,    
+    m: 225,        
+  },  
+  mm100:{    
+    ft: 140,    
+    m: 450,        
+  },  
+  mm150:{    
+    ft: 250,    
+    m: 800,        
+  },
+  mm200:{    
+    ft: 350,    
+    m: 1150,        
+  }  
+}
+

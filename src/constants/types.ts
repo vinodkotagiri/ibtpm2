@@ -27,13 +27,14 @@ type PlasterFCMachineType = 'Cummm6' | 'Sftmm6'| 'Sqtmm6'|'Cummm8' | 'Sftmm8'| '
 type PlasterSCMachineType = 'Cummm6' | 'Sftmm6'| 'Sqtmm6'|'Cummm8' | 'Sftmm8'| 'Sqtmm8'|'Cummm10' | 'Sftmm10'| 'Sqtmm10'|'Cummm12' | 'Sftmm12'| 'Sqtmm12'
 |'Cummm15' | 'Sftmm15'| 'Sqtmm15'|'Cummm20' | 'Sftmm20'| 'Sqtmm20'
 
-
+type SewerS40PVCType = 'ftmm12SewerS40PVC'| 'mmm12SewerS40PVC'|'ftmm25SewerS40PVC'| 'mmm25SewerS40PVC'|'ftmm50SewerS40PVC'| 'mmm50SewerS40PVC'|'ftmm100SewerS40PVC'| 'mmm100SewerS40PVC'|'ftmm150SewerS40PVC'| 'mmm150SewerS40PVC'|'ftmm200SewerS40PVC'| 'mmm200SewerS40PVC'
+type SewerS80PVCType = 'ftmm12SewerS80PVC'| 'mmm12SewerS80PVC'|'ftmm25SewerS80PVC'| 'mmm25SewerS80PVC'|'ftmm50SewerS80PVC'| 'mmm50SewerS80PVC'|'ftmm100SewerS80PVC'| 'mmm100SewerS80PVC'|'ftmm150SewerS80PVC'| 'mmm150SewerS80PVC'|'ftmm200SewerS80PVC'| 'mmm200SewerS80PVC'
 
 
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'
-export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
+export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'mm' | 'm' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
 export type CurrencyUnits =
   | "USD" | "EUR" | "GBP" | "INR" | "JPY" | "CNY" | "AUD" | "CAD" | "CHF"
   | "SEK" | "NZD" | "ZAR" | "MXN" | "SGD" | "HKD" | "NOK" | "KRW" | "TRY"
@@ -47,6 +48,7 @@ export type CurrencyUnits =
 export type ResourceType = MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| 
 RedclayBrickType | FlyAshBrickType|CCBlockRatesType| PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
+|SewerS40PVCType| SewerS80PVCType
 
 export type Task = {
   id: string
