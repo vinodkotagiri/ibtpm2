@@ -1780,64 +1780,202 @@ const tasks:Task[]=[
     parent:'C01'
   },
   {
-    id:'C21',
+    id:'GCT1',
+    name:'Columns-G-Level1-Typ-1 3x0.23x0.23',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'C20'
+  },
+  //columns// set-1
+  {
+    id:'GCT11',
     name:'Columns Steel',
     start:'',
     end:'',
-    duration:4,
+    duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C20'],
+    dependencies:['GP4'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C20'
-  },
+    parent:'GCT1'
+  },  
   {
-    id:'C22',
+    id:'GCT12',
     name:'Columns Falsework',
     start:'',
     end:'',
-    duration:2,
+    duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C21'],
+    dependencies:['GCT1'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'GCT1'
   },
   {
-    id:'C23',
+    id:'GCT13',
     name:'Columns Concrete',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C22'],
+    dependencies:['GCT11'],
     type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GCT1'
+  },
+  //Ground columns// set-1
+
+  //Ground columns// set-2
+  {
+    id:'GCT2',
+    name:'Columns-G=Level1-Typ-2 3x0.3x0.3',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
     progress:0,
     hideChildren:false,
     parent:'C20'
   },
+  //columns// set-2
   {
-    id:'C24',
-    name:'Beam Falsework',
+    id:'CT21',
+    name:'Columns Steel',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C23'],
+    dependencies:['GP4'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'GCT2'
+  },  
+  {
+    id:'CT22',
+    name:'Columns Falsework',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['CT21'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GCT2'
   },
   {
-    id:'C25',
-    name:'Beam Steel',
+    id:'CT23',
+    name:'Columns Concrete',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['CT22'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GCT2'
+  },
+  //end of Ground columns// set-2
+
+    //Ground columns// set-3
+    {
+      id:'GCT3',
+      name:'Columns-G=Level1-Typ-3 3x0.3x0.45',
+      start:'',
+      end:'',
+      duration:0,
+      cost:0,
+      strategy:'FS',
+      dependencies:[],
+      type:'project',
+      progress:0,
+      hideChildren:false,
+      parent:'C20'
+    },
+    //columns// set-3
+    {
+      id:'CT31',
+      name:'Columns Steel',
+      start:'',
+      end:'',
+      duration:1,
+      cost:0,
+      strategy:'FS',
+      dependencies:['GP4'],
+      type:'task',
+      progress:0,
+      hideChildren:false,
+      parent:'GCT3'
+    },  
+    {
+      id:'CT32',
+      name:'Columns Falsework',
+      start:'',
+      end:'',
+      duration:1,
+      cost:0,
+      strategy:'FS',
+      dependencies:['CT31'],
+      type:'task',
+      progress:0,
+      hideChildren:false,
+      parent:'GCT3'
+    },
+    {
+      id:'CT33',
+      name:'Columns Concrete',
+      start:'',
+      end:'',
+      duration:1,
+      cost:0,
+      strategy:'FS',
+      dependencies:['CT32'],
+      type:'task',
+      progress:0,
+      hideChildren:false,
+      parent:'GCT3'
+    },
+    //end of Ground columns// set-3
+
+    //Beam Type-1// 3x0.23x0.45
+    {
+      id:'C24',
+      name:'Beam G-Level1-Typ-1 3x0.23x0.45',
+      start:'',
+      end:'',
+      duration:0,
+      cost:0,
+      strategy:'FS',
+      dependencies:[],
+      type:'project',
+      progress:0,
+      hideChildren:false,
+      parent:'C20'
+    },
+  {
+    id:'BT11',
+    name:'Beam Falsework',
     start:'',
     end:'',
     duration:1,
@@ -1847,36 +1985,127 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'C24'
   },
   {
-    id:'C26',
-    name:'Inspection',
+    id:'BT12',
+    name:'Beam Steel',
     start:'',
     end:'',
-    duration:3,
+    duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C25'],
+    dependencies:['BT11'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'C24'
   },
   {
-    id:'C27',
+    id:'BT13',
+    name:'Inspection',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['BT12'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'C24'
+  },
+  {
+    id:'BT14',
     name:'Beam Concrete',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C26'],
+    dependencies:['BT13'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'C24'
   },
+  //Beam Type-1// 3x0.23x0.45
+
+//Beam Type-2// 3x0.3x0.6
+{
+  id:'C25',
+  name:'Beam G-Level1-Typ-2 3x0.3x0.6',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'C20'
+},
+{
+id:'BT21',
+name:'Beam Falsework',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['C24'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'C25'
+},
+{
+id:'BT22',
+name:'Beam Steel',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['BT11'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'C25'
+},
+{
+id:'BT23',
+name:'Inspection',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['BT12'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'C25'
+},
+{
+id:'BT24',
+name:'Beam Concrete',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['BT13'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'C25'
+},
+//Beam Type-2// 3x0.3x0.6
+
+
+  //slab//
   {
     id:'C28',
     name:'Slab Falsework',
@@ -1896,7 +2125,7 @@ const tasks:Task[]=[
     name:'Slab Steel',
     start:'',
     end:'',
-    duration:3,
+    duration:2,
     cost:0,
     strategy:'FS',
     dependencies:['C28'],

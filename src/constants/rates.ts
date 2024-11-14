@@ -1,3 +1,13 @@
+export const EngineerRates = {
+  Inspection:{
+  Visit: 6000,  
+  Contract:35000,
+  Hourly: 1500,
+  Sft1: 5,
+  SFt2: 10
+}
+}
+
 export const FencingRates = {
   Fencing:{
   Daily: 1400,

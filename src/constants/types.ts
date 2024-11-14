@@ -1,3 +1,4 @@
+type EngineerType =  'PerHourEngineer' |'DailyEngineer' | 'WeeklyEngineer' | 'MonthlyEngineer' | 'ContractEngineer' | 'PerSftEngineer' | 'VisitEngineer' 
 type MasonType = 'DailyMason' | 'WeeklyMason' | 'MonthlyMason' | 'ContractMason' | 'PerSftMason' | 'PerCumMason' | 'PerHourMason' | 'HourlyMason'
 type HelperType = 'DailyHelper' | 'WeeklyHelper' | 'MonthlyHelper' | 'ContractHelper' | 'PerSftHelper' | 'PerCumHelper' | 'PerHourHelper' | 'PerMTHelper' | 'HourlyHelper'
 type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 'MonthlyMachinery' | 'ContractMachinery' | 'PerSftMachinery' | 'PerCumMachinery' | "PerMT" | "PerHourMachinery"
@@ -48,7 +49,7 @@ export type CurrencyUnits =
   | "JOD" | "ALL" | "RSD" | "ISK" | "BGN" | "HRK" | "GEL" | "TND" | "AZN"
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
 
-export type ResourceType = MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
+export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| 
 RedclayBrickType | FlyAshBrickType|CCBlockRatesType| PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
 |SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType
