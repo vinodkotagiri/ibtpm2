@@ -741,28 +741,28 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     "GP1": [
       { id: 'GP10', resource: 'CumSoil', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-      { id: 'GP11', resource: 'DailyMason', description: 'Filling', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-      { id: 'GP12', resource: 'DailyHelper', description: 'Filling', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
-      { id: 'GP13', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
-      { id: 'GP14', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+      { id: 'GP11', resource: 'DailyMason', description: 'Filling', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+      { id: 'GP12', resource: 'DailyHelper', description: 'Filling', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+      { id: 'GP13', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+      { id: 'GP14', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "GP2": [
       { id: 'GP20', resource: 'KgsSteel', description: 'Main Bars', length: 12, diameter: 6, noOfBars: 20, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'GP21', resource: 'KgsSteel', description: 'Distribution Bars', length: 12, diameter: 6, noOfBars: 20, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'GP22', resource: 'KgsSteel', description: 'dia16', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
+      { id: 'GP22', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
       { id: 'GP23', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'GP24', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "GP3": [
       { id: 'GP30', resource: 'CumM25', description: 'groundFloorArea-groundFloorWalls', area: groundFloorArea,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-      { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-      { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+      { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+      { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
 
     "GP4": [
       { id: 'GP40', resource: 'SftWater', description: 'Curing Water', area: groundFloorArea,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
-      { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-      { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+      { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+      { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ]
 
 
