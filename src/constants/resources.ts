@@ -4,7 +4,7 @@ import { MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, Woo
 import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
-  const { excavationArea, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness } = drawingData
+  const { excavationArea, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness,groundFloorArea,groundFloorWalls } = drawingData
   const resources: Record<string, Array<Resource>> = {
 
 
@@ -661,12 +661,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
     //sewer pipes//
     "DC1": [
-    { id: 'DC11', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'mm', quantity: 0, totalCost: 0 },    
+    { id: 'DC11', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'm', quantity: 0, totalCost: 0 },    
     { id: 'DC12', resource: 'DailyMason', description: 'sewer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'DC13', resource: 'DailyHelper', description: 'sewer', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
   ],
   "DC2": [
-    { id: 'DC21', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'mm', quantity: 0, totalCost: 0 },    
     { id: 'DC22', resource: 'DailyMason', description: 'sewer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'DC23', resource: 'DailyHelper', description: 'sewer', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
   ],
@@ -727,7 +726,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Water tank plumbing pipes//    
     "WTPL2": [
-      { id: 'WTP11', resource: 'ftmm20CPVC', description: 'Plumbing', length: 5, area:0,  rate:  CPVCRates.mm20.m, units: 'm', quantity: 0, totalCost: 0 },    
+      { id: 'WTP11', resource: 'ftmm20CPVC', description: 'Plumbing', length: 5, noOfBars:2,   rate:  CPVCRates.mm20.m, units: 'm', quantity: 0, totalCost: 0 },    
       { id: 'WTP12', resource: 'DailyMason', description: 'Plumbing', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'WTP13', resource: 'DailyHelper', description: 'Plumbing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
     ],
@@ -740,25 +739,35 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     //Filling//
 
-    "C17": [
-      { id: 'F224', resource: 'CumSoil', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-      { id: 'PL19', resource: 'DailyMason', description: 'Filling', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-      { id: 'PL20', resource: 'DailyHelper', description: 'Filling', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
-      { id: 'PL21', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
-      { id: 'PL22', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+    "GP1": [
+      { id: 'GP10', resource: 'CumSoil', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP11', resource: 'DailyMason', description: 'Filling', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+      { id: 'GP12', resource: 'DailyHelper', description: 'Filling', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+      { id: 'GP13', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+      { id: 'GP14', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
-    "C18": [
-      { id: 'F5', resource: 'KgsSteel', description: 'Main Bars', length: 12, diameter: 6, noOfBars: 20, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'KgsSteel', description: 'Distribution Bars', length: 12, diameter: 6, noOfBars: 20, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'PL26', resource: 'KgsSteel', description: 'dia16', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
-      { id: 'PL27', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-      { id: 'PL28', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+    "GP2": [
+      { id: 'GP20', resource: 'KgsSteel', description: 'Main Bars', length: 12, diameter: 6, noOfBars: 20, rate: SteelRates.Dia10.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'GP21', resource: 'KgsSteel', description: 'Distribution Bars', length: 12, diameter: 6, noOfBars: 20, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'GP22', resource: 'KgsSteel', description: 'dia16', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
+      { id: 'GP23', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+      { id: 'GP24', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
-    "C19": [
-      { id: 'F12', resource: 'CumM25', description: 'M25Concrete', length: 3.0, breadth: 0.3, thickness: 0.15, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-      { id: 'PL30', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-      { id: 'PL31', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+    "GP3": [
+      { id: 'GP30', resource: 'CumM25', description: 'groundFloorArea-groundFloorWalls', area: groundFloorArea,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+      { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+    ],
+
+    "GP4": [
+      { id: 'GP40', resource: 'SftWater', description: 'Curing Water', area: groundFloorArea,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+      { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ]
+
+
+
+
   }
   if(taskResources)  return updateQuantities(taskResources)
     return updateQuantities( resources[ taskId ]??[] )
