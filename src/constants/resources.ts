@@ -661,12 +661,12 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
     //sewer pipes//
     "DC1": [
-    { id: 'DC11', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, breadth:5, thickness: 3, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'mm', quantity: 0, totalCost: 0 },    
+    { id: 'DC11', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'mm', quantity: 0, totalCost: 0 },    
     { id: 'DC12', resource: 'DailyMason', description: 'sewer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'DC13', resource: 'DailyHelper', description: 'sewer', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
   ],
   "DC2": [
-    { id: 'DC21', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, breadth:5, thickness: 3, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'mm', quantity: 0, totalCost: 0 },    
+    { id: 'DC21', resource: 'mmm100SewerS40PVC', description: 'Sewer', length: 5, area:0,  rate:  SewerS40PVCRates.mm100.m, units: 'mm', quantity: 0, totalCost: 0 },    
     { id: 'DC22', resource: 'DailyMason', description: 'sewer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'DC23', resource: 'DailyHelper', description: 'sewer', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
   ],
@@ -727,12 +727,12 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Water tank plumbing pipes//    
     "WTPL2": [
-      { id: 'WTP11', resource: 'ftmm20CPVC', description: 'Plumbing', length: 5, breadth:5, thickness: 3, area:0,  rate:  CPVCRates.mm20.m, units: 'm', quantity: 0, totalCost: 0 },    
+      { id: 'WTP11', resource: 'ftmm20CPVC', description: 'Plumbing', length: 5, area:0,  rate:  CPVCRates.mm20.m, units: 'm', quantity: 0, totalCost: 0 },    
       { id: 'WTP12', resource: 'DailyMason', description: 'Plumbing', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'WTP13', resource: 'DailyHelper', description: 'Plumbing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
     ],
     "WTPL3": [
-      { id: 'WTP21', resource: 'ftmm32CPVC', description: 'Plumbing', length: 5, breadth:5, thickness: 3, area:0,  rate:  CPVCRates.mm32.m, units: 'm', quantity: 0, totalCost: 0 },    
+      { id: 'WTP21', resource: 'ftmm32CPVC', description: 'Plumbing', length: 5, area:0,  rate:  CPVCRates.mm32.m, units: 'm', quantity: 0, totalCost: 0 },    
       { id: 'WTP22', resource: 'DailyMason', description: 'Plumbing', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'WTP23', resource: 'DailyHelper', description: 'Plumbing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },    
     ],   
