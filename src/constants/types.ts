@@ -5,8 +5,8 @@ type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' |
 type ConcreteType = 'sftM10pcc' | 'CumM10pcc' | 'CftM10pcc'|'sftM15pcc' | 'CumM15pcc' | 'CftM15pcc'|'sftM20' | 'CumM20' | 'CftM20'|'sftM20' | 'CumM20' | 'CftM20'
 |'sftM25' | 'CumM25' | 'CftM25'| 'sftM30' | 'CumM30' | 'CftM30'| 'sftM35' | 'CumM35' | 'CftM35'| 'sftM40' | 'CumM40' | 'CftM40'| 'sftM40' | 'CumM45' | 'CftM45'
 type SteelType = 'SftSteel' | 'KgsSteel' | 'TonSteel' | 'MTSteel'
-type WoodFormworkType = 'SftFormwork' | 'CftFormwork' | 'SqmFormwork' | 'CumFormwork'
-type MetalFormworkType = 'SftFormwork' | 'CftFormwork' | 'SqmFormwork' | 'CumFormwork'
+type WoodFormworkType = 'SftWoodFormwork' | 'CftWoodFormwork' | 'SqmWoodFormwork' | 'CumWoodFormwork'
+type MetalFormworkType = 'SftMetalFormwork' | 'CftMetalFormwork' | 'SqmMetalFormwork' | 'CumMetalFormwork'
 
 type FillingType = 'CumSoil' | 'CumSand' | 'CumAggregate' | 'CumStone'
 type FencingType = 'SqmFencing' | 'SftFencing'
@@ -18,18 +18,26 @@ type ExcavationManualType = 'CumExcavation' | 'SftExcavation'| 'CftExcavation'| 
 type RedclayBrickType = 'CumRedclayBrick' | 'SftRedclayBrick'
 type FlyAshBrickType = 'CumFlyAshBrick' | 'SftFlyAshBrick'
 type CCBlockRatesType = 'CumCCBlock' | 'SftCCBlock'
-type PlasterFCManualType = 'CumPlasterFCManual' | 'SftPlasterFCManual'
-type PlasterSCManualType = 'CumPlasterSCManual' | 'SftPlasterSCManual'
-type PlasterFCMachineType = 'CumPlasterFCMachine' | 'SftPlasterFCMachine'
-type PlasterSCMachineType = 'CumPlasterSCMachine' | 'SftPlasterSCMachine'
+type PlasterFCManualType = 'Cummm6' | 'Sftmm6'| 'Sqtmm6'|'Cummm8' | 'Sftmm8'| 'Sqtmm8'|'Cummm10' | 'Sftmm10'| 'Sqtmm10'|'Cummm12' | 'Sftmm12'| 'Sqtmm12'
+|'Cummm15' | 'Sftmm15'| 'Sqtmm15'|'Cummm20' | 'Sftmm20'| 'Sqtmm20'
+type PlasterSCManualType = 'Cummm6' | 'Sftmm6'| 'Sqtmm6'|'Cummm8' | 'Sftmm8'| 'Sqtmm8'|'Cummm10' | 'Sftmm10'| 'Sqtmm10'|'Cummm12' | 'Sftmm12'| 'Sqtmm12'
+|'Cummm15' | 'Sftmm15'| 'Sqtmm15'|'Cummm20' | 'Sftmm20'| 'Sqtmm20'
+type PlasterFCMachineType = 'Cummm6' | 'Sftmm6'| 'Sqtmm6'|'Cummm8' | 'Sftmm8'| 'Sqtmm8'|'Cummm10' | 'Sftmm10'| 'Sqtmm10'|'Cummm12' | 'Sftmm12'| 'Sqtmm12'
+|'Cummm15' | 'Sftmm15'| 'Sqtmm15'|'Cummm20' | 'Sftmm20'| 'Sqtmm20'
+type PlasterSCMachineType = 'Cummm6' | 'Sftmm6'| 'Sqtmm6'|'Cummm8' | 'Sftmm8'| 'Sqtmm8'|'Cummm10' | 'Sftmm10'| 'Sqtmm10'|'Cummm12' | 'Sftmm12'| 'Sqtmm12'
+|'Cummm15' | 'Sftmm15'| 'Sqtmm15'|'Cummm20' | 'Sftmm20'| 'Sqtmm20'
 
+type SewerS40PVCType = 'ftmm12SewerS40PVC'| 'mmm12SewerS40PVC'|'ftmm25SewerS40PVC'| 'mmm25SewerS40PVC'|'ftmm50SewerS40PVC'| 'mmm50SewerS40PVC'|'ftmm100SewerS40PVC'| 'mmm100SewerS40PVC'|'ftmm150SewerS40PVC'| 'mmm150SewerS40PVC'|'ftmm200SewerS40PVC'| 'mmm200SewerS40PVC'
+type SewerS80PVCType = 'ftmm12SewerS80PVC'| 'mmm12SewerS80PVC'|'ftmm25SewerS80PVC'| 'mmm25SewerS80PVC'|'ftmm50SewerS80PVC'| 'mmm50SewerS80PVC'|'ftmm100SewerS80PVC'| 'mmm100SewerS80PVC'|'ftmm150SewerS80PVC'| 'mmm150SewerS80PVC'|'ftmm200SewerS80PVC'| 'mmm200SewerS80PVC'
 
-
+type CPVCType = 'ftmm15CPVC'| 'ftmm20CPVC'| 'ftmm32CPVC'
+type PPRType = 'ftmm20PPR'| 'ftmm25PPR'| 'ftmm40PPR'
+type GIType = 'ftmm15PPR'| 'ftmm20PPR'| 'ftmm40PPR'
 
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'
-export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
+export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'mm' | 'm' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
 export type CurrencyUnits =
   | "USD" | "EUR" | "GBP" | "INR" | "JPY" | "CNY" | "AUD" | "CAD" | "CHF"
   | "SEK" | "NZD" | "ZAR" | "MXN" | "SGD" | "HKD" | "NOK" | "KRW" | "TRY"
@@ -43,6 +51,7 @@ export type CurrencyUnits =
 export type ResourceType = MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| 
 RedclayBrickType | FlyAshBrickType|CCBlockRatesType| PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
+|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType
 
 export type Task = {
   id: string

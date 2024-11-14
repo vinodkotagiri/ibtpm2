@@ -1326,7 +1326,7 @@ const tasks:Task[]=[
 
 {
   id:'C14',
-  name:'Underground Drainage',
+  name:'Underground Sewage',
   start:'',
   end:'',
   duration:0,
@@ -1466,7 +1466,7 @@ const tasks:Task[]=[
 
 {
   id:'UD2',
-  name:'Drain Conduits',
+  name:'Sewer PVC Pipes',
   start:'',
   end:'',
   duration:0,
@@ -1481,7 +1481,7 @@ const tasks:Task[]=[
 },
 {
   id:'DC1',
-  name:'Install Conduits',
+  name:'Install Sewer PVC',
   start:'',
   end:'',
   duration:1,
@@ -1497,7 +1497,7 @@ const tasks:Task[]=[
 
 {
   id:'DC2',
-  name:'Install Conduits',
+  name:'Install ConSewer PVC',
   start:'',
   end:'',
   duration:1,
