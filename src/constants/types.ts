@@ -33,12 +33,17 @@ type SewerS80PVCType = 'ftmm12SewerS80PVC'| 'mmm12SewerS80PVC'|'ftmm25SewerS80PV
 
 type CPVCType = 'ftmm15CPVC'| 'ftmm20CPVC'| 'ftmm32CPVC'
 type PPRType = 'ftmm20PPR'| 'ftmm25PPR'| 'ftmm40PPR'
-type GIType = 'ftmm15PPR'| 'ftmm20PPR'| 'ftmm40PPR'
+type GIType = 'ftmm15GI'| 'ftmm20GI'| 'ftmm40GI'
+type ElectricalType = 'SftPVCElectrical'| 'mPVCElectrical'| 'UnitJunctionBoxElectrical'| 'mJunctionBoxElectrical'| 'SftJunctionBoxElectrical'| 'UnitPullwiresconduitsElectrical'  | 'mPullwiresconduitsElectrical'| 'SftPullwiresconduitsElectrical'  | 'mLightFixturesElectrical'| 'UnitLightFixturesElectrical'| 'SftLightFixturesElectrical'
+type MechanicalType = 'SftHangersMechanical'| 'mHangersMechanical'| 'SftDuctMechanical'| 'SftDrainpipesMechanical'  | 'mDrainpipesMechanical'
+type FirefightingType = 'SftSprinklerpipesFirefighting'| 'mSprinklerpipesFirefighting'|'mFirehosereelconduitFirefighting'|'SftFirehosereelconduitFirefighting'|'SftHangerssprinklerFirefighting'|'mHangerssprinklerFirefighting'
+type PlumbingType = 'SftCPVCPlumbing'| 'mCPVCPlumbing'| 'mDrainagepipespvcPlumbing'| 'SftDrainagepipespvcPlumbing'
+
 
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'
-export type ResourceUnits = 'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'mm' | 'm' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
+export type ResourceUnits = 'Unit' |'Hour' | 'Day' | 'Week' | 'Month' | 'Contract' | 'Sft' | 'mm' | 'm' | 'Cum' | 'MT' | 'Kgs' | 'Ton' | 'Cft' | 'Sqm'
 export type CurrencyUnits =
   | "USD" | "EUR" | "GBP" | "INR" | "JPY" | "CNY" | "AUD" | "CAD" | "CHF"
   | "SEK" | "NZD" | "ZAR" | "MXN" | "SGD" | "HKD" | "NOK" | "KRW" | "TRY"
@@ -52,7 +57,7 @@ export type CurrencyUnits =
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| 
 RedclayBrickType | FlyAshBrickType|CCBlockRatesType| PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
-|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType
+|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
 
 export type Task = {
   id: string
