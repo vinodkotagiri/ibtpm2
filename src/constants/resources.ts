@@ -878,61 +878,79 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 //Bottom Bars slab level1//
 "SLB1": [
   { id: 'SLB11', resource: 'CumMetalFormwork', description: 'Metal', length:builtLength, breadth:builtWidth, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SLB13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 4, totalCost: 0 },           
+  { id: 'SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
 ],
 "SSL1": [  
   { id: 'SSL11', resource: 'KgsSteel', description: 'Bottom Main Bars', length: builtLength, diameter: 16, noOfBars: 16, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-  { id: 'SSL12', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
-  { id: 'SSL13', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SSL14', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
+  { id: 'SSL12', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+  { id: 'SSL13', resource: 'DailyMason', description: 'steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SSL14', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
 ],
 "SSB1": [    
   { id: 'SSB11', resource: 'KgsSteel', description: 'Bottom Distri Bars', breadth: builtWidth, diameter: 12, noOfBars: 21, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'SSB12', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
-  { id: 'SSB13', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SSB14', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
+  { id: 'SSB12', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+  { id: 'SSB13', resource: 'DailyMason', description: 'steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SSB14', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
 ],
 //Bottom Bars slab level1//
 
 //MEP Level1//
 "SLB3": [
   { id: 'SLB31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'SLB32', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'SLB33', resource: 'DailyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'SLB32', resource: 'DailyMason', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB33', resource: 'DailyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
 "SLB4": [
   { id: 'SLB41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'SLB42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'SLB43', resource: 'DailyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB42', resource: 'DailyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB43', resource: 'DailyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 "SLB5": [
   { id: 'SLB51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'SLB52', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'SLB53', resource: 'DailyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB52', resource: 'DailyMason', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB53', resource: 'DailyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 "SLB6": [
   { id: 'SLB61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'SLB62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'SLB63', resource: 'DailyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB62', resource: 'DailyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB63', resource: 'DailyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 //MEP Level1//
 
 //Top Bars lab level1//
 "SSL2": [  
   { id: 'SSL21', resource: 'KgsSteel', description: 'Bottom Main Bars', length: builtLength, diameter: 16, noOfBars: 16, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-  { id: 'SSL22', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
-  { id: 'SSL23', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SSL24', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
+  { id: 'SSL22', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+  { id: 'SSL23', resource: 'DailyMason', description: 'steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SSL24', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
 ],
 "SLB2": [    
   { id: 'SLB21', resource: 'KgsSteel', description: 'Bottom Distri Bars', breadth: builtWidth, diameter: 12, noOfBars: 21, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'SLB22', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Hourly, units: 'Hour', quantity: 8, totalCost: 0 },
-  { id: 'SLB23', resource: 'HourlyMason', description: 'steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SLB24', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
+  { id: 'SLB22', resource: 'KgsSteel', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+  { id: 'SLB23', resource: 'DailyMason', description: 'steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB24', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
 ],
 //Top Bars lab level1//
 
+//Slab Concrete Level1//
+"SLB7": [
+  { id: 'SLB71', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'SLB72', resource: 'CumM25', description: 'M30Concrete', length: builtLength, breadth: builtWidth, thickness: 0.15, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'SLB73', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'SLB74', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },
+],
+//Slab Concrete Level1//
+"SLB8": [
+      { id: 'SLB81', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'SLB82', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+      { id: 'SLB83', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
+    ],
+
+"SLB9": [      
+      { id: 'SLB91', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+      { id: 'SLB92', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    ],
 
 
 
