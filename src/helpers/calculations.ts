@@ -120,6 +120,11 @@ export function calculateTotalResourceCost(tasks: Task[]): Task[]{
         for(const childTask of childTasks){
           totalCost+=childTask.cost
         }
+        if(tasks[i].numbersRequired!=undefined){
+          if(tasks[i].numbersRequired>0){
+            totalCost=totalCost*tasks[i].numbersRequired
+          }
+        }
         tasks[i].cost=totalCost
       }
     }

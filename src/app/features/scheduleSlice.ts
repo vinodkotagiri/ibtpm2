@@ -78,7 +78,7 @@ const scheduleSlice = createSlice( {
       state.tasks=calculateTotalResourceCost(state.tasks)
     },
     updateDrawingData(state,action){ 
-      let {drawingData}=action.payload
+      const {drawingData}=action.payload
       state.drawingData=drawingData
        state.tasks=state.tasks.map(task=>{
         if(task.resources?.length){
@@ -95,8 +95,11 @@ const scheduleSlice = createSlice( {
       updateDrawingData({drawingData:state.drawingData})
     },
     updateTaskField(state,action){
-      const {id,field,value}=action.payload
+      const {id,field,value,type}=action.payload
       state.tasks=state.tasks.map(task=>{
+        if(task.id===id&&type=='project'){
+          task[field]=value
+        }
         if(task?.resources?.length){
           task.resources=task.resources.map(resource=>{
             if(resource.id===id){
@@ -115,6 +118,7 @@ const scheduleSlice = createSlice( {
         }
         return task
       })
+
       state.tasks=calculateTotalResourceCost(state.tasks)
     }
   }
