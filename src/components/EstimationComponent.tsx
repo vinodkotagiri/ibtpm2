@@ -18,8 +18,8 @@ const EstimationComponent: React.FC = () => {
     setCurrentTasks(tasks)
   },[tasks])
 
-  function handleChange(e,id,field:string) {
-    dispatch(updateTaskField({ id: id, field: field, value: e.target.valueAsNumber }))
+  function handleChange(e,id,field:string,type:string='task'){ 
+    dispatch(updateTaskField({ id: id, field: field, value: e.target.valueAsNumber,type }))
   }
 
   // Build task tree function
@@ -97,7 +97,7 @@ const EstimationComponent: React.FC = () => {
         <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.noOfBars} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'noOfBars')}/></td>
         <td>{resource.area}</td>
         <td>{resource.perimeter}</td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.numbersRequired} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'numbersRequired')}/></td>
+        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.numbersRequired} disabled={!resource?.numbersRequired} onChange={e => handleChange(e,resource.id,'numbersRequired')}/></td>
         <td>{resource.quantity}</td>
         <td>{resource.rate}</td>
         <td>{resource.units}</td>
@@ -142,7 +142,7 @@ const EstimationComponent: React.FC = () => {
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={task?.numbersRequired} disabled={!task?.numbersRequired} onChange={e => handleChange(e,task.id,'numbersRequired','project')}/></td>
             <td></td>
             <td></td>
             <td></td>

@@ -60,6 +60,7 @@ export type Task = {
   end: string
   duration: number
   cost: number
+  numbersRequired?:number
   strategy: Strategy
   dependencies: Array<string>
   type: TaskType
