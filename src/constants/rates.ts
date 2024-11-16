@@ -1,3 +1,110 @@
+export const EngineerRates = {
+  Inspection:{
+  Visit: 6000,  
+  Contract:35000,
+  Hourly: 1500,
+  Sft1: 5,
+  SFt2: 10
+}
+}
+export const ElectricianRates = {
+  Mason:{
+  Daily: 1500,
+  Weekly: 1200*6,
+  Monthly: 1200*24,
+  Contract: 100,
+  Hourly: 220,
+  Sft: 35,  
+}
+}
+export const PlumberRates = {
+  Mason:{
+  Daily: 1300,
+  Weekly: 1100*6,
+  Monthly: 1100*24,
+  Contract: 150,
+  Hourly: 160,
+  Sft: 25,  
+}
+}
+export const MechMasonRates = {
+    Mason:{
+    Daily: 1400,
+    Weekly: 1200*6,
+    Monthly: 1100*24,
+    Contract: 170,
+    Hourly: 180,
+    Sft: 35,  
+  }
+  }
+export const FFMasonRates = {
+  Mason:{
+  Daily: 1600,
+  Weekly: 1500*6,
+  Monthly: 1500*24,
+  Contract: 200,
+  Hourly: 250,
+  Sft: 45,  
+}
+}
+export const ElectricalRates = {
+  PVC:{  
+    Sft: 8,
+    m: 125
+},
+JunctionBox:{  
+  Unit:225,
+  Sft: 5,
+  m: 225
+},
+Pullwiresconduits:{    
+  Sft: 2,
+  m: 20
+},
+LightFixtures:{  
+  Unit:700,
+  Sft: 8,
+  m: 800
+},
+}
+export const MechanicalRates = {
+  Hangers:{  
+    Sft: 10,
+    m: 350
+},
+Duct:{    
+  Sft: 220,
+},
+Drainpipes:{    
+  Sft: 8,
+  m: 200
+},
+}
+export const FirefightingRates = {
+  Sprinklerpipes:{  
+    Sft: 15,
+    m: 400
+},
+Firehosereelconduit:{    
+  Sft: 15,
+  m: 600
+},
+Hangerssprinkler:{    
+  Sft: 8,
+  m: 200
+},
+}
+export const PlumbingRates = {
+  CPVC:{  
+    Sft: 12,
+    m: 250
+},
+Drainagepipespvc:{    
+  Sft: 10,
+  m: 250
+},
+}
+
 export const FencingRates = {
   Fencing:{
   Daily: 1400,
