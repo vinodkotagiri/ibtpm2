@@ -1789,7 +1789,7 @@ const tasks:Task[]=[
 
   {
     id:'C20',
-    name:'Level-1 Slab',
+    name:'Level-1 Columns',
     start:'',
     end:'',
     duration:0,
@@ -1937,8 +1937,7 @@ const tasks:Task[]=[
       progress:0,
       hideChildren:false,
       parent:'C20'
-    },
-    //columns// set-3
+    },    
     {
       id:'CT31',
       name:'Columns Steel',
@@ -1981,9 +1980,24 @@ const tasks:Task[]=[
       hideChildren:false,
       parent:'GCT3'
     },
+    //columns// set-3
     //end of Ground columns// set-3
 
     //Beam Type-1// 3x0.23x0.45
+    {
+      id:'C21',
+      name:'Level-1 Beams',
+      start:'',
+      end:'',
+      duration:0,
+      cost:0,
+      strategy:'FS',
+      dependencies:[],
+      type:'project',
+      progress:0,
+      hideChildren:false,
+      parent:'C01'
+    },
     {
       id:'C24',
       name:'Beam G-Level1-Typ-1 3x0.23x0.45',
@@ -1997,7 +2011,7 @@ const tasks:Task[]=[
       type:'project',
       progress:0,
       hideChildren:false,
-      parent:'C20'
+      parent:'C21'
     },
   {
     id:'BT11',
@@ -2071,7 +2085,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C20'
+  parent:'C21'
 },
 {
 id:'BT21',
@@ -2145,7 +2159,7 @@ parent:'C25'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'C01'
   },
   {
     id:'SLB1',
@@ -2374,7 +2388,7 @@ parent:'C25'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C20'
+    parent:'C01'
   },
   {
     id:'FFGL1',
@@ -2442,7 +2456,7 @@ parent:'C25'
     cost:0,
     strategy:'FF',
     dependencies:['FFG13'],
-    type:'project',
+    type:'task',
     progress:0,
     hideChildren:false,
     parent:'FFGL1'
@@ -2533,51 +2547,52 @@ parent:'C25'
     parent:'C31'
   },
 
+
   {
     id:'SFG12',
-    name:'1st Landing Slab Steel',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['FFG17'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'FFGL1'
-  },
-  {
-    id:'SFG13',
-    name:'Formwork Waist Slab',
+    name:'Formwork 2nd Flight Slab',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FF',
+    dependencies:['FFG17'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'SFGL1'
+  },
+  {
+    id:'SFG13',
+    name:'2nd Landing Slab Steel',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
     dependencies:['SFG12'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG14',
-    name:'Waist Slab Steel',
+    name:'Mid Landing Slab Steel',
     start:'',
     end:'',
     duration:0,
     cost:0,
     strategy:'FF',
     dependencies:['SFG13'],
-    type:'project',
+    type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
-  },
+    parent:'SFGL1'
+  }, 
   {
     id:'SFG15',
-    name:'2nd Landing Slab Steel',
+    name:'Waist Slab Steel',
     start:'',
     end:'',
     duration:0,
@@ -2587,11 +2602,11 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG16',
-    name:'Mid Landing Slab Steel',
+    name:'3rd Landing Slab Steel',
     start:'',
     end:'',
     duration:0,
@@ -2601,8 +2616,9 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
-  }, 
+    parent:'SFGL1'
+  },
+
   {
     id:'SFG17',
     name:'Staircase Concrete',
@@ -2615,7 +2631,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG18',
@@ -2629,7 +2645,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG19',
@@ -2643,7 +2659,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
 //G-L1 Staircase
 
