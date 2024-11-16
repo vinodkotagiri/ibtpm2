@@ -2,6 +2,12 @@ import { currencies } from '../constants/currency';
 import { Strategy, Task } from '../constants/types';
 
 export function updateTaskDates(tasks: Task[]): Task[] {
+  // Map tasks by their ID for quick lookup when dealing with dependencies
+  const taskMap = new Map<string, Task>();
+  for (const task of tasks) {
+    taskMap.set(task.id, task);
+  }
+
   let previousStartDate = tasks[0].start;
   let previousEndDate = calculateEndDate(tasks[0].start, tasks[0].duration);
 
@@ -9,8 +15,26 @@ export function updateTaskDates(tasks: Task[]): Task[] {
     const task = tasks[i];
     const strategy = task.strategy as Strategy;
 
-    // Update start and end dates based on the strategy
-    const [start, end] = calculateStartDateAndEndDates(previousStartDate, previousEndDate, task.duration, strategy);
+    // Check if the task has a dependency
+    let dependencyStartDate = previousStartDate;
+    let dependencyEndDate = previousEndDate;
+
+    if (task.dependencies && task.dependencies.length > 0) {
+      const dependencyTask = taskMap.get(task.dependencies[0]); // Take the first dependency for simplicity
+      if (dependencyTask) {
+        dependencyStartDate = dependencyTask.start;
+        dependencyEndDate = dependencyTask.end;
+      }
+    }
+
+    // Update start and end dates based on the strategy and dependency
+    const [start, end] = calculateStartDateAndEndDates(
+      dependencyStartDate,
+      dependencyEndDate,
+      task.duration,
+      strategy
+    );
+
     task.start = start;
     task.end = end;
 
@@ -18,8 +42,10 @@ export function updateTaskDates(tasks: Task[]): Task[] {
     previousStartDate = task.start;
     previousEndDate = task.end;
   }
+
   // Calculate project end dates
-  tasks=calculateProjectDatesAndDurations(tasks)
+  tasks = calculateProjectDatesAndDurations(tasks);
+
   return tasks;
 }
 
@@ -76,7 +102,7 @@ export function calculateStartDateAndEndDates(
   return [formatDate(startDate), formatDate(endDate)];
 }
 
-export function formatDate(date:Date):string {
+export function formatDate(date: Date): string {
   if (!date) return ''; // Handle null or undefined
   const day = String(date.getDate()).padStart(2, '0');
   const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
@@ -84,54 +110,53 @@ export function formatDate(date:Date):string {
   return `${year}-${month}-${day}`;
 }
 
-function calculateProjectDatesAndDurations(tasks:Task[]):Task[]{
-  for(let i=tasks.length-1;i>=0;i--){
-    if(tasks[i].type === 'project'){
-      const childTasks=tasks.filter(t=>t.parent===tasks[i].id)
-      if(childTasks.length){
-        let endDate=new Date(childTasks[0].end)
-        for(const childTask of childTasks){
-          const currentEndDate=new Date(childTask.end)
-          if((currentEndDate)>endDate){
-            endDate=currentEndDate
-          }
-      }
-      tasks[i].end=formatDate(endDate)
-      tasks[i].duration=(endDate.getTime()-new Date(tasks[i].start).getTime())/(1000*60*60*24)
-    }
-  }
-  }
-
-  return tasks
-}
-
-export function calculateTotalResourceCost(tasks: Task[]): Task[]{
-  for(const task of tasks){
-    if(task.type=='task' && task?.resources?.length){
-      task.resources.forEach(resource=>resource.totalCost=resource.rate*resource.quantity)
-      task.cost=task.resources.reduce((acc,curr)=>acc+curr.totalCost,0)      
-    }
-  }
-  for(let i=tasks.length-1;i>=0;i--){
-    if(tasks[i].type === 'project'){
-      const childTasks=tasks.filter(t=>t.parent===tasks[i].id)
-      if(childTasks.length){
-        let totalCost=0
-        for(const childTask of childTasks){
-          totalCost+=childTask.cost
-        }
-        if(tasks[i].numbersRequired!=undefined){
-          if(tasks[i].numbersRequired>0){
-            totalCost=totalCost*tasks[i].numbersRequired
+function calculateProjectDatesAndDurations(tasks: Task[]): Task[] {
+  for (let i = tasks.length - 1; i >= 0; i--) {
+    if (tasks[i].type === 'project') {
+      const childTasks = tasks.filter(t => t.parent === tasks[i].id);
+      if (childTasks.length) {
+        let endDate = new Date(childTasks[0].end);
+        for (const childTask of childTasks) {
+          const currentEndDate = new Date(childTask.end);
+          if (currentEndDate > endDate) {
+            endDate = currentEndDate;
           }
         }
-        tasks[i].cost=totalCost
+        tasks[i].end = formatDate(endDate);
+        tasks[i].duration = (endDate.getTime() - new Date(tasks[i].start).getTime()) / (1000 * 60 * 60 * 24);
       }
     }
   }
-  return tasks
+
+  return tasks;
 }
 
+export function calculateTotalResourceCost(tasks: Task[]): Task[] {
+  for (const task of tasks) {
+    if (task.type === 'task' && task?.resources?.length) {
+      task.resources.forEach(resource => resource.totalCost = resource.rate * resource.quantity);
+      task.cost = task.resources.reduce((acc, curr) => acc + curr.totalCost, 0);
+    }
+  }
+  for (let i = tasks.length - 1; i >= 0; i--) {
+    if (tasks[i].type === 'project') {
+      const childTasks = tasks.filter(t => t.parent === tasks[i].id);
+      if (childTasks.length) {
+        let totalCost = 0;
+        for (const childTask of childTasks) {
+          totalCost += childTask.cost;
+        }
+        if (tasks[i].numbersRequired !== undefined) {
+          if (tasks[i].numbersRequired > 0) {
+            totalCost = totalCost * tasks[i].numbersRequired;
+          }
+        }
+        tasks[i].cost = totalCost;
+      }
+    }
+  }
+  return tasks;
+}
 
 export const getCurrencySymbol = (currencyCode: string): string => {
   return currencies[currencyCode] || currencyCode;
