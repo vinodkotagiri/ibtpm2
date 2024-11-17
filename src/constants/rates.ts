@@ -4,7 +4,10 @@ export const EngineerRates = {
   Contract:35000,
   Hourly: 1500,
   Sft1: 5,
-  SFt2: 10
+  SFt2: 10,
+  SFt3: 15,
+  SFt4: 18,
+  SFt5: 20,
 }
 }
 export const ElectricianRates = {

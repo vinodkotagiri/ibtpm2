@@ -2176,7 +2176,7 @@ parent:'C25'
     parent:'C28'
   },
   {
-    id:'SLB2',
+    id:'C29',
     name:'Slab Steel-Bottom',
     start:'',
     end:'',
@@ -2201,7 +2201,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SLB2'
+    parent:'C29'
   },
   {
     id:'SSB1',
@@ -2215,7 +2215,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SLB2'
+    parent:'C29'
   },
 //SLAB MEP START//
 {
