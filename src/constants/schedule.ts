@@ -1839,7 +1839,7 @@ const tasks:Task[]=[
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GCT1'],
+    dependencies:['GCT11'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -1853,7 +1853,7 @@ const tasks:Task[]=[
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GCT11'],
+    dependencies:['GCT12'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -2021,7 +2021,7 @@ const tasks:Task[]=[
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C24'],
+    dependencies:['CT32'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -2137,7 +2137,7 @@ end:'',
 duration:1,
 cost:0,
 strategy:'FS',
-dependencies:['BT13'],
+dependencies:['BT23'],
 type:'task',
 progress:0,
 hideChildren:false,
@@ -2176,7 +2176,7 @@ parent:'C25'
     parent:'C28'
   },
   {
-    id:'C29',
+    id:'SLB2',
     name:'Slab Steel-Bottom',
     start:'',
     end:'',
@@ -2201,7 +2201,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C29'
+    parent:'SLB2'
   },
   {
     id:'SSB1',
@@ -2215,7 +2215,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C29'
+    parent:'SLB2'
   },
 //SLAB MEP START//
 {
