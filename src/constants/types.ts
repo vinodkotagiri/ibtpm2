@@ -5,7 +5,7 @@ type MachinaryType = 'DailyMachinery' | 'DailyCompaction' | 'WeeklyMachinery' | 
 type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' | 'ContractBarbender' | 'PerMTBarbender' | 'PerCumBarbender'
 type ConcreteType = 'sftM10pcc' | 'CumM10pcc' | 'CftM10pcc'|'sftM15pcc' | 'CumM15pcc' | 'CftM15pcc'|'sftM20' | 'CumM20' | 'CftM20'|'sftM20' | 'CumM20' | 'CftM20'
 |'sftM25' | 'CumM25' | 'CftM25'| 'sftM30' | 'CumM30' | 'CftM30'| 'sftM35' | 'CumM35' | 'CftM35'| 'sftM40' | 'CumM40' | 'CftM40'| 'sftM40' | 'CumM45' | 'CftM45'
-type SteelType = 'SftSteel' | 'KgsSteel' | 'TonSteel' | 'MTSteel'
+type SteelType = 'SftDia6Steel' | 'KgsDia6Steel' |'SftDia8Steel' | 'KgsDia8Steel' |'SftDia10Steel' | 'KgsDia10Steel' |'SftDia12Steel' | 'KgsDia12Steel' |'SftDia14Steel' | 'KgsDia14Steel' |'SftDia16Steel' | 'KgsDia16Steel' |'SftDia18Steel' | 'KgsDia18Steel' |'SftDia20Steel' | 'KgsDia20Steel' 
 type WoodFormworkType = 'SftWoodFormwork' | 'CftWoodFormwork' | 'SqmWoodFormwork' | 'CumWoodFormwork'
 type MetalFormworkType = 'SftMetalFormwork' | 'CftMetalFormwork' | 'SqmMetalFormwork' | 'CumMetalFormwork'
 

@@ -2421,12 +2421,12 @@ parent:'C25'
 
   {
     id:'FFG12',
-    name:'1st Landing Slab Steel',
+    name:'Anchorage & Ld Steel',
     start:'',
     end:'',
     duration:1,
     cost:0,
-    strategy:'FS',
+    strategy:'FF',
     dependencies:['FFG10'],
     type:'task',
     progress:0,
