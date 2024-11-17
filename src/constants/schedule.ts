@@ -2421,7 +2421,7 @@ parent:'C25'
 
   {
     id:'FFG12',
-    name:'Anchorage & Ld Steel',
+    name:'Waist Slab Steel',
     start:'',
     end:'',
     duration:1,
@@ -2435,7 +2435,7 @@ parent:'C25'
   },
   {
     id:'FFG13',
-    name:'Formwork Waist Slab',
+    name:'Landing Slab',
     start:'',
     end:'',
     duration:1,
@@ -2463,7 +2463,7 @@ parent:'C25'
   },
   {
     id:'FFG15',
-    name:'2nd Landing Slab Steel',
+    name:'Landing Slab Steel',
     start:'',
     end:'',
     duration:0,
@@ -2477,7 +2477,7 @@ parent:'C25'
   },
   {
     id:'FFG16',
-    name:'Mid Landing Slab Steel',
+    name:'Beam Steel (Landing Portion Support)',
     start:'',
     end:'',
     duration:0,
