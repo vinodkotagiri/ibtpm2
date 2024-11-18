@@ -564,35 +564,35 @@ export const CCBlockRates = {
 
 export const PlasterFCManualRates = {
   mm6:{
-    Sft: 10,    
-    Sqm: 125,    
-    Cum: 7500
+    Sft: 11,    
+    Sqm: 120,    
+    Cum: 11000
   },
   mm8:{
-    Sft: 15,    
+    Sft: 14,    
     Sqm: 150,    
-    Cum: 7800
+    Cum: 15000
   },
   
   mm10:{    
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 8000
+    Sft: 16,    
+    Sqm: 200,    
+    Cum: 18000
   },  
   mm12:{    
     Sft: 20,    
-    Sqm: 200,    
-    Cum: 9500
+    Sqm: 325,    
+    Cum: 24000
   },  
   mm15:{    
-    Sft: 20,    
-    Sqm: 200,    
-    Cum: 1000  
+    Sft: 24,    
+    Sqm: 350,    
+    Cum: 25000  
   },
   mm20:{    
     Sft: 25,    
-    Sqm: 250,    
-    Cum: 11500  
+    Sqm: 400,    
+    Cum: 21500  
   }  
 }
 

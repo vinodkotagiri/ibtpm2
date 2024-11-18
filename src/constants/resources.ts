@@ -17,8 +17,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Survery",
         "rate": FencingRates.Fencing.Sft,
         "units": "Sft",
-        length:0,
-        breadth:0,        
+        length:builtLength,
+        breadth:builtWidth,        
         thickness:3, // height of fencing
         area:0,        
         "quantity": 0,
@@ -33,8 +33,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Fencing",
         "rate": FencingRates.Fencing.Sqm,
         "units": "Sqm",
-        length:0,
-        breadth:0,
+        length:builtLength,
+        breadth:builtWidth,        
         area:0,
         perimeter:0,
         thickness:3, // height of fencing
@@ -58,9 +58,10 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Cum",
         "rate": MachinaryRates.Excavator.Sft,
         "units": "Day",         
-        length: 0,
-        breadth:0,               
-        thickness:3, // height of excavation
+        length: builtLength,
+        breadth:builtWidth,               
+        thickness:2.5, // height of excavation
+        area:0,
         "quantity": excavationArea,
         "totalCost": 0
       },
@@ -99,8 +100,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Shoring",
         "rate": ShoringRates.Shoring.Sft,
         "units": "Day",
-        length: 0,
-        breadth:0,
+        length: builtLength,
+        breadth:builtWidth,
         area:0,        
         thickness:3, // height of fencing
         "quantity": 0,
@@ -123,9 +124,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "description": "Termite",
         "rate": TermiteRates.Termite.Sft,
         "units": "Day",
-        length: 0,
-        breadth:0,
-        thickness:1, // height of fencing
+        length: builtLength,
+        breadth:builtWidth,        
         area:0, 
         "quantity": 1,
         "totalCost": 0
@@ -370,7 +370,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     "C11": [
           
-      { id: 'F224', resource: 'CumSoil', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F224', resource: 'CumSoilFilling', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F225', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F226', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'F227', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -380,7 +380,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     // Plinth beam Length//
         
     "PT1L1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -408,7 +408,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
    
     "PT2L1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -436,7 +436,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     
     "PT3L1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -464,7 +464,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     
     "PT4L1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -495,7 +495,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     // plinth beam breadth//
     
     "PT1B1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -523,7 +523,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
    
     "PT2B1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -551,7 +551,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     
     "PT3B1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -578,7 +578,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
     
     "PT4B1": [
-      { id: 'PL1', resource: 'CumStone', description: 'Filling', length: 0, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -607,8 +607,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     //underground Sewage tank //
     "STO": [
-    { id: 'STO', resource: 'CumExcavation', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-    { id: 'ST1', resource: 'CumExcavation', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationManualRates.ToolsExcavation.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'STO', resource: 'CumExcavationMachine', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'ST1', resource: 'CumExcavationManual', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationManualRates.ToolsExcavation.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
     {id: 'ST2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'ST3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'ST4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -641,7 +641,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'ST45', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
     "ST5": [
-      { id: 'ST51', resource: 'Sftmm6', description: 'Plaster', length: 6, breadth:3, thickness: 0.6, perimeter:0,  rate: PlasterFCManualRates.mm6.Sft, units: 'Sft', quantity: 0, totalCost: 0 },      
+      { id: 'ST51', resource: 'Cummm12PlasterFCManual', description: 'Plaster', length: 6, breadth:3, thickness: 0.012, area:0,  rate: PlasterFCManualRates.mm12.Cum, units: 'Cum', quantity: 0, totalCost: 0 },      
       { id: 'ST52', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'ST53', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'ST54', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -677,8 +677,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //underground Water tank //
   "WT1": [
-    { id: 'STO', resource: 'CumExcavation', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-    { id: 'ST1', resource: 'CumExcavation', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationManualRates.ToolsExcavation.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'STO', resource: 'CumExcavationMachine', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'ST1', resource: 'CumExcavationManual', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationManualRates.ToolsExcavation.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
     {id: 'ST2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'ST3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'ST4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -704,7 +704,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'ST35', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],    
     "WT5": [
-      { id: 'ST41', resource: 'Sftmm6', description: 'Plaster', length: 6, breadth:3, thickness: 0.6, perimeter:0,  rate: PlasterFCManualRates.mm6.Sft, units: 'Sft', quantity: 0, totalCost: 0 },      
+      { id: 'ST41', resource: 'Cummm12PlasterFCManual', description: 'Plaster', length: 6, breadth:3, thickness: 0.012, area:0,  rate: PlasterFCManualRates.mm12.Cum, units: 'Cum', quantity: 0, totalCost: 0 },      
       { id: 'ST42', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'ST43', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'ST44', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -742,7 +742,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     //Filling//
 
     "GP1": [
-      { id: 'GP10', resource: 'CumSoil', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP10', resource: 'CumSoilFilling', description: 'perimeter-deduts (no of footings)', length: 0, breadth:0, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP11', resource: 'DailyMason', description: 'Filling', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'GP12', resource: 'DailyHelper', description: 'Filling', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
       { id: 'GP13', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
