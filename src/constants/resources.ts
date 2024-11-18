@@ -1,3 +1,4 @@
+import { width } from '@fortawesome/free-solid-svg-icons/fa0'
 import { EngineerRates,MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, WoodFormworkRates,MetalFormworkRates,FillingRates, 
    PlasterFCManualRates,PlasterFCMachineRates,PlasterSCManualRates,PlasterSCMachineRates,BarBenderRates,FencingRates,ShoringRates,
   TermiteRates,WaterRates,ExcavationMachineRates,ExcavationManualRates,RedclayBrickRates,FlyAshBrickRates,CCBlockRates,ElectricalRates,MechanicalRates,FirefightingRates,PlumbingRates,
@@ -755,13 +756,13 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       { id: 'GP24', resource: 'HourlyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     ],
     "GP3": [
-      { id: 'GP30', resource: 'CumM25Concrete', description: 'groundFloorArea-groundFloorWalls', area: groundFloorArea,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP30', resource: 'CumM15pccConcrete', description: 'Floor Screed', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: ConcreteRates.M15pcc.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
     "GP4": [
-      { id: 'GP40', resource: 'SftWater', description: 'Curing Water', area: groundFloorArea,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'GP40', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
       { id: 'GP31', resource: 'DailyMason', description: 'mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GP32', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -977,7 +978,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'FFG128', resource: 'DailyMason', description: 'steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'FFG129', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
 ],
-"FFG14": [    
+"FFG13": [    
   { id: 'FFG141', resource: 'SftDia12Steel', description: 'Main bars top', length: 3.5, diameter: 12, noOfBars: 9, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
   { id: 'FFG142', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 3.5, diameter: 12, noOfBars: 9, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
   { id: 'FFG143', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1.2, diameter: 8, noOfBars: 18, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
