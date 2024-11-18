@@ -691,6 +691,7 @@ const tasks:Task[]=[
     end:'',
     duration:2,
     cost:0,
+    numbersRequired:16,
     strategy:'FS',
     dependencies:['FT604'],
     type:'task',
@@ -734,7 +735,7 @@ const tasks:Task[]=[
     start:'',
     end:'',
     duration:2,
-    cost:0,
+    cost:0,    
     strategy:'FS',
     dependencies:['C11'],
     type:'task',
@@ -2419,6 +2420,20 @@ parent:'C25'
     hideChildren:false,
     parent:'FFGL1'
   },
+  {
+    id:'FFG11',
+    name:'Slab Falsework',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'SS',
+    dependencies:['FFG10'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'C28'
+  },
 
   {
     id:'FFG12',
@@ -2427,8 +2442,8 @@ parent:'C25'
     end:'',
     duration:1,
     cost:0,
-    strategy:'FF',
-    dependencies:['FFG10'],
+    strategy:'FS',
+    dependencies:['FFG11'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -2448,28 +2463,29 @@ parent:'C25'
     hideChildren:false,
     parent:'FFGL1'
   },
+  
   {
-    id:'FFG13',
-    name:'Waist Slab Steel',
+    id:'FFG14',
+    name:'Beam Steel (Landing Portion Support)',
     start:'',
     end:'',
-    duration:0,
+    duration:1,
     cost:0,
-    strategy:'FF',
+    strategy:'FS',
     dependencies:['FFG13'],
     type:'task',
     progress:0,
     hideChildren:false,
     parent:'FFGL1'
-  },
+  }, 
   {
     id:'FFG15',
-    name:'Landing Slab Steel',
+    name:'Staircase Concrete',
     start:'',
     end:'',
-    duration:0,
+    duration:1,
     cost:0,
-    strategy:'FF',
+    strategy:'FS',
     dependencies:['FFG14'],
     type:'task',
     progress:0,
@@ -2478,55 +2494,27 @@ parent:'C25'
   },
   {
     id:'FFG16',
-    name:'Beam Steel (Landing Portion Support)',
-    start:'',
-    end:'',
-    duration:0,
-    cost:0,
-    strategy:'FF',
-    dependencies:['FFG15'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'FFGL1'
-  }, 
-  {
-    id:'FFG17',
-    name:'Staircase Concrete',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['FFG16'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'FFGL1'
-  },
-  {
-    id:'FFG18',
     name:'Staircase Curing',
     start:'',
     end:'',
     duration:7,
     cost:0,
     strategy:'FS',
-    dependencies:['FFG17'],
+    dependencies:['FFG15'],
     type:'task',
     progress:0,
     hideChildren:false,
     parent:'FFGL1'
   },
   {
-    id:'FFG19',
+    id:'FFG17',
     name:'Remove Falsework',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['FFG18'],
+    dependencies:['FFG16'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -2557,7 +2545,7 @@ parent:'C25'
     duration:1,
     cost:0,
     strategy:'FF',
-    dependencies:['FFG17'],
+    dependencies:['FFG16'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -2565,7 +2553,7 @@ parent:'C25'
   },
   {
     id:'SFG13',
-    name:'2nd Landing Slab Steel',
+    name:'Beam Steel (Landing portion)',
     start:'',
     end:'',
     duration:1,
@@ -2575,51 +2563,51 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
-  },
+    parent:'FFGL1'
+  }, 
   {
     id:'SFG14',
-    name:'Mid Landing Slab Steel',
+    name:'Landing Steel',
     start:'',
     end:'',
-    duration:0,
+    duration:1,
     cost:0,
     strategy:'FF',
     dependencies:['SFG13'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
-  }, 
+    parent:'FFGL1'
+  },
+
   {
     id:'SFG15',
     name:'Waist Slab Steel',
     start:'',
     end:'',
-    duration:0,
+    duration:1,
     cost:0,
-    strategy:'FF',
+    strategy:'FS',
     dependencies:['SFG14'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
+    parent:'FFGL1'
   },
   {
     id:'SFG16',
-    name:'3rd Landing Slab Steel',
+    name:'Landing Slab',
     start:'',
     end:'',
-    duration:0,
+    duration:1,
     cost:0,
     strategy:'FF',
     dependencies:['SFG15'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
+    parent:'FFGL1'
   },
-
   {
     id:'SFG17',
     name:'Staircase Concrete',
@@ -2632,7 +2620,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
+    parent:'FFGL1'
   },
   {
     id:'SFG18',
@@ -2642,11 +2630,11 @@ parent:'C25'
     duration:7,
     cost:0,
     strategy:'FS',
-    dependencies:['SFG17'],
+    dependencies:['FFG17'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
+    parent:'FFGL1'
   },
   {
     id:'SFG19',
@@ -2656,12 +2644,13 @@ parent:'C25'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['SFG18'],
+    dependencies:['FFG18'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'SFGL1'
+    parent:'FFGL1'
   },
+
 //G-L1 Staircase
 
 

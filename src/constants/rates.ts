@@ -532,6 +532,33 @@ export const FillingRates = {
   }  
 }
 
+export const DeductRates = {
+  Sand:{
+    Sft: 200,
+    Cft: 450,
+    Sqm:  250,
+    Cum:  350
+  },
+  Soil:{    
+    Sft: 250,
+    Cft: 350,
+    Sqm: 200,
+    Cum: 300
+  },  
+  Aggregate:{    
+    Sft: 1.5,
+    Cft: 20,
+    Sqm: 15,
+    Cum: 400
+  },  
+  Stone:{    
+    Sft: 3.5,
+    Cft: 24,
+    Sqm: 25,
+    Cum: 820
+  }  
+}
+
 export const RedclayBrickRates = {
   inch6:{
     Sft: 70,    
