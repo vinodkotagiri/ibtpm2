@@ -2563,7 +2563,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   }, 
   {
     id:'SFG14',
@@ -2577,7 +2577,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
 
   {
@@ -2592,7 +2592,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG16',
@@ -2606,7 +2606,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG17',
@@ -2620,7 +2620,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG18',
@@ -2634,7 +2634,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
   {
     id:'SFG19',
@@ -2648,7 +2648,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'FFGL1'
+    parent:'SFGL1'
   },
 
 //G-L1 Staircase
