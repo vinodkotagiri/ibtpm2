@@ -121,39 +121,52 @@ export const FencingRates = {
 }
 export const ExcavationMachineRates = {
   Backhoe:{    
-    Hourly: 1500,
+    Hourly: 1000,
     Cft: 0,
-    Cum: 0,  
+    Cum: 100,  
+    Day: 8500
   },
   Excavator:{    
-    Hourly: 2250,
+    Hourly: 1800,
     Cft: 0,
-    Cum: 0,  
+    Cum: 150,  
+    Day: 13000  
   },
   Soft:{    
-  Hourly: 0,
+  Hourly: 1400,
   Cft: 0,
-  Cum: 170,  
+  Cum: 150,  
+  Day: 11000  
 },
   Medium:{    
-  Hourly: 0,
+  Hourly: 1800,
   Cft: 0,
-  Cum: 270,  
+  Cum: 150,  
+  Day: 14000  
 },
   Hard:{    
-  Hourly: 0,
-  Cft: 0,
-  Cum: 440,  
-},
-  Foundation:{    
-  Hourly: 0,
+  Hourly: 2300,
   Cft: 0,
   Cum: 225,  
+  Day: 16500  
+},
+Rocky:{    
+  Hourly: 4500,
+  Cft: 0,
+  Cum: 500,  
+  Day: 23500  
+},
+  Foundation:{    
+  Hourly: 3200,
+  Cft: 0,
+  Cum: 250,  
+  Day: 18000  
 },
   Utilities:{    
-  Hourly: 0,
-  Cft: 0,
-  Cum: 125,  
+  Hourly: 2300,
+  Cft: 325,
+  Cum: 320,  
+  Day: 23000  
 },
 }
 export const ExcavationManualRates = {

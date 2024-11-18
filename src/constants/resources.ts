@@ -51,20 +51,8 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "totalCost": 0
       }
     ],
-    "C04": [
-      {
-        "id": "C3",
-        "resource": "DailyMachinery",
-        "description": "Cum",
-        "rate": MachinaryRates.Excavator.Sft,
-        "units": "Day",         
-        length: builtLength,
-        breadth:builtWidth,               
-        thickness:2.5, // height of excavation
-        area:0,
-        "quantity": excavationArea,
-        "totalCost": 0
-      },
+    "C04": [      
+      { id: 'C04', resource: 'CumExcavatorExcavatonMachine', description: 'Excavation', length: 2.5, breadth:2.5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       {
         "id": "C4",
         "resource": "MonthlyMachinery",
@@ -607,7 +595,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
     //underground Sewage tank //
     "STO": [
-    { id: 'STO', resource: 'CumExcavationMachine', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'STO', resource: 'CumExcavatorExcavatonMachine', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
     { id: 'ST1', resource: 'CumExcavationManual', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationManualRates.ToolsExcavation.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
     {id: 'ST2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'ST3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -677,7 +665,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //underground Water tank //
   "WT1": [
-    { id: 'STO', resource: 'CumExcavationMachine', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'STO', resource: 'CumExcavatorExcavatonMachine', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
     { id: 'ST1', resource: 'CumExcavationManual', description: 'Excavation', length: 5, breadth:5, thickness: 3, area:0,  rate:  ExcavationManualRates.ToolsExcavation.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
     {id: 'ST2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'ST3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },

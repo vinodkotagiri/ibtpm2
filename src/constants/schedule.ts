@@ -148,6 +148,7 @@ const tasks:Task[]=[
     end:'',
     duration:3,
     cost:0,
+    numbersRequired:16,
     strategy:'FS',
     dependencies:['C03'],
     type:'task',

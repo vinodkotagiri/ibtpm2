@@ -14,8 +14,17 @@ type FencingType = 'SqmFencing' | 'SftFencing'
 type ShoringType = 'SqmShoring' | 'SftShoring'
 type TermiteType = 'SqmTermite' | 'SftTermite'
 type WaterType = 'SqmWater' | 'SftWater'| 'LtrWater'| 'CumWater'| 'ContractWater'| 'HourlyWater'| 'DailyWater'| 'WeeklyWater'
-type ExcavationMachineType = 'CumExcavationMachine' | 'SftExcavationMachine'| 'CftExcavationMachine'| 'ContractExcavationMachine'| 'HourlyExcavationMachine'| 'DailyExcavationMachine'| 'WeeklyExcavationMachine'
-type ExcavationManualType = 'CumExcavationManual' | 'SftExcavationManual'| 'CftExcavationManual'| 'ContractExcavationManual'| 'HourlyExcavationManual'| 'DailyExcavationManual'| 'WeeklyExcavationManual'
+type ExcavationMachineType = 'CumBackhoeExcavationMachine' | 'SftBackhoeExcavationMachine'| 'CftBackhoeExcavationMachine'| 'HourlyBackhoeExcavationMachine'|
+'CumExcavatorExcavatonMachine' | 'SftExcavatorExcavationMachine'| 'CftExcavatorExcavationMachine'| 'HourlyExcavatorExcavationMachine'| 
+'CumSoftExcavatonMachine' | 'SftSoftExcavationMachine'| 'CftSoftExcavationMachine'| 'HourlySoftExcavationMachine' | 
+'CumMediumExcavatonMachine' | 'SftMediumExcavationMachine'| 'CftMediumExcavationMachine'| 'HourlyMediumExcavationMachine' | 
+'CumHardExcavatonMachine' | 'SftHardExcavationMachine'| 'CftHardExcavationMachine'| 'HourlyHardExcavationMachine' | 
+'CumFoundationExcavatonMachine' | 'SftFoundationExcavationMachine'| 'CftFoundationExcavationMachine'| 'HourlyFoundationExcavationMachine' | 
+'CumUtilitiesExcavatonMachine' | 'SftUtilitiesExcavationMachine'| 'CftUtilitiesExcavationMachine'| 'HourlyUtilitiesExcavationMachine' 
+
+
+
+type ExcavationManualType = 'CumExcavationManual' | 'SftExcavationManual'| 'CftExcavationManual'| 'ContractExcavationManual'| 'HourlyExcavationManual'| 'DailyExcavationManual'
 type RedclayBrickType = 'CumRedclayBrick' | 'SftRedclayBrick'
 type FlyAshBrickType = 'CumFlyAshBrick' | 'SftFlyAshBrick'
 type CCBlockRatesType = 'CumCCBlock' | 'SftCCBlock'
