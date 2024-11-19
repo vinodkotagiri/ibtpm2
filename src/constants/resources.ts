@@ -1109,6 +1109,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'FFG104', resource: 'DailyHelper', description: 'helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
 ],
 //Foundation Steel//
+
 //Elevator Columns Concrete Level1//
 "EL12": [
   { id: 'FFG151', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },      
