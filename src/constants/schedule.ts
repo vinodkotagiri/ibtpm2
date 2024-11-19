@@ -1790,7 +1790,7 @@ const tasks:Task[]=[
   },
   {
     id:'LL1',
-    name:'Level-1',
+    name:'Level-1 Structure',
     start:'',
     end:'',
     duration:0,
@@ -2111,7 +2111,7 @@ end:'',
 duration:1,
 cost:0,
 strategy:'FS',
-dependencies:['C24'],
+dependencies:['CT32'],
 type:'task',
 progress:0,
 hideChildren:false,
@@ -2185,7 +2185,7 @@ parent:'L1BT2'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C27'],
+    dependencies:['CT32'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -2255,6 +2255,7 @@ parent:'L1BT2'
   end:'',
   duration:1,
   cost:0,
+  numbersRequired:1,
   strategy:'FS',
   dependencies:['SLB21'],
   type:'task',
@@ -2269,6 +2270,7 @@ parent:'L1BT2'
   end:'',
   duration:1,
   cost:0,
+  numbersRequired:1,
   strategy:'FS',
   dependencies:['SLB3'],
   type:'task',
@@ -2283,6 +2285,7 @@ parent:'L1BT2'
   end:'',
   duration:1,
   cost:0,
+  numbersRequired:1,
   strategy:'FS',
   dependencies:['SLB4'],
   type:'task',
@@ -2297,6 +2300,7 @@ parent:'L1BT2'
   end:'',
   duration:1,
   cost:0,
+  numbersRequired:1,
   strategy:'FS',
   dependencies:['SLB5'],
   type:'task',
@@ -2404,7 +2408,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'LL1'
   },
   {
     id:'FFGL1',
@@ -2680,7 +2684,7 @@ parent:'L1BT2'
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C01'
+  parent:'LL1'
 },
 {
   id:'EL11',
@@ -2772,6 +2776,7 @@ parent:'L1BT2'
   hideChildren:false,
   parent:'ELE0'
 },
+//Elevator Beams//
 {
   id:'EL17',
   name:'Beam Falsework',
@@ -2831,1048 +2836,1066 @@ parent:'L1BT2'
   hideChildren:false,
   parent:'ELE0'
 },
-//Elevator Core Wall//END
+//Level-1 Structure End//
 
 
+//Level-2 Structure Start//
 
-//Level-2 Structure//STart
-// {
-//   id:'C20',
-//   name:'Level-1 Columns',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C01'
-// },
-// {
-//   id:'GCT1',
-//   name:'Columns-G-Level1-Typ-1 3x0.23x0.23',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   numbersRequired:1,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C20'
-// },
-// //columns// set-1
-// {
-//   id:'GCT11',
-//   name:'Columns Steel',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['GP4'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'GCT1'
-// },  
-// {
-//   id:'GCT12',
-//   name:'Columns Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['GCT11'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'GCT1'
-// },
-// {
-//   id:'GCT13',
-//   name:'Columns Concrete',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['GCT12'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'GCT1'
-// },
-// //Ground columns// set-1
+{
+  id:'LL2',
+  name:'Level-2 Structure',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'C01'
+},
 
-// //Ground columns// set-2
-// {
-//   id:'GCT2',
-//   name:'Columns-G=Level1-Typ-2 3x0.3x0.3',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   numbersRequired:1,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C20'
-// },
-// //columns// set-2
-// {
-//   id:'CT21',
-//   name:'Columns Steel',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['GP4'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'GCT2'
-// },  
-// {
-//   id:'CT22',
-//   name:'Columns Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['CT21'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'GCT2'
-// },
-// {
-//   id:'CT23',
-//   name:'Columns Concrete',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['CT22'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'GCT2'
-// },
-// //end of Ground columns// set-2
+{
+  id:'L2C',
+  name:'Level-2 Columns',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'LL2'
+},
+{
+  id:'L2T1',
+  name:'Columns-L2-Typ-1 3x0.23x0.23',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  numbersRequired:1,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'L2C'
+},
+//columns// set-1
+{
+  id:'L2T11',
+  name:'Columns Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['SFG17'], //Staircase Comcrete - second flight
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2T1'
+},  
+{
+  id:'L2T12',
+  name:'Columns Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2T11'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2T1'
+},
+{
+  id:'L2T13',
+  name:'Columns Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2T12'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2T1'
+},
+//Ground columns// set-1
 
-//   //Ground columns// set-3
-//   {
-//     id:'GCT3',
-//     name:'Columns-G=Level1-Typ-3 3x0.3x0.45',
-//     start:'',
-//     end:'',
-//     duration:0,
-//     cost:0,
-//     numbersRequired:1,
-//     strategy:'FS',
-//     dependencies:[],
-//     type:'project',
-//     progress:0,
-//     hideChildren:false,
-//     parent:'C20'
-//   },    
-//   {
-//     id:'CT31',
-//     name:'Columns Steel',
-//     start:'',
-//     end:'',
-//     duration:1,
-//     cost:0,
-//     strategy:'FS',
-//     dependencies:['GP4'],
-//     type:'task',
-//     progress:0,
-//     hideChildren:false,
-//     parent:'GCT3'
-//   },  
-//   {
-//     id:'CT32',
-//     name:'Columns Falsework',
-//     start:'',
-//     end:'',
-//     duration:1,
-//     cost:0,
-//     strategy:'FS',
-//     dependencies:['CT31'],
-//     type:'task',
-//     progress:0,
-//     hideChildren:false,
-//     parent:'GCT3'
-//   },
-//   {
-//     id:'CT33',
-//     name:'Columns Concrete',
-//     start:'',
-//     end:'',
-//     duration:1,
-//     cost:0,
-//     strategy:'FS',
-//     dependencies:['CT32'],
-//     type:'task',
-//     progress:0,
-//     hideChildren:false,
-//     parent:'GCT3'
-//   },
-//   //columns// set-3
-//   //end of Ground columns// set-3
+//Ground columns// set-2
+{
+  id:'L2T2',
+  name:'Columns-L2-Typ-2 3x0.3x0.3',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  numbersRequired:1,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'L2C'
+},
+//columns// set-2
+{
+  id:'L2T21',
+  name:'Columns Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['SFG17'], //Staircase Comcrete - second flight
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2T2'
+},  
+{
+  id:'L2T22',
+  name:'Columns Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2T21'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2T2'
+},
+{
+  id:'L2T23',
+  name:'Columns Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2T22'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2T2'
+},
+//end of Ground columns// set-2
 
-//   //Beam Type-1// 3x0.23x0.45
-//   {
-//     id:'C21',
-//     name:'Level-1 Beams',
-//     start:'',
-//     end:'',
-//     duration:0,
-//     cost:0,
-//     strategy:'FS',
-//     dependencies:[],
-//     type:'project',
-//     progress:0,
-//     hideChildren:false,
-//     parent:'C01'
-//   },
-//   {
-//     id:'C24',
-//     name:'Beam G-Level1-Typ-1 3x0.23x0.45',
-//     start:'',
-//     end:'',
-//     duration:0,
-//     cost:0,
-//     numbersRequired:1,
-//     strategy:'FS',
-//     dependencies:[],
-//     type:'project',
-//     progress:0,
-//     hideChildren:false,
-//     parent:'C21'
-//   },
-// {
-//   id:'BT11',
-//   name:'Beam Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['CT32'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C24'
-// },
-// {
-//   id:'BT12',
-//   name:'Beam Steel',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['BT11'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C24'
-// },
-// {
-//   id:'BT13',
-//   name:'Inspection',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['BT12'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C24'
-// },
-// {
-//   id:'BT14',
-//   name:'Beam Concrete',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['BT13'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C24'
-// },
-// //Beam Type-1// 3x0.23x0.45
-
-// //Beam Type-2// 3x0.3x0.6
-// {
-// id:'C25',
-// name:'Beam G-Level1-Typ-2 3x0.3x0.6',
-// start:'',
-// end:'',
-// duration:0,
-// cost:0,
-// numbersRequired:1,
-// strategy:'FS',
-// dependencies:[],
-// type:'project',
-// progress:0,
-// hideChildren:false,
-// parent:'C21'
-// },
-// {
-// id:'BT21',
-// name:'Beam Falsework',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['C24'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C25'
-// },
-// {
-// id:'BT22',
-// name:'Beam Steel',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['BT11'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C25'
-// },
-// {
-// id:'BT23',
-// name:'Inspection',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['BT12'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C25'
-// },
-// {
-// id:'BT24',
-// name:'Beam Concrete',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['BT23'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C25'
-// },
-// //Beam Type-2// 3x0.3x0.6
-
-
-// //slab//
-// {
-//   id:'C28',
-//   name:'Slab Level-1',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C01'
-// },
-// {
-//   id:'SLB1',
-//   name:'Slab Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['C27'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C28'
-// },
-// {
-//   id:'C29',
-//   name:'Slab Steel-Bottom',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C28'
-// },
-// {
-//   id:'SSL1',
-//   name:'Slab Steel-Length',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SLB1'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C29'
-// },
-// {
-//   id:'SSB1',
-//   name:'Slab Steel-Breadth',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FF',
-//   dependencies:['SSL1'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C29'
-// },
-// //SLAB MEP START//
-// {
-// id:'L1MEP',
-// name:'MEP',
-// start:'',
-// end:'',
-// duration:0,
-// cost:0,
-// strategy:'FS',
-// dependencies:[],
-// type:'project',
-// progress:0,
-// hideChildren:false,
-// parent:'C28'
-// },
-// {
-// id:'SLB3',
-// name:'Slab Electrical',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['SLB21'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'L1MEP'
-// },
-// {
-// id:'SLB4',
-// name:'Slab Mechanical',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['SLB3'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'L1MEP'
-// },
-// {
-// id:'SLB5',
-// name:'Slab Plumbing',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['SLB4'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'L1MEP'
-// },
-// {
-// id:'SLB6',
-// name:'Slab Firefighting',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// strategy:'FS',
-// dependencies:['SLB5'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'L1MEP'
-// },
-// //SLAB MEP END//
-// {
-//   id:'C30',
-//   name:'Slab Steel-Top',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C28'
-// },
-// {
-//   id:'SSL2',
-//   name:'Slab Steel-Length',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SLB3'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C30'
-// },
-// {
-//   id:'SLB2',
-//   name:'Slab Steel-Breadth',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FF',
-//   dependencies:['SSL2'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C30'
-// },
-
-// {
-//   id:'SLB7',
-//   name:'Slab Concrete',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SLB2'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C28'
-// },
-// {
-//   id:'SLB8',
-//   name:'Slab Curing',
-//   start:'',
-//   end:'',
-//   duration:7,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SLB7'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C28'
-// },
-// {
-//   id:'SLB9',
-//   name:'Remove Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SLB8'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C28'
-// },
-
-// //G-L1 Staircase//
-// {
-//   id:'C31',
-//   name:'Staircase-G-L1',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C01'
-// },
-// {
-//   id:'FFGL1',
-//   name:'First Flight-G-L1',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C31'
-// },
-// {
-//   id:'FFG10',
-//   name:'Foundation Bed',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SLB8'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-// {
-//   id:'FFG11',
-//   name:'Slab Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'SS',
-//   dependencies:['FFG10'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-
-// {
-//   id:'FFG12',
-//   name:'Waist Slab Steel',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG11'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-// {
-//   id:'FFG13',
-//   name:'Landing Slab',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FF',
-//   dependencies:['FFG12'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-
-// {
-//   id:'FFG14',
-//   name:'Beam Steel (Landing Portion Support)',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG13'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// }, 
-// {
-//   id:'FFG15',
-//   name:'Staircase Concrete',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG14'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-// {
-//   id:'FFG16',
-//   name:'Staircase Curing',
-//   start:'',
-//   end:'',
-//   duration:7,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG15'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-// {
-//   id:'FFG17',
-//   name:'Remove Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG16'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'FFGL1'
-// },
-
-// {
-//   id:'SFGL1',
-//   name:'Second Flight-G-L1',
-//   start:'',
-//   end:'',
-//   duration:0,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:[],
-//   type:'project',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'C31'
-// },
-
-
-// {
-//   id:'SFG12',
-//   name:'Formwork 2nd Flight Slab',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FF',
-//   dependencies:['FFG16'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-// {
-//   id:'SFG13',
-//   name:'Beam Steel (Landing portion)',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SFG12'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// }, 
-// {
-//   id:'SFG14',
-//   name:'Landing Steel',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FF',
-//   dependencies:['SFG13'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-
-// {
-//   id:'SFG15',
-//   name:'Waist Slab Steel',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SFG14'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-// {
-//   id:'SFG16',
-//   name:'Landing Slab',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FF',
-//   dependencies:['SFG15'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-// {
-//   id:'SFG17',
-//   name:'Staircase Concrete',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['SFG16'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-// {
-//   id:'SFG18',
-//   name:'Staircase Curing',
-//   start:'',
-//   end:'',
-//   duration:7,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG17'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-// {
-//   id:'SFG19',
-//   name:'Remove Falsework',
-//   start:'',
-//   end:'',
-//   duration:1,
-//   cost:0,
-//   strategy:'FS',
-//   dependencies:['FFG18'],
-//   type:'task',
-//   progress:0,
-//   hideChildren:false,
-//   parent:'SFGL1'
-// },
-
-// //G-L1 Staircase
-
-// //Elevator Core Wall//
-// {
-// id:'C32',
-// name:'Elevator Core',
-// start:'',
-// end:'',
-// duration:0,
-// cost:0,
-// strategy:'FS',
-// dependencies:[],
-// type:'project',
-// progress:0,
-// hideChildren:false,
-// parent:'C01'
-// },
-// {
-// id:'EL11',
-// name:'Foundation Columns Steel',
-// start:'',
-// end:'',
-// duration:4,
-// cost:0,
-// numbersRequired:4,
-// strategy:'SS',
-// dependencies:['SFG17'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL12',
-// name:'Inspection',
-// start:'',
-// end:'',
-// duration:4,
-// cost:0,
-// numbersRequired:1,
-// strategy:'FS',
-// dependencies:['EL11'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL13',
-// name:'Foundation Columns Concrete',
-// start:'',
-// end:'',
-// duration:4,
-// cost:0,
-// numbersRequired:4,
-// strategy:'FF',
-// dependencies:['EL12'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL14',
-// name:'Columns Steel',
-// start:'',
-// end:'',
-// duration:4,
-// cost:0,
-// numbersRequired:4,
-// strategy:'SS',
-// dependencies:['EL13'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL15',
-// name:'Columns Falsework',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// numbersRequired:4,
-// strategy:'FS',
-// dependencies:['EL14'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL16',
-// name:'Columns Concrete',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// numbersRequired:4,
-// strategy:'FS',
-// dependencies:['EL15'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL17',
-// name:'Beam Falsework',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// numbersRequired:4,
-// strategy:'FS',
-// dependencies:['EL16'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL18',
-// name:'Beam Steel',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// numbersRequired:4,
-// strategy:'FS',
-// dependencies:['EL17'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL19',
-// name:'Inspection',
-// start:'',
-// end:'',
-// duration:3,
-// cost:0,  
-// strategy:'FS',
-// dependencies:['EL18'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-// {
-// id:'EL110',
-// name:'Beam Concrete',
-// start:'',
-// end:'',
-// duration:1,
-// cost:0,
-// numbersRequired:4,
-// strategy:'FS',
-// dependencies:['EL19'],
-// type:'task',
-// progress:0,
-// hideChildren:false,
-// parent:'C32'
-// },
-//Elevator Core Wall//
-//Level-2 Structure//Structure
-
-
-
-
-//Overhead WAter Tank//
+  //Ground columns// set-3
   {
-    id:'C147',
+    id:'L2T3',
+    name:'Columns-L2-Typ-3 3x0.3x0.45',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    numbersRequired:1,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'L2C'
+  },    
+  {
+    id:'L2T31',
+    name:'Columns Steel',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['SFG17'], //Staircase Comcrete - second flight
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'L2T3'
+  },  
+  {
+    id:'L2T32',
+    name:'Columns Falsework',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['L2T31'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'L2T3'
+  },
+  {
+    id:'L2T33',
+    name:'Columns Concrete',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['L2T32'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'L2T3'
+  },
+  //columns// set-3
+  //end of Ground columns// set-3
+
+  //Beam Type-1// 3x0.23x0.45
+  {
+    id:'L2B',
+    name:'Level-2 Beams',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'LL2'
+  },
+  {
+    id:'L2BT1',
+    name:'Beam L2-Typ-1 3x0.23x0.45',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    numbersRequired:1,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'L2B'
+  },
+{
+  id:'L2BT11',
+  name:'Beam Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2T13'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2BT1'
+},
+{
+  id:'L2BT12',
+  name:'Beam Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['BT11'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2BT1'
+},
+{
+  id:'L2BT13',
+  name:'Inspection',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['BT12'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2BT1'
+},
+{
+  id:'L2BT14',
+  name:'Beam Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['BT13'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2BT1'
+},
+//Beam Type-1// 3x0.23x0.45
+
+//Beam Type-2// 3x0.3x0.6
+{
+id:'L2BT2',
+name:'Beam L2-Typ-2 3x0.3x0.6',
+start:'',
+end:'',
+duration:0,
+cost:0,
+numbersRequired:1,
+strategy:'FS',
+dependencies:[],
+type:'project',
+progress:0,
+hideChildren:false,
+parent:'L2B'
+},
+{
+id:'L2BT21',
+name:'Beam Falsework',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['L2T13'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2BT2'
+},
+{
+id:'L2BT22',
+name:'Beam Steel',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['BT21'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2BT2'
+},
+{
+id:'L2BT23',
+name:'Inspection',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['BT22'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2BT2'
+},
+{
+id:'L2BT24',
+name:'Beam Concrete',
+start:'',
+end:'',
+duration:1,
+cost:0,
+strategy:'FS',
+dependencies:['BT23'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2BT2'
+},
+//Beam Type-2// 3x0.3x0.6 Level-2//
+
+
+//slab//
+{
+  id:'SL2',
+  name:'Slab Level-2',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'LL2'
+},
+{
+  id:'L2SLB1',
+  name:'Slab Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['C27'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'SL2'
+},
+{
+  id:'L2SSB',
+  name:'Slab Steel-Bottom',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'SL2'
+},
+{
+  id:'L2SSL1',
+  name:'Slab Steel-Length',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SSB'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SSB'
+},
+{
+  id:'L2SSB1',
+  name:'Slab Steel-Breadth',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FF',
+  dependencies:['L2SSL1'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SSB'
+},
+//SLAB MEP START//
+{
+id:'L2MEP',
+name:'MEP',
+start:'',
+end:'',
+duration:0,
+cost:0,
+strategy:'FS',
+dependencies:[],
+type:'project',
+progress:0,
+hideChildren:false,
+parent:'SL2'
+},
+{
+id:'L2SLB3',
+name:'Slab Electrical',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2SSB1'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2MEP'
+},
+{
+id:'L2SLB4',
+name:'Slab Mechanical',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2SLB3'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2MEP'
+},
+{
+id:'L2SLB5',
+name:'Slab Plumbing',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2SLB4'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2MEP'
+},
+{
+id:'L2SLB6',
+name:'Slab Firefighting',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2SLB5'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2MEP'
+},
+//SLAB MEP END//
+{
+  id:'L2SST',
+  name:'Slab Steel-Top',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'SL2'
+},
+{
+  id:'L2SSL2',
+  name:'Slab Steel-Length',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SLB3'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SST'
+},
+{
+  id:'L2SLB2',
+  name:'Slab Steel-Breadth',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FF',
+  dependencies:['L2SSL2'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SST'
+},
+
+{
+  id:'L2SLC1',
+  name:'Slab Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SLB2'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SST'
+},
+{
+  id:'L2SLC2',
+  name:'Slab Curing',
+  start:'',
+  end:'',
+  duration:7,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SLC1'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SST'
+},
+{
+  id:'L2SLC3',
+  name:'Remove Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SLC2'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SST'
+},
+
+//L1-L2 Staircase//
+{
+  id:'L2SC',
+  name:'Staircase-L2',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'LL2'
+},
+{
+  id:'L2FF',
+  name:'First Flight-L2',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SC'
+},
+{
+  id:'L2FF1',
+  name:'Foundation Bed',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['SLB8'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+{
+  id:'L2FF2',
+  name:'Slab Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'SS',
+  dependencies:['L2FF1'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+
+{
+  id:'L2FF3',
+  name:'Waist Slab Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2FF2'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+{
+  id:'L2FF4',
+  name:'Landing Slab',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FF',
+  dependencies:['L2FF3'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+
+{
+  id:'L2FF5',
+  name:'Beam Steel (Landing Portion Support)',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2FF4'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+}, 
+{
+  id:'L2FF6',
+  name:'Staircase Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2FF5'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+{
+  id:'L2FF7',
+  name:'Staircase Curing',
+  start:'',
+  end:'',
+  duration:7,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2FF6'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+{
+  id:'L2FF8',
+  name:'Remove Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2FF7'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2FF'
+},
+
+{
+  id:'L2SF',
+  name:'Second Flight-L2',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SC'
+},
+
+
+{
+  id:'L2SF1',
+  name:'Formwork 2nd Flight Slab',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FF',
+  dependencies:['L2FF7'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+{
+  id:'L2SF2',
+  name:'Beam Steel (Landing portion)',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SF1'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+}, 
+{
+  id:'L2SF3',
+  name:'Landing Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FF',
+  dependencies:['L2SF2'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+
+{
+  id:'L2SF4',
+  name:'Waist Slab Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SF3'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+{
+  id:'L2SF5',
+  name:'Landing Slab',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FF',
+  dependencies:['L2SF4'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+{
+  id:'L2SF6',
+  name:'Staircase Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SF5'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+{
+  id:'L2SF7',
+  name:'Staircase Curing',
+  start:'',
+  end:'',
+  duration:7,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SF6'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+{
+  id:'L2SF8',
+  name:'Remove Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  strategy:'FS',
+  dependencies:['L2SF7'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'L2SF'
+},
+
+//L2 Staircase//
+
+//L2- Elevator Core Wall//
+{
+id:'L2EL0',
+name:'Elevator Core',
+start:'',
+end:'',
+duration:0,
+cost:0,
+strategy:'FS',
+dependencies:[],
+type:'project',
+progress:0,
+hideChildren:false,
+parent:'LL2'
+},
+{
+id:'L2EL1',
+name:'Foundation Columns Steel',
+start:'',
+end:'',
+duration:4,
+cost:0,
+numbersRequired:4,
+strategy:'SS',
+dependencies:['SFG17'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL2',
+name:'Inspection',
+start:'',
+end:'',
+duration:4,
+cost:0,
+numbersRequired:1,
+strategy:'FS',
+dependencies:['L2EL1'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL3',
+name:'Foundation Columns Concrete',
+start:'',
+end:'',
+duration:4,
+cost:0,
+numbersRequired:4,
+strategy:'FF',
+dependencies:['L2EL2'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL4',
+name:'Columns Steel',
+start:'',
+end:'',
+duration:4,
+cost:0,
+numbersRequired:4,
+strategy:'SS',
+dependencies:['L2EL3'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL5',
+name:'Columns Falsework',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2EL4'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL6',
+name:'Columns Concrete',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2EL5'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL7',
+name:'Beam Falsework',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2EL6'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL8',
+name:'Beam Steel',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2EL7'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL9',
+name:'Inspection',
+start:'',
+end:'',
+duration:3,
+cost:0,  
+strategy:'FS',
+dependencies:['L2EL8'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+{
+id:'L2EL10',
+name:'Beam Concrete',
+start:'',
+end:'',
+duration:1,
+cost:0,
+numbersRequired:4,
+strategy:'FS',
+dependencies:['L2EL9'],
+type:'task',
+progress:0,
+hideChildren:false,
+parent:'L2EL0'
+},
+
+
+//Level-2 Structure End//
+
+
+//Overhead Water Tank Concrete//
+  {
+    id:'OHT1CW',
     name:'Overhead Tank-1 Concrete Walls',
     start:'',
     end:'',
@@ -3897,7 +3920,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C149',
@@ -3911,7 +3934,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C150',
@@ -3925,7 +3948,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C151',
@@ -3939,7 +3962,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C152',
@@ -3953,7 +3976,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C153',
@@ -3967,7 +3990,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C154',
@@ -3981,7 +4004,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C155',
@@ -3995,7 +4018,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C156',
@@ -4009,7 +4032,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
   {
     id:'C157',
@@ -4023,11 +4046,12 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C147'
+    parent:'OHT1CW'
   },
 
+  //Overhead Water Tank Brick//
   {
-    id:'C158',
+    id:'OHT1BW',
     name:'Overhead Tank-1 Brick Walls',
     start:'',
     end:'',
@@ -4052,7 +4076,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C160',
@@ -4066,7 +4090,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C161',
@@ -4080,7 +4104,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C162',
@@ -4094,7 +4118,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C163',
@@ -4108,7 +4132,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C164',
@@ -4122,7 +4146,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C165',
@@ -4136,7 +4160,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C166',
@@ -4150,7 +4174,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C167',
@@ -4164,7 +4188,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C168',
@@ -4178,7 +4202,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C169',
@@ -4192,7 +4216,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
   {
     id:'C170',
@@ -4206,14 +4230,14 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C158'
+    parent:'OHT1BW'
   },
 
 //Finishes//
 
   {
-    id:'C14',
-    name:'Finishes Rough-in',
+    id:'L1FR',
+    name:'Level-1 Finishes Rough-in',
     start:'',
     end:'',
     duration:1,
@@ -4237,7 +4261,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C173',
@@ -4490,7 +4514,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C188',
@@ -4748,7 +4772,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C203',
@@ -5001,7 +5025,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C218',
@@ -5256,7 +5280,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C233',
@@ -5509,7 +5533,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C247',
@@ -5762,7 +5786,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C14'
+    parent:'L1FR'
   },
   {
     id:'C262',
@@ -6004,8 +6028,8 @@ parent:'L1BT2'
   },
 
   {
-    id:'C15',
-    name:'Finishes Interiors',
+    id:'L1FI',
+    name:'Level-1 Finishes Interiors',
     start:'',
     end:'',
     duration:0,
@@ -6029,7 +6053,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C15'
+    parent:'L1FI'
   },
   {
     id:'C278',
