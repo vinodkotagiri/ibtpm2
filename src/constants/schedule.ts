@@ -2432,7 +2432,7 @@ parent:'C25'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C28'
+    parent:'FFGL1'
   },
 
   {
@@ -2653,7 +2653,175 @@ parent:'C25'
 
 //G-L1 Staircase
 
+//Elevator Core Wall//
+{
+  id:'C32',
+  name:'Elevator Core',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'C01'
+},
+{
+  id:'EL11',
+  name:'Foundation Columns Steel',
+  start:'',
+  end:'',
+  duration:4,
+  cost:0,
+  numbersRequired:4,
+  strategy:'SS',
+  dependencies:['SFG17'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL12',
+  name:'Inspection',
+  start:'',
+  end:'',
+  duration:4,
+  cost:0,
+  numbersRequired:1,
+  strategy:'FS',
+  dependencies:['EL11'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL13',
+  name:'Foundation Columns Concrete',
+  start:'',
+  end:'',
+  duration:4,
+  cost:0,
+  numbersRequired:4,
+  strategy:'FF',
+  dependencies:['EL12'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL14',
+  name:'Columns Steel',
+  start:'',
+  end:'',
+  duration:4,
+  cost:0,
+  numbersRequired:4,
+  strategy:'SS',
+  dependencies:['EL13'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL15',
+  name:'Columns Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  numbersRequired:4,
+  strategy:'FS',
+  dependencies:['EL14'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL16',
+  name:'Columns Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  numbersRequired:4,
+  strategy:'FS',
+  dependencies:['EL15'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL17',
+  name:'Beam Falsework',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  numbersRequired:4,
+  strategy:'FS',
+  dependencies:['EL16'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL18',
+  name:'Beam Steel',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  numbersRequired:4,
+  strategy:'FS',
+  dependencies:['EL17'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL19',
+  name:'Inspection',
+  start:'',
+  end:'',
+  duration:3,
+  cost:0,  
+  strategy:'FS',
+  dependencies:['EL18'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
+{
+  id:'EL110',
+  name:'Beam Concrete',
+  start:'',
+  end:'',
+  duration:1,
+  cost:0,
+  numbersRequired:4,
+  strategy:'FS',
+  dependencies:['EL19'],
+  type:'task',
+  progress:0,
+  hideChildren:false,
+  parent:'C32'
+},
 
+
+//Elevator Core Wall//
+
+//Level 2//
   {
     id:'C37',
     name:'Level-2 Slab',
