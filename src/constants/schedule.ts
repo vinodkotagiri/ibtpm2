@@ -99,7 +99,7 @@ const tasks:Task[]=[
     parent:'P0'
   },     
   {
-    id:'C02',
+    id:'SP0',
     name:'Site Preparation',
     start:'',
     end:'',
@@ -124,7 +124,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C02'
+    parent:'SP0'
   },  
   {
     id:'SP2',
@@ -138,7 +138,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C02',
+    parent:'SP0',
     resources:[]
   },
   {
@@ -154,7 +154,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C02',
+    parent:'SP0',
     resources:[],
   },
   {
@@ -169,7 +169,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C02',
+    parent:'SP0',
     resources:[],
   },
   {
@@ -184,7 +184,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C02',
+    parent:'SP0',
     resources:[],
   },
   {
@@ -199,11 +199,11 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C02',
+    parent:'SP0',
     resources:[],
   },
   {
-    id:'C03',
+    id:'FD1',
     name:'Foundation',
     start:'',
     end:'',
@@ -228,7 +228,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C03'
+    parent:'FD1'
   },
   {
     id:'F01',
@@ -685,7 +685,7 @@ const tasks:Task[]=[
   },
 
   {
-    id:'C04',
+    id:'FL0',
     name:'Filling',
     start:'',
     end:'',
@@ -697,11 +697,11 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C03',
+    parent:'FD1',
     resources:[],
   },
   {
-    id:'C05',
+    id:'PBL',
     name:'Plinth Beam Length',
     start:'',
     end:'',
@@ -712,7 +712,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C03'
+    parent:'FD1'
   },
   {
     id:'PT1L0',
@@ -727,7 +727,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBL'
   },
   {
     id:'PT1L1',
@@ -737,7 +737,7 @@ const tasks:Task[]=[
     duration:2,
     cost:0,    
     strategy:'FS',
-    dependencies:['C04'],
+    dependencies:['FL0'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -803,7 +803,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBL'
   },
   {
     id:'PT2L1',
@@ -879,7 +879,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBL'
   },
   {
     id:'PT3L1',
@@ -955,7 +955,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBL'
   },
   {
     id:'PT4L1',
@@ -1020,7 +1020,7 @@ const tasks:Task[]=[
 
   //Breadth// Plinth Beam Breadth wise  between columns
   {
-    id:'C05',
+    id:'PBB',
     name:'Plinth Beam Breadth',
     start:'',
     end:'',
@@ -1031,7 +1031,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C03'
+    parent:'FD1'
   },
   {
     id:'PT1B0',
@@ -1046,7 +1046,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBB'
   },
   {
     id:'PT1B1',
@@ -1056,7 +1056,7 @@ const tasks:Task[]=[
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['C04'],
+    dependencies:['FL0'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -1122,7 +1122,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBB'
   },
   {
     id:'PT2B1',
@@ -1198,7 +1198,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBB'
   },
   {
     id:'PT3B1',
@@ -1274,7 +1274,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C05'
+    parent:'PBB'
   },
   {
     id:'PT4B1',
@@ -1341,7 +1341,7 @@ const tasks:Task[]=[
 //MEP//
 
 {
-  id:'C06',
+  id:'US0',
   name:'Underground Sewage',
   start:'',
   end:'',
@@ -1368,7 +1368,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C06',
+  parent:'US0',
   resources:[],
 },
 {
@@ -1495,7 +1495,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C06',
+  parent:'US0',
   resources:[],
 },
 {
@@ -1535,7 +1535,7 @@ const tasks:Task[]=[
 //under ground water tank //
 
 {
-  id:'C07',
+  id:'UW0',
   name:'Underground Water Tank',
   start:'',
   end:'',
@@ -1562,7 +1562,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C07',
+  parent:'UW0',
   resources:[],
 },
 {
@@ -1674,7 +1674,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C07',
+  parent:'UW0',
   resources:[],
 },
 {
@@ -1713,7 +1713,7 @@ const tasks:Task[]=[
 
 //MEP//
 {
-  id:'C08',
+  id:'GCC',
   name:'Ground CC Floor',
   start:'',
   end:'',
@@ -1735,11 +1735,11 @@ const tasks:Task[]=[
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['C06'],
+    dependencies:['US0'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08',
+    parent:'GCC',
     resources:[],
   },
   {
@@ -1754,7 +1754,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08',
+    parent:'GCC',
     resources:[],
   },
 
@@ -1770,7 +1770,7 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08',
+    parent:'GCC',
     resources:[],
   },
   {
@@ -1785,13 +1785,12 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C08',
+    parent:'GCC',
     resources:[],
   },
-
   {
-    id:'C09',
-    name:'Level-1 Columns',
+    id:'LL1',
+    name:'Level-1',
     start:'',
     end:'',
     duration:0,
@@ -1802,6 +1801,21 @@ const tasks:Task[]=[
     progress:0,
     hideChildren:false,
     parent:'C01'
+  },
+
+  {
+    id:'L1C',
+    name:'Level-1 Columns',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'LL1'
   },
   {
     id:'GCT1',
@@ -1816,7 +1830,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C09'
+    parent:'L1C'
   },
   //columns// set-1
   {
@@ -1877,7 +1891,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C09'
+    parent:'L1C'
   },
   //columns// set-2
   {
@@ -1938,7 +1952,7 @@ const tasks:Task[]=[
       type:'project',
       progress:0,
       hideChildren:false,
-      parent:'C09'
+      parent:'L1C'
     },    
     {
       id:'CT31',
@@ -1987,7 +2001,7 @@ const tasks:Task[]=[
 
     //Beam Type-1// 3x0.23x0.45
     {
-      id:'C10',
+      id:'L1B',
       name:'Level-1 Beams',
       start:'',
       end:'',
@@ -1998,7 +2012,7 @@ const tasks:Task[]=[
       type:'project',
       progress:0,
       hideChildren:false,
-      parent:'C01'
+      parent:'LL1'
     },
     {
       id:'L1BT1',
@@ -2013,7 +2027,7 @@ const tasks:Task[]=[
       type:'project',
       progress:0,
       hideChildren:false,
-      parent:'C10'
+      parent:'L1B'
     },
   {
     id:'BT11',
@@ -2087,7 +2101,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C10'
+  parent:'L1B'
 },
 {
 id:'BT21',
@@ -2150,7 +2164,7 @@ parent:'L1BT2'
 
   //slab//
   {
-    id:'C11',
+    id:'SL1',
     name:'Slab Level-1',
     start:'',
     end:'',
@@ -2161,7 +2175,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'LL1'
   },
   {
     id:'SLB1',
@@ -2175,10 +2189,10 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C11'
+    parent:'SL1'
   },
   {
-    id:'C29',
+    id:'SSB',
     name:'Slab Steel-Bottom',
     start:'',
     end:'',
@@ -2189,7 +2203,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C11'
+    parent:'SL1'
   },
   {
     id:'SSL1',
@@ -2203,7 +2217,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C29'
+    parent:'SSB'
   },
   {
     id:'SSB1',
@@ -2217,7 +2231,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C29'
+    parent:'SSB'
   },
 //SLAB MEP START//
 {
@@ -2232,7 +2246,7 @@ parent:'L1BT2'
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C11'
+  parent:'SL1'
 },
 {
   id:'SLB3',
@@ -2292,7 +2306,7 @@ parent:'L1BT2'
 },
 //SLAB MEP END//
   {
-    id:'C30',
+    id:'SST',
     name:'Slab Steel-Top',
     start:'',
     end:'',
@@ -2303,7 +2317,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C11'
+    parent:'SL1'
   },
   {
     id:'SSL2',
@@ -2317,7 +2331,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C30'
+    parent:'SST'
   },
   {
     id:'SLB2',
@@ -2331,7 +2345,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C30'
+    parent:'SST'
   },
  
   {
@@ -2346,7 +2360,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C11'
+    parent:'SL1'
   },
   {
     id:'SLB8',
@@ -2360,7 +2374,7 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C11'
+    parent:'SL1'
   },
   {
     id:'SLB9',
@@ -2374,12 +2388,12 @@ parent:'L1BT2'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C11'
+    parent:'SL1'
   },
 
   //G-L1 Staircase//
   {
-    id:'C12',
+    id:'SCL1',
     name:'Staircase-G-L1',
     start:'',
     end:'',
@@ -2404,7 +2418,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C12'
+    parent:'SCL1'
   },
   {
     id:'FFG10',
@@ -2533,7 +2547,7 @@ parent:'L1BT2'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C12'
+    parent:'SCL1'
   },
 
 
@@ -2655,7 +2669,7 @@ parent:'L1BT2'
 
 //Elevator Core Wall//
 {
-  id:'C13',
+  id:'ELE0',
   name:'Elevator Core',
   start:'',
   end:'',
@@ -2681,7 +2695,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL12',
@@ -2696,7 +2710,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL13',
@@ -2711,7 +2725,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL14',
@@ -2726,7 +2740,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL15',
@@ -2741,7 +2755,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL16',
@@ -2756,7 +2770,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL17',
@@ -2771,7 +2785,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL18',
@@ -2786,7 +2800,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL19',
@@ -2800,7 +2814,7 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 {
   id:'EL110',
@@ -2815,9 +2829,11 @@ parent:'L1BT2'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'C13'
+  parent:'ELE0'
 },
 //Elevator Core Wall//END
+
+
 
 //Level-2 Structure//STart
 // {
