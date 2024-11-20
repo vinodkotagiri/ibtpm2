@@ -22,12 +22,14 @@ type ExcavationMachineType = 'CumBackhoeExcavationMachine' | 'SftBackhoeExcavati
 'CumFoundationExcavatonMachine' | 'SftFoundationExcavationMachine'| 'CftFoundationExcavationMachine'| 'HourlyFoundationExcavationMachine' | 
 'CumUtilitiesExcavatonMachine' | 'SftUtilitiesExcavationMachine'| 'CftUtilitiesExcavationMachine'| 'HourlyUtilitiesExcavationMachine' 
 
-
-
 type ExcavationManualType = 'CumExcavationManual' | 'SftExcavationManual'| 'CftExcavationManual'| 'ContractExcavationManual'| 'HourlyExcavationManual'| 'DailyExcavationManual'
-type RedclayBrickType = 'CumRedclayBrick' | 'SftRedclayBrick'
-type FlyAshBrickType = 'CumFlyAshBrick' | 'SftFlyAshBrick'
-type CCBlockRatesType = 'CumCCBlock' | 'SftCCBlock'
+
+//Brickwork//
+type Redclayper1000Type = 'Cuminch6Redclayper1000' | 'Sftinch6Redclayper1000'|'Cuminch9Redclayper1000' | 'Sftinch9Redclayper1000'|'Cuminch12Redclayper1000' | 'Sftinch12Redclayper1000'|'Cuminch16Redclayper1000' | 'Sftinch16Redclayper1000'
+type FlyAshper1000Type = 'Cuminch6FlyAshper1000' | 'Sftinch6FlyAshper1000'|'Cuminch9FlyAshper1000' | 'Sftinch9FlyAshper1000'|'Cuminch12FlyAshper1000' | 'Sftinch12FlyAshper1000'|'Cuminch16FlyAshper1000' | 'Sftinch16FlyAshper1000'
+type CCBlockper1000Type = 'Cuminch6CCBlockper1000' | 'Sftinch6CCBlockper1000'|'Cuminch9CCBlockper1000' | 'Sftinch9CCBlockper1000'|'Cuminch12CCBlockper1000' | 'Sftinch12CCBlockper1000'|'Cuminch16CCBlockper1000' | 'Sftinch16CCBlockper1000'
+//Brickwork//
+
 type PlasterFCManualType = 'Cummm6PlasterFCManual' | 'Sftmm6PlasterFCManual'| 'Sqtmm6PlasterFCManual'|'Cummm8PlasterFCManual' | 'Sftmm8PlasterFCManual'| 'Sqtmm8PlasterFCManual'|'Cummm10PlasterFCManual' | 'Sftmm10PlasterFCManual'| 'Sqtmm10PlasterFCManual'|'Cummm12PlasterFCManual' | 'Sftmm12PlasterFCManual'| 'Sqtmm12PlasterFCManual'
 |'Cummm15PlasterFCManual' | 'Sftmm15PlasterFCManual'| 'Sqtmm15PlasterFCManual'|'Cummm20PlasterFCManual' | 'Sftmm20PlasterFCManual'| 'Sqtmm20PlasterFCManual'
 type PlasterSCManualType = 'Cummm6PlasterSCManual' | 'Sftmm6PlasterSCManual'| 'Sqtmm6PlasterSCManual'|'Cummm8PlasterSCManual' | 'Sftmm8PlasterSCManual'| 'Sqtmm8PlasterSCManual'|'Cummm10PlasterSCManual' | 'Sftmm10PlasterSCManual'| 'Sqtmm10PlasterSCManual'|'Cummm12PlasterSCManual' | 'Sftmm12PlasterSCManual'| 'Sqtmm12PlasterSCManual'
@@ -65,7 +67,7 @@ export type CurrencyUnits =
 
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| 
-RedclayBrickType | FlyAshBrickType|CCBlockRatesType| PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
+Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type | PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
 |SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
 
 export type Task = {

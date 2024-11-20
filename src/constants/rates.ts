@@ -559,24 +559,24 @@ export const DeductRates = {
   }  
 }
 
-export const RedclayBrickRates = {
+export const Redclayper1000Rates = {
   inch6:{
     Sft: 70,    
-    Cum: 5600
+    Cum: 7500
   },
   inch9:{    
     Sft: 100,    
-    Cum: 6250
+    Cum: 9000
   },  
   inch12:{    
     Sft: 129,    
-    Cum: 6600  
+    Cum: 9500  
   }  
 }
-export const FlyAshBrickRates = {
+export const FlyAshper1000Rates = {
   inch6:{
     Sft: 60,    
-    Cum: 4500
+    Cum: 6500
   },
   inch9:{    
     Sft: 80,    
@@ -587,18 +587,18 @@ export const FlyAshBrickRates = {
     Cum: 5500  
   }  
 }
-export const CCBlockRates = {
+export const CCBlockper1000Rates = {
   inch6:{
     Sft: 45,    
-    Cum: 4100
+    Cum: 3500
   },
-  inch9:{    
+  inch8:{    
     Sft: 70,    
-    Cum: 4500
+    Cum: 4400
   },  
   inch12:{    
     Sft: 90,    
-    Cum: 5000  
+    Cum: 5500  
   }  
 }
 
