@@ -4871,7 +4871,7 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C122'
+    parent:'LL3'
   },
   {
     id:'C148',
@@ -4908,6 +4908,7 @@ parent:'L3EL0'
     end:'',
     duration:3,
     cost:0,
+    numbersRequired:4,
     strategy:'FS',
     dependencies:['C149'],
     type:'task',
@@ -5027,7 +5028,7 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C122'
+    parent:'LL3'
   },
   {
     id:'C159',
