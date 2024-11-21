@@ -2206,18 +2206,14 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ], 
 
 "GPTF1": [
-    { id: 'GPTF11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GPTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GPTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'GPTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
+  //Ground Living//Finishes Rough-in start//
 
 
-
-    //Ground Living//Finishes Rough-in start//
-
-
-
-
+  
   }
   if(taskResources)  return updateQuantities(taskResources)
     return updateQuantities( resources[ taskId ]??[] )
