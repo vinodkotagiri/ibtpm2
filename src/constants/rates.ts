@@ -764,51 +764,51 @@ export const GIRates = {
   },    
 }
 //Door Frame Insulation end//
-export const DFisulationRates = {
+export const DFinsulationRates = {
   Teak:{
-    WP1: 2000,    
+    WP1: 2000,    //waterproof membrane
     WP2: 2500,    
     WP3: 3000,    
     FT1: 3500,        
-    FT2: 400,        
+    FT2: 4000,    //foam tape
   },
   Ply:{
-    FT1: 1000,    
-    Ft2: 1500,    
-    ADSEALANT1: 1600,    
-    ADSEALANT2: 2000,        
-    WP1: 1200,
+    FT1: 1000,     //foam tape
+    FT2: 1500,    
+    AS1: 1600,    //Adhesive sealant
+    AS2: 2000,        
+    WP1: 1200,    //waterproof membrane
     WP2: 1500,
     WP3: 2000,
     WP4: 2500,    
   },
   WPFlush:{
-    SiliconRI1: 1500,    
-    SiliconRI2: 2000,        
-    SiliconRI3: 2500,        
-    SiliconRI4: 3000,        
+    SRI1: 1500,   //silicon rubber insulation  SRI1WPFlushDFinsulation
+    SRI2: 2000,        
+    SRI3: 2500,        
+    SRI4: 3000,        
   },
   LamWood:{
-    AdFSeal: 1000,    
-    AdFSeal1: 1500,    
-    RubberStr1: 1500,    
-    RubberStr2: 2000,
+    AFS1: 1000,    ////adhesive foam sealant           AFS1LamWoodDFinsulation
+    AFS2: 1500,    
+    Rt1: 1500,      //Rubber Strips
+    Rt2: 2000,    //Rubber Strips
   },
   SolidcoreFlush:{
-    InsulatedFoam1: 2000,    
-    InsulatedFoam2: 3000,    
-    Fibermemb1: 3000, 
-    Fibermemb2: 4000,        
+    IF1: 2000,    //Insulated faam              IF1SolidcoreFlushDFinsulation
+    IF2: 3000,    
+    FM1: 3000,   //Fiber Membrane                 FM1SolidcoreFlushDFinsulation
+    FM2: 4000,        
   },
   WPC:{
-    Rubberseal: 1500,    
+    Rubberseal: 1500,    //Rubber Seals or foam tape   |'RubbersealWPCDFinsulation'
     Rubbersea2: 2000,    
     Rubbersea3: 2000,    
     Rubbersea4: 3000,        
   },
   GlassPanel:{
-    GlassInterface1: 2000,    
-    GlassInterface2: 2000,    
+    GI1: 2000,    //Insulated Strips for glass interface   //  |'GI1GlassPanelDFinsulation'
+    GI2: 2000,    //Glass Interface//
   },
   
 }
@@ -817,19 +817,19 @@ export const DFisulationRates = {
 //Door Frames//
 export const DFRates = {
   Teakperft:{
-    TW1: 300,    
-    TW2: 350,    
-    TW3: 400,    
-    TW4: 500,        
-    TW5: 600,            
+    TW1: 300,    //Teak wood
+    TW2: 350,    //Teak wood
+    TW3: 400,    //Teak wood
+    TW4: 500,        //Teak wood
+    TW5: 600,            //Teak wood
   }, 
   Graniteperft:{    
-    HW1: 200,        
-    HW2: 300,        
-    HW3: 400,        
-    HWG1: 600,        
-    HWG2: 700,        
-    HWG3: 800,        
+    HW1: 200,        //Hard wood
+    HW2: 300,        //Hard wood
+    HW3: 400,        //Hard wood
+    GRN1: 600,       //Granite
+    GRN2: 700,        //Granite
+    GRN3: 800,        //Granite
   },  
   WPCperft:{
     WPC1: 150,    
@@ -844,3 +844,30 @@ export const DFRates = {
   },  
 }
 
+//Primer for walls//
+export const PPaintRates = {//prmer and paint togather//
+  Interior:{
+    Sft: 5, 
+    Sqm: 50,
+  },
+  Exterior:{
+    Sft: 8, 
+    Sqm: 85,
+  }, 
+  Whitewash:{
+    Sft: 8, 
+    Sqm: 95,
+  }, 
+  Emulsion:{
+    Sft: 15, 
+    Sqm: 150,
+  }, 
+  Enamel:{
+    Sft: 17, 
+    Sqm: 190,
+  }, 
+  Textured:{
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+}

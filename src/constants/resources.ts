@@ -1,8 +1,9 @@
 import { width } from '@fortawesome/free-solid-svg-icons/fa0'
-import { EngineerRates,MachinaryRates, MasonRates, HelperRates, ConcreteRates, SteelRates, WoodFormworkRates,MetalFormworkRates,FillingRates, 
-   PlasterManualRates,PlasterMachineRates,BarBenderRates,FencingRates,ShoringRates,
-  TermiteRates,WaterRates,ExcavationMachineRates,ExcavationManualRates,Redclayper1000Rates,FlyAshper1000Rates,CCBlockper1000Rates,ElectricalRates,MechanicalRates,FirefightingRates,PlumbingRates,
-  SewerS40PVCRates,SewerS80PVCRates,CPVCRates,PPRRates,GIRates,ElectricianRates,PlumberRates,MechMasonRates,FFMasonRates } from './rates'
+import { EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  ConcreteRates,  SteelRates,  WoodFormworkRates,  MetalFormworkRates,
+  FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
+  Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
+  PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
+  DFinsulationRates,  DFRates,  PPaintRates, } from './rates'
 import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
@@ -2131,7 +2132,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'C1544', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
     ],
   "OTBW13": [
-    { id: 'C153A1', resource: 'Cummm12PlasterManual', description: 'Plaster', length:4, breadth:3, thickness: 0.12, perimeter:0, rate: PlasterManualRates.mm12.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+    { id: 'C153A1', resource: 'Cummm12PlasterManual', description: 'Plaster', length:4, breadth:3, thickness: 0.012, perimeter:0, rate: PlasterManualRates.mm12.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
     { id: 'C153A2', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'C153A3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },           
   ],
@@ -2147,7 +2148,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     
     //Ground Living//Finishes Rough-in start//
 "GBW1": [  
-    { id: 'GBW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', livingLength:0, livingWidth:0, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'GBW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'GBW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'GBW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2172,10 +2173,21 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'SLB63', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "GDFI1": [
-    { id: 'C1561', resource: 'SftDoor', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DoorRates.Door.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'C1561', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
-
+"GWFI1": [
+    { id: 'C1561', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+"GPL1": [
+    { id: 'C153A1', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  ],  
+"GPR1": [
+    { id: 'C153A1', resource: 'SqmPPaint', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  ],  
 
 
     //Ground Living//Finishes Rough-in start//

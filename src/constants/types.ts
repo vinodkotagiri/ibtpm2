@@ -47,8 +47,27 @@ type ElectricalType = 'SftPVCElectrical'| 'mPVCElectrical'| 'UnitJunctionBoxElec
 type MechanicalType = 'SftHangersMechanical'| 'mHangersMechanical'| 'SftDuctMechanical'| 'SftDrainpipesMechanical'  | 'mDrainpipesMechanical'
 type FirefightingType = 'SftSprinklerpipesFirefighting'| 'mSprinklerpipesFirefighting'|'mFirehosereelconduitFirefighting'|'SftFirehosereelconduitFirefighting'|'SftHangerssprinklerFirefighting'|'mHangerssprinklerFirefighting'
 type PlumbingType = 'SftCPVCPlumbing'| 'mCPVCPlumbing'| 'mDrainagepipespvcPlumbing'| 'SftDrainagepipespvcPlumbing'
+//doorframe Insulation//
+type DFinsulationType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation'| 'FT1TeakDFinsulation'| 'FT2TeakDFinsulation'
+|'FT1PlyDFinsulation'| 'FT2PlyDFinsulation'| 'AS1PlyDFinsulation'| 'AS2PlyDFinsulation'| 'WP1PlyDFinsulation'| 'WP2PlyDFinsulation'| 'WP3PlyDFinsulation'| 'WP4PlyDFinsulation'
+|'SRI1WPFlushDFinsulation'|'SRI2WPFlushDFinsulation'|'SRI3WPFlushDFinsulation'|'SRI4WPFlushDFinsulation'
+|'AFS1LamWoodDFinsulation'|'AFS2LamWoodDFinsulation'|'Rt1LamWoodDFinsulation'|'Rt2LamWoodDFinsulation'
+|'IF1SolidcoreFlushDFinsulation'|'IF2SolidcoreFlushDFinsulation'|'FM1SolidcoreFlushDFinsulation'|'FM2SolidcoreFlushDFinsulation'
+|'RubbersealWPCDFinsulation'|'Rubbersea2WPCDFinsulation'|'Rubbersea3WPCDFinsulation'|'Rubbersea4WPCDFinsulation'
+|'GI1GlassPanelDFinsulation'|'GI2GlassPanelDFinsulation'
+//doorframe//
+type DFType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation'| 'FT1TeakDFinsulation'| 'FT2TeakDFinsulation'
+//doorframe//
+type PPaintType = 'SftInteriorPPaint'| 'SqmPPaint'| 'SftExteriorPPaint'| 'SqmExteriorPPaint'| 'SftWhitewashPPaint'| 'SqmWhitewashPPaint'
+| 'SftEmulsionPPaint'| 'SqmEmulsionPPaint'| 'SftEnamelPPaint'| 'SqmEnamelPPaint'| 'SftTexturedPPaint'| 'SqmTexturedPPaint'
 
 
+
+
+export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
+|MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
+ PlasterManualType|PlasterMachineType|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
+ |DFinsulationType|DFType | PPaintType
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'
@@ -62,10 +81,6 @@ export type CurrencyUnits =
   | "LKR" | "GHS" | "MMK" | "IRR" | "BHD" | "OMR" | "IQD" | "MAD" | "LYD"
   | "JOD" | "ALL" | "RSD" | "ISK" | "BGN" | "HRK" | "GEL" | "TND" | "AZN"
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
-
-export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
-|MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
- PlasterManualType|PlasterMachineType|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
 
 export type Task = {
   id: string
