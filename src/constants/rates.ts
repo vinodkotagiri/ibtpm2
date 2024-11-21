@@ -871,3 +871,90 @@ export const PPaintRates = {//prmer and paint togather//
     Sqm: 400,
   }, 
 }
+//waterproofing prior flooring//
+export const WPRates = {
+  Cement:{  //Cementitious  //Economical and commonly used; consists of polymer-modified cement coatings.
+    Sft: 20,   //Bathrooms, Kitchens, Balconies	
+    Sqm: 200,
+  },
+  Liquid:{   //Flexible waterproofing using acrylic or polyurethane-based liquid; forms a seamless barrier.
+    Sft: 30, //Bathrooms, Kitchens, Roofs	
+    Sqm: 310,
+  }, 
+  Bitumin:{ //Bituminous //Economical option; includes bituminous coatings or membranes; not suitable for interiors due to smell.
+    Sft: 25, //Roofs, Basements	
+    Sqm: 325,
+  }, 
+  Polyurth :{  //Polyurethane//Premium, highly durable, and elastic; excellent for areas prone to waterlogging.
+    Sft: 50,    //Swimming Pools, Basements, Roofs	
+    Sqm: 550,
+  }, 
+  EPDMembr:{   //EPDMembrane //Ethylene Propylene Diene Monomer rubber membranes; excellent for large surface areas and durability.
+    Sft: 65,   //Swimming Pools, Roof Gardens
+    Sqm: 650,
+  }, 
+  Crystal :{   //Crystalline //Enhances concrete density; forms crystals that block water passage.
+    Sft: 35, //Concrete Tanks, Basements	
+    Sqm: 450,
+  }, 
+  Injectgrout :{  //Injection grout //Used for treating cracks and joints in concrete; suitable for repairs.
+    Sft: 100,   //Bathrooms, Basements, Cracks	
+    Sqm: 1000,
+  }, 
+  Hybrid :{           //Hybrid Systems (PU + Cement)//Combines flexibility and adhesion of PU with the hardness of cementitious coatings; premium option.
+    Sft: 60,          //Bathrooms, Swimming Pools, Basements	
+    Sqm: 650,
+  }, 
+  SelfAdWP :{   //self adhesive water proofing  //Bitumen-based adhesive sheets; easy to apply and highly reliable for flat surfaces.
+    Sft: 80,      //Roofs, Basements, Wet Zones	
+    Sqm: 800,
+  }, 
+  NanoCoatWP :{   //Nano Coating Water Proofing  //Advanced technology for high durability and water repellency; environmentally friendly.
+    Sft: 70,        ///Bathrooms, Kitchens	
+    Sqm: 800,
+  }, 
+}
+//Flooring materials 
+export const FlooringRates = {  //IS:15622 - Ceramic and vitrified tiles for flooring and walls.  IS:777 - Quality standards for roofing and flooring tiles.  IS:3622 - Polished granite slabs for wall and flooring use.
+  Ceramic:{         //Economical option for floors and walls; available in various designs.//  IS:1443 - Standard for laying and fixing natural stone slabs.
+    Sft: 5, 
+    Sqm: 50,
+  },
+  Vitrified:{     //Durable, low porosity, suitable for high-traffic areas; glossy or matte.
+    Sft: 8, 
+    Sqm: 85,
+  }, 
+  Porcelain:{     //Harder and more durable than ceramic; ideal for moisture-prone areas.
+    Sft: 8, 
+    Sqm: 95,
+  }, 
+  Marble:{        //Natural stone; premium option; requires polishing for a luxurious finish.
+    Sft: 15, 
+    Sqm: 150,
+  }, 
+  Granite:{       //Strong, durable, ideal for kitchens, staircases, and high-traffic areas.
+    Sft: 17, 
+    Sqm: 190,
+  }, 
+  Kota:{          //Affordable natural stone; suitable for indoor and outdoor areas.
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+  Quartz:{        //Engineered stone; offers a premium look with high durability.
+    Sft: 15, 
+    Sqm: 150,
+  }, 
+  Wooden:{        //Aesthetic appeal, moderate durability; not suitable for moisture-prone areas.
+    Sft: 17, 
+    Sqm: 190,
+  }, 
+  Vinly:{         //Economical, water-resistant; ideal for kitchens and bathrooms.
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+  Terracotta :{   //Rustic look, suitable for balconies and courtyards.
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+
+}

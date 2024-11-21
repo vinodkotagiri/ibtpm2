@@ -61,13 +61,17 @@ type DFType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation
 type PPaintType = 'SftInteriorPPaint'| 'SqmPPaint'| 'SftExteriorPPaint'| 'SqmExteriorPPaint'| 'SftWhitewashPPaint'| 'SqmWhitewashPPaint'
 | 'SftEmulsionPPaint'| 'SqmEmulsionPPaint'| 'SftEnamelPPaint'| 'SqmEnamelPPaint'| 'SftTexturedPPaint'| 'SqmTexturedPPaint'
 
+type WPType = 'SftCementitious'| 'SqmCementitious'|'SftLiquid'| 'SqmLiquid'| 'SqmBitumin'|'SftBitumin'| 'SqmPolyurth'|'SftPolyurth'| 
+'SqmEPDMembr'|'SftEPDMembr'| 'SqmCrystal'|'SftCrystal'| 'SqmInjectgrout'|'SftInjectgrout'| 'SqmHybrid'|'SftHybrid'| 'SqmSelfAdWP'| 'SftSelfAdWP'|
+'SqmNanoCoatWP'| 'SftNanoCoatWP'
 
-
+type FlooringType = 'SftCeramic'| 'SqmCeramic'| 'SftVitrified'| 'SqmVitrified'| 'SftPorcelain'| 'SqmPorcelain'|'SftMarble'| 'SqmMarble'|
+'SftGranite'| 'SqmGranite'|'SftKota'| 'SqmKota'|'SftQuartz'| 'SqmQuartz'|'SftWooden'| 'SqmWooden'|'SftVinly'| 'SqmVinly'|'SftTerracotta'| 'SqmTerracotta'
 
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
-|MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
- PlasterManualType|PlasterMachineType|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
- |DFinsulationType|DFType | PPaintType
+|MetalFormworkType | FillingType | FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
+ PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
+ |DFinsulationType|DFType | PPaintType | WPType |FlooringType
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'

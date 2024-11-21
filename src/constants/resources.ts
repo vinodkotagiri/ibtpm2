@@ -3,7 +3,7 @@ import { EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  ConcreteRat
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
-  DFinsulationRates,  DFRates,  PPaintRates, } from './rates'
+  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FlooringRates } from './rates'
 import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
@@ -1938,12 +1938,12 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'L3EL85', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
 ],
 "L3EL9": [  
-{ id: 'BT131', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+{ id: 'L3EL9', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
 ],
 "L3EL10": [
-{ id: 'BT141', resource: 'CumM30Concrete', description: 'M30Concrete', length: 2, breadth: 0.23, thickness: 0.45, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-{ id: 'BT142', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-{ id: 'BT143', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+{ id: 'L3EL101', resource: 'CumM30Concrete', description: 'M30Concrete', length: 2, breadth: 0.23, thickness: 0.45, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+{ id: 'L3EL102', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+{ id: 'L3EL103', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 //Level3 Elevator Beam Concrete//
 
@@ -1951,196 +1951,196 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Watertank CC column 3x0.23x0.23 //type-1// 4nos
 "OT1": [
-  { id: 'C1491', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C1492', resource: 'SftDia16Steel', description: 'Main Bars', length: 3, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C1493', resource: 'SftDia12Steel', description: 'Distribution Bars', length: 3, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'C1494', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1495', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
+  { id: 'OT11', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT12', resource: 'SftDia16Steel', description: 'Main Bars', length: 3, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT13', resource: 'SftDia12Steel', description: 'Distribution Bars', length: 3, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+  { id: 'OT14', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT15', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
 ],
 "OT2": [
-  { id: 'C1501', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C1502', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1503', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
+  { id: 'OT21', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT22', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT23', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
 ],
 "OT3": [
-  { id: 'C1511', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3, breadth: 0.3, thickness: 0.3, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-  { id: 'C1512', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1513', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT31', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3, breadth: 0.3, thickness: 0.3, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'OT32', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT33', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 //Watertank CC column 3x0.23x0.23 //type-1//
 
 //Watertank CC Level3 Beam Type-1//3x0.23x0.45
 "OT4": [
-  { id: 'L3BT111', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'L3BT112', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'L3BT113', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
+  { id: 'OT41', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT42', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'OT43', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
   ],
   "OT5": [
-  { id: 'L3BT121', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'L3BT122', resource: 'SftDia12Steel', description: 'Top Bars', length: 3, diameter: 12, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'L3BT123', resource: 'SftDia16Steel', description: 'Bottom Bars', length: 3, diameter: 16, noOfBars: 6, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'L3BT124', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'L3BT125', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'OT51', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT52', resource: 'SftDia12Steel', description: 'Top Bars', length: 3, diameter: 12, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT53', resource: 'SftDia16Steel', description: 'Bottom Bars', length: 3, diameter: 16, noOfBars: 6, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+  { id: 'OT54', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'OT55', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],  
   "OT6": [
-  { id: 'L3BT131', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
-  { id: 'L3BT141', resource: 'CumM30Concrete', description: 'M30Concrete', length: 3, breadth: 0.25, thickness: 0.25, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-  { id: 'L3BT142', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'L3BT143', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT61', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'OT61', resource: 'CumM30Concrete', description: 'M30Concrete', length: 3, breadth: 0.25, thickness: 0.25, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'OT62', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT63', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
   ],
   //Watertank CC Level3 Beam Type-1//
 
   // Level3 Watertank Slab//
   //Formwork
 "OT7": [
-  { id: 'C153A1', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C153A2', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C153A3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },           
+  { id: 'OT71', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT72', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },           
   ],
   //Steel
   "OT8": [  
-  { id: 'C1541', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-  { id: 'C1541', resource: 'SftDia16Steel', description: 'Bottom Distri Bars', length: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
+  { id: 'OT81', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+  { id: 'OT82', resource: 'SftDia16Steel', description: 'Bottom Distri Bars', length: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
   
-  { id: 'C1541', resource: 'SftDia16Steel', description: 'Top Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-  { id: 'C1541', resource: 'SftDia12Steel', description: 'Top Distri Bars', breadth: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'C1542', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
-  { id: 'C1543', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1544', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'OT83', resource: 'SftDia16Steel', description: 'Top Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+  { id: 'OT84', resource: 'SftDia12Steel', description: 'Top Distri Bars', breadth: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+  { id: 'OT85', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+  { id: 'OT86', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT87', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
   ],
   //Level3 Top Bars lab //
   
   //Level3 Slab Concrete //
   "OT9": [
-  { id: 'C1551', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
-  { id: 'C1552', resource: 'CumM25Concrete', description: 'M25Concrete', length: 4, breadth: 3, thickness: 0.15, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-  { id: 'C1553', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1554', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'OT91', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'OT92', resource: 'CumM25Concrete', description: 'M25Concrete', length: 4, breadth: 3, thickness: 0.15, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'OT93', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OT94', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],
   //Level3 Slab Concrete //
   "OT10": [
-    { id: 'C1561', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'OT101', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'OT102', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],    
   //Level3 Shearwalls //
   "OT11": [  
-    { id: 'C1541', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-    { id: 'C1541', resource: 'SftDia16Steel', description: 'Bottom Distri Bars', length: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
+    { id: 'OT111', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+    { id: 'OT112', resource: 'SftDia16Steel', description: 'Bottom Distri Bars', length: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
     
-    { id: 'C1541', resource: 'SftDia16Steel', description: 'Top Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-    { id: 'C1541', resource: 'SftDia12Steel', description: 'Top Distri Bars', breadth: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-    { id: 'L3SF45', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 1.2, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-    { id: 'L3SF46', resource: 'SftDia12Steel', description: 'Ld bars', length: 1.2, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-    { id: 'L3SF47', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },    
-    { id: 'C1543', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-    { id: 'C1544', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+    { id: 'OT113', resource: 'SftDia16Steel', description: 'Top Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+    { id: 'OT114', resource: 'SftDia12Steel', description: 'Top Distri Bars', breadth: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+    { id: 'OT115', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 1.2, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+    { id: 'OT116', resource: 'SftDia12Steel', description: 'Ld bars', length: 1.2, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+    { id: 'OT117', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },    
+    { id: 'OT118', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OT119', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
     ],
   "OT12": [
-    { id: 'C153A1', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.21, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-    { id: 'C153A2', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-    { id: 'C153A3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },           
+    { id: 'OT121', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.21, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+    { id: 'OT122', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OT123', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },           
   ],
   "OT13": [
-    { id: 'C1551', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
-    { id: 'C1552', resource: 'CumM25Concrete', description: 'M25Concrete', length: 4, breadth: 3, thickness: 0.2, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-    { id: 'C1553', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-    { id: 'C1554', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'OT131', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+    { id: 'OT132', resource: 'CumM25Concrete', description: 'M25Concrete', length: 4, breadth: 3, thickness: 0.2, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+    { id: 'OT133', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OT134', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     ],
   "OT14": [          
-    { id: 'C1571', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OT14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
     ],
   // Level3 Watertank ShearWalls end//
 
   // Level3 Watertank Brickwalls start//
   // Level3 Watertank Brickwalls start//
 "OTBW1": [
-  { id: 'C1491', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C1492', resource: 'SftDia16Steel', description: 'Main Bars', length: 3, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C1493', resource: 'SftDia12Steel', description: 'Distribution Bars', length: 3, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'C1494', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1495', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
+  { id: 'OTBW11', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW12', resource: 'SftDia16Steel', description: 'Main Bars', length: 3, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW13', resource: 'SftDia12Steel', description: 'Distribution Bars', length: 3, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+  { id: 'OTBW14', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW15', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
 ],
 "OTBW2": [
-  { id: 'C1501', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C1502', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1503', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
+  { id: 'OTBW21', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW22', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW23', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
 ],
 "OTBW3": [
-  { id: 'C1511', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3, breadth: 0.3, thickness: 0.3, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-  { id: 'C1512', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1513', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW31', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3, breadth: 0.3, thickness: 0.3, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'OTBW32', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW33', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 //Watertank CC column 3x0.23x0.23 //type-1//
 
 //Watertank CC Level3 Beam Type-1//3x0.23x0.45
 "OTBW4": [
-  { id: 'L3BT111', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'L3BT112', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'L3BT113', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
+  { id: 'OTBW41', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW42', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'OTBW43', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
   ],
   "OTBW5": [
-  { id: 'L3BT121', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'L3BT122', resource: 'SftDia12Steel', description: 'Top Bars', length: 3, diameter: 12, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'L3BT123', resource: 'SftDia16Steel', description: 'Bottom Bars', length: 3, diameter: 16, noOfBars: 6, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'L3BT124', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'L3BT125', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'OTBW51', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW52', resource: 'SftDia12Steel', description: 'Top Bars', length: 3, diameter: 12, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW53', resource: 'SftDia16Steel', description: 'Bottom Bars', length: 3, diameter: 16, noOfBars: 6, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+  { id: 'OTBW54', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'OTBW55', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],  
   "OTBW6": [
-  { id: 'L3BT131', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
-  { id: 'L3BT141', resource: 'CumM30Concrete', description: 'M30Concrete', length: 3, breadth: 0.25, thickness: 0.25, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-  { id: 'L3BT142', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'L3BT143', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'OTBW61', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'OTBW62', resource: 'CumM30Concrete', description: 'M30Concrete', length: 3, breadth: 0.25, thickness: 0.25, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'OTBW63', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW64', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
   ],
   //Watertank CC Level3 Beam Type-1//
 
   // Level3 Watertank Slab//
   "OTBW7": [
-  { id: 'C153A1', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-  { id: 'C153A2', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C153A3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },           
+  { id: 'OTBW71', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW72', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },           
   ],
   "OTBW8": [  
-  { id: 'C1541', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-  { id: 'C1541', resource: 'SftDia16Steel', description: 'Bottom Distri Bars', length: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
+  { id: 'OTBW81', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+  { id: 'OTBW82', resource: 'SftDia16Steel', description: 'Bottom Distri Bars', length: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
   
-  { id: 'C1541', resource: 'SftDia16Steel', description: 'Top Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
-  { id: 'C1541', resource: 'SftDia12Steel', description: 'Top Distri Bars', breadth: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
-  { id: 'C1542', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
-  { id: 'C1543', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1544', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'OTBW83', resource: 'SftDia16Steel', description: 'Top Main Bars', length: 4, diameter: 12, noOfBars: 7, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+  { id: 'OTBW84', resource: 'SftDia12Steel', description: 'Top Distri Bars', breadth: 3, diameter: 8, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+  { id: 'OTBW85', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+  { id: 'OTBW86', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW87', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
   ],
   //Level3 Top Bars lab //
   
   //Level3 Slab Concrete //
   "OTBW9": [
-  { id: 'C1551', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
-  { id: 'C1552', resource: 'CumM25Concrete', description: 'M25Concrete', length: 4, breadth: 3, thickness: 0.15, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
-  { id: 'C1553', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-  { id: 'C1554', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'OTBW91', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+  { id: 'OTBW92', resource: 'CumM25Concrete', description: 'M25Concrete', length: 4, breadth: 3, thickness: 0.15, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+  { id: 'OTBW93', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'OTBW94', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],
   //Level3 Slab Concrete //
   "OTBW10": [
-    { id: 'C1561', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'OTBW101', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'OTBW102', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
   "OTBW11": [          
-    { id: 'C1571', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OTBW11', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],
 // Level3 Watertank Brickwalls// //
   "OTBW12": [  
-    { id: 'C1541', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length: 4, breadth:3, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'C1544', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+    { id: 'OTBW121', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length: 4, breadth:3, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'OTBW122', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
     ],
   "OTBW13": [
-    { id: 'C153A1', resource: 'Cummm12PlasterManual', description: 'Plaster', length:4, breadth:3, thickness: 0.012, perimeter:0, rate: PlasterManualRates.mm12.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-    { id: 'C153A2', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
-    { id: 'C153A3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },           
+    { id: 'OTBW131', resource: 'Cummm12PlasterManual', description: 'Plaster', length:4, breadth:3, thickness: 0.012, perimeter:0, rate: PlasterManualRates.mm12.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+    { id: 'OTBW132', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OTBW133', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },           
   ],
   "OTBW14": [          
-    { id: 'C1571', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OTBW14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
     ],
   "OTBW15": [          
-    { id: 'C1571', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'OTBW15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
     ],
     // Level3 Watertank Brickwalls end//
     
@@ -2153,41 +2153,64 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'GBW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "GEL1": [
-  { id: 'SLB31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
-  { id: 'SLB32', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SLB33', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+  { id: 'GEL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GEL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GEL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "GMD1": [
-  { id: 'SLB41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'SLB42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SLB43', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GMD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GMD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GMD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "GPC1": [
-  { id: 'SLB51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
-  { id: 'SLB52', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SLB53', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GPC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GPC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GPC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "GFF1": [
-  { id: 'SLB61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'SLB62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'SLB63', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GFF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GFF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GFF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "GDFI1": [
-    { id: 'C1561', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'GDFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'GDFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "GWFI1": [
-    { id: 'C1561', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'GWFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'GWFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "GPL1": [
-    { id: 'C153A1', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'GPL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'GPL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "GPR1": [
-    { id: 'C153A1', resource: 'SqmPPaint', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'C153A1', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
+"GPT1": [
+    { id: 'GPR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GPR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ],  
+"GWP1": [
+    { id: 'GWP11', resource: 'SqmLiquid', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GWP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ], 
+"GGR1": [
+    { id: 'GGR11', resource: 'SqmGranite', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: FlooringRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GGR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ], 
+"GTL1": [
+    { id: 'GTL11', resource: 'SqmVitrified', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: FlooringRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GTL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ], 
+
+"GPTF1": [
+    { id: 'GPTF11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GPTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'GPTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ], 
+
 
 
     //Ground Living//Finishes Rough-in start//
