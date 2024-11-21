@@ -763,4 +763,84 @@ export const GIRates = {
     m: 350,        
   },    
 }
+//Door Frame Insulation end//
+export const DFisulationRates = {
+  Teak:{
+    WP1: 2000,    
+    WP2: 2500,    
+    WP3: 3000,    
+    FT1: 3500,        
+    FT2: 400,        
+  },
+  Ply:{
+    FT1: 1000,    
+    Ft2: 1500,    
+    ADSEALANT1: 1600,    
+    ADSEALANT2: 2000,        
+    WP1: 1200,
+    WP2: 1500,
+    WP3: 2000,
+    WP4: 2500,    
+  },
+  WPFlush:{
+    SiliconRI1: 1500,    
+    SiliconRI2: 2000,        
+    SiliconRI3: 2500,        
+    SiliconRI4: 3000,        
+  },
+  LamWood:{
+    AdFSeal: 1000,    
+    AdFSeal1: 1500,    
+    RubberStr1: 1500,    
+    RubberStr2: 2000,
+  },
+  SolidcoreFlush:{
+    InsulatedFoam1: 2000,    
+    InsulatedFoam2: 3000,    
+    Fibermemb1: 3000, 
+    Fibermemb2: 4000,        
+  },
+  WPC:{
+    Rubberseal: 1500,    
+    Rubbersea2: 2000,    
+    Rubbersea3: 2000,    
+    Rubbersea4: 3000,        
+  },
+  GlassPanel:{
+    GlassInterface1: 2000,    
+    GlassInterface2: 2000,    
+  },
+  
+}
+//Door Frame Insulation end//
+
+//Door Frames//
+export const DFRates = {
+  Teakperft:{
+    TW1: 300,    
+    TW2: 350,    
+    TW3: 400,    
+    TW4: 500,        
+    TW5: 600,            
+  }, 
+  Graniteperft:{    
+    HW1: 200,        
+    HW2: 300,        
+    HW3: 400,        
+    HWG1: 600,        
+    HWG2: 700,        
+    HWG3: 800,        
+  },  
+  WPCperft:{
+    WPC1: 150,    
+    WPC2: 200,    
+    WPC3: 250,    
+    WPC4: 300,    
+    
+  },
+  PVCperft:{
+    PVC1: 100,    
+    PVC2: 200,        
+  },  
+}
 

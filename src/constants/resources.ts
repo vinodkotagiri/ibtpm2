@@ -6,8 +6,21 @@ import { EngineerRates,MachinaryRates, MasonRates, HelperRates, ConcreteRates, S
 import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
-  const { excavationArea, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness,groundFloorArea,groundFloorWalls,
-    builtupArea1, builtLength1, builtWidth1, builtupArea2, builtLength2, builtWidth2, builtupArea3, builtLength3, builtWidth3,
+  const { excavationArea, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness,groundFloorArea,groundFloorWalls,    
+  
+    //Floorwise for slabs//
+  builtupArea1, builtLength1, builtWidth1, builtupArea2, builtLength2, builtWidth2, builtupArea3, builtLength3, builtWidth3,
+  //roomwise//xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required//
+  livingLength, livingWidth,  livingArea, bedroom1Length, bedroom1Width,  bedroom1Area,  bedroom2Length,  bedroom2Width,  
+  bedroom2Area,  bedroom3Length,  bedroom3Width,  bedroom3Area,  bedroom4Length,  bedroom4Width,  bedroom4Area,  drawingLength,
+  drawingWidth,  drawingArea,  kitchenLength,  kitchenWidth,  kitchenArea,  poojaLength,  poojaWidth,  poojaArea, mediaLength, 
+  mediaWidth,  mediaArea,  bath1Length,  bath1Width,  bath1Area,  bath2Length,  bath2Width,  bath2Area,  bath3Length,  bath3Width,  
+  bath3Area,  bath4Length,  bath4Width,  bath4Area,  toiletLength,  toiletWidth,  toiletArea,  balconyLength,  balconyWidth,  
+  balconyArea,  sitoutLength,  sitoutWidth,  sitoutArea, storeLength,  storeWidth,  storeArea,  parkingLength,  parkingWidth,  
+  parkingArea,  staircaseLength,  staircaseWidth,
+  staircaseArea,
+  //xxxx room wise L&B  xxxxxxx//roomwise//
+
    } = drawingData
   const resources: Record<string, Array<Resource>> = {
 
@@ -2114,8 +2127,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ],
 // Level3 Watertank Brickwalls// //
   "OTBW12": [  
-    { id: 'C1541', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length: 4, breadth:3, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
-        
+    { id: 'C1541', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length: 4, breadth:3, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'C1544', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
     ],
   "OTBW13": [
@@ -2129,7 +2141,48 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   "OTBW15": [          
     { id: 'C1571', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
     ],
-  // Level3 Watertank Brickwalls//
+    // Level3 Watertank Brickwalls end//
+    
+    //Finishes Rough-in start//
+    
+    //Ground Living//Finishes Rough-in start//
+"GBW1": [  
+    { id: 'GBW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', livingLength:0, livingWidth:0, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'GBW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'GBW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    ],
+"GEL1": [
+  { id: 'SLB31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'SLB32', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'SLB33', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+],
+"GMD1": [
+  { id: 'SLB41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'SLB42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'SLB43', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+],
+"GPC1": [
+  { id: 'SLB51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'SLB52', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'SLB53', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+],
+"GFF1": [
+  { id: 'SLB61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'SLB62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'SLB63', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+],
+"GDFI1": [
+    { id: 'C1561', resource: 'SftDoor', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DoorRates.Door.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+
+
+
+    //Ground Living//Finishes Rough-in start//
+
+
+
+
   }
   if(taskResources)  return updateQuantities(taskResources)
     return updateQuantities( resources[ taskId ]??[] )
