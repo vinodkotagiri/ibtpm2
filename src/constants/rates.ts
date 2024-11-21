@@ -566,7 +566,7 @@ export const Redclayper1000Rates = {
   },
   inch9:{    
     Sft: 100,    
-    Cum: 9000
+    Cum: 8800
   },  
   inch12:{    
     Sft: 129,    
@@ -602,41 +602,34 @@ export const CCBlockper1000Rates = {
   }  
 }
 
-export const PlasterFCManualRates = {
+export const PlasterManualRates = {
   mm6:{
-    Sft: 11,    
-    Sqm: 120,    
-    Cum: 11000
+    Sft: 15,        
+    Cum: 5200
   },
   mm8:{
-    Sft: 14,    
-    Sqm: 150,    
-    Cum: 15000
-  },
-  
-  mm10:{    
-    Sft: 16,    
-    Sqm: 200,    
-    Cum: 18000
-  },  
+    Sft: 20,         
+    Cum: 6800
+  },    
   mm12:{    
-    Sft: 20,    
-    Sqm: 325,    
-    Cum: 24000
+    Sft: 22,         
+    Cum: 7800
   },  
   mm15:{    
-    Sft: 24,    
-    Sqm: 350,    
-    Cum: 25000  
+    Sft: 28,        
+    Cum: 9800  
   },
-  mm20:{    
-    Sft: 25,    
-    Sqm: 400,    
-    Cum: 21500  
+  mm18:{    
+    Sft: 35,        
+    Cum: 12500  
+  },  
+  mm22:{    
+    Sft: 45,        
+    Cum: 15000  
   }  
 }
 
-export const PlasterFCMachineRates = {
+export const PlasterMachineRates = {
   mm6:{
     Sft: 9,    
     Sqm: 100,    
@@ -667,73 +660,6 @@ export const PlasterFCMachineRates = {
     Sft: 22,    
     Sqm: 220,    
     Cum: 10000  
-  }  
-}
-
-export const PlasterSCManualRates = {
-  mm6:{
-    Sft: 8,    
-    Sqm: 80,    
-    Cum: 5500
-  },
-  mm8:{
-    Sft: 12,    
-    Sqm: 120,    
-    Cum: 7000
-  },
-  
-  mm10:{    
-    Sft: 12,    
-    Sqm: 120,    
-    Cum: 7000
-  },  
-  mm12:{    
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 8500
-  },  
-  mm15:{    
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 8500  
-  },
-  mm20:{    
-    Sft: 20,    
-    Sqm: 180,    
-    Cum: 9500  
-  }  
-}
-export const PlasterSCMachineRates = {
-  mm6:{
-    Sft: 6,    
-    Sqm: 60,    
-    Cum: 5000
-  },
-  mm8:{
-    Sft: 10,    
-    Sqm: 100,    
-    Cum: 6500
-  },
-  
-  mm10:{    
-    Sft: 10,    
-    Sqm: 100,    
-    Cum: 6500
-  },  
-  mm12:{    
-    Sft: 14,    
-    Sqm: 140,    
-    Cum: 7500
-  },  
-  mm15:{    
-    Sft: 14,    
-    Sqm: 140,    
-    Cum: 8000  
-  },
-  mm20:{    
-    Sft: 16,    
-    Sqm: 160,    
-    Cum: 9000  
   }  
 }
 

@@ -30,14 +30,12 @@ type FlyAshper1000Type = 'Cuminch6FlyAshper1000' | 'Sftinch6FlyAshper1000'|'Cumi
 type CCBlockper1000Type = 'Cuminch6CCBlockper1000' | 'Sftinch6CCBlockper1000'|'Cuminch9CCBlockper1000' | 'Sftinch9CCBlockper1000'|'Cuminch12CCBlockper1000' | 'Sftinch12CCBlockper1000'|'Cuminch16CCBlockper1000' | 'Sftinch16CCBlockper1000'
 //Brickwork//
 
-type PlasterFCManualType = 'Cummm6PlasterFCManual' | 'Sftmm6PlasterFCManual'| 'Sqtmm6PlasterFCManual'|'Cummm8PlasterFCManual' | 'Sftmm8PlasterFCManual'| 'Sqtmm8PlasterFCManual'|'Cummm10PlasterFCManual' | 'Sftmm10PlasterFCManual'| 'Sqtmm10PlasterFCManual'|'Cummm12PlasterFCManual' | 'Sftmm12PlasterFCManual'| 'Sqtmm12PlasterFCManual'
-|'Cummm15PlasterFCManual' | 'Sftmm15PlasterFCManual'| 'Sqtmm15PlasterFCManual'|'Cummm20PlasterFCManual' | 'Sftmm20PlasterFCManual'| 'Sqtmm20PlasterFCManual'
-type PlasterSCManualType = 'Cummm6PlasterSCManual' | 'Sftmm6PlasterSCManual'| 'Sqtmm6PlasterSCManual'|'Cummm8PlasterSCManual' | 'Sftmm8PlasterSCManual'| 'Sqtmm8PlasterSCManual'|'Cummm10PlasterSCManual' | 'Sftmm10PlasterSCManual'| 'Sqtmm10PlasterSCManual'|'Cummm12PlasterSCManual' | 'Sftmm12PlasterSCManual'| 'Sqtmm12PlasterSCManual'
-|'Cummm15PlasterSCManual' | 'Sftmm15PlasterSCManual'| 'Sqtmm15PlasterSCManual'|'Cummm20PlasterSCManual' | 'Sftmm20PlasterSCManual'| 'Sqtmm20PlasterSCManual'
-type PlasterFCMachineType = 'Cummm6PlasterFCMachine' | 'Sftmm6PlasterFCMachine'| 'Sqtmm6PlasterFCMachine'|'Cummm8PlasterFCMachine' | 'Sftmm8PlasterFCMachine'| 'Sqtmm8PlasterFCMachinePlasterFCMachine'|'Cummm10PlasterFCMachinePlasterFCMachine' | 'Sftmm10PlasterFCMachine'| 'Sqtmm10PlasterFCMachine'|'Cummm12PlasterFCMachine' | 'Sftmm12PlasterFCMachine'| 'Sqtmm12PlasterFCMachine'
-|'Cummm15PlasterFCMachine' | 'Sftmm15PlasterFCMachine'| 'Sqtmm15PlasterFCMachine'|'Cummm20PlasterFCMachine' | 'Sftmm20PlasterFCMachine'| 'Sqtmm20PlasterFCMachine'
-type PlasterSCMachineType = 'Cummm6PlasterSCMachine' | 'Sftmm6PlasterSCMachine'| 'Sqtmm6PlasterSCMachine'|'Cummm8PlasterSCMachine' | 'Sftmm8PlasterSCMachine'| 'Sqtmm8PlasterSCMachine'|'Cummm10PlasterSCMachinePlasterSCMachine' | 'Sftmm10PlasterSCMachine'| 'Sqtmm10PlasterSCMachine'|'Cummm12PlasterSCMachine' | 'Sftmm12PlasterSCMachine'| 'Sqtmm12PlasterSCMachine'
-|'Cummm15PlasterSCMachine' | 'Sftmm15PlasterSCMachine'| 'Sqtmm15PlasterSCMachine'|'Cummm20PlasterSCMachine' | 'Sftmm20PlasterSCMachine'| 'Sqtmm20PlasterSCMachine'
+//plaster//
+type PlasterManualType = 'Cummm6PlasterManual' | 'Sftmm6PlasterManual'| 'Sqtmm6PlasterManual'|'Cummm8PlasterManual' | 'Sftmm8PlasterManual'| 'Sqtmm8PlasterManual'|'Cummm10PlasterManual' | 'Sftmm10PlasterManual'| 'Sqtmm10PlasterManual'|'Cummm12PlasterManual' | 'Sftmm12PlasterManual'| 'Sqtmm12PlasterManual'
+|'Cummm15PlasterManual' | 'Sftmm15PlasterManual'| 'Sqtmm15PlasterManual'|'Cummm20PlasterManual' | 'Sftmm20PlasterManual'| 'Sqtmm20PlasterManual'
+type PlasterMachineType = 'Cummm6PlasterMachine' | 'Sftmm6PlasterMachine'| 'Sqtmm6PlasterMachine'|'Cummm8PlasterMachine' | 'Sftmm8PlasterMachine'| 'Sqtmm8PlasterMachinePlasterMachine'|'Cummm10PlasterMachinePlasterMachine' | 'Sftmm10PlasterMachine'| 'Sqtmm10PlasterMachine'|'Cummm12PlasterMachine' | 'Sftmm12PlasterMachine'| 'Sqtmm12PlasterMachine'
+|'Cummm15PlasterMachine' | 'Sftmm15PlasterMachine'| 'Sqtmm15PlasterMachine'|'Cummm20PlasterMachine' | 'Sftmm20PlasterMachine'| 'Sqtmm20PlasterMachine'
+//plaster//
 
 type SewerS40PVCType = 'ftmm12SewerS40PVC'| 'mmm12SewerS40PVC'|'ftmm25SewerS40PVC'| 'mmm25SewerS40PVC'|'ftmm50SewerS40PVC'| 'mmm50SewerS40PVC'|'ftmm100SewerS40PVC'| 'mmm100SewerS40PVC'|'ftmm150SewerS40PVC'| 'mmm150SewerS40PVC'|'ftmm200SewerS40PVC'| 'mmm200SewerS40PVC'
 type SewerS80PVCType = 'ftmm12SewerS80PVC'| 'mmm12SewerS80PVC'|'ftmm25SewerS80PVC'| 'mmm25SewerS80PVC'|'ftmm50SewerS80PVC'| 'mmm50SewerS80PVC'|'ftmm100SewerS80PVC'| 'mmm100SewerS80PVC'|'ftmm150SewerS80PVC'| 'mmm150SewerS80PVC'|'ftmm200SewerS80PVC'| 'mmm200SewerS80PVC'
@@ -66,9 +64,8 @@ export type CurrencyUnits =
   | "UZS" | "KZT" | "AMD" | "BYN" | "MNT" | "LBP" | "SDG" | "SYP" | "YER";
 
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
-|MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| 
-Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type | PlasterFCManualType|PlasterSCManualType|PlasterFCMachineType|PlasterSCMachineType
-|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
+|MetalFormworkType | FillingType |FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
+ PlasterManualType|PlasterMachineType|SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
 
 export type Task = {
   id: string
