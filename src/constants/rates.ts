@@ -4,7 +4,10 @@ export const EngineerRates = {
   Contract:35000,
   Hourly: 1500,
   Sft1: 5,
-  SFt2: 10
+  SFt2: 10,
+  SFt3: 15,
+  SFt4: 18,
+  SFt5: 20,
 }
 }
 export const ElectricianRates = {
@@ -118,39 +121,52 @@ export const FencingRates = {
 }
 export const ExcavationMachineRates = {
   Backhoe:{    
-    Hourly: 1500,
+    Hourly: 1000,
     Cft: 0,
-    Cum: 0,  
+    Cum: 100,  
+    Day: 8500
   },
   Excavator:{    
-    Hourly: 2250,
+    Hourly: 1800,
     Cft: 0,
-    Cum: 0,  
+    Cum: 150,  
+    Day: 13000  
   },
   Soft:{    
-  Hourly: 0,
+  Hourly: 1400,
   Cft: 0,
-  Cum: 170,  
+  Cum: 150,  
+  Day: 11000  
 },
   Medium:{    
-  Hourly: 0,
+  Hourly: 1800,
   Cft: 0,
-  Cum: 270,  
+  Cum: 150,  
+  Day: 14000  
 },
   Hard:{    
-  Hourly: 0,
-  Cft: 0,
-  Cum: 440,  
-},
-  Foundation:{    
-  Hourly: 0,
+  Hourly: 2300,
   Cft: 0,
   Cum: 225,  
+  Day: 16500  
+},
+Rocky:{    
+  Hourly: 4500,
+  Cft: 0,
+  Cum: 500,  
+  Day: 23500  
+},
+  Foundation:{    
+  Hourly: 3200,
+  Cft: 0,
+  Cum: 250,  
+  Day: 18000  
 },
   Utilities:{    
-  Hourly: 0,
-  Cft: 0,
-  Cum: 125,  
+  Hourly: 2300,
+  Cft: 325,
+  Cum: 320,  
+  Day: 23000  
 },
 }
 export const ExcavationManualRates = {
@@ -516,24 +532,51 @@ export const FillingRates = {
   }  
 }
 
-export const RedclayBrickRates = {
+export const DeductRates = {
+  Sand:{
+    Sft: 200,
+    Cft: 450,
+    Sqm:  250,
+    Cum:  350
+  },
+  Soil:{    
+    Sft: 250,
+    Cft: 350,
+    Sqm: 200,
+    Cum: 300
+  },  
+  Aggregate:{    
+    Sft: 1.5,
+    Cft: 20,
+    Sqm: 15,
+    Cum: 400
+  },  
+  Stone:{    
+    Sft: 3.5,
+    Cft: 24,
+    Sqm: 25,
+    Cum: 820
+  }  
+}
+
+export const Redclayper1000Rates = {
   inch6:{
     Sft: 70,    
-    Cum: 5600
+    Cum: 7500
   },
   inch9:{    
     Sft: 100,    
-    Cum: 6250
+    Cum: 8800
   },  
   inch12:{    
     Sft: 129,    
-    Cum: 6600  
+    Cum: 9500  
   }  
 }
-export const FlyAshBrickRates = {
+export const FlyAshper1000Rates = {
   inch6:{
     Sft: 60,    
-    Cum: 4500
+    Cum: 6500
   },
   inch9:{    
     Sft: 80,    
@@ -544,56 +587,49 @@ export const FlyAshBrickRates = {
     Cum: 5500  
   }  
 }
-export const CCBlockRates = {
+export const CCBlockper1000Rates = {
   inch6:{
     Sft: 45,    
-    Cum: 4100
+    Cum: 3500
   },
-  inch9:{    
+  inch8:{    
     Sft: 70,    
-    Cum: 4500
+    Cum: 4400
   },  
   inch12:{    
     Sft: 90,    
-    Cum: 5000  
+    Cum: 5500  
   }  
 }
 
-export const PlasterFCManualRates = {
+export const PlasterManualRates = {
   mm6:{
-    Sft: 10,    
-    Sqm: 125,    
-    Cum: 7500
+    Sft: 15,        
+    Cum: 5200
   },
   mm8:{
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 7800
-  },
-  
-  mm10:{    
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 8000
-  },  
+    Sft: 20,         
+    Cum: 6800
+  },    
   mm12:{    
-    Sft: 20,    
-    Sqm: 200,    
-    Cum: 9500
+    Sft: 22,         
+    Cum: 7800
   },  
   mm15:{    
-    Sft: 20,    
-    Sqm: 200,    
-    Cum: 1000  
+    Sft: 28,        
+    Cum: 9800  
   },
-  mm20:{    
-    Sft: 25,    
-    Sqm: 250,    
-    Cum: 11500  
+  mm18:{    
+    Sft: 35,        
+    Cum: 12500  
+  },  
+  mm22:{    
+    Sft: 45,        
+    Cum: 15000  
   }  
 }
 
-export const PlasterFCMachineRates = {
+export const PlasterMachineRates = {
   mm6:{
     Sft: 9,    
     Sqm: 100,    
@@ -624,73 +660,6 @@ export const PlasterFCMachineRates = {
     Sft: 22,    
     Sqm: 220,    
     Cum: 10000  
-  }  
-}
-
-export const PlasterSCManualRates = {
-  mm6:{
-    Sft: 8,    
-    Sqm: 80,    
-    Cum: 5500
-  },
-  mm8:{
-    Sft: 12,    
-    Sqm: 120,    
-    Cum: 7000
-  },
-  
-  mm10:{    
-    Sft: 12,    
-    Sqm: 120,    
-    Cum: 7000
-  },  
-  mm12:{    
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 8500
-  },  
-  mm15:{    
-    Sft: 15,    
-    Sqm: 150,    
-    Cum: 8500  
-  },
-  mm20:{    
-    Sft: 20,    
-    Sqm: 180,    
-    Cum: 9500  
-  }  
-}
-export const PlasterSCMachineRates = {
-  mm6:{
-    Sft: 6,    
-    Sqm: 60,    
-    Cum: 5000
-  },
-  mm8:{
-    Sft: 10,    
-    Sqm: 100,    
-    Cum: 6500
-  },
-  
-  mm10:{    
-    Sft: 10,    
-    Sqm: 100,    
-    Cum: 6500
-  },  
-  mm12:{    
-    Sft: 14,    
-    Sqm: 140,    
-    Cum: 7500
-  },  
-  mm15:{    
-    Sft: 14,    
-    Sqm: 140,    
-    Cum: 8000  
-  },
-  mm20:{    
-    Sft: 16,    
-    Sqm: 160,    
-    Cum: 9000  
   }  
 }
 
@@ -794,4 +763,111 @@ export const GIRates = {
     m: 350,        
   },    
 }
+//Door Frame Insulation end//
+export const DFinsulationRates = {
+  Teak:{
+    WP1: 2000,    //waterproof membrane
+    WP2: 2500,    
+    WP3: 3000,    
+    FT1: 3500,        
+    FT2: 4000,    //foam tape
+  },
+  Ply:{
+    FT1: 1000,     //foam tape
+    FT2: 1500,    
+    AS1: 1600,    //Adhesive sealant
+    AS2: 2000,        
+    WP1: 1200,    //waterproof membrane
+    WP2: 1500,
+    WP3: 2000,
+    WP4: 2500,    
+  },
+  WPFlush:{
+    SRI1: 1500,   //silicon rubber insulation  SRI1WPFlushDFinsulation
+    SRI2: 2000,        
+    SRI3: 2500,        
+    SRI4: 3000,        
+  },
+  LamWood:{
+    AFS1: 1000,    ////adhesive foam sealant           AFS1LamWoodDFinsulation
+    AFS2: 1500,    
+    Rt1: 1500,      //Rubber Strips
+    Rt2: 2000,    //Rubber Strips
+  },
+  SolidcoreFlush:{
+    IF1: 2000,    //Insulated faam              IF1SolidcoreFlushDFinsulation
+    IF2: 3000,    
+    FM1: 3000,   //Fiber Membrane                 FM1SolidcoreFlushDFinsulation
+    FM2: 4000,        
+  },
+  WPC:{
+    Rubberseal: 1500,    //Rubber Seals or foam tape   |'RubbersealWPCDFinsulation'
+    Rubbersea2: 2000,    
+    Rubbersea3: 2000,    
+    Rubbersea4: 3000,        
+  },
+  GlassPanel:{
+    GI1: 2000,    //Insulated Strips for glass interface   //  |'GI1GlassPanelDFinsulation'
+    GI2: 2000,    //Glass Interface//
+  },
+  
+}
+//Door Frame Insulation end//
 
+//Door Frames//
+export const DFRates = {
+  Teakperft:{
+    TW1: 300,    //Teak wood
+    TW2: 350,    //Teak wood
+    TW3: 400,    //Teak wood
+    TW4: 500,        //Teak wood
+    TW5: 600,            //Teak wood
+  }, 
+  Graniteperft:{    
+    HW1: 200,        //Hard wood
+    HW2: 300,        //Hard wood
+    HW3: 400,        //Hard wood
+    GRN1: 600,       //Granite
+    GRN2: 700,        //Granite
+    GRN3: 800,        //Granite
+  },  
+  WPCperft:{
+    WPC1: 150,    
+    WPC2: 200,    
+    WPC3: 250,    
+    WPC4: 300,    
+    
+  },
+  PVCperft:{
+    PVC1: 100,    
+    PVC2: 200,        
+  },  
+}
+
+//Primer for walls//
+export const PPaintRates = {//prmer and paint togather//
+  Interior:{
+    Sft: 5, 
+    Sqm: 50,
+  },
+  Exterior:{
+    Sft: 8, 
+    Sqm: 85,
+  }, 
+  Whitewash:{
+    Sft: 8, 
+    Sqm: 95,
+  }, 
+  Emulsion:{
+    Sft: 15, 
+    Sqm: 150,
+  }, 
+  Enamel:{
+    Sft: 17, 
+    Sqm: 190,
+  }, 
+  Textured:{
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+}
