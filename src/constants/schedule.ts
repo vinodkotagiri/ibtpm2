@@ -5656,6 +5656,7 @@ parent:'L3EL0'
     hideChildren:false,
     parent:'GFI1'
   },
+    //Ground Living//Finishes Interior start//
   {
     id:'GFI3',
     name:'Electrical',
@@ -5700,7 +5701,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI6',
-    name:'Install Door Frame',
+    name:'FireFighting',
     start:'',
     end:'',
     duration:1,
@@ -5714,7 +5715,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI7',
-    name:'Install Windoor Frame',
+    name:'Install Door Frame',
     start:'',
     end:'',
     duration:1,
@@ -5728,7 +5729,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI8',
-    name:'Install Window',
+    name:'Install Windoor Frame',
     start:'',
     end:'',
     duration:1,
@@ -5742,7 +5743,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI9',
-    name:'Install Door',
+    name:'Install Window',
     start:'',
     end:'',
     duration:1,
@@ -5756,7 +5757,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI10',
-    name:'Light Fixtures',
+    name:'Install Door',
     start:'',
     end:'',
     duration:1,
@@ -5770,7 +5771,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI11',
-    name:'Flooring',
+    name:'False Ceiling',
     start:'',
     end:'',
     duration:5,
@@ -5784,10 +5785,10 @@ parent:'L3EL0'
   },
   {
     id:'GFI12',
-    name:'False Ceiling',
+    name:'Light Fixtures',
     start:'',
     end:'',
-    duration:5,
+    duration:1,
     cost:0,
     strategy:'FS',
     dependencies:['GFI11'],
@@ -5798,10 +5799,10 @@ parent:'L3EL0'
   },
   {
     id:'GFI13',
-    name:'Light Fixtures',
+    name:'Countertop',
     start:'',
     end:'',
-    duration:1,
+    duration:2,
     cost:0,
     strategy:'FS',
     dependencies:['GFI12'],
@@ -5812,7 +5813,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI14',
-    name:'Countertop',
+    name:'Sliding door',
     start:'',
     end:'',
     duration:2,
@@ -5826,10 +5827,10 @@ parent:'L3EL0'
   },
   {
     id:'GFI15',
-    name:'Sliding door',
+    name:'Joinery',
     start:'',
     end:'',
-    duration:2,
+    duration:1,
     cost:0,
     strategy:'FS',
     dependencies:['GFI14'],
@@ -5840,7 +5841,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI16',
-    name:'Joinery',
+    name:'Exhaust Chimney',
     start:'',
     end:'',
     duration:1,
@@ -5854,27 +5855,13 @@ parent:'L3EL0'
   },
   {
     id:'GFI17',
-    name:'Exhaust Chimney',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['GFI16'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'GFI2'
-  },
-  {
-    id:'GFI18',
     name:'Furniture',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI17'],
+    dependencies:['GFI16'],
     type:'task',
     progress:0,
     hideChildren:false,

@@ -969,5 +969,104 @@ export const FloorRates = {  //IS:15622 - Ceramic and vitrified tiles for floori
     Sft: 35, 
     Sqm: 400,
   }, 
-
+}
+export const DoorRates = {
+  UPVCSlid:{
+    Sft: 1300,        
+    Unit: 15000,        
+  },  
+  UPVCfix:{    
+    Sft: 500,    
+    Unit: 6000,        
+  },
+  Alum:{    
+    Sft: 600,    
+    Unit: 7500,        
+  },
+  Metal:{    
+    Sft: 800,    
+    Unit: 10000,        
+  },  
+  TeakWood:{    
+    Sft: 1200,        
+    Unit: 14500,        
+  },  
+  Decor:{    
+    Sft: 2000,    
+    Unit: 21000,        
+  },   
+  WProof:{    
+    Sft: 1000,    
+    Unit: 10000,        
+  },    
+  Solidwd:{    
+    Sft: 1300,    
+    Unit: 12000,        
+  },       
+  Panel:{    
+    Sft: 900,    
+    Unit: 10000,        
+  },   
+  Flush:{    
+    Sft: 800,    
+    Unit: 9000,        
+  },
+  Glass:{    
+    Sft: 1500,    
+    Unit: 18000,        
+  },           
+}
+export const LitCfixRates = {
+  Recsed:{
+    Unit1: 400,    
+    Unit2: 600,        
+    Unit3: 800,    
+    Unit4: 1200,        
+  },
+  Pendt:{
+    Unit1: 1000,    
+    Unit2: 3000,    
+    Unit3: 6500,        
+    Unit4: 8500,    
+    Unit5: 9000,        
+    Unit6: 10000,        
+    Unit7: 12000,    
+    Unit8: 1500,        
+  },
+  Flush:{
+    Unit1: 800,    
+    Unit2: 1000,    
+    Unit3: 2000,        
+    Unit4: 3000,        
+  },    
+}
+export const LitWfixRates = {
+  Wall:{
+    Unit1: 800,    
+    Unit2: 900,        
+    Unit3: 1000,    
+    Unit4: 2000,        
+    Unit5: 3000,        
+    Unit6: 4000,        
+    Unit7: 5000,        
+  },
+  LEDWP:{
+    Unit1: 600,    
+    Unit2: 800,    
+    Unit3: 900,        
+    Unit4: 1000,    
+    Unit5: 1200,        
+    Unit6: 1400,        
+    Unit7: 1600,    
+    Unit8: 2000,        
+  },    
+}
+export const LowCRates = {  //Sft1CeilingLowC
+  Ceiling:{
+    Sft1: 50,    
+    Sft2: 60,    
+    Sft3: 75,
+    Sft4: 85,    
+    Sft5: 100,           
+  }, 
 }

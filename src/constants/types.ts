@@ -56,8 +56,10 @@ type DFinsulationType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDF
 |'RubbersealWPCDFinsulation'|'Rubbersea2WPCDFinsulation'|'Rubbersea3WPCDFinsulation'|'Rubbersea4WPCDFinsulation'
 |'GI1GlassPanelDFinsulation'|'GI2GlassPanelDFinsulation'
 //doorframe//
-type DFType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation'| 'FT1TeakDFinsulation'| 'FT2TeakDFinsulation'
+type DFType = 'TW1TeakperftDF'| 'TW2TeakperftDF'| 'TW3TeakperftDF'| 'TW4TeakperftDF'| 'TW5TeakperftDF'| 'HW1GraniteperftDF'|
+'HW2GraniteperftDF'|'HW3GraniteperftDF'|'GRN1GraniteperftDF'|'GRN2GraniteperftDF'|'GRN3GraniteperftDF' | 'WPC1WPCperftDF'|'WPC2WPCperftDF'|'WPC3WPCperftDF'|'WPC4WPCperftDF'
 //doorframe//
+
 type PPaintType = 'SftInteriorPPaint'| 'SqmPPaint'| 'SftExteriorPPaint'| 'SqmExteriorPPaint'| 'SftWhitewashPPaint'| 'SqmWhitewashPPaint'
 | 'SftEmulsionPPaint'| 'SqmEmulsionPPaint'| 'SftEnamelPPaint'| 'SqmEnamelPPaint'| 'SftTexturedPPaint'| 'SqmTexturedPPaint'
 
@@ -70,10 +72,22 @@ type FloorType = 'SftCeramicFloor'| 'SqmCeramicFloor'| 'SftVitrifiedFloor'| 'Sqm
 
 type IBTType = 'UnitDesignIBT'| 'BusinessDesignIBT'| 'UnitEstimateIBT'| 'BusinessEstimateIBT'| 'UnitCityapprIBT'| 'BusinessCityapprIBT'
 
+type DoorType = 'SftUPVCSlidDoor'| 'UnitUPVCSlidDoor'|'SftUPVCfixDoor'| 'UnitUPVCfixDoor'|'SftAlumDoor'| 'UnitAlumDoor'|'SftMetalDoor'| 'UnitMetalDoor'
+|'SftTeakWoodDoor'| 'UnitTeakWoodDoor'|'SftDecorDoor'| 'UnitDecorDoor'|'SftWProofDoor'| 'UnitWProofDoor'|'SftSolidwdDoor'| 'UnitSolidwdDoor'|
+'SftPanelwdDoor'| 'UnitPanelwdDoor'|'SftFlushwdDoor'| 'UnitFlushwdDoor'|'SftGlassDoor'| 'UnitGlassDoor'
+
+type LitCfixType = 'Unit1RecsedLitCfix'| 'Unit2RecsedLitCfix'|'Unit3RecsedLitCfix' | 'Unit4RecsedLitCfix'| 'Unit1PendtLitCfix'|'Unit2PendtLitCfix'
+| 'Unit3PendtLitCfix'|'Unit4PendtLitCfix'| 'Unit5PendtLitCfix'|'Unit6PendtLitCfix'| 'Unit1FlushLitCfix'|'Unit2PFlusLitCfix'|'Unit3PFlushLitCfix'
+
+type LitWfixType = 'Unit1WallLitWfix'| 'Unit2WallLitWfix'| 'Unit3WallLitWfix'| 'Unit4WallLitWfix'| 'Unit5WallLitWfix'| 'Unit6WallLitWfix'
+| 'Unit1LEDWPLitWfix'| 'Unit2LEDWPLitWfix'| 'Unit3LEDWPLitWfix'| 'Unit4LEDWPLitWfix'| 'Unit5LEDWPLitWfix'| 'Unit6LEDWPLitWfix'
+
+type LowCType = | 'Sft1CeilingLowC'| 'Sft2CeilingLowC'| 'Sft3CeilingLowC'| 'Sft4CeilingLowC'|'Sft5CeilingLowC'
+//xxx//
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType | FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
  PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
- |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType
+ |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| LowCType
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'

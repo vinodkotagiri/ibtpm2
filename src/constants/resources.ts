@@ -3,7 +3,7 @@ import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  C
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
-  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates } from './rates'
+  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, LowCRates } from './rates'
   //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
 
@@ -2221,8 +2221,57 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'GPTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'GPTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
-  //Ground Living//Finishes Rough-in start//
+  //Ground Living//Finishes Interior start//
+  //Ground Living//Finishes Interior start//
+  //Ground Living//Finishes Interior start//
+  //Ground Living//Finishes Interior start//
+  //Ground Living//Finishes Interior start//
 
+  "GFI3": [
+  { id: 'GEL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GEL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GEL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+  ],
+  "GFI4": [
+  { id: 'GMD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GMD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GMD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],
+  "GFI5": [
+  { id: 'GPC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GPC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GPC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],
+  "GFI6": [
+  { id: 'GFF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GFF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'GFF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],
+"GFI7": [
+    { id: 'GDFI11', resource: 'TW1TeakperftDF', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GDFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+"GFI8": [
+    { id: 'GWFI11', resource: 'TW1TeakperftDF', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GWFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+"GFI9": [
+    { id: 'GDFI11', resource: 'SftUPVCSlidDoor', description: 'Window', length: 1.5, breadth: 2.2, area: 0,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GDFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+"GFI10": [
+    { id: 'GWFI11', resource: 'UnitTeakWoodDoor', description: 'Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'GWFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+  "GFI11": [
+    { id: 'GWFI11', resource: 'Sft2CeilingLowC', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: 0,  rate: LowCRates.Ceiling.Sft2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GWFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],
+  "GFI12": [
+    { id: 'GWFI11', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'GWFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+  ], 
+   
 
   
   }
