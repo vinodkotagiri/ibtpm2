@@ -928,7 +928,7 @@ export const WPRates = {
   }, 
 }
 //Flooring materials 
-export const FlooringRates = {  //IS:15622 - Ceramic and vitrified tiles for flooring and walls.  IS:777 - Quality standards for roofing and flooring tiles.  IS:3622 - Polished granite slabs for wall and flooring use.
+export const FloorRates = {  //IS:15622 - Ceramic and vitrified tiles for flooring and walls.  IS:777 - Quality standards for roofing and flooring tiles.  IS:3622 - Polished granite slabs for wall and flooring use.
   Ceramic:{         //Economical option for floors and walls; available in various designs.//  IS:1443 - Standard for laying and fixing natural stone slabs.
     Sft: 5, 
     Sqm: 50,
