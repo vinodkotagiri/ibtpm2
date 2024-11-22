@@ -82,9 +82,9 @@ type LitCfixType = 'Unit1RecsedLitCfix'| 'Unit2RecsedLitCfix'|'Unit3RecsedLitCfi
 type LitWfixType = 'Unit1WallLitWfix'| 'Unit2WallLitWfix'| 'Unit3WallLitWfix'| 'Unit4WallLitWfix'| 'Unit5WallLitWfix'| 'Unit6WallLitWfix'
 | 'Unit1LEDWPLitWfix'| 'Unit2LEDWPLitWfix'| 'Unit3LEDWPLitWfix'| 'Unit4LEDWPLitWfix'| 'Unit5LEDWPLitWfix'| 'Unit6LEDWPLitWfix'
 
-type LowCType = | 'Sft1CeilingLowC'| 'Sft2CeilingLowC'| 'Sft3CeilingLowC'| 'Sft4CeilingLowC'|'Sft5CeilingLowC'
+type LowCType =  'Sft1CeilingLowC'| 'Sft2CeilingLowC'| 'Sft3CeilingLowC'| 'Sft4CeilingLowC'|'Sft5CeilingLowC'
 
-type KCtop40sftType = | 'Sft1GraniteKCtop20sft'| 'Sft2GraniteKCtop20sft'| 'Sft3GraniteKCtop20sft'| 'Sft4GraniteKCtop20sft'|'Sft5GraniteKCtop20sft'
+type KCtop40sftType =  'Sft1GraniteKCtop20sft'| 'Sft2GraniteKCtop20sft'| 'Sft3GraniteKCtop20sft'| 'Sft4GraniteKCtop20sft'|'Sft5GraniteKCtop20sft'
 | 'Sft1QuartzKCtop20sft'| 'Sft2QuartzKCtop20sft'| 'Sft3QuartzKCtop20sft'| 'Sft4QuartzKCtop20sft'|'Sft5QuartzKCtop20sft'
 | 'Sft1CorianKCtop20sft'| 'Sft2CorianKCtop20sft'| 'Sft3CorianKCtop20sft'| 'Sft4CorianKCtop20sft'|'Sft5CorianKCtop20sft'
 | 'Sft1CCKCtop20sft'| 'Sft2CCKCtop20sft'| 'Sft3CCKCtop20sft'| 'Sft4CCKCtop20sft'|'Sft5CCKCtop20sft'
@@ -99,11 +99,17 @@ type KCtop40sftType = | 'Sft1GraniteKCtop20sft'| 'Sft2GraniteKCtop20sft'| 'Sft3G
 | 'Sft1CorianKCtop60sft'| 'Sft2CorianKCtop60sft'| 'Sft3CorianKCtop60sft'| 'Sft4CorianKCtop60sft'|'Sft5CorianKCtop60sft'
 | 'Sft1CCKCtop60sft'| 'Sft2CCKCtop60sft'| 'Sft3CCKCtop60sft'| 'Sft4CCKCtop60sft'|'Sft5CCKCtop60sft'
 
+type CabinetType =  'Sft1KitchenCabinet'| 'Sft2KitchenCabinet'|'Sft3KitchenCabinet'|'Sft4KitchenCabinet'|'Sft5KitchenCabinet'|
+'Sft1WardrobeCabinet'| 'Sft2WardrobeCabinet'|'Sft3WardrobeCabinet'|'Sft4WardrobeCabinet'|'Sft5WardrobeCabinet'|
+'Sft1FurniCabinet'| 'Sft2FurniCabinet'|'Sft3FurniCabinet'|'Sft4FurniCabinet'|'Sft5FurniCabinet'
+
+type ExhaustType = 'Unit1KitchenExhaust' | 'Unit2KitchenExhaust' | 'Unit3KitchenExhaust' | 'Unit4KitchenExhaust'  
+
 //xxx//
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType | FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
  PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
- |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| LowCType |KCtop40sftType
+ |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| LowCType |KCtop40sftType| CabinetType | ExhaustType
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'
 export type TaskType = 'task' | 'project' | 'milestone'

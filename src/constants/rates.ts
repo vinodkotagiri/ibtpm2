@@ -1192,3 +1192,35 @@ export const KCtop90sftRates = {
     Sft5: 54000,           
   },   
 }
+
+export const CabinetRates = { 
+  Kitchen:{
+    Sft1: 1100,    
+    Sft2: 1500,    
+    Sft3: 1800,
+    Sft4: 2500,    
+    Sft5: 3250,           
+  }, 
+  Wardrobe:{
+    Sft1: 1300,    
+    Sft2: 1800,    
+    Sft3: 2500,
+    Sft4: 3000,    
+    Sft5: 3750,           
+  }, 
+  Furni:{
+    Sft1: 8250,    
+    Sft2: 10000,    
+    Sft3: 15000,
+    Sft4: 25000,    
+    Sft5: 35000,           
+  }, 
+}
+export const ExhaustRates = { 
+  Kitchen:{
+    Unit1: 12000,    
+    Unit2: 18000,    
+    Unit3: 24000,    
+    Unit4: 32000,    
+  }, 
+}
