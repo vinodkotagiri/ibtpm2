@@ -1070,3 +1070,125 @@ export const LowCRates = {  //Sft1CeilingLowC
     Sft5: 100,           
   }, 
 }
+
+export const KCtop20sftRates = {  
+  Granite:{
+    Sft1: 5000,    
+    Sft2: 6000,    
+    Sft3: 8000,
+    Sft4: 10000,    
+    Sft5: 12000,           
+  }, 
+  Quartz:{
+    Sft1: 8000,    
+    Sft2: 12000,    
+    Sft3: 16000,
+    Sft4: 18000,    
+    Sft5: 24000,           
+  }, 
+  Corian:{
+    Sft1: 12000,    
+    Sft2: 16000,    
+    Sft3: 20000,
+    Sft4: 25000,    
+    Sft5: 28000,           
+  }, 
+  Concrete:{
+    Sft1: 5000,    
+    Sft2: 7000,    
+    Sft3: 8000,
+    Sft4: 10000,    
+    Sft5: 12000,           
+  },   
+}
+
+export const KCtop40sftRates = {  
+  Granite:{
+    Sft1: 6000,    
+    Sft2: 9000,    
+    Sft3: 14000,
+    Sft4: 18000,    
+    Sft5: 24000,           
+  }, 
+  Quartz:{
+    Sft1: 8000,    
+    Sft2: 14000,    
+    Sft3: 19000,
+    Sft4: 25000,    
+    Sft5: 32000,           
+  }, 
+  Corian:{
+    Sft1: 24000,    
+    Sft2: 30000,    
+    Sft3: 40000,
+    Sft4: 52000,    
+    Sft5: 60000,           
+  }, 
+  CC:{
+    Sft1: 10000,    
+    Sft2: 12000,    
+    Sft3: 15000,
+    Sft4: 20000,    
+    Sft5: 24000,           
+  },   
+}
+export const KCtop60sftRates = { 
+  Granite:{
+    Sft1: 9000,    
+    Sft2: 15000,    
+    Sft3: 20000,
+    Sft4: 28000,    
+    Sft5: 36000,           
+  }, 
+  Quartz:{
+    Sft1: 24000,    
+    Sft2: 35000,    
+    Sft3: 45000,
+    Sft4: 60000,    
+    Sft5: 72000,           
+  }, 
+  Corian:{
+    Sft1: 36000,    
+    Sft2: 42000,    
+    Sft3: 55000,
+    Sft4: 75000,    
+    Sft5: 85000,           
+  }, 
+  Concrete:{
+    Sft1: 15000,    
+    Sft2: 20000,    
+    Sft3: 25000,
+    Sft4: 30000,    
+    Sft5: 36000,           
+  },   
+}
+export const KCtop90sftRates = { 
+  Granite:{
+    Sft1: 13500,    
+    Sft2: 20000,    
+    Sft3: 30000,
+    Sft4: 48000,    
+    Sft5: 54000,           
+  }, 
+  Quartz:{
+    Sft1: 36000,    
+    Sft2: 46000,    
+    Sft3: 58000,
+    Sft4: 75000,    
+    Sft5: 100000,           
+  }, 
+  Corian:{
+    Sft1: 55000,    
+    Sft2: 70000,    
+    Sft3: 85000,
+    Sft4: 100000,    
+    Sft5: 125000,           
+  }, 
+  Concrete:{
+    Sft1: 22500,    
+    Sft2: 28000,    
+    Sft3: 35000,
+    Sft4: 45000,    
+    Sft5: 54000,           
+  },   
+}

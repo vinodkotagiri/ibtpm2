@@ -5799,7 +5799,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI13',
-    name:'Countertop',
+    name:'Kitchen Countertop',
     start:'',
     end:'',
     duration:2,
