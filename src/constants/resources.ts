@@ -3,7 +3,7 @@ import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  C
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
-  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FlooringRates } from './rates'
+  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates } from './rates'
   //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
 
@@ -37,7 +37,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'GTL11', resource: 'UnitCityapprIBT', description: 'Municipal approval', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Cityappr.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
     ],
 
-    "C02A": [
+    "SP1": [
       {
         "id": "C0",
         "resource": "DailyMason",
@@ -53,7 +53,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
       }
     ],
    
-    "C03": [
+    "SP2": [
       {
         "id": "C1",
         "resource": "DailyMason",
@@ -78,7 +78,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "totalCost": 0
       }
     ],
-    "C04": [      
+    "SP3": [      
       { id: 'C04', resource: 'CumExcavatorExcavatonMachine', description: 'Excavation', length: 2.5, breadth:2.5, thickness: 3, area:0,  rate:  ExcavationMachineRates.Excavator.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       {
         "id": "C4",
@@ -108,7 +108,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "totalCost": 0
       }
     ],
-    "C05": [
+    "SP4": [
       {
         "id": "C7",
         "resource": "DailyMason",
@@ -132,7 +132,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "totalCost": 0
       }
     ],
-    "C06": [
+    "SP5": [
       {
         "id": "C9",
         "resource": "DailyMason",
@@ -155,7 +155,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
         "totalCost": 0
       }
     ],
-    "C07": [
+    "SP6": [
       {
         "id": "C11",
         "resource": "SftWater",
@@ -2208,11 +2208,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'GWP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "GGR1": [
-    { id: 'GGR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FlooringRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GGR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GGR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "GTL1": [
-    { id: 'GTL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FlooringRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GTL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GTL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
