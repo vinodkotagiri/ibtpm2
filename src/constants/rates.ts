@@ -1,3 +1,16 @@
+export const IBTRates = {
+  Design:{
+    Unit: 449,    
+    Business: 1449,            
+  },
+  Estimate:{
+    Unit: 1200,    
+    Business: 2000,        
+  },  
+  Cityappr:{    
+    Unit: 1000,             
+  },    
+}
 export const EngineerRates = {
   Inspection:{
   Visit: 6000,  

@@ -2,7 +2,7 @@ import {Task} from './types'
 
 const tasks:Task[]=[
   {
-    id:'P0',
+    id:'PROJ',
     name:'Project iBuiltup Tech Summary',
     start:'',
     end:'',
@@ -15,7 +15,7 @@ const tasks:Task[]=[
     hideChildren:false,    
   },
   {
-    id:'P1',
+    id:'PCON',
     name:'Pre-Construction',
     start:'',
     end:'',
@@ -26,10 +26,10 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'P0'
+    parent:'PROJ'
   },
   {
-    id:'P11',
+    id:'PC1',
     name:'Design & Contract',
     start:'',
     end:'',
@@ -40,10 +40,10 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'P1'
+    parent:'PCON'
   },
   {
-    id:'P11T1',
+    id:'PC2',
     name:'Floor Plan Design',
     start:'',
     end:'',
@@ -54,38 +54,38 @@ const tasks:Task[]=[
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'P11'
+    parent:'PC1'
   },
   {
-    id:'P11T2',
+    id:'PC3',
     name:'Contract and Estimation details',
     start:'',
     end:'',
     duration:5,
     cost:0,
-    strategy:'SS',
-    dependencies:['P11T1'],
+    strategy:'FS',
+    dependencies:['PC2'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'P11'
+    parent:'PC1'
   },
     {
-    id:'P11T3',
-    name:'Issue Contract',
+    id:'PC4',
+    name:'City Approval & Issue Contract',
     start:'',
     end:'',
     duration:1,
     cost:0,
-    strategy:'SS',
-    dependencies:['P11T1'],
+    strategy:'FF',
+    dependencies:['PC3'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'P11'
+    parent:'PC1'
   }, 
   {
-    id:'C01',
+    id:'CON',
     name:'Construction',
     start:'',
     end:'',
@@ -96,7 +96,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'P0'
+    parent:'PROJ'
   },     
   {
     id:'SP0',
@@ -110,7 +110,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'CON'
   },
   {
     id:'SP1',
@@ -120,7 +120,7 @@ const tasks:Task[]=[
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['P11T1'],
+    dependencies:['PC3'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -214,7 +214,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'CON'
   },
   {
     id:'F00',
@@ -1352,7 +1352,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C01',
+  parent:'CON',
   resources:[],
 },
 
@@ -1546,7 +1546,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C01',
+  parent:'CON',
   resources:[],
 },
 
@@ -1724,7 +1724,7 @@ const tasks:Task[]=[
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C01',
+  parent:'CON',
   resources:[],
 },
   {
@@ -1800,7 +1800,7 @@ const tasks:Task[]=[
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'CON'
   },
 
   {
@@ -2853,7 +2853,7 @@ parent:'L1BT2'
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C01'
+  parent:'CON'
 },
 
 {
@@ -3862,7 +3862,7 @@ parent:'L2EL0'
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'C01'
+  parent:'CON'
 },
 
 {
@@ -4870,7 +4870,7 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'CON'
   },
   {
     id:'OT1',
@@ -5084,7 +5084,7 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'CON'
   },
   {
     id:'OTBW1',
@@ -5311,7 +5311,7 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'C01'
+    parent:'PROJ'
   },
   {
     id:'GFRI',
@@ -5626,7 +5626,7 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'P0'
+    parent:'PROJ'
   },
   {
     id:'GFI1',
@@ -5686,7 +5686,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI5',
-    name:'Mechical',
+    name:'Mechanical',
     start:'',
     end:'',
     duration:1,
@@ -5710,7 +5710,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C282'
+    parent:'GFI2'
   },
   {
     id:'GFI7',
@@ -5724,7 +5724,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C282'
+    parent:'GFI2'
   },
   {
     id:'GFI8',
@@ -5738,7 +5738,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C282'
+    parent:'GFI2'
   },
   {
     id:'GFI9',
@@ -5752,7 +5752,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C282'
+    parent:'GFI2'
   },
   {
     id:'GFI10',
@@ -5882,7 +5882,7 @@ parent:'L3EL0'
   },
 
   {
-    id:'C16',
+    id:'CLOSE',
     name:'Closing',
     start:'',
     end:'',
@@ -5893,77 +5893,77 @@ parent:'L3EL0'
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'P0'
+    parent:'PROJ'
   },
   {
-    id:'C433',
+    id:'CL01',
     name:'Install Final Fixtures',
     start:'',
     end:'',
     duration:5,
     cost:0,
     strategy:'FS',
-    dependencies:['C431'],
+    dependencies:['GFI16'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C16'
+    parent:'CLOSE'
   },
   {
-    id:'C434',
+    id:'CL02',
     name:'Inspections',
     start:'',
     end:'',
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['C433'],
+    dependencies:['CL01'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C16'
+    parent:'CLOSE'
   },
   {
-    id:'C435',
+    id:'CL03',
     name:'Snag List',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C434'],
+    dependencies:['CL02'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C16'
+    parent:'CLOSE'
   },
   {
-    id:'C436',
+    id:'CL04',
     name:'Clear Snag List',
     start:'',
     end:'',
     duration:5,
     cost:0,
     strategy:'FS',
-    dependencies:['C435'],
+    dependencies:['CL03'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C16'
+    parent:'CLOSE'
   },
   {
-    id:'C437',
+    id:'CL05',
     name:'Handover',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['C436'],
+    dependencies:['CL04,GFI17'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'C16'
+    parent:'CLOSE'
   },  
 ]
 export default tasks

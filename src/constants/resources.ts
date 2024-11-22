@@ -1,14 +1,14 @@
 import { width } from '@fortawesome/free-solid-svg-icons/fa0'
-import { EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  ConcreteRates,  SteelRates,  WoodFormworkRates,  MetalFormworkRates,
+import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  ConcreteRates,  SteelRates,  WoodFormworkRates,  MetalFormworkRates,
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
   DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FlooringRates } from './rates'
+  //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
 
 function getResources ( taskId: string, drawingData: DrawingData, taskResources: Array<Resource> =null): Array<Resource> {
-  const { excavationArea, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness,groundFloorArea,groundFloorWalls,    
-  
+  const { excavationArea, plotLength, plotWidth, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness,groundFloorArea,groundFloorWalls,      
     //Floorwise for slabs//
   builtupArea1, builtLength1, builtWidth1, builtupArea2, builtLength2, builtWidth2, builtupArea3, builtLength3, builtWidth3,
   //roomwise//xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required//
@@ -25,6 +25,17 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
    } = drawingData
   const resources: Record<string, Array<Resource>> = {
 
+    "PC2": [
+    { id: 'GTL11', resource: 'UnitDesignIBT', description: 'Design', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Design.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
+    ], 
+
+    "PC3": [
+    { id: 'GTL11', resource: 'UnitEstimateIBT', description: 'Estimate', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Estimate.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
+    ],
+  
+    "PC4": [
+    { id: 'GTL11', resource: 'UnitCityapprIBT', description: 'Municipal approval', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Cityappr.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
+    ],
 
     "C02A": [
       {
@@ -2193,20 +2204,20 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'GPR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "GWP1": [
-    { id: 'GWP11', resource: 'SqmLiquid', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GWP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GWP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "GGR1": [
-    { id: 'GGR11', resource: 'SqmGranite', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: FlooringRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GGR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FlooringRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GGR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "GTL1": [
-    { id: 'GTL11', resource: 'SqmVitrified', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: FlooringRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GTL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FlooringRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GTL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "GPTF1": [
-    { id: 'GPTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'GPTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'GPTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'GPTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
