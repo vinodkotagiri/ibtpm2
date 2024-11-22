@@ -1,3 +1,16 @@
+export const IBTRates = {
+  Design:{
+    Unit: 449,    
+    Business: 1449,            
+  },
+  Estimate:{
+    Unit: 1200,    
+    Business: 2000,        
+  },  
+  Cityappr:{    
+    Unit: 1000,             
+  },    
+}
 export const EngineerRates = {
   Inspection:{
   Visit: 6000,  
@@ -869,5 +882,345 @@ export const PPaintRates = {//prmer and paint togather//
   Textured:{
     Sft: 35, 
     Sqm: 400,
+  }, 
+}
+//waterproofing prior flooring//
+export const WPRates = {
+  Cement:{  //Cementitious  //Economical and commonly used; consists of polymer-modified cement coatings.
+    Sft: 20,   //Bathrooms, Kitchens, Balconies	
+    Sqm: 200,
+  },
+  Liquid:{   //Flexible waterproofing using acrylic or polyurethane-based liquid; forms a seamless barrier.
+    Sft: 30, //Bathrooms, Kitchens, Roofs	
+    Sqm: 310,
+  }, 
+  Bitumin:{ //Bituminous //Economical option; includes bituminous coatings or membranes; not suitable for interiors due to smell.
+    Sft: 25, //Roofs, Basements	
+    Sqm: 325,
+  }, 
+  Polyurth :{  //Polyurethane//Premium, highly durable, and elastic; excellent for areas prone to waterlogging.
+    Sft: 50,    //Swimming Pools, Basements, Roofs	
+    Sqm: 550,
+  }, 
+  EPDMembr:{   //EPDMembrane //Ethylene Propylene Diene Monomer rubber membranes; excellent for large surface areas and durability.
+    Sft: 65,   //Swimming Pools, Roof Gardens
+    Sqm: 650,
+  }, 
+  Crystal :{   //Crystalline //Enhances concrete density; forms crystals that block water passage.
+    Sft: 35, //Concrete Tanks, Basements	
+    Sqm: 450,
+  }, 
+  Injectgrout :{  //Injection grout //Used for treating cracks and joints in concrete; suitable for repairs.
+    Sft: 100,   //Bathrooms, Basements, Cracks	
+    Sqm: 1000,
+  }, 
+  Hybrid :{           //Hybrid Systems (PU + Cement)//Combines flexibility and adhesion of PU with the hardness of cementitious coatings; premium option.
+    Sft: 60,          //Bathrooms, Swimming Pools, Basements	
+    Sqm: 650,
+  }, 
+  SelfAdWP :{   //self adhesive water proofing  //Bitumen-based adhesive sheets; easy to apply and highly reliable for flat surfaces.
+    Sft: 80,      //Roofs, Basements, Wet Zones	
+    Sqm: 800,
+  }, 
+  NanoCoatWP :{   //Nano Coating Water Proofing  //Advanced technology for high durability and water repellency; environmentally friendly.
+    Sft: 70,        ///Bathrooms, Kitchens	
+    Sqm: 800,
+  }, 
+}
+//Flooring materials 
+export const FloorRates = {  //IS:15622 - Ceramic and vitrified tiles for flooring and walls.  IS:777 - Quality standards for roofing and flooring tiles.  IS:3622 - Polished granite slabs for wall and flooring use.
+  Ceramic:{         //Economical option for floors and walls; available in various designs.//  IS:1443 - Standard for laying and fixing natural stone slabs.
+    Sft: 5, 
+    Sqm: 50,
+  },
+  Vitrified:{     //Durable, low porosity, suitable for high-traffic areas; glossy or matte.
+    Sft: 8, 
+    Sqm: 85,
+  }, 
+  Porcelain:{     //Harder and more durable than ceramic; ideal for moisture-prone areas.
+    Sft: 8, 
+    Sqm: 95,
+  }, 
+  Marble:{        //Natural stone; premium option; requires polishing for a luxurious finish.
+    Sft: 15, 
+    Sqm: 150,
+  }, 
+  Granite:{       //Strong, durable, ideal for kitchens, staircases, and high-traffic areas.
+    Sft: 17, 
+    Sqm: 190,
+  }, 
+  Kota:{          //Affordable natural stone; suitable for indoor and outdoor areas.
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+  Quartz:{        //Engineered stone; offers a premium look with high durability.
+    Sft: 15, 
+    Sqm: 150,
+  }, 
+  Wooden:{        //Aesthetic appeal, moderate durability; not suitable for moisture-prone areas.
+    Sft: 17, 
+    Sqm: 190,
+  }, 
+  Vinly:{         //Economical, water-resistant; ideal for kitchens and bathrooms.
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+  Terracotta :{   //Rustic look, suitable for balconies and courtyards.
+    Sft: 35, 
+    Sqm: 400,
+  }, 
+}
+export const DoorRates = {
+  UPVCSlid:{
+    Sft: 1300,        
+    Unit: 15000,        
+  },  
+  UPVCfix:{    
+    Sft: 500,    
+    Unit: 6000,        
+  },
+  Alum:{    
+    Sft: 600,    
+    Unit: 7500,        
+  },
+  Metal:{    
+    Sft: 800,    
+    Unit: 10000,        
+  },  
+  TeakWood:{    
+    Sft: 1200,        
+    Unit: 14500,        
+  },  
+  Decor:{    
+    Sft: 2000,    
+    Unit: 21000,        
+  },   
+  WProof:{    
+    Sft: 1000,    
+    Unit: 10000,        
+  },    
+  Solidwd:{    
+    Sft: 1300,    
+    Unit: 12000,        
+  },       
+  Panel:{    
+    Sft: 900,    
+    Unit: 10000,        
+  },   
+  Flush:{    
+    Sft: 800,    
+    Unit: 9000,        
+  },
+  Glass:{    
+    Sft: 1500,    
+    Unit: 18000,        
+  },           
+}
+export const LitCfixRates = {
+  Recsed:{
+    Unit1: 400,    
+    Unit2: 600,        
+    Unit3: 800,    
+    Unit4: 1200,        
+  },
+  Pendt:{
+    Unit1: 1000,    
+    Unit2: 3000,    
+    Unit3: 6500,        
+    Unit4: 8500,    
+    Unit5: 9000,        
+    Unit6: 10000,        
+    Unit7: 12000,    
+    Unit8: 1500,        
+  },
+  Flush:{
+    Unit1: 800,    
+    Unit2: 1000,    
+    Unit3: 2000,        
+    Unit4: 3000,        
+  },    
+}
+export const LitWfixRates = {
+  Wall:{
+    Unit1: 800,    
+    Unit2: 900,        
+    Unit3: 1000,    
+    Unit4: 2000,        
+    Unit5: 3000,        
+    Unit6: 4000,        
+    Unit7: 5000,        
+  },
+  LEDWP:{
+    Unit1: 600,    
+    Unit2: 800,    
+    Unit3: 900,        
+    Unit4: 1000,    
+    Unit5: 1200,        
+    Unit6: 1400,        
+    Unit7: 1600,    
+    Unit8: 2000,        
+  },    
+}
+export const LowCRates = {  //Sft1CeilingLowC
+  Ceiling:{
+    Sft1: 50,    
+    Sft2: 60,    
+    Sft3: 75,
+    Sft4: 85,    
+    Sft5: 100,           
+  }, 
+}
+
+export const KCtop20sftRates = {  
+  Granite:{
+    Sft1: 5000,    
+    Sft2: 6000,    
+    Sft3: 8000,
+    Sft4: 10000,    
+    Sft5: 12000,           
+  }, 
+  Quartz:{
+    Sft1: 8000,    
+    Sft2: 12000,    
+    Sft3: 16000,
+    Sft4: 18000,    
+    Sft5: 24000,           
+  }, 
+  Corian:{
+    Sft1: 12000,    
+    Sft2: 16000,    
+    Sft3: 20000,
+    Sft4: 25000,    
+    Sft5: 28000,           
+  }, 
+  Concrete:{
+    Sft1: 5000,    
+    Sft2: 7000,    
+    Sft3: 8000,
+    Sft4: 10000,    
+    Sft5: 12000,           
+  },   
+}
+
+export const KCtop40sftRates = {  
+  Granite:{
+    Sft1: 6000,    
+    Sft2: 9000,    
+    Sft3: 14000,
+    Sft4: 18000,    
+    Sft5: 24000,           
+  }, 
+  Quartz:{
+    Sft1: 8000,    
+    Sft2: 14000,    
+    Sft3: 19000,
+    Sft4: 25000,    
+    Sft5: 32000,           
+  }, 
+  Corian:{
+    Sft1: 24000,    
+    Sft2: 30000,    
+    Sft3: 40000,
+    Sft4: 52000,    
+    Sft5: 60000,           
+  }, 
+  CC:{
+    Sft1: 10000,    
+    Sft2: 12000,    
+    Sft3: 15000,
+    Sft4: 20000,    
+    Sft5: 24000,           
+  },   
+}
+export const KCtop60sftRates = { 
+  Granite:{
+    Sft1: 9000,    
+    Sft2: 15000,    
+    Sft3: 20000,
+    Sft4: 28000,    
+    Sft5: 36000,           
+  }, 
+  Quartz:{
+    Sft1: 24000,    
+    Sft2: 35000,    
+    Sft3: 45000,
+    Sft4: 60000,    
+    Sft5: 72000,           
+  }, 
+  Corian:{
+    Sft1: 36000,    
+    Sft2: 42000,    
+    Sft3: 55000,
+    Sft4: 75000,    
+    Sft5: 85000,           
+  }, 
+  Concrete:{
+    Sft1: 15000,    
+    Sft2: 20000,    
+    Sft3: 25000,
+    Sft4: 30000,    
+    Sft5: 36000,           
+  },   
+}
+export const KCtop90sftRates = { 
+  Granite:{
+    Sft1: 13500,    
+    Sft2: 20000,    
+    Sft3: 30000,
+    Sft4: 48000,    
+    Sft5: 54000,           
+  }, 
+  Quartz:{
+    Sft1: 36000,    
+    Sft2: 46000,    
+    Sft3: 58000,
+    Sft4: 75000,    
+    Sft5: 100000,           
+  }, 
+  Corian:{
+    Sft1: 55000,    
+    Sft2: 70000,    
+    Sft3: 85000,
+    Sft4: 100000,    
+    Sft5: 125000,           
+  }, 
+  Concrete:{
+    Sft1: 22500,    
+    Sft2: 28000,    
+    Sft3: 35000,
+    Sft4: 45000,    
+    Sft5: 54000,           
+  },   
+}
+
+export const CabinetRates = { 
+  Kitchen:{
+    Sft1: 1100,    
+    Sft2: 1500,    
+    Sft3: 1800,
+    Sft4: 2500,    
+    Sft5: 3250,           
+  }, 
+  Wardrobe:{
+    Sft1: 1300,    
+    Sft2: 1800,    
+    Sft3: 2500,
+    Sft4: 3000,    
+    Sft5: 3750,           
+  }, 
+  Furni:{
+    Sft1: 8250,    
+    Sft2: 10000,    
+    Sft3: 15000,
+    Sft4: 25000,    
+    Sft5: 35000,           
+  }, 
+}
+export const ExhaustRates = { 
+  Kitchen:{
+    Unit1: 12000,    
+    Unit2: 18000,    
+    Unit3: 24000,    
+    Unit4: 32000,    
   }, 
 }
