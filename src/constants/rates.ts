@@ -1224,3 +1224,14 @@ export const ExhaustRates = {
     Unit4: 32000,    
   }, 
 }
+
+export const FinalRates = {
+  FFix:{
+  Oth: 25000,    
+}
+}
+export const ContingRates = {
+  Clear:{
+  Snag: 45000,    
+}
+}

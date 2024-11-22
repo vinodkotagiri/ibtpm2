@@ -3,7 +3,8 @@ import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  C
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
-  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, LowCRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates  } from './rates'
+  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, LowCRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates,
+  FinalRates,  ContingRates  } from './rates'
   //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
 
@@ -26,15 +27,15 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   const resources: Record<string, Array<Resource>> = {
 
     "PC2": [
-    { id: 'GTL11', resource: 'UnitDesignIBT', description: 'Design', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Design.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
+    { id: 'GTL11', resource: 'UnitDesignIBT', description: 'Design', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Design.Unit, units: 'Unit', quantity: 1, totalCost: 0 },     
     ], 
 
     "PC3": [
-    { id: 'GTL11', resource: 'UnitEstimateIBT', description: 'Estimate', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Estimate.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
+    { id: 'GTL11', resource: 'UnitEstimateIBT', description: 'Estimate', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Estimate.Unit, units: 'Unit', quantity: 1, totalCost: 0 },     
     ],
   
     "PC4": [
-    { id: 'GTL11', resource: 'UnitCityapprIBT', description: 'Municipal approval', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Cityappr.Unit, units: 'Unit', quantity: 0, totalCost: 0 },     
+    { id: 'GTL11', resource: 'UnitCityapprIBT', description: 'Municipal approval', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Cityappr.Unit, units: 'Unit', quantity: 1, totalCost: 0 },     
     ],
 
     "SP1": [
@@ -2292,7 +2293,14 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'GWFI11', resource: 'Unit2KitchenExhaust', description: 'Exhaust', rate: ExhaustRates.Kitchen.Unit2, units: 'Unit', quantity: 1, totalCost: 0 },    
     { id: 'GWFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
-  
+  "CL01": [
+    { id: 'GWFI11', resource: 'OthFFixFinal', description: 'FinalFix',   rate: FinalRates.FFix.Oth, units: 'Unit', quantity: 1, totalCost: 0 },    
+    { id: 'GWFI11', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
+  ],  
+  "CL04": [
+    { id: 'GWFI11', resource: 'SnagClearConting', description: 'Snag&Desnag', rate: ContingRates.Clear.Snag, units: 'Unit', quantity: 1, totalCost: 0 },    
+    { id: 'GWFI11', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 1, totalCost: 0 },        
+  ]
   
   }
   if(taskResources)  return updateQuantities(taskResources)
