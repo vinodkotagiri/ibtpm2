@@ -10,7 +10,7 @@ const ScheduleComponent: React.FC = () => {
   const [ collapsed, setCollapsed ] = useState<{ [ key: string ]: boolean }>( {} );
   const { tasks,currencyCode } = useAppSelector( state => state.schedule );
   const dispatch=useAppDispatch()
-  const colorPalette = [ '#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7' ];
+  const colorPalette = [ '#f0ad4e50', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7' ];
 
   const buildTaskTree = ( tasks: Task[] ) => {
     const taskMap: { [ id: string ]: Task & { children: Task[] } } = {};
@@ -53,25 +53,26 @@ const ScheduleComponent: React.FC = () => {
 
       return (
         <React.Fragment key={ task.id }>
-          <tr style={ { backgroundColor: color } }>
-            <td style={ { paddingLeft: `${ level * 20 }px` } }>
+          <tr style={ { backgroundColor: task.type=='project'?'#5bc0de':'#fff' } }>
+            <td style={ { paddingLeft: `${ level * 20 }px`,width:'10%' } }>
               <span className="ml-2">{ task.id }</span>
               { task.children.length > 0 && (
                 <FontAwesomeIcon icon={ collapsed[ task.id ] ? faChevronCircleDown : faChevronCircleUp } className='ml-2 cursor-pointer' size='lg' color='#00000095' onClick={ () => toggleCollapse( task.id ) } />
               ) }
             </td>
-            <td className='font-semibold italic capitalize' style={{color:task.type==='project'?"blue":"green"}}>{task.type}</td>
-            <td>{ task.name }</td>
-            <td>
+            {/* <td className='font-semibold italic capitalize' style={{color:task.type==='project'?"blue":"green"}}>{task.type}</td> */}
+            <td className='w-[100px]'>{ task.name }</td>
+            {task.cost ?<td className='font-semibold w-[90px]'>{ currencyCode+' '+ task.cost.toFixed(2) }</td>:<td></td>}
+            <td className='w-[80px]'>
               <div className="tooltip  tooltip-right z-50" data-tip="Please select start date">
                 <input type='date' className='input input-ghost cursor-pointer' onChange={ e => handleStartDateChange(task.id,e.target.value)} value={task.start}/>
               </div>
             </td>
-            <td><input disabled type='date' className='input input-ghost disabled:border-none disabled:bg-transparent disabled:cursor-auto disabled:text-black' value={task.end}/></td>
-            <td>{ task.duration }</td>
-            <td>{ task.strategy }</td>
-            <td>{ task.progress }</td>
-            {task.cost ?<td className='font-semibold'>{ currencyCode+' '+ task.cost }</td>:<td></td>}
+            <td className='w-[80px]'><input disabled type='date' className='input input-ghost disabled:border-none disabled:bg-transparent disabled:cursor-auto disabled:text-black' value={task.end}/></td>
+            <td className='w-[90px]'>{ task.duration }</td>
+            <td className='w-[48px]'>{ task.strategy }</td>
+            <td className='w-[48px]'>{ task.progress }</td>
+          
           </tr>
           { !collapsed[ task.id ] &&
             task.children.length > 0 &&
@@ -90,14 +91,15 @@ const ScheduleComponent: React.FC = () => {
         <thead>
           <tr className="sticky-header">
             <th>ID</th>
-            <th>Type</th>
+            {/* <th>Type</th> */}
             <th>Task Name</th>
+            <th>Cost</th>
             <th>Start</th>
             <th>End</th>
             <th>Duration</th>
             <th>Strategy</th>
             <th>Progress</th>
-            <th>Cost</th>
+          
           </tr>
         </thead>
         <tbody>{ renderTasks( nestedTasks ) }</tbody>

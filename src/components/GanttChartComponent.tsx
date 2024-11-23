@@ -9,7 +9,9 @@ const GanttChartComponent = () => {
 
   // Map tasks to Gantt chart format
   const formatTasks = (): Task[] => {
-    return tasks.map(task => ({
+    return tasks.map(task => {
+      // console.log(task.id,'==>', new Date(task.end || Date.now() + task.duration * 86400000),)
+      return ({
       id: task.id,
       name: task.name,
       start: new Date(task.start || Date.now()), // Default to now if no start date
@@ -18,7 +20,8 @@ const GanttChartComponent = () => {
       progress: 45,
       isDisabled: false,
       dependencies: task.dependencies,
-    }));
+    })}
+  );
   };
 
   const ganttTasks = formatTasks();
