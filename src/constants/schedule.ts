@@ -5355,6 +5355,20 @@ parent:'L3EL0'
     hideChildren:false,
     parent:'GLI1'
   },  
+  {
+    id:'G1MEP1',
+    name:'MEP-1st Fix',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'GLI1'
+  },
 
   {
     id:'G1EL1',
@@ -5368,7 +5382,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1MEP1'
   },
   {
     id:'G1MD1',
@@ -5382,7 +5396,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1MEP1'
   },
   {
     id:'G1PC1',
@@ -5396,7 +5410,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1MEP1'
   },
   {
     id:'G1FF1',
@@ -5410,7 +5424,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1MEP1'
   },
   {
     id:'G1DFI1',
@@ -5420,7 +5434,7 @@ parent:'L3EL0'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['G1FF1'],
+    dependencies:['G1BW1'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -5448,7 +5462,7 @@ parent:'L3EL0'
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['G1WFI1'],
+    dependencies:['G1EL1,G1DFI1'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -5585,7 +5599,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GKI1'
 },  
-
+{
+  id:'G1MEP2',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GKI1'
+},
 {
   id:'G2EL1',
   name:'Electrical - Wires',
@@ -5598,7 +5625,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1MEP2'
 },
 {
   id:'G2MD1',
@@ -5612,7 +5639,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1MEP2'
 },
 {
   id:'G2PC1',
@@ -5626,7 +5653,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1MEP2'
 },
 {
   id:'G2FF1',
@@ -5640,7 +5667,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1MEP2'
 },
 {
   id:'G2DFI1',
@@ -5650,7 +5677,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G2FF1'],
+  dependencies:['G2BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -5678,7 +5705,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G2WFI1'],
+  dependencies:['G2BW1,G2EL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -5813,7 +5840,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GB1I1'
 },  
-
+{
+  id:'G1MEP3',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB1I1'
+},
 {
   id:'G3EL1',
   name:'Electrical - Wires',
@@ -5826,7 +5866,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1MEP3'
 },
 {
   id:'G3MD1',
@@ -5840,7 +5880,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1MEP3'
 },
 {
   id:'G3PC1',
@@ -5854,7 +5894,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1MEP3'
 },
 {
   id:'G3FF1',
@@ -5868,7 +5908,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1MEP3'
 },
 {
   id:'G3DFI1',
@@ -5878,7 +5918,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G3FF1'],
+  dependencies:['G3BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -5906,7 +5946,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G3WFI1'],
+  dependencies:['G3BW1,G3WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6039,7 +6079,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GB2I1'
 },  
-
+{
+  id:'G1MEP4',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB2I1'
+},
 {
   id:'G4EL1',
   name:'Electrical - Wires',
@@ -6052,7 +6105,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1MEP4'
 },
 {
   id:'G4MD1',
@@ -6066,7 +6119,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1MEP4'
 },
 {
   id:'G4PC1',
@@ -6080,7 +6133,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1MEP4'
 },
 {
   id:'G4FF1',
@@ -6094,7 +6147,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1MEP4'
 },
 {
   id:'G4DFI1',
@@ -6104,7 +6157,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G4FF1'],
+  dependencies:['G4BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6132,7 +6185,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G4WFI1'],
+  dependencies:['G4BW1,G4WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6267,7 +6320,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GB3I1'
 },  
-
+{
+  id:'G1MEP5',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB3I1'
+},
 {
   id:'G5EL1',
   name:'Electrical - Wires',
@@ -6280,7 +6346,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1MEP5'
 },
 {
   id:'G5MD1',
@@ -6294,7 +6360,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1MEP5'
 },
 {
   id:'G5PC1',
@@ -6308,7 +6374,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1MEP5'
 },
 {
   id:'G5FF1',
@@ -6322,7 +6388,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1MEP5'
 },
 {
   id:'G5DFI1',
@@ -6332,7 +6398,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G5FF1'],
+  dependencies:['G5BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6360,7 +6426,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G5WFI1'],
+  dependencies:['G5BW1,G5WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6496,7 +6562,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GB4I1'
 },  
-
+{
+  id:'G1MEP6',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB4I1'
+},
 {
   id:'G6EL1',
   name:'Electrical - Wires',
@@ -6509,7 +6588,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1MEP6'
 },
 {
   id:'G6MD1',
@@ -6523,7 +6602,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1MEP6'
 },
 {
   id:'G6PC1',
@@ -6537,7 +6616,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1MEP6'
 },
 {
   id:'G6FF1',
@@ -6551,7 +6630,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1MEP6'
 },
 {
   id:'G6DFI1',
@@ -6561,7 +6640,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G6FF1'],
+  dependencies:['G6BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6589,7 +6668,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G6WFI1'],
+  dependencies:['G6EL1,G6WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6724,7 +6803,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GDI1'
 },  
-
+{
+  id:'G1MEP7',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GDI1'
+},
 {
   id:'G7EL1',
   name:'Electrical - Wires',
@@ -6737,7 +6829,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1MEP7'
 },
 {
   id:'G7MD1',
@@ -6751,7 +6843,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1MEP7'
 },
 {
   id:'G7PC1',
@@ -6765,7 +6857,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1MEP7'
 },
 {
   id:'G7FF1',
@@ -6779,7 +6871,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1MEP7'
 },
 {
   id:'G7DFI1',
@@ -6789,7 +6881,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G7FF1'],
+  dependencies:['G7BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6817,7 +6909,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G7WFI1'],
+  dependencies:['G7EL1,G7WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6952,7 +7044,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GMI1'
 },  
-
+{
+  id:'G1MEP8',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GMI1'
+},
 {
   id:'G8EL1',
   name:'Electrical - Wires',
@@ -6965,7 +7070,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MEP8'
 },
 {
   id:'G8MD1',
@@ -6979,7 +7084,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MEP8'
 },
 {
   id:'G8PC1',
@@ -6993,7 +7098,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MEP8'
 },
 {
   id:'G8FF1',
@@ -7007,7 +7112,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MEP8'
 },
 {
   id:'G8DFI1',
@@ -7017,7 +7122,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G8FF1'],
+  dependencies:['G8BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7045,7 +7150,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G8WFI1'],
+  dependencies:['G8EL1,G8WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7180,7 +7285,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GPI1'
 },  
-
+{
+  id:'G1MEP9',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GMI1'
+},
 {
   id:'G9EL1',
   name:'Electrical - Wires',
@@ -7193,7 +7311,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1MEP9'
 },
 {
   id:'G9MD1',
@@ -7207,7 +7325,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1MEP9'
 },
 {
   id:'G9PC1',
@@ -7221,7 +7339,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1MEP9'
 },
 {
   id:'G9FF1',
@@ -7235,7 +7353,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1MEP9'
 },
 {
   id:'G9DFI1',
@@ -7245,7 +7363,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G9FF1'],
+  dependencies:['G9BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7273,7 +7391,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G9WFI1'],
+  dependencies:['G9EL1,G9WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7408,7 +7526,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GSI1'
 },  
-
+{
+  id:'G1MEP10',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GSI1'
+},
 {
   id:'G10EL1',
   name:'Electrical - Wires',
@@ -7421,7 +7552,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1MEP10'
 },
 {
   id:'G10MD1',
@@ -7435,7 +7566,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1MEP10'
 },
 {
   id:'G10PC1',
@@ -7449,7 +7580,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1MEP10'
 },
 {
   id:'G10FF1',
@@ -7463,7 +7594,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1MEP10'
 },
 {
   id:'G10DFI1',
@@ -7473,7 +7604,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G10FF1'],
+  dependencies:['G10BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7501,7 +7632,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G10WFI1'],
+  dependencies:['G10EL1,G10WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7636,7 +7767,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GBIT'
 },  
-
+{
+  id:'G1MEP11',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBIT'
+},
 {
   id:'G11EL1',
   name:'Electrical - Wires',
@@ -7649,7 +7793,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBIT'
+  parent:'G1MEP11'
 },
 {
   id:'G11MD1',
@@ -7663,7 +7807,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBIT'
+  parent:'G1MEP11'
 },
 {
   id:'G11PC1',
@@ -7677,7 +7821,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBIT'
+  parent:'G1MEP11'
 },
 {
   id:'G11FF1',
@@ -7691,7 +7835,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBIT'
+  parent:'G1MEP11'
 },
 {
   id:'G11DFI1',
@@ -7701,7 +7845,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G11FF1'],
+  dependencies:['G11BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7729,7 +7873,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G11WFI1'],
+  dependencies:['G11EL1,G11WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7864,7 +8008,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GBAT'
 },  
-
+{
+  id:'G1MEP12',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT'
+},
 {
   id:'G12EL1',
   name:'Electrical - Wires',
@@ -7877,7 +8034,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1MEP12'
 },
 {
   id:'G12MD1',
@@ -7891,7 +8048,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1MEP12'
 },
 {
   id:'G12PC1',
@@ -7905,7 +8062,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1MEP12'
 },
 {
   id:'G12FF1',
@@ -7919,7 +8076,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1MEP12'
 },
 {
   id:'G12DFI1',
@@ -7929,7 +8086,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G12FF1'],
+  dependencies:['G12BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7957,7 +8114,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G12WFI1'],
+  dependencies:['G12EL1,G12WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8092,7 +8249,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GBAT2'
 },  
-
+{
+  id:'G1MEP13',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT2'
+},
 {
   id:'G13EL1',
   name:'Electrical - Wires',
@@ -8105,7 +8275,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1MEP13'
 },
 {
   id:'G13MD1',
@@ -8119,7 +8289,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1MEP13'
 },
 {
   id:'G13PC1',
@@ -8133,7 +8303,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1MEP13'
 },
 {
   id:'G13FF1',
@@ -8147,7 +8317,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1MEP13'
 },
 {
   id:'G13DFI1',
@@ -8157,7 +8327,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G13FF1'],
+  dependencies:['G13BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8185,7 +8355,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G13WFI1'],
+  dependencies:['G13EL1,G13WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8320,7 +8490,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GBAT3'
 },  
-
+{
+  id:'G1MEP14',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT3'
+},
 {
   id:'G14EL1',
   name:'Electrical - Wires',
@@ -8333,7 +8516,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1MEP14'
 },
 {
   id:'G14MD1',
@@ -8347,7 +8530,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1MEP14'
 },
 {
   id:'G14PC1',
@@ -8361,7 +8544,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1MEP14'
 },
 {
   id:'G14FF1',
@@ -8375,7 +8558,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1MEP14'
 },
 {
   id:'G14DFI1',
@@ -8385,7 +8568,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G14FF1'],
+  dependencies:['G14BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8413,7 +8596,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G14WFI1'],
+  dependencies:['G14EL1,G14WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8548,7 +8731,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GBAT4'
 },  
-
+{
+  id:'G1MEP15',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT4'
+},
 {
   id:'G15EL1',
   name:'Electrical - Wires',
@@ -8561,7 +8757,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1MEP15'
 },
 {
   id:'G15MD1',
@@ -8575,7 +8771,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1MEP15'
 },
 {
   id:'G15PC1',
@@ -8589,7 +8785,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1MEP15'
 },
 {
   id:'G15FF1',
@@ -8603,7 +8799,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1MEP15'
 },
 {
   id:'G15DFI1',
@@ -8613,7 +8809,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G15FF1'],
+  dependencies:['G15BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8641,7 +8837,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G15WFI1'],
+  dependencies:['G15EL1,G15WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8776,7 +8972,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GTOI'
 },  
-
+{
+  id:'G1MEP16',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GTOI'
+},
 {
   id:'G16EL1',
   name:'Electrical - Wires',
@@ -8789,7 +8998,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1MEP16'
 },
 {
   id:'G16MD1',
@@ -8803,7 +9012,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1MEP16'
 },
 {
   id:'G16PC1',
@@ -8817,7 +9026,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1MEP16'
 },
 {
   id:'G16FF1',
@@ -8831,7 +9040,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1MEP16'
 },
 {
   id:'G16DFI1',
@@ -8841,7 +9050,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G16FF1'],
+  dependencies:['G16BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8869,7 +9078,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G16WFI1'],
+  dependencies:['G16EL1,G16WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9004,7 +9213,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GSTO'
 },  
-
+{
+  id:'G1MEP17',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GSTO'
+},
 {
   id:'G17EL1',
   name:'Electrical - Wires',
@@ -9017,7 +9239,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1MEP17'
 },
 {
   id:'G17MD1',
@@ -9031,7 +9253,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1MEP17'
 },
 {
   id:'G17PC1',
@@ -9045,7 +9267,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1MEP17'
 },
 {
   id:'G17FF1',
@@ -9059,7 +9281,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1MEP17'
 },
 {
   id:'G17DFI1',
@@ -9069,7 +9291,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G17FF1'],
+  dependencies:['G17BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9097,7 +9319,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G17WFI1'],
+  dependencies:['G17EL1,G17WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9232,7 +9454,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GPAR'
 },  
-
+{
+  id:'G1MEP18',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GPAR'
+},
 {
   id:'G18EL1',
   name:'Electrical - Wires',
@@ -9245,7 +9480,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1MEP18'
 },
 {
   id:'G18MD1',
@@ -9259,7 +9494,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1MEP18'
 },
 {
   id:'G18PC1',
@@ -9273,7 +9508,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1MEP18'
 },
 {
   id:'G18FF1',
@@ -9287,7 +9522,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1MEP18'
 },
 {
   id:'G18DFI1',
@@ -9297,7 +9532,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G18FF1'],
+  dependencies:['G18BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9325,7 +9560,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G18WFI1'],
+  dependencies:['G18EL1,G18WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9460,7 +9695,20 @@ parent:'L3EL0'
   hideChildren:false,
   parent:'GSTA'
 },  
-
+{
+  id:'G1MEP19',
+  name:'MEP-1st Fix',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GSTA'
+},
 {
   id:'G19EL1',
   name:'Electrical - Wires',
@@ -9473,7 +9721,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1MEP19'
 },
 {
   id:'G19MD1',
@@ -9487,7 +9735,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1MEP19'
 },
 {
   id:'G19PC1',
@@ -9501,7 +9749,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1MEP19'
 },
 {
   id:'G19FF1',
@@ -9515,7 +9763,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1MEP19'
 },
 {
   id:'G19DFI1',
@@ -9525,7 +9773,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G19FF1'],
+  dependencies:['G19BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9553,7 +9801,7 @@ parent:'L3EL0'
   duration:2,
   cost:0,
   strategy:'FS',
-  dependencies:['G19WFI1'],
+  dependencies:['G19EL1,G19WFI1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9704,16 +9952,15 @@ parent:'L3EL0'
     hideChildren:false,
     parent:'GFI1'
   },
-    //Ground Living//Finishes Interior start//
   {
     id:'GFI3',
-    name:'Electrical',
+    name:'Install Door Frame',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GPL1'],
+    dependencies:['G19PL1'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -9721,10 +9968,10 @@ parent:'L3EL0'
   },
   {
     id:'GFI4',
-    name:'Plumbing',
+    name:'Install Windoor Frame',
     start:'',
     end:'',
-    duration:2,
+    duration:1,
     cost:0,
     strategy:'FS',
     dependencies:['GFI3'],
@@ -9735,7 +9982,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI5',
-    name:'Mechanical',
+    name:'Install Window',
     start:'',
     end:'',
     duration:1,
@@ -9749,7 +9996,7 @@ parent:'L3EL0'
   },
   {
     id:'GFI6',
-    name:'FireFighting',
+    name:'Install Door',
     start:'',
     end:'',
     duration:1,
@@ -9762,8 +10009,106 @@ parent:'L3EL0'
     parent:'GFI2'
   },
   {
-    id:'GFI7',
-    name:'Install Door Frame',
+    id:'GFMEP0',
+    name:'MEP-Final-Fix',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'GFI1'
+  },
+  {
+    id:'GFEL',
+    name:'Electrical',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['G19PL1'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GFMEP0'
+  },
+  {
+    id:'GFPL',
+    name:'Plumbing',
+    start:'',
+    end:'',
+    duration:2,
+    cost:0,
+    strategy:'FS',
+    dependencies:['GFI3'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GFMEP0'
+  },
+  {
+    id:'GFME',
+    name:'Mechanical',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['GFI4'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GFMEP0'
+  },
+  {
+    id:'GFFF',
+    name:'FireFighting',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['GFI5'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GFMEP0'
+  },
+  {
+    id:'GFFI',
+    name:'Fixtures',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'GFI1'
+  },
+  {
+    id:'GFFC',
+    name:'False Ceiling',
+    start:'',
+    end:'',
+    duration:5,
+    cost:0,
+    strategy:'FS',
+    dependencies:['GFFF,GFEL'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GFFI'
+  },
+  {
+    id:'GFLF',
+    name:'Light Fixtures',
     start:'',
     end:'',
     duration:1,
@@ -9776,144 +10121,74 @@ parent:'L3EL0'
     parent:'GFI2'
   },
   {
-    id:'GFI8',
-    name:'Install Windoor Frame',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['GFI7'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'GFI2'
-  },
-  {
-    id:'GFI9',
-    name:'Install Window',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['GFI8'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'GFI2'
-  },
-  {
-    id:'GFI10',
-    name:'Install Door',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['GFI9'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'GFI2'
-  },
-  {
-    id:'GFI11',
-    name:'False Ceiling',
-    start:'',
-    end:'',
-    duration:5,
-    cost:0,
-    strategy:'FS',
-    dependencies:['GFI10'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'GFI2'
-  },
-  {
-    id:'GFI12',
-    name:'Light Fixtures',
-    start:'',
-    end:'',
-    duration:1,
-    cost:0,
-    strategy:'FS',
-    dependencies:['GFI11'],
-    type:'task',
-    progress:0,
-    hideChildren:false,
-    parent:'GFI2'
-  },
-  {
-    id:'GFI13',
-    name:'Wash Area',
+    id:'GFWA',
+    name:'Wash Area/Countertop',
     start:'',
     end:'',
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI12'],
+    dependencies:['GFLF'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GFI2'
+    parent:'GFFI'
   },
   {
-    id:'GFI14',
+    id:'GFSD',
     name:'Sliding door',
     start:'',
     end:'',
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI13'],
+    dependencies:['GFWA'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GFI2'
+    parent:'GFFI'
   },
   {
-    id:'GFI15',
+    id:'GFJY',
     name:'Joinery',
     start:'',
     end:'',
     duration:4,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI14'],
+    dependencies:['GFSD,GFEL'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GFI2'
+    parent:'GFFI'
   },
   {
-    id:'GFI16',
+    id:'GFEX',
     name:'Exhaust Chimney',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI15'],
+    dependencies:['GFJY'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GFI2'
+    parent:'GFFI'
   },
   {
-    id:'GFI17',
+    id:'GFFU',
     name:'Furniture',
     start:'',
     end:'',
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI16'],
+    dependencies:['GFEX'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GFI2'
+    parent:'GFFI'
   },
 
   {
@@ -9938,7 +10213,7 @@ parent:'L3EL0'
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI16'],
+    dependencies:['GFFU'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -9966,7 +10241,7 @@ parent:'L3EL0'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['CL02'],
+    dependencies:['CL02,GFPL'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -9994,7 +10269,7 @@ parent:'L3EL0'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['CL04,GFI17'],
+    dependencies:['CL04'],
     type:'task',
     progress:0,
     hideChildren:false,

@@ -3419,56 +3419,58 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 //Ground Finishes Interior start//
 //Ground Finishes Interior start//
 //Ground Finishes Interior start//
-  "GFI3": [
+  
+"GFI3": [
+    { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+  ],  
+"GFI4": [
+    { id: 'GFI81', resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+  ],  
+"GFI5": [
+    { id: 'GFI91', resource: 'SftUPVCSlidDoor', description: 'Window', length: 1.5, breadth: 2.2, area: 0,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+  ],  
+"GFI6": [
+    { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
+  ],
+"GFEL": [
   { id: 'GFI31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'GFI32', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
-  "GFI4": [
-  { id: 'GFI41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
-  { id: 'GFI42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  ],
-  "GFI5": [
+  "GFPL": [
   { id: 'GFI51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'GFI52', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
-  "GFI6": [
+  "GFME": [
+  { id: 'GFI41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GFI42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  ],  
+  "GFFF": [
   { id: 'GFI61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'GFI62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
-"GFI7": [
-    { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
-  ],  
-"GFI8": [
-    { id: 'GFI81', resource: 'TW1TeakperftDF', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
-  ],  
-"GFI9": [
-    { id: 'GFI91', resource: 'SftUPVCSlidDoor', description: 'Window', length: 1.5, breadth: 2.2, area: 0,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
-  ],  
-"GFI10": [
-    { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
-  ],  
-  "GFI11": [
+
+  "GFFC": [
     { id: 'GFI111', resource: 'Sft2CeilingLowC', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: 0,  rate: LowCRates.Ceiling.Sft2, units: 'Sft', quantity: 0, totalCost: 0 },    
   ],
-  "GFI12": [
+  "GFLF": [
     { id: 'GFI12', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
+  ],    
+  "GFWA": [
+    { id: 'GWFI11', resource: 'Sft2GraniteKCtop40sft', description: 'Kitchen Countertop L-Shape', length: 0.92, breadth: 2.13, area: 0,  rate: KCtop40sftRates.Granite.Sft2, units: 'Unit', quantity: 1, totalCost: 0 },        
   ], 
-  "GFI13": [
-    { id: 'GWFI11', resource: 'Sft2GraniteKCtop40sft', description: 'L-Shape', length: 0.92, breadth: 2.13, area: 0,  rate: KCtop40sftRates.Granite.Sft2, units: 'Unit', quantity: 1, totalCost: 0 },        
-  ], 
-  "GFI14": [
+  "GFSD": [
     { id: 'GFI13', resource: 'UnitUPVCSlidDoor', description: 'Slide-Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.UPVCSlid.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
   ], 
   
-  "GFI15": [
+  "GFJY": [
     { id: 'GFI15', resource: 'Sft3KitchenCabinet', description: 'Cabinet', length: 3, breadth: 2.13, area: 0,  rate: CabinetRates.Kitchen.Sft3, units: 'Sft', quantity: 0, totalCost: 0 },        
-  ],    
-  "GFI17": [
-    { id: 'GFI17', resource: 'Sft3FurniCabinet', description: 'Furniture', length: 2, breadth: 2.5, area: 0,  rate: CabinetRates.Furni.Sft3, units: 'Sft', quantity: 0, totalCost: 0 },        
   ],  
-   "GFI16": [
+  "GFEX": [
     { id: 'GFI16', resource: 'Unit2KitchenExhaust', description: 'Exhaust', rate: ExhaustRates.Kitchen.Unit2, units: 'Unit', quantity: 1, totalCost: 0 },        
-  ],  
+  ],    
+  "GFFU": [
+    { id: 'GFI17', resource: 'Sft3FurniCabinet', description: 'Furniture', length: 2, breadth: 2.5, area: 0,  rate: CabinetRates.Furni.Sft3, units: 'Sft', quantity: 0, totalCost: 0 },        
+  ],     
   "CL01": [
     { id: 'CL01', resource: 'OthFFixFinal', description: 'FinalFix',   rate: FinalRates.FFix.Oth, units: 'Unit', quantity: 1, totalCost: 0 },    
     { id: 'CL01', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
