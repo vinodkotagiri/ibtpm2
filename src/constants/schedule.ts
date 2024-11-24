@@ -5483,6 +5483,21 @@ parent:'L3EL0'
     parent:'GLI1'
   },  
   {
+    id:'G1LFLR',
+    name:'Flooring',
+    start:'',
+    end:'',
+    duration:0,
+    cost:0,
+    strategy:'FS',
+    dependencies:[],
+    type:'project',
+    progress:0,
+    hideChildren:false,
+    parent:'GLI1'
+  },
+
+  {
     id:'G1WP1',
     name:'Waterproofing',
     start:'',
@@ -5494,7 +5509,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1LFLR'
   },
   {
     id:'G1GR1',
@@ -5508,7 +5523,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1LFLR'
   },
   {
     id:'G1TL1',
@@ -5522,7 +5537,7 @@ parent:'L3EL0'
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GLI1'
+    parent:'G1LFLR'
   },
   {
     id:'G1PTF1',
@@ -5532,7 +5547,7 @@ parent:'L3EL0'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['G1TL1'],
+    dependencies:['G1GR1,G1TL1'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -5698,6 +5713,20 @@ parent:'L3EL0'
   parent:'GKI1'
 },  
 {
+  id:'G1KFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GKI1'
+},
+{
   id:'G2WP1',
   name:'Waterproofing',
   start:'',
@@ -5709,7 +5738,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1KFLR'
 },
 {
   id:'G2GR1',
@@ -5723,7 +5752,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1KFLR'
 },
 {
   id:'G2TL1',
@@ -5737,7 +5766,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GKI1'
+  parent:'G1KFLR'
 },
 {
   id:'G2PTF1',
@@ -5747,7 +5776,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G2TL1'],
+  dependencies:['G2GR1,G2TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -5912,6 +5941,20 @@ parent:'L3EL0'
   parent:'GB1I1'
 },  
 {
+  id:'G1B1FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB1I1'
+},
+{
   id:'G3WP1',
   name:'Waterproofing',
   start:'',
@@ -5923,7 +5966,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1B1FLR'
 },
 {
   id:'G3GR1',
@@ -5937,7 +5980,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1B1FLR'
 },
 {
   id:'G3TL1',
@@ -5951,7 +5994,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB1I1'
+  parent:'G1B1FLR'
 },
 {
   id:'G3PTF1',
@@ -5961,7 +6004,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G3TL1'],
+  dependencies:['G3GR1,G3TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6124,6 +6167,20 @@ parent:'L3EL0'
   parent:'GB2I1'
 },  
 {
+  id:'G1B2FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB1I1'
+},
+{
   id:'G4WP1',
   name:'Waterproofing',
   start:'',
@@ -6135,7 +6192,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1B2FLR'
 },
 {
   id:'G4GR1',
@@ -6149,7 +6206,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1B2FLR'
 },
 {
   id:'G4TL1',
@@ -6163,7 +6220,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB2I1'
+  parent:'G1B2FLR'
 },
 {
   id:'G4PTF1',
@@ -6173,7 +6230,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G4TL1'],
+  dependencies:['G4GR1,G4TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6338,6 +6395,20 @@ parent:'L3EL0'
   parent:'GB3I1'
 },  
 {
+  id:'G1B3FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB3I1'
+},
+{
   id:'G5WP1',
   name:'Waterproofing',
   start:'',
@@ -6349,7 +6420,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1B3FLR'
 },
 {
   id:'G5GR1',
@@ -6363,7 +6434,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1B3FLR'
 },
 {
   id:'G5TL1',
@@ -6377,7 +6448,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB3I1'
+  parent:'G1B3FLR'
 },
 {
   id:'G5PTF1',
@@ -6387,7 +6458,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G5TL1'],
+  dependencies:['G5GR1,G5TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6553,6 +6624,20 @@ parent:'L3EL0'
   parent:'GB4I1'
 },  
 {
+  id:'G1B4FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GB4I1'
+},
+{
   id:'G6WP1',
   name:'Waterproofing',
   start:'',
@@ -6564,7 +6649,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1B4FLR'
 },
 {
   id:'G6GR1',
@@ -6578,7 +6663,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1B4FLR'
 },
 {
   id:'G6TL1',
@@ -6592,7 +6677,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GB4I1'
+  parent:'G1B4FLR'
 },
 {
   id:'G6PTF1',
@@ -6602,7 +6687,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G6TL1'],
+  dependencies:['G6GR1,G6TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6767,6 +6852,20 @@ parent:'L3EL0'
   parent:'GDI1'
 },  
 {
+  id:'G1DFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GDI1'
+},
+{
   id:'G7WP1',
   name:'Waterproofing',
   start:'',
@@ -6778,7 +6877,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1DFLR'
 },
 {
   id:'G7GR1',
@@ -6792,7 +6891,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1DFLR'
 },
 {
   id:'G7TL1',
@@ -6806,7 +6905,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GDI1'
+  parent:'G1DFLR'
 },
 {
   id:'G7PTF1',
@@ -6816,7 +6915,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G7TL1'],
+  dependencies:['G7GR1,G7TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6981,6 +7080,20 @@ parent:'L3EL0'
   parent:'GMI1'
 },  
 {
+  id:'G1MFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GMI1'
+},
+{
   id:'G8WP1',
   name:'Waterproofing',
   start:'',
@@ -6992,7 +7105,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MFLR'
 },
 {
   id:'G8GR1',
@@ -7006,7 +7119,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MFLR'
 },
 {
   id:'G8TL1',
@@ -7020,7 +7133,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'G1MFLR'
 },
 {
   id:'G8PTF1',
@@ -7030,7 +7143,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G8TL1'],
+  dependencies:['G8GR1,G8TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7195,6 +7308,20 @@ parent:'L3EL0'
   parent:'GPI1'
 },  
 {
+  id:'G1PFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GPI1'
+},
+{
   id:'G9WP1',
   name:'Waterproofing',
   start:'',
@@ -7206,7 +7333,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1PFLR'
 },
 {
   id:'G9GR1',
@@ -7220,7 +7347,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1PFLR'
 },
 {
   id:'G9TL1',
@@ -7234,7 +7361,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPI1'
+  parent:'G1PFLR'
 },
 {
   id:'G9PTF1',
@@ -7244,7 +7371,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G9TL1'],
+  dependencies:['G9GR1,G9TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7409,6 +7536,20 @@ parent:'L3EL0'
   parent:'GSI1'
 },  
 {
+  id:'G1SFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GSI1'
+},
+{
   id:'G10WP1',
   name:'Waterproofing',
   start:'',
@@ -7420,7 +7561,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1SFLR'
 },
 {
   id:'G10GR1',
@@ -7434,7 +7575,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1SFLR'
 },
 {
   id:'G10TL1',
@@ -7448,7 +7589,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSI1'
+  parent:'G1SFLR'
 },
 {
   id:'G10PTF1',
@@ -7458,7 +7599,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G10TL1'],
+  dependencies:['G10GR1,G10TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7468,8 +7609,8 @@ parent:'L3EL0'
 
 //Ground Balcony Finsishes Rough-in start//
 {
-  id:'GSIT',
-  name:'Sitout',
+  id:'GBIT',
+  name:'Balcony',
   start:'',
   end:'',
   duration:0,
@@ -7493,7 +7634,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },  
 
 {
@@ -7508,7 +7649,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11MD1',
@@ -7522,7 +7663,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11PC1',
@@ -7536,7 +7677,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11FF1',
@@ -7550,7 +7691,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11DFI1',
@@ -7564,7 +7705,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11WFI1',
@@ -7578,7 +7719,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11PL1',
@@ -7592,7 +7733,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11PR1',
@@ -7606,7 +7747,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 {
   id:'G11PT1',
@@ -7620,8 +7761,22 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },  
+{
+  id:'G1BFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBIT'
+},
 {
   id:'G11WP1',
   name:'Waterproofing',
@@ -7634,7 +7789,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'G1BFLR'
 },
 {
   id:'G11GR1',
@@ -7648,7 +7803,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'G1BFLR'
 },
 {
   id:'G11TL1',
@@ -7662,7 +7817,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'G1BFLR'
 },
 {
   id:'G11PTF1',
@@ -7672,11 +7827,11 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G11TL1'],
+  dependencies:['G11GR1,G11TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSIT'
+  parent:'GBIT'
 },
 //Ground Balcony Finsishes Rough-in end//
 
@@ -7837,6 +7992,20 @@ parent:'L3EL0'
   parent:'GBAT'
 },  
 {
+  id:'G1B1FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBIT'
+},
+{
   id:'G12WP1',
   name:'Waterproofing',
   start:'',
@@ -7848,7 +8017,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1B1FLR'
 },
 {
   id:'G12GR1',
@@ -7862,7 +8031,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1B1FLR'
 },
 {
   id:'G12TL1',
@@ -7876,7 +8045,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT'
+  parent:'G1B1FLR'
 },
 {
   id:'G12PTF1',
@@ -7886,7 +8055,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G12TL1'],
+  dependencies:['G12GR1,G12TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8051,6 +8220,20 @@ parent:'L3EL0'
   parent:'GBAT2'
 },  
 {
+  id:'G1B2FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT2'
+},
+{
   id:'G13WP1',
   name:'Waterproofing',
   start:'',
@@ -8062,7 +8245,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1B2FLR'
 },
 {
   id:'G13GR1',
@@ -8076,7 +8259,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1B2FLR'
 },
 {
   id:'G13TL1',
@@ -8090,7 +8273,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT2'
+  parent:'G1B2FLR'
 },
 {
   id:'G13PTF1',
@@ -8265,6 +8448,20 @@ parent:'L3EL0'
   parent:'GBAT3'
 },  
 {
+  id:'G1B3FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT3'
+},
+{
   id:'G14WP1',
   name:'Waterproofing',
   start:'',
@@ -8276,7 +8473,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1B3FLR'
 },
 {
   id:'G14GR1',
@@ -8290,7 +8487,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1B3FLR'
 },
 {
   id:'G14TL1',
@@ -8304,7 +8501,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT3'
+  parent:'G1B3FLR'
 },
 {
   id:'G14PTF1',
@@ -8314,7 +8511,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G14TL1'],
+  dependencies:['G14GR1,G14TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8479,6 +8676,20 @@ parent:'L3EL0'
   parent:'GBAT4'
 },  
 {
+  id:'G1B4FLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GBAT4'
+},
+{
   id:'G15WP1',
   name:'Waterproofing',
   start:'',
@@ -8490,7 +8701,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1B4FLR'
 },
 {
   id:'G15GR1',
@@ -8504,7 +8715,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1B4FLR'
 },
 {
   id:'G15TL1',
@@ -8518,7 +8729,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GBAT4'
+  parent:'G1B4FLR'
 },
 {
   id:'G15PTF1',
@@ -8528,7 +8739,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G15TL1'],
+  dependencies:['G15GR1,G15TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8693,6 +8904,20 @@ parent:'L3EL0'
   parent:'GTOI'
 },  
 {
+  id:'G1TFLR',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GTOI'
+},
+{
   id:'G16WP1',
   name:'Waterproofing',
   start:'',
@@ -8704,7 +8929,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1TFLR'
 },
 {
   id:'G16GR1',
@@ -8718,7 +8943,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1TFLR'
 },
 {
   id:'G16TL1',
@@ -8732,7 +8957,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GTOI'
+  parent:'G1TFLR'
 },
 {
   id:'G16PTF1',
@@ -8742,7 +8967,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G16TL1'],
+  dependencies:['G16GR1,G16TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8907,6 +9132,20 @@ parent:'L3EL0'
   parent:'GSTO'
 },  
 {
+  id:'G1STFL',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GSTO'
+},
+{
   id:'G17WP1',
   name:'Waterproofing',
   start:'',
@@ -8918,7 +9157,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1STFL'
 },
 {
   id:'G17GR1',
@@ -8932,7 +9171,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1STFL'
 },
 {
   id:'G17TL1',
@@ -8946,7 +9185,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTO'
+  parent:'G1STFL'
 },
 {
   id:'G17PTF1',
@@ -8956,7 +9195,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G17TL1'],
+  dependencies:['G17GR1,G17TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9121,6 +9360,20 @@ parent:'L3EL0'
   parent:'GPAR'
 },  
 {
+  id:'G1PAFL',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GPAR'
+},
+{
   id:'G18WP1',
   name:'Waterproofing',
   start:'',
@@ -9132,7 +9385,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1PAFL'
 },
 {
   id:'G18GR1',
@@ -9146,7 +9399,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1PAFL'
 },
 {
   id:'G18TL1',
@@ -9160,7 +9413,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GPAR'
+  parent:'G1PAFL'
 },
 {
   id:'G18PTF1',
@@ -9170,7 +9423,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G18TL1'],
+  dependencies:['G18GR1,G18TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9335,6 +9588,20 @@ parent:'L3EL0'
   parent:'GSTA'
 },  
 {
+  id:'G1STFL',
+  name:'Flooring',
+  start:'',
+  end:'',
+  duration:0,
+  cost:0,
+  strategy:'FS',
+  dependencies:[],
+  type:'project',
+  progress:0,
+  hideChildren:false,
+  parent:'GSTA'
+},
+{
   id:'G19WP1',
   name:'Waterproofing',
   start:'',
@@ -9346,7 +9613,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1STFL'
 },
 {
   id:'G19GR1',
@@ -9360,7 +9627,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1STFL'
 },
 {
   id:'G19TL1',
@@ -9374,7 +9641,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'GSTA'
+  parent:'G1STFL'
 },
 {
   id:'G19PTF1',
@@ -9384,7 +9651,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['G19TL1'],
+  dependencies:['G19GR1,G19TL1'],
   type:'task',
   progress:0,
   hideChildren:false,
