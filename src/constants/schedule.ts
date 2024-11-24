@@ -7910,7 +7910,7 @@ parent:'L3EL0'
   parent:'GFRI'
 },
 {
-  id:'G14BW1',
+  id:'G13BW1',
   name:'BrickWork',
   start:'',
   end:'',
@@ -7925,7 +7925,7 @@ parent:'L3EL0'
 },  
 
 {
-  id:'G14EL1',
+  id:'G13EL1',
   name:'Electrical - Wires',
   start:'',
   end:'',
@@ -7939,7 +7939,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14MD1',
+  id:'G13MD1',
   name:'Mechanical - Ducts',
   start:'',
   end:'',
@@ -7953,7 +7953,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14PC1',
+  id:'G13PC1',
   name:'Plumbing - Conduits',
   start:'',
   end:'',
@@ -7967,7 +7967,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14FF1',
+  id:'G13FF1',
   name:'Fire Fighting - Pipes',
   start:'',
   end:'',
@@ -7981,7 +7981,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14DFI1',
+  id:'G13DFI1',
   name:'Door Frame Insulation',
   start:'',
   end:'',
@@ -7995,7 +7995,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14WFI1',
+  id:'G13WFI1',
   name:'Window Frame Insulation',
   start:'',
   end:'',
@@ -8009,7 +8009,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14PL1',
+  id:'G13PL1',
   name:'Plaster',
   start:'',
   end:'',
@@ -8023,7 +8023,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14PR1',
+  id:'G13PR1',
   name:'Primer',
   start:'',
   end:'',
@@ -8037,7 +8037,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14PT1',
+  id:'G13PT1',
   name:'Painting',
   start:'',
   end:'',
@@ -8051,7 +8051,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },  
 {
-  id:'G14WP1',
+  id:'G13WP1',
   name:'Waterproofing',
   start:'',
   end:'',
@@ -8065,7 +8065,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14GR1',
+  id:'G13GR1',
   name:'Granite',
   start:'',
   end:'',
@@ -8079,7 +8079,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14TL1',
+  id:'G13TL1',
   name:'Tiling',
   start:'',
   end:'',
@@ -8093,7 +8093,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },
 {
-  id:'G14PTF1',
+  id:'G13PTF1',
   name:'Paint Final Coat & Clean-up',
   start:'',
   end:'',
@@ -8124,7 +8124,7 @@ parent:'L3EL0'
   parent:'GFRI'
 },
 {
-  id:'G13BW1',
+  id:'G14BW1',
   name:'BrickWork',
   start:'',
   end:'',
@@ -8139,7 +8139,7 @@ parent:'L3EL0'
 },  
 
 {
-  id:'G14EL1A',
+  id:'G14EL1',
   name:'Electrical - Wires',
   start:'',
   end:'',
@@ -8153,7 +8153,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14MD1A',
+  id:'G14MD1',
   name:'Mechanical - Ducts',
   start:'',
   end:'',
@@ -8167,7 +8167,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14PC1A',
+  id:'G14PC1',
   name:'Plumbing - Conduits',
   start:'',
   end:'',
@@ -8181,7 +8181,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14FF1A',
+  id:'G14FF1',
   name:'Fire Fighting - Pipes',
   start:'',
   end:'',
@@ -8195,7 +8195,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14DFI1A',
+  id:'G14DFI1',
   name:'Door Frame Insulation',
   start:'',
   end:'',
@@ -8209,7 +8209,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14WFI1A',
+  id:'G14WFI1',
   name:'Window Frame Insulation',
   start:'',
   end:'',
@@ -8223,7 +8223,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14PL1A',
+  id:'G14PL1',
   name:'Plaster',
   start:'',
   end:'',
@@ -8237,7 +8237,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14PR1A',
+  id:'G14PR1',
   name:'Primer',
   start:'',
   end:'',
@@ -8251,7 +8251,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14PT1A',
+  id:'G14PT1',
   name:'Painting',
   start:'',
   end:'',
@@ -8265,7 +8265,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },  
 {
-  id:'G14WP1A',
+  id:'G14WP1',
   name:'Waterproofing',
   start:'',
   end:'',
@@ -8279,7 +8279,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14GR1A',
+  id:'G14GR1',
   name:'Granite',
   start:'',
   end:'',
@@ -8293,7 +8293,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14TL1A',
+  id:'G14TL1',
   name:'Tiling',
   start:'',
   end:'',
@@ -8307,7 +8307,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },
 {
-  id:'G14PTF1A',
+  id:'G14PTF1',
   name:'Paint Final Coat & Clean-up',
   start:'',
   end:'',
