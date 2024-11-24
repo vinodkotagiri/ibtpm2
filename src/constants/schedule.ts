@@ -4024,7 +4024,7 @@ parent:'L2EL0'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['L3SF6'], //Staircase Comcrete - Level2 second flight
+    dependencies:['L2SF6'], //Staircase Comcrete - Level2 second flight
     type:'task',
     progress:0,
     hideChildren:false,
@@ -4147,9 +4147,9 @@ parent:'L2EL0'
   hideChildren:false,
   parent:'L3BT1'
 },
-//Beam Type-1// 3x0.23x0.45
+//Beam Type-1// 3x0.23x0.45 - level3
 
-//Beam Type-2// 3x0.3x0.6
+//Beam Type-2// 3x0.3x0.6 - level3
 {
 id:'L3BT2',
 name:'Beam L3-Typ-2 3x0.3x0.6',
