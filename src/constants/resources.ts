@@ -761,7 +761,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
 
     "GP4": [
-      { id: 'GP40', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'GP40', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP31', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GP32', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -942,7 +942,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level-1 Slab Concrete //
 "SLB8": [
-      { id: 'SLB81', resource: 'SftWater', description: 'Curing Water', length: builtLength1, breadth: builtWidth1, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'SLB81', resource: 'CumWater', description: 'Curing Water', length: builtLength1, breadth: builtWidth1, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'SLB82', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'SLB83', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -1023,7 +1023,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level-1 Slab Concrete //
 "FFG16": [
-  { id: 'FFG161', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'FFG161', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'FFG162', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'FFG163', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1101,7 +1101,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level-1 Staircase Concrete Second Flight //
 "SFG18": [
-  { id: 'SFG181', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'SFG181', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'SFG182', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'SFG183', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1359,7 +1359,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level2 Slab Concrete //
 "L2SLC2": [
-  { id: 'L2SLC21', resource: 'SftWater', description: 'Curing Water', length: builtLength2, breadth: builtWidth2, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'L2SLC21', resource: 'CumWater', description: 'Curing Water', length: builtLength2, breadth: builtWidth2, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'L2SLC22', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'L2SLC23', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -1436,7 +1436,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level2 Slab Concrete //
 "L2FF7": [
-{ id: 'L2FF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L2FF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L2FF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2FF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1514,7 +1514,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level2 Staircase Concrete Second Flight //
 "L2SF7": [
-{ id: 'L2SF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L2SF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L2SF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2SF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -1748,7 +1748,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level3 Slab Concrete //
 "L3SLC2": [
-  { id: 'L3SLC21', resource: 'SftWater', description: 'Curing Water', length: builtLength3, breadth: builtWidth3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'L3SLC21', resource: 'CumWater', description: 'Curing Water', length: builtLength3, breadth: builtWidth3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'L3SLC22', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'L3SLC23', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -1826,7 +1826,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level3 Slab Concrete //
 "L3FF7": [
-{ id: 'L3FF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L3FF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L3FF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3FF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1903,7 +1903,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level3 Staircase Concrete Second Flight //
 "L3SF7": [
-{ id: 'L3SF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L3SF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L3SF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3SF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -2031,7 +2031,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ],
   //Level3 Slab Concrete //
   "OT10": [
-    { id: 'OT101', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'OT101', resource: 'CumWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },    
     { id: 'OT102', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],    
   //Level3 Shearwalls //
@@ -2132,7 +2132,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ],
   //Level3 Slab Concrete //
   "OTBW10": [
-    { id: 'OTBW101', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'OTBW101', resource: 'CumWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },    
     { id: 'OTBW102', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
   "OTBW11": [          
