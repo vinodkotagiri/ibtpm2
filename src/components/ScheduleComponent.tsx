@@ -53,7 +53,7 @@ const ScheduleComponent: React.FC = () => {
 
       return (
         <React.Fragment key={ task.id }>
-          <tr style={ { backgroundColor: task.type=='project'?'#5bc0de':'#fff' } }>
+          <tr style={ { backgroundColor: task.type=='project'?color:'#fff' } }>
             <td style={ { paddingLeft: `${ level * 20 }px`,width:'10%' } }>
               <span className="ml-2">{ task.id }</span>
               { task.children.length > 0 && (
@@ -63,13 +63,14 @@ const ScheduleComponent: React.FC = () => {
             {/* <td className='font-semibold italic capitalize' style={{color:task.type==='project'?"blue":"green"}}>{task.type}</td> */}
             <td className='w-[100px]'>{ task.name }</td>
             {task.cost ?<td className='font-semibold w-[90px]'>{ currencyCode+' '+ task.cost.toFixed(2) }</td>:<td></td>}
+            <td className='w-[90px]'>{ task.duration }</td>
             <td className='w-[80px]'>
               <div className="tooltip  tooltip-right z-50" data-tip="Please select start date">
                 <input type='date' className='input input-ghost cursor-pointer' onChange={ e => handleStartDateChange(task.id,e.target.value)} value={task.start}/>
               </div>
             </td>
             <td className='w-[80px]'><input disabled type='date' className='input input-ghost disabled:border-none disabled:bg-transparent disabled:cursor-auto disabled:text-black' value={task.end}/></td>
-            <td className='w-[90px]'>{ task.duration }</td>
+         
             <td className='w-[48px]'>{ task.strategy }</td>
             <td className='w-[48px]'>{ task.progress }</td>
           
@@ -94,9 +95,9 @@ const ScheduleComponent: React.FC = () => {
             {/* <th>Type</th> */}
             <th>Task Name</th>
             <th>Cost</th>
+            <th>Duration</th>
             <th>Start</th>
             <th>End</th>
-            <th>Duration</th>
             <th>Strategy</th>
             <th>Progress</th>
           

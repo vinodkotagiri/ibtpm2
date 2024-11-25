@@ -1,5 +1,3 @@
-import React from 'react'
-import UnitsToggler from './UnitsToggler'
 import { useNavigate } from 'react-router-dom'
 
 const NavbarComponent = () => {
@@ -9,6 +7,10 @@ const NavbarComponent = () => {
     <div className="flex-1">
       <a className="btn btn-ghost text-xl">IBT</a>
     </div>
+      <div className="flex-none gap-2 float-start">
+        <input className='input input-bordered  max-w-xs w-[150px]' placeholder='Length(m)' />
+        <input className='input input-bordered  max-w-xs w-[150px]' placeholder='breadth(m)' />
+      </div>
     <div className="flex-none gap-2">
       <div className='mx-3 h-full flex items-center justify-center'>
         <button className='btn btn-primary' onClick={()=>{navigate('/schedule')}}>Schedule</button>

@@ -119,7 +119,7 @@ const EstimationComponent: React.FC = () => {
 
       return (
         <React.Fragment key={task.id}>
-          <tr style={{ backgroundColor: task.type === 'project' ? '#bff' : '#fff' }}>
+          <tr style={{ backgroundColor: task.type === 'project' ? color : '#fff' }}>
             <td>
               <span>{task.id}</span>
               {task.children.length > 0 && (
