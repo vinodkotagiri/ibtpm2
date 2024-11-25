@@ -22,6 +22,19 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   parkingArea,  staircaseLength,  staircaseWidth,
   staircaseArea,
   //xxxx room wise L&B  xxxxxxx//roomwise//
+  door1Length, door1Width, door1Area, window1Length,  window1Width,  window1Area, //useful for deductions//
+  ///xxxx//
+  door2Length,  door2Width,  door21Area,  window21Length,  window2Width,  window2Area,
+  ///xxxx//
+  door3Length,  door3Width,  door31Area,  window31Length,  window3Width,  window3Area,
+  ///xxxx//
+  //xxx//Door and window Frames//
+df1Length,  df1Width,  df1Area,  wf1Length,  wf1Width,  wf1Area,
+///xxxx//
+df2Length,  df2Width,  df21Area, wf21Length,  wf2Width, wf2Area,
+///xxxx//
+df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
+///xxxx////xxx//Door and window Frames//
 
    } = drawingData
   const resources: Record<string, Array<Resource>> = {
@@ -2185,11 +2198,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G1FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G1DFI1": [
-    { id: 'G1DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G1DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G1DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G1WFI1": [
-    { id: 'G1WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G1WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G1WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G1PL1": [
@@ -2251,11 +2264,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G2FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G2DFI1": [
-    { id: 'G2DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G2DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G2DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G2WFI1": [
-    { id: 'G2WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G2WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G2WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G2PL1": [
@@ -2317,11 +2330,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G3FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G3DFI1": [
-    { id: 'G3DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G3DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G3DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G3WFI1": [
-    { id: 'G3WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G3WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G3WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G3PL1": [
@@ -2383,11 +2396,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G4FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G4DFI1": [
-    { id: 'G4DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G4DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G4DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G4WFI1": [
-    { id: 'G4WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G4WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G4WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G4PL1": [
@@ -2449,11 +2462,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G5FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G5DFI1": [
-    { id: 'G5DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G5DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G5DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G5WFI1": [
-    { id: 'G5WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G5WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G5WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G5PL1": [
@@ -2515,11 +2528,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G6FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G6DFI1": [
-    { id: 'G6DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G6DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G6DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G6WFI1": [
-    { id: 'G6WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G6WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G6WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G6PL1": [
@@ -2581,11 +2594,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G7FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G7DFI1": [
-    { id: 'G7DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G7DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G7DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G7WFI1": [
-    { id: 'G7WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G7WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G7WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G7PL1": [
@@ -2647,11 +2660,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G8FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G8DFI1": [
-    { id: 'G8DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G8DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G8DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G8WFI1": [
-    { id: 'G8WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G8WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G8WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G8PL1": [
@@ -2713,11 +2726,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G9FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G9DFI1": [
-  { id: 'G9DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G9DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G9DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G9WFI1": [
-  { id: 'G9WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G9WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G9WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G9PL1": [
@@ -2779,11 +2792,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G10FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G10DFI1": [
-  { id: 'G10DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G10DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G10DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G10WFI1": [
-  { id: 'G10WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G10WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G10WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G10PL1": [
@@ -2845,11 +2858,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G11FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G11DFI1": [
-  { id: 'G11DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G11DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G11DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G11WFI1": [
-  { id: 'G11WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G11WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G11WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G11PL1": [
@@ -2911,11 +2924,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G12FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G12DFI1": [
-  { id: 'G12DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G12DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G12DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G12WFI1": [
-  { id: 'G12WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G12WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G12WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G12PL1": [
@@ -2977,11 +2990,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G13FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G13DFI1": [
-  { id: 'G13DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G13DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G13DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G13WFI1": [
-  { id: 'G13WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G13WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G13WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G13PL1": [
@@ -3043,11 +3056,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G14FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G14DFI1": [
-  { id: 'G14DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G14DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G14DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G14WFI1": [
-  { id: 'G14WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G14WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G14WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G14PL1": [
@@ -3109,11 +3122,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G15FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G15DFI1": [
-  { id: 'G15DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G15DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G15DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G15WFI1": [
-  { id: 'G15WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G15WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G15WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G15PL1": [
@@ -3175,11 +3188,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G16FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G16DFI1": [
-  { id: 'G16DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G16DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G16DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G16WFI1": [
-  { id: 'G16WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G16WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G16WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G16PL1": [
@@ -3241,11 +3254,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G17FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G17DFI1": [
-  { id: 'G17DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G17DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G17DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G17WFI1": [
-  { id: 'G17WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G17WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G17WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G17PL1": [
@@ -3307,11 +3320,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G18FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G18DFI1": [
-  { id: 'G18DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G18DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G18DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G18WFI1": [
-  { id: 'G18WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G18WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G18WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G18PL1": [
@@ -3373,11 +3386,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G19FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G19DFI1": [
-  { id: 'G19DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G19DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G19DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G19WFI1": [
-  { id: 'G19WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G19WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G19WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G19PL1": [
@@ -3421,16 +3434,16 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 //Ground Finishes Interior start//
   
 "GFI3": [
-    { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },    
   ],  
 "GFI4": [
-    { id: 'GFI81', resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI81', resource: 'TW1TeakperftDF', description: 'Window Frame', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
   ],  
 "GFI5": [
-    { id: 'GFI91', resource: 'SftUPVCSlidDoor', description: 'Window', length: 1.5, breadth: 2.2, area: 0,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI91', resource: 'SftUPVCSlidDoor', description: 'Window', length: window1Length, breadth: window1Width, area: window1Area,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
   ],  
 "GFI6": [
-    { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
+    { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: door1Width, area: door1Area,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
   ],
 "GFEL": [
   { id: 'GFI31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
