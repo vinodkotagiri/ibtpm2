@@ -22,6 +22,19 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   parkingArea,  staircaseLength,  staircaseWidth,
   staircaseArea,
   //xxxx room wise L&B  xxxxxxx//roomwise//
+  door1Length, door1Width, door1Area, window1Length,  window1Width,  window1Area, //useful for deductions//
+  ///xxxx//
+  door2Length,  door2Width,  door21Area,  window21Length,  window2Width,  window2Area,
+  ///xxxx//
+  door3Length,  door3Width,  door31Area,  window31Length,  window3Width,  window3Area,
+  ///xxxx//
+  //xxx//Door and window Frames//
+df1Length,  df1Width,  df1Area,  wf1Length,  wf1Width,  wf1Area,
+///xxxx//
+df2Length,  df2Width,  df21Area, wf21Length,  wf2Width, wf2Area,
+///xxxx//
+df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
+///xxxx////xxx//Door and window Frames//
 
    } = drawingData
   const resources: Record<string, Array<Resource>> = {
@@ -761,7 +774,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     ],
 
     "GP4": [
-      { id: 'GP40', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'GP40', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP31', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GP32', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -942,7 +955,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level-1 Slab Concrete //
 "SLB8": [
-      { id: 'SLB81', resource: 'SftWater', description: 'Curing Water', length: builtLength1, breadth: builtWidth1, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+      { id: 'SLB81', resource: 'CumWater', description: 'Curing Water', length: builtLength1, breadth: builtWidth1, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'SLB82', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'SLB83', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -1023,7 +1036,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level-1 Slab Concrete //
 "FFG16": [
-  { id: 'FFG161', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'FFG161', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'FFG162', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'FFG163', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1101,7 +1114,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level-1 Staircase Concrete Second Flight //
 "SFG18": [
-  { id: 'SFG181', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'SFG181', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'SFG182', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'SFG183', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1359,7 +1372,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level2 Slab Concrete //
 "L2SLC2": [
-  { id: 'L2SLC21', resource: 'SftWater', description: 'Curing Water', length: builtLength2, breadth: builtWidth2, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'L2SLC21', resource: 'CumWater', description: 'Curing Water', length: builtLength2, breadth: builtWidth2, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'L2SLC22', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'L2SLC23', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -1436,7 +1449,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level2 Slab Concrete //
 "L2FF7": [
-{ id: 'L2FF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L2FF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L2FF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2FF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1514,7 +1527,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level2 Staircase Concrete Second Flight //
 "L2SF7": [
-{ id: 'L2SF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L2SF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L2SF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2SF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -1748,7 +1761,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level3 Slab Concrete //
 "L3SLC2": [
-  { id: 'L3SLC21', resource: 'SftWater', description: 'Curing Water', length: builtLength3, breadth: builtWidth3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+  { id: 'L3SLC21', resource: 'CumWater', description: 'Curing Water', length: builtLength3, breadth: builtWidth3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
   { id: 'L3SLC22', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'L3SLC23', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -1826,7 +1839,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level3 Slab Concrete //
 "L3FF7": [
-{ id: 'L3FF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L3FF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L3FF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3FF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
@@ -1903,7 +1916,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 ],
 //Level3 Staircase Concrete Second Flight //
 "L3SF7": [
-{ id: 'L3SF71', resource: 'SftWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },
+{ id: 'L3SF71', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
 { id: 'L3SF72', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3SF73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 3, totalCost: 0 },
 ],
@@ -2031,7 +2044,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ],
   //Level3 Slab Concrete //
   "OT10": [
-    { id: 'OT101', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'OT101', resource: 'CumWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },    
     { id: 'OT102', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],    
   //Level3 Shearwalls //
@@ -2132,7 +2145,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ],
   //Level3 Slab Concrete //
   "OTBW10": [
-    { id: 'OTBW101', resource: 'SftWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'OTBW101', resource: 'CumWater', description: 'Curing Water', length: 4, breadth: 3, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },    
     { id: 'OTBW102', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
   "OTBW11": [          
@@ -2185,11 +2198,11 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G1FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G1DFI1": [
-    { id: 'G1DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G1DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G1DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G1WFI1": [
-    { id: 'G1WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G1WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G1WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G1PL1": [
@@ -2205,15 +2218,15 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
     { id: 'G1PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G1WP1": [
-    { id: 'G1WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: livingArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G1WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G1GR1": [
-    { id: 'G1GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: livingArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G1GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G1TL1": [
-    { id: 'G1TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: livingArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G1TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
@@ -2251,40 +2264,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G2FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G2DFI1": [
-    { id: 'G2DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G2DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G2DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G2WFI1": [
-    { id: 'G2WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G2WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G2WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G2PL1": [
-    { id: 'G2PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:kitchenLength, breadth:kitchenWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G2PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G2PR1": [
-    { id: 'G2PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR11', resource: 'SqmPPaint', description: 'Primer', length:kitchenLength, breadth:kitchenWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G2PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G2PT1": [
-    { id: 'G2PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:kitchenLength, breadth:kitchenWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G2PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G2WP1": [
-    { id: 'G2WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:kitchenLength, breadth:kitchenWidth, area: kitchenArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G2WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G2GR1": [
-    { id: 'G2GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:kitchenLength, breadth:kitchenWidth, area: kitchenArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G2GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G2TL1": [
-    { id: 'G2TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:kitchenLength, breadth:kitchenWidth, area: kitchenArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G2TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G2PTF1": [
-    { id: 'G2PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:kitchenLength, breadth:kitchenWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G2PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G2PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2292,7 +2305,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Ground Bedroom1//Finishes Rough-in start//
   "G3BW1": [  
-    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G3BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G3BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2317,40 +2330,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G3FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G3DFI1": [
-    { id: 'G3DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G3DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G3DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G3WFI1": [
-    { id: 'G3WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G3WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G3WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G3PL1": [
-    { id: 'G3PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom1Length, breadth:bedroom1Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G3PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G3PR1": [
-    { id: 'G3PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom1Length, breadth:bedroom1Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G3PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G3PT1": [
-    { id: 'G3PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom1Length, breadth:bedroom1Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G3PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G3WP1": [
-    { id: 'G3WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom1Length, breadth:bedroom1Width, area: bedroom1Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G3WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G3GR1": [
-    { id: 'G3GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bedroom1Length, breadth:bedroom1Width, area: bedroom1Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G3GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G3TL1": [
-    { id: 'G3TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bedroom1Length, breadth:bedroom1Width, area: bedroom1Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G3TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G3PTF1": [
-    { id: 'G3PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom1Length, breadth:bedroom1Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G3PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G3PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2358,7 +2371,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Ground Bedroom2//Finishes Rough-in start//  
   "G4BW1": [  
-    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G4BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G4BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2383,40 +2396,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G4FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G4DFI1": [
-    { id: 'G4DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G4DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G4DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G4WFI1": [
-    { id: 'G4WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G4WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G4WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G4PL1": [
-    { id: 'G4PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom2Length, breadth:bedroom2Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G4PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G4PR1": [
-    { id: 'G4PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom2Length, breadth:bedroom2Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G4PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G4PT1": [
-    { id: 'G4PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom2Length, breadth:bedroom2Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G4PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G4WP1": [
-    { id: 'G4WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom2Length, breadth:bedroom2Width, area: bedroom1Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G4WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G4GR1": [
-    { id: 'G4GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bedroom2Length, breadth:bedroom2Width, area: bedroom1Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G4GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G4TL1": [
-    { id: 'G4TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bedroom2Length, breadth:bedroom2Width, area: bedroom1Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G4TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G4PTF1": [
-    { id: 'G4PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom2Length, breadth:bedroom2Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G4PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G4PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2424,7 +2437,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Ground Bedroom3//Finishes Rough-in start//  
   "G5BW1": [  
-    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G5BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G5BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2449,40 +2462,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G5FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G5DFI1": [
-    { id: 'G5DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G5DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G5DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G5WFI1": [
-    { id: 'G5WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G5WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G5WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G5PL1": [
-    { id: 'G5PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom3Length, breadth:bedroom3Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G5PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G5PR1": [
-    { id: 'G5PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom3Length, breadth:bedroom3Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G5PT1": [
-    { id: 'G5PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom3Length, breadth:bedroom3Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G5WP1": [
-    { id: 'G5WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom3Length, breadth:bedroom3Width, area: bedroom3Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G5GR1": [
-    { id: 'G5GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bedroom3Length, breadth:bedroom3Width, area: bedroom3Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G5TL1": [
-    { id: 'G5TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bedroom3Length, breadth:bedroom3Width, area: bedroom3Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G5PTF1": [
-    { id: 'G5PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom3Length, breadth:bedroom3Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G5PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2490,7 +2503,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Ground Bedroom4//Finishes Rough-in start//  
   "G6BW1": [  
-    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G6BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G6BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2515,40 +2528,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G6FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G6DFI1": [
-    { id: 'G6DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G6DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G6DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G6WFI1": [
-    { id: 'G6WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G6WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G6WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G6PL1": [
-    { id: 'G6PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom4Length, breadth:bedroom4Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G6PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G6PR1": [
-    { id: 'G6PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom4Length, breadth:bedroom4Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G6PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G6PT1": [
-    { id: 'G6PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom4Length, breadth:bedroom4Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G6PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G6WP1": [
-    { id: 'G6WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom4Length, breadth:bedroom4Width, area: bedroom4Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G6WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G6GR1": [
-    { id: 'G6GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bedroom4Length, breadth:bedroom4Width, area: bedroom4Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G6GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G6TL1": [
-    { id: 'G6TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bedroom4Length, breadth:bedroom4Width, area: bedroom4Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G6TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G6PTF1": [
-    { id: 'G6PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom4Length, breadth:bedroom4Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G6PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G6PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2556,7 +2569,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
   //Ground Drawing//Finishes Rough-in start//  
   "G7BW1": [  
-    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:drawingLength, breadth: drawingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G7BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G7BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2581,40 +2594,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G7FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G7DFI1": [
-    { id: 'G7DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G7DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G7DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G7WFI1": [
-    { id: 'G7WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G7WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G7WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G7PL1": [
-    { id: 'G7PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:drawingLength, breadth:drawingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G7PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G7PR1": [
-    { id: 'G7PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR11', resource: 'SqmPPaint', description: 'Primer', length:drawingLength, breadth:drawingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G7PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G7PT1": [
-    { id: 'G7PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:drawingLength, breadth:drawingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G7PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G7WP1": [
-    { id: 'G7WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:drawingLength, breadth:drawingWidth, area: drawingArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G7WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G7GR1": [
-    { id: 'G7GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:drawingLength, breadth:drawingWidth, area: drawingArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G7GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G7TL1": [
-    { id: 'G7TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:drawingLength, breadth:drawingWidth, area: drawingArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G7TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G7PTF1": [
-    { id: 'G7PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:drawingLength, breadth:drawingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G7PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G7PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2622,7 +2635,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Media Finsishes Rough-in start//
 "G8BW1": [  
-    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:mediaLength, breadth: mediaWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G8BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G8BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2647,40 +2660,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   { id: 'G8FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G8DFI1": [
-    { id: 'G8DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G8DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G8DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G8WFI1": [
-    { id: 'G8WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G8WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
     { id: 'G8WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G8PL1": [
-    { id: 'G8PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:mediaLength, breadth:mediaWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
     { id: 'G8PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G8PR1": [
-    { id: 'G8PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR11', resource: 'SqmPPaint', description: 'Primer', length:mediaLength, breadth:mediaWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G8PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G8PT1": [
-    { id: 'G8PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:mediaLength, breadth:mediaWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G8PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G8WP1": [
-    { id: 'G8WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:mediaLength, breadth:mediaWidth, area: mediaArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G8WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G8GR1": [
-    { id: 'G8GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:mediaLength, breadth:mediaWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G8GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G8TL1": [
-    { id: 'G8TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:mediaLength, breadth:mediaWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G8TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 
 "G8PTF1": [
-    { id: 'G8PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:mediaLength, breadth:mediaWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G8PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G8PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
@@ -2688,7 +2701,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Pooja Finsishes Rough-in start//
 "G9BW1": [  
-  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:poojaLength, breadth: poojaWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G9BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G9BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2713,40 +2726,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G9FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G9DFI1": [
-  { id: 'G9DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G9DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G9DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G9WFI1": [
-  { id: 'G9WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G9WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G9WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G9PL1": [
-  { id: 'G9PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:poojaLength, breadth:poojaWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G9PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G9PR1": [
-  { id: 'G9PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR11', resource: 'SqmPPaint', description: 'Primer', length:poojaLength, breadth:poojaWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G9PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G9PT1": [
-  { id: 'G9PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:poojaLength, breadth:poojaWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G9PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G9WP1": [
-  { id: 'G9WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:poojaLength, breadth:poojaWidth, area: poojaArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G9WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G9GR1": [
-  { id: 'G9GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:poojaLength, breadth:poojaWidth, area: poojaArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G9GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G9TL1": [
-  { id: 'G9TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:poojaLength, breadth:poojaWidth, area: poojaArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G9TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G9PTF1": [
-  { id: 'G9PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:poojaLength, breadth:poojaWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G9PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G9PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -2754,7 +2767,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Sitout Finsishes Rough-in start//
 "G10BW1": [  
-  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:sitoutLength, breadth: sitoutWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G10BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G10BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2779,40 +2792,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G10FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G10DFI1": [
-  { id: 'G10DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G10DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G10DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G10WFI1": [
-  { id: 'G10WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G10WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G10WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G10PL1": [
-  { id: 'G10PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:sitoutLength, breadth:sitoutWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G10PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G10PR1": [
-  { id: 'G10PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR11', resource: 'SqmPPaint', description: 'Primer', length:sitoutLength, breadth:sitoutWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G10PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G10PT1": [
-  { id: 'G10PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:sitoutLength, breadth:sitoutWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G10PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G10WP1": [
-  { id: 'G10WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:sitoutLength, breadth:sitoutWidth, area: sitoutArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G10WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G10GR1": [
-  { id: 'G10GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:sitoutLength, breadth:sitoutWidth, area: sitoutArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G10GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G10TL1": [
-  { id: 'G10TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:sitoutLength, breadth:sitoutWidth, area: sitoutArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G10TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G10PTF1": [
-  { id: 'G10PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:sitoutLength, breadth:sitoutWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G10PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G10PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -2820,7 +2833,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Balcony Finsishes Rough-in start//
 "G11BW1": [  
-  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:balconyLength, breadth: balconyWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G11BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G11BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2845,40 +2858,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G11FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G11DFI1": [
-  { id: 'G11DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G11DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G11DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G11WFI1": [
-  { id: 'G11WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G11WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G11WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G11PL1": [
-  { id: 'G11PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:balconyLength, breadth:balconyWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G11PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G11PR1": [
-  { id: 'G11PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR11', resource: 'SqmPPaint', description: 'Primer', length:balconyLength, breadth:balconyWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G11PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G11PT1": [
-  { id: 'G11PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:balconyLength, breadth:balconyWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G11PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G11WP1": [
-  { id: 'G11WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:balconyLength, breadth:balconyWidth, area: balconyArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G11WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G11GR1": [
-  { id: 'G11GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:balconyLength, breadth:balconyWidth, area: balconyArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G11GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G11TL1": [
-  { id: 'G11TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:balconyLength, breadth:balconyWidth, area: balconyArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G11TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G11PTF1": [
-  { id: 'G11PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:balconyLength, breadth:balconyWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G11PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G11PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -2886,7 +2899,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Bath-1 Finsishes Rough-in start//
 "G12BW1": [  
-  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath1Length, breadth: bath1Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G12BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G12BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2911,40 +2924,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G12FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G12DFI1": [
-  { id: 'G12DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G12DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G12DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G12WFI1": [
-  { id: 'G12WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G12WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G12WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G12PL1": [
-  { id: 'G12PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath1Length, breadth:bath1Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G12PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G12PR1": [
-  { id: 'G12PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR11', resource: 'SqmPPaint', description: 'Primer', length:bath1Length, breadth:bath1Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G12PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G12PT1": [
-  { id: 'G12PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath1Length, breadth:bath1Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G12PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G12WP1": [
-  { id: 'G12WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath1Length, breadth:bath1Width, area: bath1Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G12WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G12GR1": [
-  { id: 'G12GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bath1Length, breadth:bath1Width, area: bath1Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G12GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G12TL1": [
-  { id: 'G12TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bath1Length, breadth:bath1Width, area: bath1Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G12TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G12PTF1": [
-  { id: 'G12PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath1Length, breadth:bath1Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G12PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G12PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -2952,7 +2965,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Bath-2 Finsishes Rough-in start//
 "G13BW1": [  
-  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath2Length, breadth: bath2Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G13BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G13BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2977,40 +2990,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G13FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G13DFI1": [
-  { id: 'G13DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G13DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G13DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G13WFI1": [
-  { id: 'G13WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G13WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G13WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G13PL1": [
-  { id: 'G13PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath2Length, breadth:bath2Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G13PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G13PR1": [
-  { id: 'G13PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR11', resource: 'SqmPPaint', description: 'Primer', length:bath2Length, breadth:bath2Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G13PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G13PT1": [
-  { id: 'G13PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath2Length, breadth:bath2Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G13PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G13WP1": [
-  { id: 'G13WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath2Length, breadth:bath2Width, area: bath2Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G13WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G13GR1": [
-  { id: 'G13GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bath2Length, breadth:bath2Width, area: bath2Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G13GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G13TL1": [
-  { id: 'G13TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bath2Length, breadth:bath2Width, area: bath2Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G13TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G13PTF1": [
-  { id: 'G13PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath2Length, breadth:bath2Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G13PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G13PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3018,7 +3031,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Bath-3 Finsishes Rough-in start//
 "G14BW1": [  
-  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath3Length, breadth: bath3Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G14BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G14BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3043,40 +3056,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G14FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G14DFI1": [
-  { id: 'G14DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G14DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G14DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G14WFI1": [
-  { id: 'G14WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G14WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G14WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G14PL1": [
-  { id: 'G14PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath3Length, breadth:bath3Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G14PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G14PR1": [
-  { id: 'G14PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR11', resource: 'SqmPPaint', description: 'Primer', length:bath3Length, breadth:bath3Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G14PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G14PT1": [
-  { id: 'G14PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath3Length, breadth:bath3Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G14PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G14WP1": [
-  { id: 'G14WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath3Length, breadth:bath3Width, area: bath3Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G14WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G14GR1": [
-  { id: 'G14GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bath3Length, breadth:bath3Width, area: bath3Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G14GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G14TL1": [
-  { id: 'G14TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bath3Length, breadth:bath3Width, area: bath3Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G14TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G14PTF1": [
-  { id: 'G14PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath3Length, breadth:bath3Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G14PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G14PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3084,7 +3097,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Bath-4 Finsishes Rough-in start//
 "G15BW1": [  
-  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath4Length, breadth: bath4Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G15BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G15BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3109,40 +3122,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G15FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G15DFI1": [
-  { id: 'G15DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G15DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G15DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G15WFI1": [
-  { id: 'G15WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G15WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G15WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G15PL1": [
-  { id: 'G15PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath4Length, breadth:bath4Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G15PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G15PR1": [
-  { id: 'G15PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR11', resource: 'SqmPPaint', description: 'Primer', length:bath4Length, breadth:bath4Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G15PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G15PT1": [
-  { id: 'G15PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath4Length, breadth:bath4Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G15PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G15WP1": [
-  { id: 'G15WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath4Length, breadth:bath4Width, area: bath4Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G15WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G15GR1": [
-  { id: 'G15GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:bath4Length, breadth:bath4Width, area: bath4Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G15GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G15TL1": [
-  { id: 'G15TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bath4Length, breadth:bath4Width, area: bath4Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G15TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G15PTF1": [
-  { id: 'G15PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath4Length, breadth:bath4Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G15PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G15PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3150,7 +3163,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Toilet Finsishes Rough-in start//
 "G16BW1": [  
-  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:toiletLength, breadth: toiletWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G16BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G16BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3175,40 +3188,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G16FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G16DFI1": [
-  { id: 'G16DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G16DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G16DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G16WFI1": [
-  { id: 'G16WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G16WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G16WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G16PL1": [
-  { id: 'G16PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:toiletLength, breadth:toiletWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G16PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G16PR1": [
-  { id: 'G16PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR11', resource: 'SqmPPaint', description: 'Primer', length:toiletLength, breadth:toiletWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G16PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G16PT1": [
-  { id: 'G16PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:toiletLength, breadth:toiletWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G16PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G16WP1": [
-  { id: 'G16WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:toiletLength, breadth:toiletWidth, area: toiletArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G16WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G16GR1": [
-  { id: 'G16GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:toiletLength, breadth:toiletWidth, area: toiletArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G16GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G16TL1": [
-  { id: 'G16TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:toiletLength, breadth:toiletWidth, area: toiletArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G16TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G16PTF1": [
-  { id: 'G16PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:toiletLength, breadth:toiletWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G16PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G16PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3216,7 +3229,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Store Finsishes Rough-in start//
 "G17BW1": [  
-  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:storeLength, breadth: storeWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G17BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G17BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3241,40 +3254,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G17FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G17DFI1": [
-  { id: 'G17DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G17DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G17DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G17WFI1": [
-  { id: 'G17WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G17WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G17WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G17PL1": [
-  { id: 'G17PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:storeLength, breadth:storeWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G17PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G17PR1": [
-  { id: 'G17PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR11', resource: 'SqmPPaint', description: 'Primer', length:storeLength, breadth:storeWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G17PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G17PT1": [
-  { id: 'G17PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:storeLength, breadth:storeWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G17PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G17WP1": [
-  { id: 'G17WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:storeLength, breadth:storeWidth, area: storeArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G17WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G17GR1": [
-  { id: 'G17GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:storeLength, breadth:storeWidth, area: storeArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G17GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G17TL1": [
-  { id: 'G17TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:storeLength, breadth:storeWidth, area: storeArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G17TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G17PTF1": [
-  { id: 'G17PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:storeLength, breadth:storeWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G17PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G17PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3282,7 +3295,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Parking Finsishes Rough-in start//
 "G18BW1": [  
-  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:parkingLength, breadth: parkingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G18BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G18BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3307,40 +3320,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G18FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G18DFI1": [
-  { id: 'G18DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G18DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G18DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G18WFI1": [
-  { id: 'G18WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G18WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G18WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G18PL1": [
-  { id: 'G18PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:parkingLength, breadth:parkingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G18PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G18PR1": [
-  { id: 'G18PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR11', resource: 'SqmPPaint', description: 'Primer', length:parkingLength, breadth:parkingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G18PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G18PT1": [
-  { id: 'G18PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:parkingLength, breadth:parkingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G18PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G18WP1": [
-  { id: 'G18WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:parkingLength, breadth:parkingWidth, area: parkingArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G18WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G18GR1": [
-  { id: 'G18GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:parkingLength, breadth:parkingWidth, area: parkingArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G18GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G18TL1": [
-  { id: 'G18TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:parkingLength, breadth:parkingWidth, area: parkingArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G18TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G18PTF1": [
-  { id: 'G18PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:parkingLength, breadth:parkingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G18PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G18PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3348,7 +3361,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 
 //Ground Staircase Finsishes Rough-in start//
 "G19BW1": [  
-  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:staircaseLength, breadth: staircaseWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G19BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G19BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3373,40 +3386,40 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 { id: 'G19FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G19DFI1": [
-  { id: 'G19DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G19DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G19DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G19WFI1": [
-  { id: 'G19WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+  { id: 'G19WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
   { id: 'G19WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G19PL1": [
-  { id: 'G19PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:staircaseLength, breadth:staircaseWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
   { id: 'G19PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G19PR1": [
-  { id: 'G19PR11', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR11', resource: 'SqmPPaint', description: 'Primer', length:staircaseLength, breadth:staircaseWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G19PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G19PT1": [
-  { id: 'G19PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:staircaseLength, breadth:staircaseWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G19PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G19WP1": [
-  { id: 'G19WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: 0, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:staircaseLength, breadth:staircaseWidth, area: staircaseArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G19WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G19GR1": [
-  { id: 'G19GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:staircaseLength, breadth:staircaseWidth, area: staircaseArea, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G19GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 "G19TL1": [
-  { id: 'G19TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:livingLength, breadth:livingWidth, area: 0, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:staircaseLength, breadth:staircaseWidth, area: staircaseArea, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G19TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 
 "G19PTF1": [
-  { id: 'G19PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:staircaseLength, breadth:staircaseWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
   { id: 'G19PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   { id: 'G19PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
@@ -3421,16 +3434,16 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
 //Ground Finishes Interior start//
   
 "GFI3": [
-    { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: 1.5, breadth: 2.2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },    
   ],  
 "GFI4": [
-    { id: 'GFI81', resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2, breadth: 2, thickness: 0.15,area: 0,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI81', resource: 'TW1TeakperftDF', description: 'Window Frame', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
   ],  
 "GFI5": [
-    { id: 'GFI91', resource: 'SftUPVCSlidDoor', description: 'Window', length: 1.5, breadth: 2.2, area: 0,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI91', resource: 'SftUPVCSlidDoor', description: 'Window', length: window1Length, breadth: window1Width, area: window1Area,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
   ],  
 "GFI6": [
-    { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
+    { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: door1Width, area: door1Area,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
   ],
 "GFEL": [
   { id: 'GFI31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3450,7 +3463,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   ],
 
   "GFFC": [
-    { id: 'GFI111', resource: 'Sft2CeilingLowC', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: 0,  rate: LowCRates.Ceiling.Sft2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI111', resource: 'Sft2CeilingLowC', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: LowCRates.Ceiling.Sft2, units: 'Sft', quantity: 0, totalCost: 0 },    
   ],
   "GFLF": [
     { id: 'GFI12', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        

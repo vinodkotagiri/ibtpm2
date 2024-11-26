@@ -242,6 +242,56 @@ export type DrawingData = {
   staircaseWidth: number,
   staircaseArea: number,
 //xxxx room wise L&B  xxxxxxx//
+    //xxx//           //Door Frames
+    df1Length: number,  
+    df1Width: number,
+    df1Area: number,
+    
+    wf1Length: number,  //Window Frames
+    wf1Width: number,
+    wf1Area: number,
+    ///xxxx//
+    df2Length: number,  
+    df2Width: number,
+    df21Area: number,
+    
+    wf21Length: number,  
+    wf2Width: number,
+    wf2Area: number,
+    ///xxxx//
+    df3Length: number,  
+    df3Width: number,
+    df31Area: number,
+    
+    wf31Length: number,  
+    wf3Width: number,
+    wf3Area: number,
+    ///xxxx//
+//xxx//
+door1Length: number,  //Door
+door1Width: number,
+door1Area: number,
+
+window1Length: number,  
+window1Width: number,
+window1Area: number,
+///xxxx//
+door2Length: number,  
+door2Width: number,
+door21Area: number,
+
+window21Length: number,  
+window2Width: number,
+window2Area: number,
+///xxxx//
+door3Length: number,  
+door3Width: number,
+door31Area: number,
+
+window31Length: number,  
+window3Width: number,
+window3Area: number,
+///xxxx//
 
   excavationArea: number,
   excavationDepth: number,

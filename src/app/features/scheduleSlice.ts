@@ -37,8 +37,8 @@ const initialState: ScheduleState = {
     slabThickness:0.15,    
     builtupPerimeter: 0,
     //xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required
-    livingLength: 0,
-    livingWidth: 0,
+    livingLength: 12,
+    livingWidth: 9,
     livingArea: 0,
     bedroom1Length: 0,
     bedroom1Width: 0,
@@ -95,6 +95,56 @@ const initialState: ScheduleState = {
     staircaseWidth: 0,
     staircaseArea: 0,
   //xxxx room wise L&B  xxxxxxx//
+    //xxx//
+df1Length: 0,  
+df1Width: 0,
+df1Area: 0,
+
+wf1Length: 0,  
+wf1Width: 0,
+wf1Area: 0,
+///xxxx//
+df2Length: 0,  
+df2Width: 0,
+df21Area: 0,
+
+wf21Length: 0,  
+wf2Width: 0,
+wf2Area: 0,
+///xxxx//
+df3Length: 0,  
+df3Width: 0,
+df31Area: 0,
+
+wf31Length: 0,  
+wf3Width: 0,
+wf3Area: 0,
+///xxxx//
+  //xxx//
+door1Length: 0,  
+door1Width: 0,
+door1Area: 0,
+
+window1Length: 0,  
+window1Width: 0,
+window1Area: 0,
+///xxxx//
+door2Length: 0,  
+door2Width: 0,
+door21Area: 0,
+
+window21Length: 0,  
+window2Width: 0,
+window2Area: 0,
+///xxxx//
+door3Length: 0,  
+door3Width: 0,
+door31Area: 0,
+
+window31Length: 0,  
+window3Width: 0,
+window3Area: 0,
+///xxxx//
     excavationArea: 0,
     excavationDepth:0,
     groundFloorArea:0,
