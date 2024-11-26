@@ -6,8 +6,26 @@ type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' |
 type ConcreteType = 'sftM10pccConcrete' | 'CumM10pccConcrete' | 'CftM10pccConcrete'|'sftM15pccConcrete' | 'CumM15pccConcrete' | 'CftM15pccConcrete'|'sftM20Concrete' | 'CumM20Concrete' | 'CftM20Concrete'|'sftM20Concrete' | 'CumM20Concrete' | 'CftM20Concrete'
 |'sftM25Concrete' | 'CumM25Concrete' | 'CftM25Concrete'| 'sftM30Concrete' | 'CumM30Concrete' | 'CftM30Concrete'| 'sftM35Concrete' | 'CumM35Concrete' | 'CftM35Concrete'| 'sftM40Concrete' | 'CumM40Concrete' | 'CftM40Concrete'| 'sftM40Concrete' | 'CumM45Concrete' | 'CftM45Concrete'
 type SteelType = 'SftDia6Steel' | 'KgsDia6Steel' |'SftDia8Steel' | 'KgsDia8Steel' |'SftDia10Steel' | 'KgsDia10Steel' |'SftDia12Steel' | 'KgsDia12Steel' |'SftDia14Steel' | 'KgsDia14Steel' |'SftDia16Steel' | 'KgsDia16Steel' |'SftDia18Steel' | 'KgsDia18Steel' |'SftDia20Steel' | 'KgsDia20Steel' 
-type WoodFormworkType = 'SftWoodFormwork' | 'CftWoodFormwork' | 'SqmWoodFormwork' | 'CumWoodFormwork'
-type MetalFormworkType = 'SftMetalFormwork' | 'CftMetalFormwork' | 'SqmMetalFormwork' | 'CumMetalFormwork'
+
+type WoodFormworkType = 'SftFootingWoodFormwork' | 'CftFootingWoodFormwork' | 'SqmFootingWoodFormwork' | 'CumFootingWoodFormwork'|
+'SftPlinthWoodFormwork' | 'CftPlinthWoodFormwork' | 'SqmPlinthWoodFormwork' | 'CumPlinthWoodFormwork'|
+'SftColumnWoodFormwork' | 'CftColumnWoodFormwork' | 'SqmColumnWoodFormwork' | 'CumColumnWoodFormwork'|
+'SftBeamWoodFormwork' | 'CftBeamWoodFormwork' | 'SqmBeamWoodFormwork' | 'CumBeamWoodFormwork'|
+'SftSlabWoodFormwork' | 'CftSlabWoodFormwork' | 'SqmSlabWoodFormwork' | 'CumSlabWoodFormwork'|
+'SftStaircaseWoodFormwork' | 'CftStaircaseWoodFormwork' | 'SqmStaircaseWoodFormwork' | 'CumStaircaseWoodFormwork'|
+'SftShearwallWoodFormwork' | 'CftShearwallWoodFormwork' | 'SqmShearwallWoodFormwork' | 'CumShearwallWoodFormwork'|
+'SftFootingColumnWoodFormwork' | 'CftFootingColumnWoodFormwork' | 'SqmFootingColumnWoodFormwork' | 'CumFootingColumnWoodFormwork'|
+'SftLintelWoodFormwork' | 'CftLintelWoodFormwork' | 'SqmLintelWoodFormwork' | 'CumLintelWoodFormwork'
+
+type MetalFormworkType = 'SftFootingMetalFormwork' | 'CftFootingMetalFormwork' | 'SqmFootingMetalFormwork' | 'CumFootingMetalFormwork'|
+'SftPlinthMetalFormwork' | 'CftPlinthMetalFormwork' | 'SqmPlinthMetalFormwork' | 'CumPlinthMetalFormwork'|
+'SftColumnMetalFormwork' | 'CftColumnMetalFormwork' | 'SqmColumnMetalFormwork' | 'CumColumnMetalFormwork'|
+'SftBeamMetalFormwork' | 'CftBeamMetalFormwork' | 'SqmBeamMetalFormwork' | 'CumBeamMetalFormwork'|
+'SftSlabMetalFormwork' | 'CftSlabMetalFormwork' | 'SqmSlabMetalFormwork' | 'CumSlabMetalFormwork'|
+'SftStaircaseMetalFormwork' | 'CftStaircaseMetalFormwork' | 'SqmStaircaseMetalFormwork' | 'CumStaircaseMetalFormwork'|
+'SftShearwallMetalFormwork' | 'CftShearwallMetalFormwork' | 'SqmShearwallMetalFormwork' | 'CumShearwallMetalFormwork'|
+'SftFootingColumnMetalFormwork' | 'CftFootingColumnMetalFormwork' | 'SqmFootingColumnMetalFormwork' | 'CumFootingColumnMetalFormwork'|
+'SftLintelMetalFormwork' | 'CftLintelMetalFormwork' | 'SqmLintelMetalFormwork' | 'CumLintelMetalFormwork'
 
 type FillingType = 'CumSoilFilling' | 'CumSandFilling' | 'CumAggregateFilling' | 'CumStoneFilling'
 type FencingType = 'SqmFencing' | 'SftFencing'
