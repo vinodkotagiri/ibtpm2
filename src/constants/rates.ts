@@ -1077,13 +1077,49 @@ export const LitWfixRates = {
     Unit8: 2000,        
   },    
 }
-export const LowCRates = {  //Sft1CeilingLowC
-  Ceiling:{
+export const FCeilingRates = {  //CeilingLowC
+  Gyp:{
     Sft1: 50,    
     Sft2: 60,    
     Sft3: 75,
     Sft4: 85,    
-    Sft5: 100,           
+    Sft5: 100,
+    Sqm1: 550,    
+    Sqm2: 700,    
+    Sqm3: 850,           
+    Sqm4: 1000,           
+    Sqm5: 1580,           
+  }, 
+  PVC:{
+    Sft1: 40,    
+    Sft2: 60,    
+    Sft3: 90,    
+    Sqm1: 430,    
+    Sqm2: 550,    
+    Sqm3: 750,           
+    Sqm4: 850,           
+    Sqm5: 970,           
+  }, 
+  Wood:{
+    Sft1: 180,    
+    Sft2: 450,    
+    Sft3: 700,    
+    Sft4: 1000,    
+    Sqm1: 1950,    
+    Sqm2: 2800,    
+    Sqm3: 3600,           
+    Sqm4: 5000,           
+    Sqm5: 9500,           
+  }, 
+  Glass:{
+    Sft1: 350,    
+    Sft2: 450,    
+    Sft3: 600,        
+    Sqm1: 3765,    
+    Sqm2: 4500,    
+    Sqm3: 5500,           
+    Sqm4: 6000,           
+    Sqm5: 6500,           
   }, 
 }
 

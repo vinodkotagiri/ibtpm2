@@ -98,7 +98,10 @@ type LitCfixType = 'Unit1RecsedLitCfix'| 'Unit2RecsedLitCfix'|'Unit3RecsedLitCfi
 type LitWfixType = 'Unit1WallLitWfix'| 'Unit2WallLitWfix'| 'Unit3WallLitWfix'| 'Unit4WallLitWfix'| 'Unit5WallLitWfix'| 'Unit6WallLitWfix'
 | 'Unit1LEDWPLitWfix'| 'Unit2LEDWPLitWfix'| 'Unit3LEDWPLitWfix'| 'Unit4LEDWPLitWfix'| 'Unit5LEDWPLitWfix'| 'Unit6LEDWPLitWfix'
 
-type LowCType =  'Sft1CeilingLowC'| 'Sft2CeilingLowC'| 'Sft3CeilingLowC'| 'Sft4CeilingLowC'|'Sft5CeilingLowC'
+type FCeilingType =  'Sqm1GypFCeiling'| 'Sqm2GypFCeiling'| 'Sqm3GypFCeiling'| 'Sqm4GypFCeiling'|'Sqm5GypFCeiling'|
+'Sqm1PVCFCeiling'| 'Sqm2PVCFCeiling'| 'Sqm3PVCFCeiling'| 'Sqm4PVCFCeiling'|'Sqm5PVCFCeiling'|
+'Sqm1WoodFCeiling'| 'Sqm2WoodFCeiling'| 'Sqm3WoodFCeiling'| 'Sqm4WoodFCeiling'|'Sqm5WoodFCeiling'|
+'Sqm1GlassFCeiling'| 'Sqm2GlassFCeiling'| 'Sqm3GlassFCeiling'| 'Sqm4GlassFCeiling'|'Sqm5GlassFCeiling'
 
 type KCtop40sftType =  'Sft1GraniteKCtop20sft'| 'Sft2GraniteKCtop20sft'| 'Sft3GraniteKCtop20sft'| 'Sft4GraniteKCtop20sft'|'Sft5GraniteKCtop20sft'
 | 'Sft1QuartzKCtop20sft'| 'Sft2QuartzKCtop20sft'| 'Sft3QuartzKCtop20sft'| 'Sft4QuartzKCtop20sft'|'Sft5QuartzKCtop20sft'
@@ -129,7 +132,7 @@ type ContingType = 'SnagClearConting'
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType | FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
  PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElecType |MechType|FFType |PlumbType
- |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| LowCType |KCtop40sftType| CabinetType | ExhaustType
+ |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| FCeilingType |KCtop40sftType| CabinetType | ExhaustType
  |FinalType| ContingType
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'

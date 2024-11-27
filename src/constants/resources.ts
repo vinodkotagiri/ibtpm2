@@ -3,7 +3,7 @@ import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  C
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElecRates, MechRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FFRates,  PlumbRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
-  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, LowCRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates,
+  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, FCeilingRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates,
   FinalRates,  ContingRates  } from './rates'
   //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
@@ -3464,7 +3464,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ],
 
   "GFFC": [
-    { id: 'GFI111', resource: 'Sft2CeilingLowC', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: LowCRates.Ceiling.Sft2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI111', resource: 'Sqm2GypFCeiling', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: FCeilingRates.Gyp.Sqm2, units: 'Sqm', quantity: 0, totalCost: 0 },    
   ],
   "GFLF": [
     { id: 'GFI12', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
