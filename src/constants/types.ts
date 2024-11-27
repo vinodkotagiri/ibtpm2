@@ -47,24 +47,22 @@ type Redclayper1000Type = 'Cuminch6Redclayper1000' | 'Sftinch6Redclayper1000'|'C
 type FlyAshper1000Type = 'Cuminch6FlyAshper1000' | 'Sftinch6FlyAshper1000'|'Cuminch9FlyAshper1000' | 'Sftinch9FlyAshper1000'|'Cuminch12FlyAshper1000' | 'Sftinch12FlyAshper1000'|'Cuminch16FlyAshper1000' | 'Sftinch16FlyAshper1000'
 type CCBlockper1000Type = 'Cuminch6CCBlockper1000' | 'Sftinch6CCBlockper1000'|'Cuminch9CCBlockper1000' | 'Sftinch9CCBlockper1000'|'Cuminch12CCBlockper1000' | 'Sftinch12CCBlockper1000'|'Cuminch16CCBlockper1000' | 'Sftinch16CCBlockper1000'
 //Brickwork//
-
 //plaster//
 type PlasterManualType = 'Cummm6PlasterManual' | 'Sftmm6PlasterManual'| 'Sqtmm6PlasterManual'|'Cummm8PlasterManual' | 'Sftmm8PlasterManual'| 'Sqtmm8PlasterManual'|'Cummm10PlasterManual' | 'Sftmm10PlasterManual'| 'Sqtmm10PlasterManual'|'Cummm12PlasterManual' | 'Sftmm12PlasterManual'| 'Sqtmm12PlasterManual'
 |'Cummm15PlasterManual' | 'Sftmm15PlasterManual'| 'Sqtmm15PlasterManual'|'Cummm20PlasterManual' | 'Sftmm20PlasterManual'| 'Sqtmm20PlasterManual'
 type PlasterMachineType = 'Cummm6PlasterMachine' | 'Sftmm6PlasterMachine'| 'Sqtmm6PlasterMachine'|'Cummm8PlasterMachine' | 'Sftmm8PlasterMachine'| 'Sqtmm8PlasterMachinePlasterMachine'|'Cummm10PlasterMachinePlasterMachine' | 'Sftmm10PlasterMachine'| 'Sqtmm10PlasterMachine'|'Cummm12PlasterMachine' | 'Sftmm12PlasterMachine'| 'Sqtmm12PlasterMachine'
 |'Cummm15PlasterMachine' | 'Sftmm15PlasterMachine'| 'Sqtmm15PlasterMachine'|'Cummm20PlasterMachine' | 'Sftmm20PlasterMachine'| 'Sqtmm20PlasterMachine'
 //plaster//
-
 type SewerS40PVCType = 'ftmm12SewerS40PVC'| 'mmm12SewerS40PVC'|'ftmm25SewerS40PVC'| 'mmm25SewerS40PVC'|'ftmm50SewerS40PVC'| 'mmm50SewerS40PVC'|'ftmm100SewerS40PVC'| 'mmm100SewerS40PVC'|'ftmm150SewerS40PVC'| 'mmm150SewerS40PVC'|'ftmm200SewerS40PVC'| 'mmm200SewerS40PVC'
 type SewerS80PVCType = 'ftmm12SewerS80PVC'| 'mmm12SewerS80PVC'|'ftmm25SewerS80PVC'| 'mmm25SewerS80PVC'|'ftmm50SewerS80PVC'| 'mmm50SewerS80PVC'|'ftmm100SewerS80PVC'| 'mmm100SewerS80PVC'|'ftmm150SewerS80PVC'| 'mmm150SewerS80PVC'|'ftmm200SewerS80PVC'| 'mmm200SewerS80PVC'
-
+//MEP//
 type CPVCType = 'ftmm15CPVC'| 'ftmm20CPVC'| 'ftmm32CPVC'
 type PPRType = 'ftmm20PPR'| 'ftmm25PPR'| 'ftmm40PPR'
 type GIType = 'ftmm15GI'| 'ftmm20GI'| 'ftmm40GI'
-type ElectricalType = 'SftPVCElectrical'| 'mPVCElectrical'| 'UnitJunctionBoxElectrical'| 'mJunctionBoxElectrical'| 'SftJunctionBoxElectrical'| 'UnitPullwiresconduitsElectrical'  | 'mPullwiresconduitsElectrical'| 'SftPullwiresconduitsElectrical'  | 'mLightFixturesElectrical'| 'UnitLightFixturesElectrical'| 'SftLightFixturesElectrical'
-type MechanicalType = 'SftHangersMechanical'| 'mHangersMechanical'| 'SftDuctMechanical'| 'SftDrainpipesMechanical'  | 'mDrainpipesMechanical'
-type FirefightingType = 'SftSprinklerpipesFirefighting'| 'mSprinklerpipesFirefighting'|'mFirehosereelconduitFirefighting'|'SftFirehosereelconduitFirefighting'|'SftHangerssprinklerFirefighting'|'mHangerssprinklerFirefighting'
-type PlumbingType = 'SftCPVCPlumbing'| 'mCPVCPlumbing'| 'mDrainagepipespvcPlumbing'| 'SftDrainagepipespvcPlumbing'
+type ElecType = 'SftPVCElec'| 'mPVCElec'| 'UnitJunctionBoxElec'| 'mJunctionBoxElec'| 'SftJunctionBoxElec'| 'UnitPullwiresconduitsElec'  | 'mPullwiresconduitsElec'| 'SftPullwiresconduitsElec'  | 'mLightFixturesElec'| 'UnitLightFixturesElec'| 'SftLightFixturesElec'
+type MechType = 'SftHangersMech'| 'mHangersMech'| 'ALDuctperSqmMech'| 'SSDuctperSqmMech'  | 'GIDuctperSqmMech'| 'FabGIDuctperSqmMech'| 'FabGIDuctperSqmMech'| 'UnitAirCMech'
+type FFType = 'SftSprinklerpipesFF'| 'mSprinklerpipesFF'|'mFirehosereelconduitFF'|'SftFirehosereelconduitFF'|'SftHangerssprinklerFF'|'mHangerssprinklerFF'
+type PlumbType = 'SftCPVCPlumb'| 'mCPVCPlumb'| 'mDrainagepipespvcPlumb'| 'SftDrainagepipespvcPlumb'| 'JaguarTapsPlumb'| 'KohlerTapsPlumb'| 'CeraTapsPlumb'| 'RegTapsPlumb'| 'LocalTapsPlumb'
 //doorframe Insulation//
 type DFinsulationType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation'| 'FT1TeakDFinsulation'| 'FT2TeakDFinsulation'
 |'FT1PlyDFinsulation'| 'FT2PlyDFinsulation'| 'AS1PlyDFinsulation'| 'AS2PlyDFinsulation'| 'WP1PlyDFinsulation'| 'WP2PlyDFinsulation'| 'WP3PlyDFinsulation'| 'WP4PlyDFinsulation'
@@ -130,7 +128,7 @@ type ContingType = 'SnagClearConting'
 //xxx//
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType | FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
- PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
+ PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElecType |MechType|FFType |PlumbType
  |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| LowCType |KCtop40sftType| CabinetType | ExhaustType
  |FinalType| ContingType
 

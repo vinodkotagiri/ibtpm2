@@ -63,7 +63,7 @@ export const FFMasonRates = {
   Sft: 45,  
 }
 }
-export const ElectricalRates = {
+export const ElecRates = {
   PVC:{  
     Sft: 8,
     m: 125
@@ -83,20 +83,26 @@ LightFixtures:{
   m: 800
 },
 }
-export const MechanicalRates = {
+export const MechRates = {
   Hangers:{  
     Sft: 10,
     m: 350
 },
-Duct:{    
-  Sft: 220,
+DuctperSqm:{    
+  GI : 220,
+  FabGI : 500,
+  AL : 650,
+  SS : 1000,
 },
 Drainpipes:{    
   Sft: 8,
   m: 200
 },
+AirC:{    
+  Unit: 450000,  
+},
 }
-export const FirefightingRates = {
+export const FFRates = {
   Sprinklerpipes:{  
     Sft: 15,
     m: 400
@@ -110,10 +116,17 @@ Hangerssprinkler:{
   m: 200
 },
 }
-export const PlumbingRates = {
+export const PlumbRates = {
   CPVC:{  
     Sft: 12,
     m: 250
+},
+  taps:{  
+  Jaguar: 1200,  
+  Kohler: 1200,  
+  Cera: 1000,  
+  Local: 600,  
+  Reg: 800,    
 },
 Drainagepipespvc:{    
   Sft: 10,
