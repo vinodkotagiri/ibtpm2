@@ -3447,11 +3447,11 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: door1Width, area: door1Area,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
   ],
 "GFEL": [
-  { id: 'GFI31', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GFI31', resource: 'UnitLightFixturesElec', description: 'Electrical', rate: ElecRates.LightFixtures.Unit, units: 'Unit', quantity: 2, totalCost: 0 },    
   { id: 'GFI32', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
   "GFPL": [
-  { id: 'GFI51', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GFI51', resource: 'CeraTapsPlumb', description: 'Plumbing', rate: PlumbRates.taps.Cera, units: 'Unit', quantity: 2, totalCost: 0 },    
   { id: 'GFI52', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
   "GFME": [
@@ -3459,7 +3459,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'GFI42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
   "GFFF": [
-  { id: 'GFI61', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GFI61', resource: 'UnitsprinklerFF', description: 'FireFighting', rate: FFRates.sprinkler.Unit, units: 'Unit', quantity: 1, totalCost: 0 },    
   { id: 'GFI62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
 

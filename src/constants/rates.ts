@@ -115,13 +115,16 @@ Hangerssprinkler:{
   Sft: 8,
   m: 200
 },
+sprinkler:{    
+Unit: 1500
+},
 }
 export const PlumbRates = {
-  CPVC:{  
-    Sft: 12,
-    m: 250
+CPVC:{  
+  Sft: 12,
+  m: 250
 },
-  taps:{  
+taps:{  
   Jaguar: 1200,  
   Kohler: 1200,  
   Cera: 1000,  

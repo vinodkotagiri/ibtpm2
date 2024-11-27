@@ -61,7 +61,7 @@ type PPRType = 'ftmm20PPR'| 'ftmm25PPR'| 'ftmm40PPR'
 type GIType = 'ftmm15GI'| 'ftmm20GI'| 'ftmm40GI'
 type ElecType = 'SftPVCElec'| 'mPVCElec'| 'UnitJunctionBoxElec'| 'mJunctionBoxElec'| 'SftJunctionBoxElec'| 'UnitPullwiresconduitsElec'  | 'mPullwiresconduitsElec'| 'SftPullwiresconduitsElec'  | 'mLightFixturesElec'| 'UnitLightFixturesElec'| 'SftLightFixturesElec'
 type MechType = 'SftHangersMech'| 'mHangersMech'| 'ALDuctperSqmMech'| 'SSDuctperSqmMech'  | 'GIDuctperSqmMech'| 'FabGIDuctperSqmMech'| 'FabGIDuctperSqmMech'| 'UnitAirCMech'
-type FFType = 'SftSprinklerpipesFF'| 'mSprinklerpipesFF'|'mFirehosereelconduitFF'|'SftFirehosereelconduitFF'|'SftHangerssprinklerFF'|'mHangerssprinklerFF'
+type FFType = 'SftSprinklerpipesFF'| 'mSprinklerpipesFF'|'mFirehosereelconduitFF'|'SftFirehosereelconduitFF'|'SftHangerssprinklerFF'|'mHangerssprinklerFF'|'UnitsprinklerFF'
 type PlumbType = 'SftCPVCPlumb'| 'mCPVCPlumb'| 'mDrainagepipespvcPlumb'| 'SftDrainagepipespvcPlumb'| 'JaguarTapsPlumb'| 'KohlerTapsPlumb'| 'CeraTapsPlumb'| 'RegTapsPlumb'| 'LocalTapsPlumb'
 //doorframe Insulation//
 type DFinsulationType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation'| 'FT1TeakDFinsulation'| 'FT2TeakDFinsulation'
