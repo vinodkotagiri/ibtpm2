@@ -7,19 +7,24 @@ const HomeView = () => {
       {/* Top Section */}
       <div className="w-full flex flex-wrap gap-3 p-3 justify-center overflow-auto">
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#F55C47] flex items-center justify-center">
-          TOTAL TASKS
+          PROJECT SUMMARY
+          LXB=AREA; G+1
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#9FE6A0] flex items-center justify-center">
           TOTAL BUDGET
+          &#8377;35,22000
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#4AA96C] flex items-center justify-center">
-          ESTIMATED
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#E6FF94] flex items-center justify-center">
+          ACTUAL COST OF WORK DONE
+          &#8377;15,0000
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#564A4A] flex items-center justify-center">
-          HELLO
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#B3A398] flex items-center justify-center">
+          PREVIOUS PAYMENTS
+          &#8377;10,0000
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#B31312] flex items-center justify-center">
-          HELLO
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#CD8D7A] flex items-center justify-center">
+          REMAINING PAYMENT
+          &#8377;5,0000
         </div>
       </div>
 

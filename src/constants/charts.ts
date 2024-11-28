@@ -25,7 +25,7 @@ export const LineChart: IChart = {
     [11, 35]
   ],
   options: {
-    title: "Line Chart Example",
+    title: "Project Summary",
     hAxis: {
       title: "Time",
       textStyle: {
@@ -59,20 +59,17 @@ export const LineChart: IChart = {
 
 export const PieChart: IChart = {
   chartType: "PieChart",
-  data: [
-    ["Task", "Hours per Day"],
-    ["Work", 9],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7]
+    data: [
+    ["Category", "Percent"],
+    ["Planned", 9],
+    ["Actual", 0.5],    
   ],
   options: {
-    title: "My Daily Activities",
+    title: "Percent Complete",
     backgroundColor: "transparent",
     titleTextStyle: {
       color: "#bbb",
-      fontSize: 16
+      fontSize: 18
     },
     legend: {
       textStyle: {
@@ -88,14 +85,14 @@ export const BarChart: IChart = {
   chartType: "BarChart",
   data: [
     ["Category", "Hours"],
-    ["Work", 9],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7]
+    ["Mason", 1],
+    ["Steel Fixer", 4],
+    ["Helper", 5],
+    ["Operator", 1],
+    ["Carpenter", 3]
   ],
   options: {
-    title: "My Daily Activities",
+    title: "Daily Worker Activities",
     backgroundColor: "transparent",
     titleTextStyle: {
       color: "#bbb",
@@ -216,12 +213,12 @@ export const ComboChart: IChart = {
 export const DonutChart: IChart = {
   chartType: "PieChart",  // Google Charts treats Donut as a Pie Chart with a hole
   data: [
-    ["Task", "Hours per Day"],
-    ["Work", 8],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 3],
-    ["Sleep", 9],
+    ["Category", "Hours"],
+    ["Mason", 1],
+    ["Steel Fixer", 4],
+    ["Helper", 5],
+    ["Operator", 1],
+    ["Carpenter", 3]
   ],
   options: {
     title: "Daily Activities",

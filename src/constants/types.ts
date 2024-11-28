@@ -6,8 +6,26 @@ type BarBenderType = 'DailyBarbender' | 'WeeklyBarbender' | 'MonthlyBarbender' |
 type ConcreteType = 'sftM10pccConcrete' | 'CumM10pccConcrete' | 'CftM10pccConcrete'|'sftM15pccConcrete' | 'CumM15pccConcrete' | 'CftM15pccConcrete'|'sftM20Concrete' | 'CumM20Concrete' | 'CftM20Concrete'|'sftM20Concrete' | 'CumM20Concrete' | 'CftM20Concrete'
 |'sftM25Concrete' | 'CumM25Concrete' | 'CftM25Concrete'| 'sftM30Concrete' | 'CumM30Concrete' | 'CftM30Concrete'| 'sftM35Concrete' | 'CumM35Concrete' | 'CftM35Concrete'| 'sftM40Concrete' | 'CumM40Concrete' | 'CftM40Concrete'| 'sftM40Concrete' | 'CumM45Concrete' | 'CftM45Concrete'
 type SteelType = 'SftDia6Steel' | 'KgsDia6Steel' |'SftDia8Steel' | 'KgsDia8Steel' |'SftDia10Steel' | 'KgsDia10Steel' |'SftDia12Steel' | 'KgsDia12Steel' |'SftDia14Steel' | 'KgsDia14Steel' |'SftDia16Steel' | 'KgsDia16Steel' |'SftDia18Steel' | 'KgsDia18Steel' |'SftDia20Steel' | 'KgsDia20Steel' 
-type WoodFormworkType = 'SftWoodFormwork' | 'CftWoodFormwork' | 'SqmWoodFormwork' | 'CumWoodFormwork'
-type MetalFormworkType = 'SftMetalFormwork' | 'CftMetalFormwork' | 'SqmMetalFormwork' | 'CumMetalFormwork'
+
+type WoodFormworkType = 'SftFootingWoodFormwork' | 'CftFootingWoodFormwork' | 'SqmFootingWoodFormwork' | 'CumFootingWoodFormwork'|
+'SftPlinthWoodFormwork' | 'CftPlinthWoodFormwork' | 'SqmPlinthWoodFormwork' | 'CumPlinthWoodFormwork'|
+'SftColumnWoodFormwork' | 'CftColumnWoodFormwork' | 'SqmColumnWoodFormwork' | 'CumColumnWoodFormwork'|
+'SftBeamWoodFormwork' | 'CftBeamWoodFormwork' | 'SqmBeamWoodFormwork' | 'CumBeamWoodFormwork'|
+'SftSlabWoodFormwork' | 'CftSlabWoodFormwork' | 'SqmSlabWoodFormwork' | 'CumSlabWoodFormwork'|
+'SftStaircaseWoodFormwork' | 'CftStaircaseWoodFormwork' | 'SqmStaircaseWoodFormwork' | 'CumStaircaseWoodFormwork'|
+'SftShearwallWoodFormwork' | 'CftShearwallWoodFormwork' | 'SqmShearwallWoodFormwork' | 'CumShearwallWoodFormwork'|
+'SftFootingColumnWoodFormwork' | 'CftFootingColumnWoodFormwork' | 'SqmFootingColumnWoodFormwork' | 'CumFootingColumnWoodFormwork'|
+'SftLintelWoodFormwork' | 'CftLintelWoodFormwork' | 'SqmLintelWoodFormwork' | 'CumLintelWoodFormwork'
+
+type MetalFormworkType = 'SftFootingMetalFormwork' | 'CftFootingMetalFormwork' | 'SqmFootingMetalFormwork' | 'CumFootingMetalFormwork'|
+'SftPlinthMetalFormwork' | 'CftPlinthMetalFormwork' | 'SqmPlinthMetalFormwork' | 'CumPlinthMetalFormwork'|
+'SftColumnMetalFormwork' | 'CftColumnMetalFormwork' | 'SqmColumnMetalFormwork' | 'CumColumnMetalFormwork'|
+'SftBeamMetalFormwork' | 'CftBeamMetalFormwork' | 'SqmBeamMetalFormwork' | 'CumBeamMetalFormwork'|
+'SftSlabMetalFormwork' | 'CftSlabMetalFormwork' | 'SqmSlabMetalFormwork' | 'CumSlabMetalFormwork'|
+'SftStaircaseMetalFormwork' | 'CftStaircaseMetalFormwork' | 'SqmStaircaseMetalFormwork' | 'CumStaircaseMetalFormwork'|
+'SftShearwallMetalFormwork' | 'CftShearwallMetalFormwork' | 'SqmShearwallMetalFormwork' | 'CumShearwallMetalFormwork'|
+'SftFootingColumnMetalFormwork' | 'CftFootingColumnMetalFormwork' | 'SqmFootingColumnMetalFormwork' | 'CumFootingColumnMetalFormwork'|
+'SftLintelMetalFormwork' | 'CftLintelMetalFormwork' | 'SqmLintelMetalFormwork' | 'CumLintelMetalFormwork'
 
 type FillingType = 'CumSoilFilling' | 'CumSandFilling' | 'CumAggregateFilling' | 'CumStoneFilling'
 type FencingType = 'SqmFencing' | 'SftFencing'
@@ -29,24 +47,22 @@ type Redclayper1000Type = 'Cuminch6Redclayper1000' | 'Sftinch6Redclayper1000'|'C
 type FlyAshper1000Type = 'Cuminch6FlyAshper1000' | 'Sftinch6FlyAshper1000'|'Cuminch9FlyAshper1000' | 'Sftinch9FlyAshper1000'|'Cuminch12FlyAshper1000' | 'Sftinch12FlyAshper1000'|'Cuminch16FlyAshper1000' | 'Sftinch16FlyAshper1000'
 type CCBlockper1000Type = 'Cuminch6CCBlockper1000' | 'Sftinch6CCBlockper1000'|'Cuminch9CCBlockper1000' | 'Sftinch9CCBlockper1000'|'Cuminch12CCBlockper1000' | 'Sftinch12CCBlockper1000'|'Cuminch16CCBlockper1000' | 'Sftinch16CCBlockper1000'
 //Brickwork//
-
 //plaster//
 type PlasterManualType = 'Cummm6PlasterManual' | 'Sftmm6PlasterManual'| 'Sqtmm6PlasterManual'|'Cummm8PlasterManual' | 'Sftmm8PlasterManual'| 'Sqtmm8PlasterManual'|'Cummm10PlasterManual' | 'Sftmm10PlasterManual'| 'Sqtmm10PlasterManual'|'Cummm12PlasterManual' | 'Sftmm12PlasterManual'| 'Sqtmm12PlasterManual'
 |'Cummm15PlasterManual' | 'Sftmm15PlasterManual'| 'Sqtmm15PlasterManual'|'Cummm20PlasterManual' | 'Sftmm20PlasterManual'| 'Sqtmm20PlasterManual'
 type PlasterMachineType = 'Cummm6PlasterMachine' | 'Sftmm6PlasterMachine'| 'Sqtmm6PlasterMachine'|'Cummm8PlasterMachine' | 'Sftmm8PlasterMachine'| 'Sqtmm8PlasterMachinePlasterMachine'|'Cummm10PlasterMachinePlasterMachine' | 'Sftmm10PlasterMachine'| 'Sqtmm10PlasterMachine'|'Cummm12PlasterMachine' | 'Sftmm12PlasterMachine'| 'Sqtmm12PlasterMachine'
 |'Cummm15PlasterMachine' | 'Sftmm15PlasterMachine'| 'Sqtmm15PlasterMachine'|'Cummm20PlasterMachine' | 'Sftmm20PlasterMachine'| 'Sqtmm20PlasterMachine'
 //plaster//
-
 type SewerS40PVCType = 'ftmm12SewerS40PVC'| 'mmm12SewerS40PVC'|'ftmm25SewerS40PVC'| 'mmm25SewerS40PVC'|'ftmm50SewerS40PVC'| 'mmm50SewerS40PVC'|'ftmm100SewerS40PVC'| 'mmm100SewerS40PVC'|'ftmm150SewerS40PVC'| 'mmm150SewerS40PVC'|'ftmm200SewerS40PVC'| 'mmm200SewerS40PVC'
 type SewerS80PVCType = 'ftmm12SewerS80PVC'| 'mmm12SewerS80PVC'|'ftmm25SewerS80PVC'| 'mmm25SewerS80PVC'|'ftmm50SewerS80PVC'| 'mmm50SewerS80PVC'|'ftmm100SewerS80PVC'| 'mmm100SewerS80PVC'|'ftmm150SewerS80PVC'| 'mmm150SewerS80PVC'|'ftmm200SewerS80PVC'| 'mmm200SewerS80PVC'
-
+//MEP//
 type CPVCType = 'ftmm15CPVC'| 'ftmm20CPVC'| 'ftmm32CPVC'
 type PPRType = 'ftmm20PPR'| 'ftmm25PPR'| 'ftmm40PPR'
 type GIType = 'ftmm15GI'| 'ftmm20GI'| 'ftmm40GI'
-type ElectricalType = 'SftPVCElectrical'| 'mPVCElectrical'| 'UnitJunctionBoxElectrical'| 'mJunctionBoxElectrical'| 'SftJunctionBoxElectrical'| 'UnitPullwiresconduitsElectrical'  | 'mPullwiresconduitsElectrical'| 'SftPullwiresconduitsElectrical'  | 'mLightFixturesElectrical'| 'UnitLightFixturesElectrical'| 'SftLightFixturesElectrical'
-type MechanicalType = 'SftHangersMechanical'| 'mHangersMechanical'| 'SftDuctMechanical'| 'SftDrainpipesMechanical'  | 'mDrainpipesMechanical'
-type FirefightingType = 'SftSprinklerpipesFirefighting'| 'mSprinklerpipesFirefighting'|'mFirehosereelconduitFirefighting'|'SftFirehosereelconduitFirefighting'|'SftHangerssprinklerFirefighting'|'mHangerssprinklerFirefighting'
-type PlumbingType = 'SftCPVCPlumbing'| 'mCPVCPlumbing'| 'mDrainagepipespvcPlumbing'| 'SftDrainagepipespvcPlumbing'
+type ElecType = 'SftPVCElec'| 'mPVCElec'| 'UnitJunctionBoxElec'| 'mJunctionBoxElec'| 'SftJunctionBoxElec'| 'UnitPullwiresconduitsElec'  | 'mPullwiresconduitsElec'| 'SftPullwiresconduitsElec'  | 'mLightFixturesElec'| 'UnitLightFixturesElec'| 'SftLightFixturesElec'
+type MechType = 'SftHangersMech'| 'mHangersMech'| 'ALDuctperSqmMech'| 'SSDuctperSqmMech'  | 'GIDuctperSqmMech'| 'FabGIDuctperSqmMech'| 'FabGIDuctperSqmMech'| 'UnitAirCMech'
+type FFType = 'SftSprinklerpipesFF'| 'mSprinklerpipesFF'|'mFirehosereelconduitFF'|'SftFirehosereelconduitFF'|'SftHangerssprinklerFF'|'mHangerssprinklerFF'|'UnitsprinklerFF'
+type PlumbType = 'SftCPVCPlumb'| 'mCPVCPlumb'| 'mDrainagepipespvcPlumb'| 'SftDrainagepipespvcPlumb'| 'JaguarTapsPlumb'| 'KohlerTapsPlumb'| 'CeraTapsPlumb'| 'RegTapsPlumb'| 'LocalTapsPlumb'
 //doorframe Insulation//
 type DFinsulationType = 'WP1TeakDFinsulation'| 'WP2TeakDFinsulation'| 'WP3TeakDFinsulation'| 'FT1TeakDFinsulation'| 'FT2TeakDFinsulation'
 |'FT1PlyDFinsulation'| 'FT2PlyDFinsulation'| 'AS1PlyDFinsulation'| 'AS2PlyDFinsulation'| 'WP1PlyDFinsulation'| 'WP2PlyDFinsulation'| 'WP3PlyDFinsulation'| 'WP4PlyDFinsulation'
@@ -82,7 +98,10 @@ type LitCfixType = 'Unit1RecsedLitCfix'| 'Unit2RecsedLitCfix'|'Unit3RecsedLitCfi
 type LitWfixType = 'Unit1WallLitWfix'| 'Unit2WallLitWfix'| 'Unit3WallLitWfix'| 'Unit4WallLitWfix'| 'Unit5WallLitWfix'| 'Unit6WallLitWfix'
 | 'Unit1LEDWPLitWfix'| 'Unit2LEDWPLitWfix'| 'Unit3LEDWPLitWfix'| 'Unit4LEDWPLitWfix'| 'Unit5LEDWPLitWfix'| 'Unit6LEDWPLitWfix'
 
-type LowCType =  'Sft1CeilingLowC'| 'Sft2CeilingLowC'| 'Sft3CeilingLowC'| 'Sft4CeilingLowC'|'Sft5CeilingLowC'
+type FCeilingType =  'Sqm1GypFCeiling'| 'Sqm2GypFCeiling'| 'Sqm3GypFCeiling'| 'Sqm4GypFCeiling'|'Sqm5GypFCeiling'|
+'Sqm1PVCFCeiling'| 'Sqm2PVCFCeiling'| 'Sqm3PVCFCeiling'| 'Sqm4PVCFCeiling'|'Sqm5PVCFCeiling'|
+'Sqm1WoodFCeiling'| 'Sqm2WoodFCeiling'| 'Sqm3WoodFCeiling'| 'Sqm4WoodFCeiling'|'Sqm5WoodFCeiling'|
+'Sqm1GlassFCeiling'| 'Sqm2GlassFCeiling'| 'Sqm3GlassFCeiling'| 'Sqm4GlassFCeiling'|'Sqm5GlassFCeiling'
 
 type KCtop40sftType =  'Sft1GraniteKCtop20sft'| 'Sft2GraniteKCtop20sft'| 'Sft3GraniteKCtop20sft'| 'Sft4GraniteKCtop20sft'|'Sft5GraniteKCtop20sft'
 | 'Sft1QuartzKCtop20sft'| 'Sft2QuartzKCtop20sft'| 'Sft3QuartzKCtop20sft'| 'Sft4QuartzKCtop20sft'|'Sft5QuartzKCtop20sft'
@@ -112,8 +131,8 @@ type ContingType = 'SnagClearConting'
 //xxx//
 export type ResourceType = EngineerType| MasonType | HelperType | MachinaryType | BarBenderType | ConcreteType | SteelType | WoodFormworkType 
 |MetalFormworkType | FillingType | FencingType |ShoringType |TermiteType|WaterType| ExcavationMachineType | ExcavationManualType| Redclayper1000Type | FlyAshper1000Type |CCBlockper1000Type |
- PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElectricalType |MechanicalType|FirefightingType |PlumbingType
- |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| LowCType |KCtop40sftType| CabinetType | ExhaustType
+ PlasterManualType|PlasterMachineType| SewerS40PVCType| SewerS80PVCType |CPVCType |PPRType |GIType |ElecType |MechType|FFType |PlumbType
+ |DFinsulationType|DFType | PPaintType | WPType |FloorType  | IBTType |DoorType | LitCfixType | LitWfixType| FCeilingType |KCtop40sftType| CabinetType | ExhaustType
  |FinalType| ContingType
 
 export type Strategy = 'FF' | 'SF' | 'FS' | 'SS'

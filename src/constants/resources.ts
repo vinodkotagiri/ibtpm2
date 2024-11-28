@@ -1,9 +1,9 @@
 import { width } from '@fortawesome/free-solid-svg-icons/fa0'
 import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  ConcreteRates,  SteelRates,  WoodFormworkRates,  MetalFormworkRates,
   FillingRates,  BarBenderRates,  FencingRates,  ShoringRates,  TermiteRates,  WaterRates,    ExcavationMachineRates,  ExcavationManualRates,  
-  Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElectricalRates, MechanicalRates,
-  PlumberRates,  MechMasonRates,  FFMasonRates,  FirefightingRates,  PlumbingRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
-  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, LowCRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates,
+  Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElecRates, MechRates,
+  PlumberRates,  MechMasonRates,  FFMasonRates,  FFRates,  PlumbRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
+  DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, FCeilingRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates,
   FinalRates,  ContingRates  } from './rates'
   //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
@@ -243,7 +243,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "FT03": [
-      { id: 'F9', resource: 'CumWoodFormwork', description: 'Wood', length: 1.2, breadth: 1.2, thickness: 0.3, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingWoodFormwork', description: 'Wood', length: 1.2, breadth: 1.2, thickness: 0.3, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -269,7 +269,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "FT203": [
-      { id: 'F9', resource: 'CumWoodFormwork', description: 'Wood', length: 1.5, breadth: 1.5, thickness: 0.3, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingWoodFormwork', description: 'Wood', length: 1.5, breadth: 1.5, thickness: 0.3, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -294,7 +294,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "FT303": [
-      { id: 'F9', resource: 'CumWoodFormwork', description: 'Wood', length: 1.8, breadth: 1.8, thickness: 0.4, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingWoodFormwork', description: 'Wood', length: 1.8, breadth: 1.8, thickness: 0.4, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -317,7 +317,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "FT403": [
-      { id: 'F9', resource: 'CumWoodFormwork', description: 'Wood', length:2.0, breadth: 2.0, thickness: 0.4, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingWoodFormwork', description: 'Wood', length:2.0, breadth: 2.0, thickness: 0.4, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -340,7 +340,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "FT503": [
-      { id: 'F9', resource: 'CumWoodFormwork', description: 'Wood', length:2.5, breadth: 2.5, thickness: 0.4, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingWoodFormwork', description: 'Wood', length:2.5, breadth: 2.5, thickness: 0.4, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -366,7 +366,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
     "FT603": [
 
-      { id: 'F9', resource: 'CumWoodFormwork', description: 'Wood', length:3.0, breadth: 3.0, thickness: 0.5, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingWoodFormwork', description: 'Wood', length:3.0, breadth: 3.0, thickness: 0.5, perimeter:0, rate: WoodFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -392,7 +392,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     // Plinth beam Length//
         
     "PT1L1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtLength, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -400,27 +400,27 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT1L2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtWidth, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtLength, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT1L3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:builtLength, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT1L4": [
-      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: 0, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: builtWidth, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
    
     "PT2L1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtWidth, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -428,27 +428,27 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT2L2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtWidth, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtLength, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT2L3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.26, thickness: 0.26, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtLength, breadth:0.26, thickness: 0.26, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT2L4": [
-      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: 0, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: builtLength, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
     
     "PT3L1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtLength, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -456,27 +456,27 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT3L2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtWidth, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtLength, diameter: 16, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT3L3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtLength, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT3L4": [
-      { id: 'F12', resource: 'CumM25Concrete', description: 'M25Concrete', length: 0, breadth: 0.3, thickness: 0.3, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM25Concrete', description: 'M25Concrete', length: builtLength, breadth: 0.3, thickness: 0.3, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
     
     "PT4L1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtLength, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -484,20 +484,20 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT4L2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtWidth, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtLength, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT4L3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtLength, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT4L4": [
-      { id: 'F12', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3.0, breadth: 0.3, thickness: 0.45, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM25Concrete', description: 'M25Concrete', length: builtLength, breadth: 0.3, thickness: 0.45, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -507,7 +507,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     // plinth beam breadth//
     
     "PT1B1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtWidth, breadth:0.23, thickness: 0.23, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -515,27 +515,27 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT1B2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtLength, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtWidth, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     ],
     "PT1B3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtWidth, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT1B4": [
-      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: 0, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: builtWidth, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
    
     "PT2B1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtWidth, breadth:0.26, thickness: 0.26, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -543,27 +543,27 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT2B2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtLength, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtWidth, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT2B3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.26, thickness: 0.26, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtWidth, breadth:0.26, thickness: 0.26, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT2B4": [
-      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: 0, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM20Concrete', description: 'M20Concrete', length: builtWidth, breadth: 0.26, thickness: 0.26, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
     
     "PT3B1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtWidth, breadth:0.3, thickness: 0.3, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -571,15 +571,15 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT3B2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtLength, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtWidth, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT3B3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtWidth, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
@@ -590,7 +590,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     
     "PT4B1": [
-      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: 0, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'PL1', resource: 'CumStoneFilling', description: 'Filling', length: builtWidth, breadth:0.3, thickness: 0.45, area:0,  rate: FillingRates.Stone.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'PL2', resource: 'DailyMason', description: 'PCC', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'PL3', resource: 'DailyHelper', description: 'Clean-up', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
       { id: 'PL4', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
@@ -598,20 +598,20 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     ],
     "PT4B2": [
       { id: 'F4', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 12, diameter: 8, noOfBars:4, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: 12, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
-      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: 12, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F5', resource: 'SftDia12Steel', description: 'Main Bars', length: builtLength, diameter: 12, noOfBars: 3, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F6', resource: 'SftDia16Steel', description: 'Distribution Bars', length: builtWidth, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F7', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F8', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },    
       { id: 'PL10', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'PL11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT4B3": [
-      { id: 'F9', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'F9', resource: 'SqmFootingMetalFormwork', description: 'Metal', length: builtWidth, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'F10', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'F11', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     ],
     "PT4B4": [
-      { id: 'F12', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3.0, breadth: 0.3, thickness: 0.45, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'F12', resource: 'CumM25Concrete', description: 'M25Concrete', length: builtWidth, breadth: 0.3, thickness: 0.45, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'F13', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'F14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
@@ -660,7 +660,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'ST55', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
     "ST6": [
-      { id: 'ST61', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'ST61', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'ST62', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'ST63', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     
@@ -723,7 +723,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'ST45', resource: 'DailyHelper', description: 'Curing', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
     "WT6": [
-      { id: 'ST61', resource: 'CumMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'ST61', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:0, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'ST62', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'ST63', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
     
@@ -790,7 +790,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'GCT15', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },      
     ],
     "GCT12": [
-      { id: 'GCT110', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+      { id: 'GCT110', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
       { id: 'GCT111', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GCT112', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },         
     ],
@@ -810,7 +810,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'CT215', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
 ],
 "CT22": [
-  { id: 'CT221', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'CT221', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'CT222', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'CT223', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },         
 ],
@@ -830,7 +830,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'CT315', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
 ],
 "CT32": [
-  { id: 'CT321', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'CT321', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'CT322', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'CT323', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },         
 ],
@@ -843,7 +843,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level-1 Beam Type-1//3x0.23x0.45
 "BT11": [
-  { id: 'BT111', resource: 'CumMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'BT111', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'BT112', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'BT113', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },           
 ],
@@ -865,7 +865,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 //Level-1 Beam Type-1//
 //Level-1 Beam Type-2//
 "BT21": [
-  { id: 'BT211', resource: 'CumMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'BT211', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'BT212', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'BT213', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },           
 ],
@@ -890,7 +890,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level-1 Bottom Bars slab //
 "SLB1": [
-  { id: 'SLB11', resource: 'CumMetalFormwork', description: 'Metal', length:builtLength1, breadth:builtWidth1, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'SLB11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:builtLength1, breadth:builtWidth1, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SLB13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
 ],
@@ -910,22 +910,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level-1 MEP //
 "SLB3": [
-  { id: 'SLB31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+  { id: 'SLB31', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
   { id: 'SLB32', resource: 'DailyMason', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SLB33', resource: 'DailyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
 "SLB4": [
-  { id: 'SLB41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'SLB41', resource: 'mHangersMech', description: 'Mechanical', rate: MechRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'SLB42', resource: 'DailyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SLB43', resource: 'DailyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 "SLB5": [
-  { id: 'SLB51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+  { id: 'SLB51', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
   { id: 'SLB52', resource: 'DailyMason', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SLB53', resource: 'DailyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],
 "SLB6": [
-  { id: 'SLB61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'SLB61', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'SLB62', resource: 'DailyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SLB63', resource: 'DailyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],
@@ -981,7 +981,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 //Level-1 Foundation Steel//
 //Level-1 Formwork//
 "FFG11": [
-  { id: 'SLB11', resource: 'CumMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'SLB11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SLB13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
 ],
@@ -1047,7 +1047,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ],
 //Level-1 second Flight //
 "SFG12": [
-  { id: 'SFG121', resource: 'CumMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'SFG121', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'SFG122', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'SFG123', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
 ],
@@ -1162,7 +1162,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'EL145', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },      
 ],
 "EL15": [
-  { id: 'EL150', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'EL150', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'EL151', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'EL152', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },         
 ],
@@ -1175,7 +1175,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level-1 Elevator Beam Concrete//
 "EL17": [
-  { id: 'EL171', resource: 'CumMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'EL171', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'EL172', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'EL173', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },           
 ],
@@ -1207,7 +1207,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'L2T115', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 4, totalCost: 0 },      
 ],
 "L2T12": [
-  { id: 'L2T120', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'L2T120', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'L2T121', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'L2T122', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 4, totalCost: 0 },         
 ],
@@ -1227,7 +1227,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 { id: 'L2T215', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },  
 ],
 "L2T22": [
-{ id: 'L2T221', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2T221', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2T222', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2T223', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },         
 ],
@@ -1247,7 +1247,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 { id: 'L2T315', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },  
 ],
 "L2T32": [
-{ id: 'L2T321', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2T321', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2T322', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2T323', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },         
 ],
@@ -1260,7 +1260,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level2 Beam Type-1//3x0.23x0.45
 "L2BT11": [
-{ id: 'L2BT111', resource: 'CumMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2BT111', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2BT112', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2BT113', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },           
 ],
@@ -1282,7 +1282,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 //Level2 Beam Type-1//
 //Level2 Beam Type-2//
 "L2BT21": [
-{ id: 'L2BT211', resource: 'CumMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2BT211', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2BT212', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2BT213', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },           
 ],
@@ -1307,7 +1307,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level2 Bottom Bars slab //
 "L2SLB1": [
-{ id: 'L2SLB11', resource: 'CumMetalFormwork', description: 'Metal', length:builtLength2, breadth:builtWidth2, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2SLB11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:builtLength2, breadth:builtWidth2, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2SLB13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },           
 ],
@@ -1327,22 +1327,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level2 MEP //
 "L2SLB3": [
-{ id: 'L2SLB31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+{ id: 'L2SLB31', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
 { id: 'L2SLB32', resource: 'DailyMason', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2SLB33', resource: 'DailyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 3, totalCost: 0 },
 ],
 "L2SLB4": [
-{ id: 'L2SLB41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'L2SLB41', resource: 'mHangersMech', description: 'Mechanical', rate: MechRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'L2SLB42', resource: 'DailyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2SLB43', resource: 'DailyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
 "L2SLB5": [
-{ id: 'L2SLB51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+{ id: 'L2SLB51', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
 { id: 'L2SLB52', resource: 'DailyMason', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2SLB53', resource: 'DailyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
 "L2SLB6": [
-{ id: 'L2SLB61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'L2SLB61', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'L2SLB62', resource: 'DailyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2SLB63', resource: 'DailyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
@@ -1385,7 +1385,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level2 Formwork//
 "L2FF1": [
-  { id: 'L2FF11', resource: 'CumMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'L2FF11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'L2FF12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'L2FF13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },           
   ],
@@ -1460,7 +1460,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ],
 //Level2 second Flight //
 "L2SF1": [
-{ id: 'L2SF11', resource: 'CumMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2SF11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2SF12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2SF13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
 ],
@@ -1549,7 +1549,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 { id: 'L2EL45', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 3, totalCost: 0 },      
 ],
 "L2EL5": [
-{ id: 'L2EL50', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2EL50', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2EL51', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L2EL52', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 3, totalCost: 0 },         
 ],
@@ -1562,7 +1562,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level2 Elevator Beam Concrete//
 "L2EL7": [
-{ id: 'L2EL71', resource: 'CumMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L2EL71', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L2EL72', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L2EL73', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },           
 ],
@@ -1596,7 +1596,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'L3T115', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 4, totalCost: 0 },      
 ],
 "L3T12": [
-  { id: 'L3T120', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'L3T120', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'L3T121', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'L3T122', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 4, totalCost: 0 },         
 ],
@@ -1616,7 +1616,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 { id: 'L3T215', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },  
 ],
 "L3T22": [
-{ id: 'L3T221', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3T221', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3T222', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3T223', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },         
 ],
@@ -1636,7 +1636,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 { id: 'L3T315', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },  
 ],
 "L3T32": [
-{ id: 'L3T321', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3T321', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3T322', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3T323', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },         
 ],
@@ -1649,7 +1649,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level3 Beam Type-1//3x0.23x0.45
 "L3BT11": [
-{ id: 'L3BT111', resource: 'CumMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3BT111', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3BT112', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3BT113', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },           
 ],
@@ -1671,7 +1671,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 //Level3 Beam Type-1//
 //Level3 Beam Type-2//
 "L3BT21": [
-{ id: 'L3BT211', resource: 'CumMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3BT211', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3.2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3BT212', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3BT213', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 3, totalCost: 0 },           
 ],
@@ -1696,7 +1696,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level3 Bottom Bars slab //
 "L3SLB1": [
-{ id: 'L3SLB11', resource: 'CumMetalFormwork', description: 'Metal', length:builtLength3, breadth:builtWidth3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3SLB11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:builtLength3, breadth:builtWidth3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3SLB13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },           
 ],
@@ -1716,22 +1716,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level3 MEP //
 "L3SLB3": [
-{ id: 'L3SLB31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+{ id: 'L3SLB31', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
 { id: 'L3SLB32', resource: 'DailyMason', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3SLB33', resource: 'DailyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 3, totalCost: 0 },
 ],
 "L3SLB4": [
-{ id: 'L3SLB41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'L3SLB41', resource: 'mHangersMech', description: 'Mechanical', rate: MechRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'L3SLB42', resource: 'DailyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3SLB43', resource: 'DailyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
 "L3SLB5": [
-{ id: 'L3SLB51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+{ id: 'L3SLB51', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
 { id: 'L3SLB52', resource: 'DailyMason', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3SLB53', resource: 'DailyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
 "L3SLB6": [
-{ id: 'L3SLB61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'L3SLB61', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'L3SLB62', resource: 'DailyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3SLB63', resource: 'DailyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],
@@ -1774,7 +1774,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level3 Formwork//
 "L3FF1": [
-  { id: 'L3FF11', resource: 'CumMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'L3FF11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'L3FF12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'L3FF13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },           
   ],
@@ -1849,7 +1849,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ],
 //Level3 second Flight //
 "L3SF1": [
-{ id: 'L3SF11', resource: 'CumMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3SF11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3SF12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3SF13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
 ],
@@ -1938,7 +1938,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 { id: 'L3EL45', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
 ],
 "L3EL5": [
-{ id: 'L3EL50', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3EL50', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3EL51', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
 { id: 'L3EL52', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
 ],
@@ -1951,7 +1951,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Level3 Elevator Beam Concrete//
 "L3EL7": [
-{ id: 'L3EL71', resource: 'CumMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+{ id: 'L3EL71', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
 { id: 'L3EL72', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'L3EL73', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
 ],
@@ -1983,7 +1983,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'OT15', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
 ],
 "OT2": [
-  { id: 'OT21', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT21', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'OT22', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'OT23', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
 ],
@@ -1996,7 +1996,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Watertank CC Level3 Beam Type-1//3x0.23x0.45
 "OT4": [
-  { id: 'OT41', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT41', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'OT42', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'OT43', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
   ],
@@ -2018,7 +2018,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   // Level3 Watertank Slab//
   //Formwork
 "OT7": [
-  { id: 'OT71', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OT71', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'OT72', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'OT73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },           
   ],
@@ -2061,7 +2061,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'OT119', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
     ],
   "OT12": [
-    { id: 'OT121', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.21, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+    { id: 'OT121', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.21, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
     { id: 'OT122', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
     { id: 'OT123', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },           
   ],
@@ -2086,7 +2086,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'OTBW15', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },      
 ],
 "OTBW2": [
-  { id: 'OTBW21', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW21', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.3, thickness: 0.3, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'OTBW22', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'OTBW23', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 1, totalCost: 0 },         
 ],
@@ -2099,7 +2099,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Watertank CC Level3 Beam Type-1//3x0.23x0.45
 "OTBW4": [
-  { id: 'OTBW41', resource: 'CumMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW41', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.25, thickness: 0.25, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'OTBW42', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'OTBW43', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },           
   ],
@@ -2120,7 +2120,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
   // Level3 Watertank Slab//
   "OTBW7": [
-  { id: 'OTBW71', resource: 'CumMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+  { id: 'OTBW71', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4, breadth:3, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
   { id: 'OTBW72', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   { id: 'OTBW73', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },           
   ],
@@ -2178,22 +2178,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G1BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G1EL1": [
-  { id: 'G1EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G1EL11', resource: 'UnitJunctionBoxElec', description: 'Electrical', rate: ElecRates.JunctionBox.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G1EL11', resource: 'mPullwiresconduitsElec', description: 'Electrical', rate: ElecRates.Pullwiresconduits.m, units: 'm', quantity: 12, totalCost: 0 },    
   { id: 'G1EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G1EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G1MD1": [
-  { id: 'G1MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G1MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G1MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G1MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G1PC1": [
-  { id: 'G1PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G1PC11', resource: 'CeraTapsPlumb', description: 'Plumbing', rate: PlumbRates.taps.Cera, units: 'Unit', quantity: 1, totalCost: 0 },    
   { id: 'G1PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G1PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G1FF1": [
-  { id: 'G1FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G1FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G1FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G1FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2244,22 +2245,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G2BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G2EL1": [
-  { id: 'G2EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G2EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G2EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G2EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G2MD1": [
-  { id: 'G2MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G2MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },      
   { id: 'G2MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G2MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G2PC1": [
-  { id: 'G2PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G2PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G2PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G2PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G2FF1": [
-  { id: 'G2FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G2FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G2FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G2FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2310,22 +2311,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G3BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G3EL1": [
-  { id: 'G3EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G3EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G3EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G3EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G3MD1": [
-  { id: 'G3MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G3MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G3MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G3MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G3PC1": [
-  { id: 'G3PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G3PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G3PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G3PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G3FF1": [
-  { id: 'G3FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G3FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G3FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G3FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2376,22 +2377,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G4BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G4EL1": [
-  { id: 'G4EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G4EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G4EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G4EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G4MD1": [
-  { id: 'G4MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G4MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G4MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G4MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G4PC1": [
-  { id: 'G4PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G4PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G4PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G4PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G4FF1": [
-  { id: 'G4FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G4FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G4FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G4FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2442,22 +2443,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G5BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G5EL1": [
-  { id: 'G5EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G5EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G5EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G5EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G5MD1": [
-  { id: 'G5MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G5MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G5MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G5MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G5PC1": [
-  { id: 'G5PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G5PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G5PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G5PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G5FF1": [
-  { id: 'G5FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G5FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G5FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G5FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2508,22 +2509,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G6BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G6EL1": [
-  { id: 'G6EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G6EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G6EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G6EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G6MD1": [
-  { id: 'G6MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G6MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G6MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G6MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G6PC1": [
-  { id: 'G6PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G6PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G6PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G6PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G6FF1": [
-  { id: 'G6FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G6FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G6FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G6FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2574,22 +2575,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G7BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G7EL1": [
-  { id: 'G7EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G7EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G7EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G7EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G7MD1": [
-  { id: 'G7MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G7MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G7MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G7MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G7PC1": [
-  { id: 'G7PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G7PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G7PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G7PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G7FF1": [
-  { id: 'G7FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G7FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G7FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G7FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2640,22 +2641,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G8BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G8EL1": [
-  { id: 'G8EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G8EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G8EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G8EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G8MD1": [
-  { id: 'G8MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G8MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
   { id: 'G8MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G8MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G8PC1": [
-  { id: 'G8PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'G8PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
   { id: 'G8PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G8PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G8FF1": [
-  { id: 'G8FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'G8FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
   { id: 'G8FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G8FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2706,22 +2707,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G9BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G9EL1": [
-{ id: 'G9EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G9EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G9EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G9EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G9MD1": [
-{ id: 'G9MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G9MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G9MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G9MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G9PC1": [
-{ id: 'G9PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G9PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G9PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G9PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G9FF1": [
-{ id: 'G9FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G9FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G9FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G9FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2772,22 +2773,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G10BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G10EL1": [
-{ id: 'G10EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G10EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G10EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G10EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G10MD1": [
-{ id: 'G10MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G10MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G10MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G10MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G10PC1": [
-{ id: 'G10PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G10PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G10PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G10PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G10FF1": [
-{ id: 'G10FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G10FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G10FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G10FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2838,22 +2839,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G11BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G11EL1": [
-{ id: 'G11EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G11EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G11EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G11EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G11MD1": [
-{ id: 'G11MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G11MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G11MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G11MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G11PC1": [
-{ id: 'G11PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G11PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G11PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G11PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G11FF1": [
-{ id: 'G11FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G11FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G11FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G11FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2904,22 +2905,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G12BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G12EL1": [
-{ id: 'G12EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G12EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G12EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G12EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G12MD1": [
-{ id: 'G12MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G12MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G12MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G12MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G12PC1": [
-{ id: 'G12PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G12PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G12PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G12PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G12FF1": [
-{ id: 'G12FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G12FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G12FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G12FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -2970,22 +2971,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G13BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G13EL1": [
-{ id: 'G13EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G13EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G13EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G13EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G13MD1": [
-{ id: 'G13MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G13MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G13MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G13MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G13PC1": [
-{ id: 'G13PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G13PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G13PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G13PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G13FF1": [
-{ id: 'G13FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G13FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G13FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G13FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3036,22 +3037,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G14BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G14EL1": [
-{ id: 'G14EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G14EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G14EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G14EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G14MD1": [
-{ id: 'G14MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G14MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G14MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G14MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G14PC1": [
-{ id: 'G14PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G14PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G14PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G14PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G14FF1": [
-{ id: 'G14FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G14FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G14FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G14FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3102,22 +3103,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G15BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G15EL1": [
-{ id: 'G15EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G15EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G15EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G15EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G15MD1": [
-{ id: 'G15MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G15MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G15MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G15MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G15PC1": [
-{ id: 'G15PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G15PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G15PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G15PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G15FF1": [
-{ id: 'G15FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G15FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G15FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G15FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3168,22 +3169,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G16BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G16EL1": [
-{ id: 'G16EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G16EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G16EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G16EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G16MD1": [
-{ id: 'G16MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G16MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G16MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G16MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G16PC1": [
-{ id: 'G16PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G16PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G16PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G16PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G16FF1": [
-{ id: 'G16FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G16FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G16FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G16FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3234,22 +3235,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G17BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G17EL1": [
-{ id: 'G17EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G17EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G17EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G17EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G17MD1": [
-{ id: 'G17MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G17MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G17MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G17MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G17PC1": [
-{ id: 'G17PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G17PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G17PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G17PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G17FF1": [
-{ id: 'G17FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G17FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G17FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G17FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3300,22 +3301,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G18BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G18EL1": [
-{ id: 'G18EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G18EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G18EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G18EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G18MD1": [
-{ id: 'G18MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G18MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G18MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G18MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G18PC1": [
-{ id: 'G18PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G18PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G18PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G18PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G18FF1": [
-{ id: 'G18FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G18FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G18FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G18FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3366,22 +3367,22 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G19BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G19EL1": [
-{ id: 'G19EL11', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G19EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G19EL12', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G19EL13', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
 ],
 "G19MD1": [
-{ id: 'G19MD11', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G19MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
 { id: 'G19MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G19MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G19PC1": [
-{ id: 'G19PC11', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+{ id: 'G19PC11', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
 { id: 'G19PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G19PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
 "G19FF1": [
-{ id: 'G19FF11', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+{ id: 'G19FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
 { id: 'G19FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 { id: 'G19FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 ],
@@ -3446,24 +3447,24 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'GFI101', resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: door1Width, area: door1Area,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
   ],
 "GFEL": [
-  { id: 'GFI31', resource: 'mPVCElectrical', description: 'Electrical', rate: ElectricalRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GFI31', resource: 'UnitLightFixturesElec', description: 'Electrical', rate: ElecRates.LightFixtures.Unit, units: 'Unit', quantity: 2, totalCost: 0 },    
   { id: 'GFI32', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
   "GFPL": [
-  { id: 'GFI51', resource: 'mCPVCPlumbing', description: 'Plumbing', rate: PlumbingRates.CPVC.m, units: 'm', quantity: 2, totalCost: 0 },    
+  { id: 'GFI51', resource: 'CeraTapsPlumb', description: 'Plumbing', rate: PlumbRates.taps.Cera, units: 'Unit', quantity: 2, totalCost: 0 },    
   { id: 'GFI52', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
   "GFME": [
-  { id: 'GFI41', resource: 'mHangersMechanical', description: 'Mechanical', rate: MechanicalRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GFI41', resource: 'UnitAirCMech', description: 'Mechanical', rate: MechRates.AirC.Unit, units: 'Unit', quantity: 1, totalCost: 0 },    
   { id: 'GFI42', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
   "GFFF": [
-  { id: 'GFI61', resource: 'mHangerssprinklerFirefighting', description: 'FireFighting', rate: FirefightingRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+  { id: 'GFI61', resource: 'UnitsprinklerFF', description: 'FireFighting', rate: FFRates.sprinkler.Unit, units: 'Unit', quantity: 1, totalCost: 0 },    
   { id: 'GFI62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
 
   "GFFC": [
-    { id: 'GFI111', resource: 'Sft2CeilingLowC', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: LowCRates.Ceiling.Sft2, units: 'Sft', quantity: 0, totalCost: 0 },    
+    { id: 'GFI111', resource: 'Sqm2GypFCeiling', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: FCeilingRates.Gyp.Sqm2, units: 'Sqm', quantity: 0, totalCost: 0 },    
   ],
   "GFLF": [
     { id: 'GFI12', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
