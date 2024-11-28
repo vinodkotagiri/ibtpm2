@@ -44,7 +44,7 @@ const tasks:Task[]=[
   },
   {
     id:'PC2',
-    name:'Floor Plan Design',
+    name:'Floor Plan Design at IBT',
     start:'',
     end:'',
     duration:2,
