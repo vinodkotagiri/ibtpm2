@@ -10,24 +10,26 @@ interface IChart {
 export const LineChart: IChart = {
   chartType: "LineChart",
   data: [
-    ["x", "dogs"],
+    ["x", "Cost"],
     [0, 0],
-    [1, 10],
-    [2, 23],
-    [3, 17],
-    [4, 18],
-    [5, 9],
-    [6, 11],
-    [7, 27],
-    [8, 33],
-    [9, 40],
-    [10, 32],
-    [11, 35]
+    [1, 5],
+    [2, 15],
+    [3, 20],
+    [4, 25],
+    [5, 30],
+    [6, 40],
+    [7, 50],
+    [8, 60],
+    [9, 70],
+    [10, 80],
+    [11, 90],
+    [12, 100]
   ],
+  
   options: {
     title: "Project Summary",
     hAxis: {
-      title: "Time",
+      title: "Time (months)",
       textStyle: {
         color: "#bf4" // Horizontal axis text color
       },
@@ -45,7 +47,7 @@ export const LineChart: IChart = {
 
     titleTextStyle: {
       color: "#bbb", // Title text color
-      fontSize: 16 // Title font size
+      fontSize: 26 // Title font size
     },
     legend: {
       textStyle: {
@@ -61,8 +63,8 @@ export const PieChart: IChart = {
   chartType: "PieChart",
     data: [
     ["Category", "Percent"],
-    ["Planned", 9],
-    ["Actual", 0.5],    
+    ["Actual", 0.5],
+    ["Planned", 9.5],    
   ],
   options: {
     title: "Percent Complete",
@@ -178,7 +180,7 @@ export const ComboChart: IChart = {
     ["Jun", 950, 680, 270, 800]
   ],
   options: {
-    title: "Company Performance",
+    title: "Previous Payments",
     backgroundColor: "transparent",
     titleTextStyle: {
       color: "#bbb",
@@ -241,7 +243,7 @@ export const DonutChart: IChart = {
 export const SteppedAreaChart: IChart = {
   chartType: "AreaChart",
   data: [
-    ["X", "Series 1", "Series 2"],
+    ["X", "Planned", "Additional"],
     [0, 0, 0],
     [1, 10, 5],
     [2, 15, 10],
@@ -255,7 +257,7 @@ export const SteppedAreaChart: IChart = {
     [10, 55, 50],
   ],
   options: {
-    title: "Stepped Area Chart Example",
+    title: "Future Payments",
     hAxis: {
       title: "X Axis",
       textStyle: {
