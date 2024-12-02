@@ -116,14 +116,21 @@ function calculateProjectDatesAndDurations(tasks: Task[]): Task[] {
       const childTasks = tasks.filter(t => t.parent === tasks[i].id);
       if (childTasks.length) {
         let endDate = new Date(childTasks[0].end);
+        let startDate=new Date(childTasks[0].start);
         for (const childTask of childTasks) {
           const currentEndDate = new Date(childTask.end);
           if (currentEndDate > endDate) {
             endDate = currentEndDate;
           }
+          const currentStartDate = new Date(childTask.start);
+          if (currentStartDate < startDate) {
+            startDate = currentStartDate;
+          }
         }
         tasks[i].end = formatDate(endDate);
+        tasks[i].start = formatDate(startDate);
         tasks[i].duration = (endDate.getTime() - new Date(tasks[i].start).getTime()) / (1000 * 60 * 60 * 24);
+    
       }
     }
   }
