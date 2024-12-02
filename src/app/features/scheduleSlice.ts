@@ -238,9 +238,20 @@ const scheduleSlice = createSlice( {
       })
 
       state.tasks=calculateTotalResourceCost(state.tasks)
+    },
+    updateTasksDuration(state,action){
+      const {id,duration}=action.payload
+      state.tasks=state.tasks.map(task=>{
+        if(task.id===id){
+          task.duration=duration
+        }
+        return task
+      })
+      state.tasks=updateTaskDates(state.tasks,true)
+      state.tasks=calculateTotalResourceCost(state.tasks)
     }
   }
 } )
 
-export const {updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
+export const {updateTasksDuration,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
 export default scheduleSlice.reducer

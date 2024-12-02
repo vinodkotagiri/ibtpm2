@@ -3,7 +3,7 @@ import { Task } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { updateTaskStartDate } from '../app/features/scheduleSlice';
+import { updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
 import resources from '../constants/resources';
 
 const ScheduleComponent: React.FC = () => {
@@ -46,11 +46,16 @@ const ScheduleComponent: React.FC = () => {
   };
 
 
+  function handleDurationChange(e,id){
+    const duration=e.target.valueAsNumber
+    dispatch(updateTasksDuration({id,duration}))
+  }
+
   const renderTasks = ( tasks: ( Task & { children: Task[] } )[], level = 0, baseColorIndex = 0 ) => {
     return tasks.map( ( task ) => {
       const color = getShade( colorPalette[ baseColorIndex ], level );
       const nextBaseColorIndex = task.children.length > 0 ? ( baseColorIndex + 1 ) % colorPalette.length : baseColorIndex;
-
+     
       return (
         <React.Fragment key={ task.id }>
           <tr style={ { backgroundColor: task.type=='project'?color:'#fff' } }>
@@ -63,7 +68,9 @@ const ScheduleComponent: React.FC = () => {
             {/* <td className='font-semibold italic capitalize' style={{color:task.type==='project'?"blue":"green"}}>{task.type}</td> */}
             <td className='w-[100px]'>{ task.name }</td>
             {task.cost ?<td className='font-semibold w-[90px]'>{ currencyCode+' '+ task.cost.toFixed(2) }</td>:<td></td>}
-            <td className='w-[90px]'>{ task.duration }</td>
+            <td className='w-[90px]'>
+              <input className='input input-ghost cursor-pointer disabled:border-none disabled:bg-transparent w-[90px]' type='number' value={ task.duration } onChange={(e)=>handleDurationChange(e,task.id)} disabled={task.type=='project'|| !task.start}/>
+            </td>
             <td className='w-[80px]'>
               <div className="tooltip  tooltip-right z-50" data-tip="Please select start date">
                 <input type='date' className='input input-ghost cursor-pointer' onChange={ e => handleStartDateChange(task.id,e.target.value)} value={task.start}/>
