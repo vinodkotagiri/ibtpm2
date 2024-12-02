@@ -164,7 +164,7 @@ const EstimationComponent: React.FC = () => {
   };
 
   return (
-    <div className="overflow-auto table-container w-screen min-h-screen pb-24 relative" style={{ overflow: 'auto', maxHeight: '100vh' }}>
+    <div className="overflow-scroll table-container w-screen min-h-screen pb-24 relative" style={{ overflow: 'auto', maxHeight: '100vh' }}>
       <table className="table table-lg w-full overflow-auto table-zebra">
         <thead>
           <tr className="sticky-header" >
