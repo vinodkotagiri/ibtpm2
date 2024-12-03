@@ -1735,7 +1735,7 @@ const tasks:Task[]=[
     duration:2,
     cost:0,
     strategy:'FS',
-    dependencies:['US0'],
+    dependencies:['PT1B4,PT2B4,PT3B4,PT4B4'],
     type:'task',
     progress:0,
     hideChildren:false,
@@ -3090,7 +3090,7 @@ parent:'L1BT2'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2T13'],
+  dependencies:['L2T13,L2T23,L2T33'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -3164,7 +3164,7 @@ end:'',
 duration:1,
 cost:0,
 strategy:'FS',
-dependencies:['L2T13'],
+dependencies:['L2T13,L2T23,L2T33'],
 type:'task',
 progress:0,
 hideChildren:false,
@@ -3238,7 +3238,7 @@ parent:'L2BT2'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['C27'],
+  dependencies:['L2T13,L2T23,L2T33'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -3266,7 +3266,7 @@ parent:'L2BT2'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SSB'],
+  dependencies:['L2SSB,L2BT11,L2BT22'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -3867,7 +3867,7 @@ parent:'L2EL0'
 
 {
   id:'L3C',
-  name:'Level-2 Columns',
+  name:'Level-3 Columns',
   start:'',
   end:'',
   duration:0,
@@ -4099,7 +4099,7 @@ parent:'L2EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L3T13'],
+  dependencies:['L3T13,L3T23,L3T33'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -4173,7 +4173,7 @@ end:'',
 duration:1,
 cost:0,
 strategy:'FS',
-dependencies:['L3T13'],
+dependencies:['L3T13,L3T23,L3T33'],
 type:'task',
 progress:0,
 hideChildren:false,
@@ -4247,7 +4247,7 @@ parent:'L3BT2'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['C27'],
+  dependencies:['L3BT12,L3BT22,'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -4275,7 +4275,7 @@ parent:'L3BT2'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L3SSB'],
+  dependencies:['L3SLB1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8149,7 +8149,7 @@ parent:'L3EL0'
   parent:'GBAT'
 },  
 {
-  id:'G1B1FLR',
+  id:'G1BH1FL',
   name:'Flooring',
   start:'',
   end:'',
@@ -8174,7 +8174,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B1FLR'
+  parent:'G1BH1FL'
 },
 {
   id:'G12GR1',
@@ -8188,7 +8188,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B1FLR'
+  parent:'G1BH1FL'
 },
 {
   id:'G12TL1',
@@ -8202,7 +8202,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B1FLR'
+  parent:'G1BH1FL'
 },
 {
   id:'G12PTF1',
@@ -8390,7 +8390,7 @@ parent:'L3EL0'
   parent:'GBAT2'
 },  
 {
-  id:'G1B2FLR',
+  id:'G1BH2FL',
   name:'Flooring',
   start:'',
   end:'',
@@ -8415,7 +8415,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B2FLR'
+  parent:'G1BH2FL'
 },
 {
   id:'G13GR1',
@@ -8429,7 +8429,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B2FLR'
+  parent:'G1BH2FL'
 },
 {
   id:'G13TL1',
@@ -8443,7 +8443,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B2FLR'
+  parent:'G1BH2FL'
 },
 {
   id:'G13PTF1',
@@ -8631,7 +8631,7 @@ parent:'L3EL0'
   parent:'GBAT3'
 },  
 {
-  id:'G1B3FLR',
+  id:'G1BH3FL',
   name:'Flooring',
   start:'',
   end:'',
@@ -8656,7 +8656,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B3FLR'
+  parent:'G1BH3FL'
 },
 {
   id:'G14GR1',
@@ -8670,7 +8670,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B3FLR'
+  parent:'G1BH3FL'
 },
 {
   id:'G14TL1',
@@ -8684,7 +8684,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B3FLR'
+  parent:'G1BH3FL'
 },
 {
   id:'G14PTF1',
@@ -8872,7 +8872,7 @@ parent:'L3EL0'
   parent:'GBAT4'
 },  
 {
-  id:'G1B4FLR',
+  id:'G1BH4FL',
   name:'Flooring',
   start:'',
   end:'',
@@ -8897,7 +8897,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B4FLR'
+  parent:'G1BH4FL'
 },
 {
   id:'G15GR1',
@@ -8911,7 +8911,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B4FLR'
+  parent:'G1BH4FL'
 },
 {
   id:'G15TL1',
@@ -8925,7 +8925,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1B4FLR'
+  parent:'G1BH4FL'
 },
 {
   id:'G15PTF1',
@@ -9354,7 +9354,7 @@ parent:'L3EL0'
   parent:'GSTO'
 },  
 {
-  id:'G1STFL',
+  id:'G1SOFL',
   name:'Flooring',
   start:'',
   end:'',
@@ -9379,7 +9379,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1STFL'
+  parent:'G1SOFL'
 },
 {
   id:'G17GR1',
@@ -9393,7 +9393,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1STFL'
+  parent:'G1SOFL'
 },
 {
   id:'G17TL1',
@@ -9407,7 +9407,7 @@ parent:'L3EL0'
   type:'task',
   progress:0,
   hideChildren:false,
-  parent:'G1STFL'
+  parent:'G1SOFL'
 },
 {
   id:'G17PTF1',
