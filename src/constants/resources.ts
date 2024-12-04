@@ -3426,13 +3426,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 //Ground Staircase Finsishes Rough-in end//
 
+//Ground Finishes Interior start//
+//Ground Finishes Interior start//
 
-
-
-//Ground Finishes Interior start//
-//Ground Finishes Interior start//
-//Ground Finishes Interior start//
-//Ground Finishes Interior start//
+//Ground Living//
   
 "GFI3": [
     { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },    
