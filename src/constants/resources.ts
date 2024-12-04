@@ -4,7 +4,7 @@ import { IBTRates, EngineerRates,  MachinaryRates,  MasonRates,  HelperRates,  C
   Redclayper1000Rates,  FlyAshper1000Rates,  CCBlockper1000Rates,  PlasterManualRates,  PlasterMachineRates,  ElecRates, MechRates,
   PlumberRates,  MechMasonRates,  FFMasonRates,  FFRates,  PlumbRates,  SewerS40PVCRates,  SewerS80PVCRates,  CPVCRates,  PPRRates,  GIRates,  ElectricianRates,  
   DFinsulationRates,  DFRates,  PPaintRates, WPRates,  FloorRates, DoorRates, LitWfixRates, FCeilingRates, KCtop40sftRates, KCtop20sftRates, KCtop60sftRates, CabinetRates, ExhaustRates,
-  FinalRates,  ContingRates  } from './rates'
+  FinalRates,  ContingRates, FurnishRates } from './rates'
   //df door frame// Ppaint =primer and paint//
 import { DrawingData, Resource } from './types'
 
@@ -3462,28 +3462,26 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'GFI61', resource: 'UnitsprinklerFF', description: 'FireFighting', rate: FFRates.sprinkler.Unit, units: 'Unit', quantity: 1, totalCost: 0 },    
   { id: 'GFI62', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   ],
-
   "GFFC": [
-    { id: 'GFI111', resource: 'Sqm2GypFCeiling', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: FCeilingRates.Gyp.Sqm2, units: 'Sqm', quantity: 0, totalCost: 0 },    
+    { id: 'GFI111', resource: 'Sqm2GypFCeiling', description: 'FalseCeiling', length: livingLength, breadth: livingWidth, area: livingArea,  rate: FCeilingRates.Gyp.Sqm2, units: 'Sqm', quantity: 1, totalCost: 0 },    
   ],
   "GFLF": [
-    { id: 'GFI12', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
+    { id: 'GFI12', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: livingLength, breadth: livingWidth, area: livingArea,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
   ],    
   "GFWA": [
     { id: 'GWFI11', resource: 'Sft2GraniteKCtop40sft', description: 'Kitchen Countertop L-Shape', length: 0.92, breadth: 2.13, area: 0,  rate: KCtop40sftRates.Granite.Sft2, units: 'Unit', quantity: 1, totalCost: 0 },        
   ], 
   "GFSD": [
     { id: 'GFI13', resource: 'UnitUPVCSlidDoor', description: 'Slide-Door', length: 0.92, breadth: 2.13, area: 0,  rate: DoorRates.UPVCSlid.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
-  ], 
-  
+  ],   
   "GFJY": [
-    { id: 'GFI15', resource: 'Sft3KitchenCabinet', description: 'Cabinet', length: 3, breadth: 2.13, area: 0,  rate: CabinetRates.Kitchen.Sft3, units: 'Sft', quantity: 0, totalCost: 0 },        
+    { id: 'GFI15', resource: 'Sqm2PlyWCabinet', description: 'Cabinet', length: 2.5, breadth: 2.13, area: 0,  rate: CabinetRates.PlyW.Sqm2, units: 'Sqm', quantity: 1, totalCost: 0 },        
   ],  
   "GFEX": [
     { id: 'GFI16', resource: 'Unit2KitchenExhaust', description: 'Exhaust', rate: ExhaustRates.Kitchen.Unit2, units: 'Unit', quantity: 1, totalCost: 0 },        
   ],    
   "GFFU": [
-    { id: 'GFI17', resource: 'Sft3FurniCabinet', description: 'Furniture', length: 2, breadth: 2.5, area: 0,  rate: CabinetRates.Furni.Sft3, units: 'Sft', quantity: 0, totalCost: 0 },        
+    { id: 'GFI17', resource: 'Sqm2FurniFurnish', description: 'Furniture', length: 2, breadth: 2.5, area: 0,  rate: FurnishRates.Furni.Sqm3, units: 'Sqm', quantity: 1, totalCost: 0 },        
   ],     
   "CL01": [
     { id: 'CL011', resource: 'OthFFixFinal', description: 'FinalFix',   rate: FinalRates.FFix.Oth, units: 'Unit', quantity: 1, totalCost: 0 },    
