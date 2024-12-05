@@ -2173,7 +2173,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     
     //Ground Living//Finishes Rough-in start//
 "G1BW1": [  
-    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G1BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G1BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2240,7 +2243,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   
   //Ground Kitchen//Finishes Rough-in start//
 "G2BW1": [  
-    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:livingLength, breadth: livingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code                 
     { id: 'G2BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G2BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2306,7 +2312,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
   //Ground Bedroom1//Finishes Rough-in start//
   "G3BW1": [  
-    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G3BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G3BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2372,7 +2381,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
   //Ground Bedroom2//Finishes Rough-in start//  
   "G4BW1": [  
-    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G4BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G4BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2438,7 +2450,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
   //Ground Bedroom3//Finishes Rough-in start//  
   "G5BW1": [  
-    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G5BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G5BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2494,7 +2509,6 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G5TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:bedroom3Length, breadth:bedroom3Width, area: bedroom3Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
-
 "G5PTF1": [
     { id: 'G5PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom3Length, breadth:bedroom3Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
     { id: 'G5PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
@@ -2504,7 +2518,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
   //Ground Bedroom4//Finishes Rough-in start//  
   "G6BW1": [  
-    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code                 
     { id: 'G6BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G6BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2570,7 +2587,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
   //Ground Drawing//Finishes Rough-in start//  
   "G7BW1": [  
-    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:drawingLength, breadth: drawingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G7BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G7BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2636,7 +2656,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Media Finsishes Rough-in start//
 "G8BW1": [  
-    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:mediaLength, breadth: mediaWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
     { id: 'G8BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
     { id: 'G8BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
@@ -2702,7 +2725,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Pooja Finsishes Rough-in start//
 "G9BW1": [  
-  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:poojaLength, breadth: poojaWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G9BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G9BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2768,7 +2794,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Sitout Finsishes Rough-in start//
 "G10BW1": [  
-  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:sitoutLength, breadth: sitoutWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G10BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G10BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2834,7 +2863,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Balcony Finsishes Rough-in start//
 "G11BW1": [  
-  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:balconyLength, breadth: balconyWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G11BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G11BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2900,7 +2932,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Bath-1 Finsishes Rough-in start//
 "G12BW1": [  
-  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath1Length, breadth: bath1Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G12BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G12BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -2966,7 +3001,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Bath-2 Finsishes Rough-in start//
 "G13BW1": [  
-  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath2Length, breadth: bath2Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G13BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G13BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3032,7 +3070,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Bath-3 Finsishes Rough-in start//
 "G14BW1": [  
-  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath3Length, breadth: bath3Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G14BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G14BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3098,7 +3139,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Bath-4 Finsishes Rough-in start//
 "G15BW1": [  
-  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:bath4Length, breadth: bath4Width, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G15BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G15BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3164,7 +3208,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Toilet Finsishes Rough-in start//
 "G16BW1": [  
-  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:toiletLength, breadth: toiletWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G16BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G16BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3230,7 +3277,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Store Finsishes Rough-in start//
 "G17BW1": [  
-  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:storeLength, breadth: storeWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code               
   { id: 'G17BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G17BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3296,7 +3346,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Parking Finsishes Rough-in start//
 "G18BW1": [  
-  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:parkingLength, breadth: parkingWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G18BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G18BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3362,7 +3415,10 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 //Ground Staircase Finsishes Rough-in start//
 "G19BW1": [  
-  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'Brickwork Walls', length:staircaseLength, breadth: staircaseWidth, thickness: 0.15, perimeter:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
   { id: 'G19BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
   { id: 'G19BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
@@ -3429,7 +3485,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 //Ground Finishes Interior start//
 //Ground Finishes Interior start//
 
-//Ground Living//
+//Ground Living// Start
   
 "GFI3": [
     { id: 'GFI71', resource: 'TW1TeakperftDF', description: 'Door Frame', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },    
@@ -3488,7 +3544,11 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'CL041', resource: 'SnagClearConting', description: 'Snag&Desnag', rate: ContingRates.Clear.Snag, units: 'Unit', quantity: 1, totalCost: 0 },    
     { id: 'CL042', resource: 'Unit2RecsedLitCfix', description: 'Lights', length: 0.92, breadth: 2.13, area: 0,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 1, totalCost: 0 },        
   ]
-//Ground Finishes Interior start//
+//Ground Living// End
+
+
+
+//Finishes End//
 
 
   }
