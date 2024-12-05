@@ -210,7 +210,12 @@ export type DrawingData = {
   builtupArea3: number,
   builtupPerimeter: number,
   
-  livingLength: number,//xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required
+  groundHeight: number,     //Room height //Each floor height //For brickwork, plaster / paint /wall tiles
+  level1Height: number,    
+  level2Height: number,    
+  level3Height: number,    
+
+  livingLength: number,     //xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required
   livingWidth: number,
   livingArea: number,
   bedroom1Length: number,

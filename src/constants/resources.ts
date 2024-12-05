@@ -12,7 +12,7 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   const { excavationArea, plotLength, plotWidth, plotArea, builtupPerimeter, builtupArea, builtLength, builtWidth, excavationDepth, slabThickness,groundFloorArea,groundFloorWalls,      
     //Floorwise for slabs//
   builtupArea1, builtLength1, builtWidth1, builtupArea2, builtLength2, builtWidth2, builtupArea3, builtLength3, builtWidth3,
-  //roomwise//xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required//
+  //roomwise//xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required//  
   livingLength, livingWidth,  livingArea, bedroom1Length, bedroom1Width,  bedroom1Area,  bedroom2Length,  bedroom2Width,  
   bedroom2Area,  bedroom3Length,  bedroom3Width,  bedroom3Area,  bedroom4Length,  bedroom4Width,  bedroom4Area,  drawingLength,
   drawingWidth,  drawingArea,  kitchenLength,  kitchenWidth,  kitchenArea,  poojaLength,  poojaWidth,  poojaArea, mediaLength, 
@@ -21,6 +21,9 @@ function getResources ( taskId: string, drawingData: DrawingData, taskResources:
   balconyArea,  sitoutLength,  sitoutWidth,  sitoutArea, storeLength,  storeWidth,  storeArea,  parkingLength,  parkingWidth,  
   parkingArea,  staircaseLength,  staircaseWidth,
   staircaseArea,
+  //Room height//
+  groundHeight, level1Height, level2Height, level3Height,
+
   //xxxx room wise L&B  xxxxxxx//roomwise//
   door1Length, door1Width, door1Area, window1Length,  window1Width,  window1Area, //useful for deductions//
   ///xxxx//
@@ -2173,12 +2176,12 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     
     //Ground Living//Finishes Rough-in start//
 "G1BW1": [  
-    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:livingLength, breadth: livingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G1BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G1BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:livingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:livingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:livingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:livingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G1BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G1BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G1EL1": [
   { id: 'G1EL11', resource: 'UnitJunctionBoxElec', description: 'Electrical', rate: ElecRates.JunctionBox.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2210,16 +2213,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G1WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G1PL1": [
-    { id: 'G1PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:livingLength, breadth:livingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G1PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G1PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:livingLength, breadth:groundHeight, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:livingLength, breadth:groundHeight, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:livingLength, breadth:groundHeight, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:livingLength, breadth:groundHeight, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G1PR1": [
-    { id: 'C153A1', resource: 'SqmPPaint', description: 'Primer', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'C1563', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'C153A1', resource: 'SqmPPaint', description: 'leftWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A2', resource: 'SqmPPaint', description: 'rightWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A3', resource: 'SqmPPaint', description: 'frontWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A4', resource: 'SqmPPaint', description: 'backWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A5', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G1PT1": [
-    { id: 'G1PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:livingLength, breadth:livingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G1PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G1PR11', resource: 'SqmPPaint', description: 'leftWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PR12', resource: 'SqmPPaint', description: 'rightWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PR13', resource: 'SqmPPaint', description: 'frontWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PR14', resource: 'SqmPPaint', description: 'backWall', length:livingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 },     
+    { id: 'G1PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G1WP1": [
     { id: 'G1WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:livingLength, breadth:livingWidth, area: livingArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2235,20 +2247,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G1PTF1": [
-    { id: 'G1PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:livingLength, breadth:livingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G1PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G1PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G1PTF11', resource: 'SqmPPaint', description: 'leftWall', length:livingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF12', resource: 'SqmPPaint', description: 'rightWall', length:livingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF13', resource: 'SqmPPaint', description: 'frontWall', length:livingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF14', resource: 'SqmPPaint', description: 'backWall', length:livingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G1PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Living//Finishes Rough-in end//
   
   //Ground Kitchen//Finishes Rough-in start//
 "G2BW1": [  
-    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:kitchenLength, breadth: kitchenWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code                 
-    { id: 'G2BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G2BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G2BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:kitchenLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:kitchenLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:kitchenLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G2BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:kitchenLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code                 
+    { id: 'G2BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G2BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G2EL1": [
   { id: 'G2EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2279,16 +2294,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G2WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G2PL1": [
-    { id: 'G2PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:kitchenLength, breadth:kitchenWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G2PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G2PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:kitchenLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:kitchenLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:kitchenLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:kitchenLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G2PR1": [
-    { id: 'G2PR11', resource: 'SqmPPaint', description: 'Primer', length:kitchenLength, breadth:kitchenWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G2PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G2PR11', resource: 'SqmPPaint', description: 'leftWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR12', resource: 'SqmPPaint', description: 'rightWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR13', resource: 'SqmPPaint', description: 'frontWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR14', resource: 'SqmPPaint', description: 'backWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G2PT1": [
-    { id: 'G2PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:kitchenLength, breadth:kitchenWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G2PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G2PR11', resource: 'SqmPPaint', description: 'leftWall', length:kitchenLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR12', resource: 'SqmPPaint', description: 'rightWall', length:kitchenLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR13', resource: 'SqmPPaint', description: 'frontWall', length:kitchenLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR14', resource: 'SqmPPaint', description: 'backWall', length:kitchenLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G2WP1": [
     { id: 'G2WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:kitchenLength, breadth:kitchenWidth, area: kitchenArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2304,20 +2328,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G2PTF1": [
-    { id: 'G2PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:kitchenLength, breadth:kitchenWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G2PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G2PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G2PTF11', resource: 'SqmPPaint', description: 'leftWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PTF12', resource: 'SqmPPaint', description: 'rightWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PTF13', resource: 'SqmPPaint', description: 'frontWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PTF14', resource: 'SqmPPaint', description: 'backWall', length:kitchenLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G2PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G2PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Kitchen//Finishes Rough-in end//
 
   //Ground Bedroom1//Finishes Rough-in start//
   "G3BW1": [  
-    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom1Length, breadth: bedroom1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G3BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G3BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G3BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G3BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G3BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G3EL1": [
   { id: 'G3EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2348,16 +2375,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G3WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G3PL1": [
-    { id: 'G3PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom1Length, breadth:bedroom1Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G3PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G3PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bedroom1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bedroom1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bedroom1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bedroom1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G3PR1": [
-    { id: 'G3PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom1Length, breadth:bedroom1Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G3PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G3PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G3PT1": [
-    { id: 'G3PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom1Length, breadth:bedroom1Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G3PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G3PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G3WP1": [
     { id: 'G3WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom1Length, breadth:bedroom1Width, area: bedroom1Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2373,20 +2409,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G3PTF1": [
-    { id: 'G3PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom1Length, breadth:bedroom1Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G3PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G3PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G3PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom1Length, breadth:groundHeight,thickness: 3, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom1Length, breadth:groundHeight,thickness: 3, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom1Length, breadth:groundHeight,thickness: 3, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PTF14', resource: 'SqmPPaint', description: 'backWall', length:bedroom1Length, breadth:groundHeight,thickness: 3, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G3PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G3PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Bedroom1//Finishes Rough-in end//
 
   //Ground Bedroom2//Finishes Rough-in start//  
   "G4BW1": [  
-    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom2Length, breadth: bedroom2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G4BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G4BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G4BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G4BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G4BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G4EL1": [
   { id: 'G4EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2417,16 +2456,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G4WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G4PL1": [
-    { id: 'G4PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom2Length, breadth:bedroom2Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G4PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G4PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bedroom2Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bedroom2Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bedroom2Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bedroom2Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G4PR1": [
-    { id: 'G4PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom2Length, breadth:bedroom2Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G4PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G4PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom2Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom2Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom2Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom2Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G4PT1": [
-    { id: 'G4PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom2Length, breadth:bedroom2Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G4PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G4PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G4WP1": [
     { id: 'G4WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom2Length, breadth:bedroom2Width, area: bedroom1Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2442,20 +2490,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G4PTF1": [
-    { id: 'G4PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom2Length, breadth:bedroom2Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G4PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G4PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G4PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PTF14', resource: 'SqmPPaint', description: 'backWall', length:bedroom2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G4PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G4PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Bedroom2//Finishes Rough-in end//
 
   //Ground Bedroom3//Finishes Rough-in start//  
   "G5BW1": [  
-    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom3Length, breadth: bedroom3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G5BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G5BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G5BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G5BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G5BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G5EL1": [
   { id: 'G5EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2486,16 +2537,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G5WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G5PL1": [
-    { id: 'G5PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom3Length, breadth:bedroom3Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G5PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G5PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bedroom3Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bedroom3Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bedroom3Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bedroom3Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G5PR1": [
-    { id: 'G5PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom3Length, breadth:bedroom3Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G5PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G5PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom3Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom3Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom3Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom3Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G5PT1": [
-    { id: 'G5PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom3Length, breadth:bedroom3Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G5PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G5PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G5WP1": [
     { id: 'G5WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom3Length, breadth:bedroom3Width, area: bedroom3Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2510,20 +2570,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G5TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 "G5PTF1": [
-    { id: 'G5PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom3Length, breadth:bedroom3Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G5PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G5PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G5PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PTF14', resource: 'SqmPPaint', description: 'backWall', length:bedroom3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G5PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G5PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Bedroom3//Finishes Rough-in end//
 
   //Ground Bedroom4//Finishes Rough-in start//  
   "G6BW1": [  
-    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom4Length, breadth: bedroom4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code                 
-    { id: 'G6BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G6BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G6BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bedroom4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bedroom4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bedroom4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G6BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bedroom4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code                 
+    { id: 'G6BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G6BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G6EL1": [
   { id: 'G6EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2554,16 +2617,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G6WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G6PL1": [
-    { id: 'G6PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bedroom4Length, breadth:bedroom4Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G6PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G6PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bedroom4Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bedroom4Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bedroom4Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bedroom4Length, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G6PR1": [
-    { id: 'G6PR11', resource: 'SqmPPaint', description: 'Primer', length:bedroom4Length, breadth:bedroom4Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G6PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G6PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G6PT1": [
-    { id: 'G6PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bedroom4Length, breadth:bedroom4Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G6PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G6PR11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR14', resource: 'SqmPPaint', description: 'backWall', length:bedroom4Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G6WP1": [
     { id: 'G6WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bedroom4Length, breadth:bedroom4Width, area: bedroom4Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2579,20 +2651,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G6PTF1": [
-    { id: 'G6PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bedroom4Length, breadth:bedroom4Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G6PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G6PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G6PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bedroom4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bedroom4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bedroom4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PTF14', resource: 'SqmPPaint', description: 'backWall', length:bedroom4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G6PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G6PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Bedroom4//Finishes Rough-in end//
 
   //Ground Drawing//Finishes Rough-in start//  
   "G7BW1": [  
-    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:drawingLength, breadth: drawingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G7BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G7BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G7BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:drawingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:drawingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:drawingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:drawingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G7BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G7BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G7EL1": [
   { id: 'G7EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2623,16 +2698,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G7WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G7PL1": [
-    { id: 'G7PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:drawingLength, breadth:drawingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G7PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G7PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:drawingLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:drawingLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:drawingLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:drawingLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G7PR1": [
-    { id: 'G7PR11', resource: 'SqmPPaint', description: 'Primer', length:drawingLength, breadth:drawingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G7PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G7PR11', resource: 'SqmPPaint', description: 'leftWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR12', resource: 'SqmPPaint', description: 'rightWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR13', resource: 'SqmPPaint', description: 'frontWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR14', resource: 'SqmPPaint', description: 'backWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G7PT1": [
-    { id: 'G7PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:drawingLength, breadth:drawingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G7PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G7PR11', resource: 'SqmPPaint', description: 'leftWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR12', resource: 'SqmPPaint', description: 'rightWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR13', resource: 'SqmPPaint', description: 'frontWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR14', resource: 'SqmPPaint', description: 'backWall', length:drawingLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G7WP1": [
     { id: 'G7WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:drawingLength, breadth:drawingWidth, area: drawingArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2648,20 +2732,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G7PTF1": [
-    { id: 'G7PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:drawingLength, breadth:drawingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G7PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G7PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G7PTF11', resource: 'SqmPPaint', description: 'leftWall', length:drawingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PTF12', resource: 'SqmPPaint', description: 'rightWall', length:drawingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PTF13', resource: 'SqmPPaint', description: 'frontWall', length:drawingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PTF14', resource: 'SqmPPaint', description: 'backWall', length:drawingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G7PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G7PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
   //Ground Drawing//Finishes Rough-in end//
 
 //Ground Media Finsishes Rough-in start//
 "G8BW1": [  
-    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:mediaLength, breadth: mediaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-    { id: 'G8BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-    { id: 'G8BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+    { id: 'G8BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:mediaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:mediaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:mediaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:mediaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+    { id: 'G8BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+    { id: 'G8BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
     ],
 "G8EL1": [
   { id: 'G8EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2692,16 +2779,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G8WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
   ],  
 "G8PL1": [
-    { id: 'G8PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:mediaLength, breadth:mediaWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-    { id: 'G8PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    { id: 'G8PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:mediaLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:mediaLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:mediaLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:mediaLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
   ],  
 "G8PR1": [
-    { id: 'G8PR11', resource: 'SqmPPaint', description: 'Primer', length:mediaLength, breadth:mediaWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G8PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G8PR11', resource: 'SqmPPaint', description: 'leftWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR12', resource: 'SqmPPaint', description: 'rightWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR13', resource: 'SqmPPaint', description: 'frontWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR14', resource: 'SqmPPaint', description: 'backWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G8PT1": [
-    { id: 'G8PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:mediaLength, breadth:mediaWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G8PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G8PR11', resource: 'SqmPPaint', description: 'leftWall', length:mediaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR12', resource: 'SqmPPaint', description: 'rightWall', length:mediaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR13', resource: 'SqmPPaint', description: 'frontWall', length:mediaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR14', resource: 'SqmPPaint', description: 'backWall', length:mediaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ],  
 "G8WP1": [
     { id: 'G8WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:mediaLength, breadth:mediaWidth, area: mediaArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2717,20 +2813,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   ], 
 
 "G8PTF1": [
-    { id: 'G8PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:mediaLength, breadth:mediaWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-    { id: 'G8PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-    { id: 'G8PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G8PTF11', resource: 'SqmPPaint', description: 'leftWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PTF12', resource: 'SqmPPaint', description: 'rightWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PTF13', resource: 'SqmPPaint', description: 'frontWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PTF14', resource: 'SqmPPaint', description: 'backWall', length:mediaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G8PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G8PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
 //Ground Media Finsishes Rough-in end//
 
 //Ground Pooja Finsishes Rough-in start//
 "G9BW1": [  
-  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:poojaLength, breadth: poojaWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G9BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G9BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G9BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:poojaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:poojaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:poojaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:poojaLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G9BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G9BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G9EL1": [
 { id: 'G9EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2761,16 +2860,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G9WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G9PL1": [
-  { id: 'G9PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:poojaLength, breadth:poojaWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G9PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G9PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:poojaLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:poojaLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:poojaLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:poojaLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G9PR1": [
-  { id: 'G9PR11', resource: 'SqmPPaint', description: 'Primer', length:poojaLength, breadth:poojaWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G9PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G9PR11', resource: 'SqmPPaint', description: 'leftWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR12', resource: 'SqmPPaint', description: 'rightWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR13', resource: 'SqmPPaint', description: 'frontWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR14', resource: 'SqmPPaint', description: 'backWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G9PT1": [
-  { id: 'G9PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:poojaLength, breadth:poojaWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G9PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G9PR11', resource: 'SqmPPaint', description: 'leftWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR12', resource: 'SqmPPaint', description: 'rightWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR13', resource: 'SqmPPaint', description: 'frontWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR14', resource: 'SqmPPaint', description: 'backWall', length:poojaLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G9WP1": [
   { id: 'G9WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:poojaLength, breadth:poojaWidth, area: poojaArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2786,20 +2894,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G9PTF1": [
-  { id: 'G9PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:poojaLength, breadth:poojaWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G9PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G9PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G9PTF11', resource: 'SqmPPaint', description: 'leftWall', length:poojaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PTF12', resource: 'SqmPPaint', description: 'rightWall', length:poojaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PTF13', resource: 'SqmPPaint', description: 'frontWall', length:poojaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PTF14', resource: 'SqmPPaint', description: 'backWall', length:poojaLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G9PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G9PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Pooja Finsishes Rough-in end//
 
 //Ground Sitout Finsishes Rough-in start//
 "G10BW1": [  
-  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:sitoutLength, breadth: sitoutWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G10BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G10BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G10BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:sitoutLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:sitoutLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:sitoutLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:sitoutLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G10BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G10BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G10EL1": [
 { id: 'G10EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2830,16 +2941,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G10WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G10PL1": [
-  { id: 'G10PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:sitoutLength, breadth:sitoutWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G10PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G10PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:sitoutLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:sitoutLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:sitoutLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:sitoutLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G10PR1": [
-  { id: 'G10PR11', resource: 'SqmPPaint', description: 'Primer', length:sitoutLength, breadth:sitoutWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G10PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G10PR11', resource: 'SqmPPaint', description: 'leftWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR12', resource: 'SqmPPaint', description: 'rightWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR13', resource: 'SqmPPaint', description: 'frontWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR14', resource: 'SqmPPaint', description: 'backWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G10PT1": [
-  { id: 'G10PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:sitoutLength, breadth:sitoutWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G10PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G10PR11', resource: 'SqmPPaint', description: 'leftWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR12', resource: 'SqmPPaint', description: 'rightWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR13', resource: 'SqmPPaint', description: 'frontWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR14', resource: 'SqmPPaint', description: 'backWall', length:sitoutLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G10WP1": [
   { id: 'G10WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:sitoutLength, breadth:sitoutWidth, area: sitoutArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2855,20 +2975,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G10PTF1": [
-  { id: 'G10PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:sitoutLength, breadth:sitoutWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G10PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G10PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G10PTF11', resource: 'SqmPPaint', description: 'leftWall', length:sitoutLength, breadth:groundHeight,  area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PTF12', resource: 'SqmPPaint', description: 'rightWall', length:sitoutLength, breadth:groundHeight,  area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PTF13', resource: 'SqmPPaint', description: 'frontWall', length:sitoutLength, breadth:groundHeight,  area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PTF14', resource: 'SqmPPaint', description: 'backWall', length:sitoutLength, breadth:groundHeight,  area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G10PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G10PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Sitout Finsishes Rough-in end//
 
 //Ground Balcony Finsishes Rough-in start//
 "G11BW1": [  
-  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:balconyLength, breadth: balconyWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G11BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G11BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G11BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:balconyLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:balconyLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:balconyLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:balconyLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G11BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G11BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G11EL1": [
 { id: 'G11EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2899,16 +3022,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G11WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G11PL1": [
-  { id: 'G11PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:balconyLength, breadth:balconyWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G11PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G11PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:balconyLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:balconyLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:balconyLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:balconyLength, breadth:groundHeight, thickness: 0.016,  rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G11PR1": [
-  { id: 'G11PR11', resource: 'SqmPPaint', description: 'Primer', length:balconyLength, breadth:balconyWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G11PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G11PR11', resource: 'SqmPPaint', description: 'leftWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR12', resource: 'SqmPPaint', description: 'rightWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR13', resource: 'SqmPPaint', description: 'frontWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR14', resource: 'SqmPPaint', description: 'backWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G11PT1": [
-  { id: 'G11PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:balconyLength, breadth:balconyWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G11PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G11PR11', resource: 'SqmPPaint', description: 'leftWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR12', resource: 'SqmPPaint', description: 'rightWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR13', resource: 'SqmPPaint', description: 'frontWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR14', resource: 'SqmPPaint', description: 'backWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G11WP1": [
   { id: 'G11WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:balconyLength, breadth:balconyWidth, area: balconyArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2924,20 +3056,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G11PTF1": [
-  { id: 'G11PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:balconyLength, breadth:balconyWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G11PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G11PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G11PTF11', resource: 'SqmPPaint', description: 'leftWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PTF12', resource: 'SqmPPaint', description: 'rightWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PTF13', resource: 'SqmPPaint', description: 'frontWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PTF14', resource: 'SqmPPaint', description: 'backWall', length:balconyLength, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G11PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G11PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Balcony Finsishes Rough-in end//
 
 //Ground Bath-1 Finsishes Rough-in start//
 "G12BW1": [  
-  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath1Length, breadth: bath1Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G12BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G12BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G12BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath1Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G12BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G12BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G12EL1": [
 { id: 'G12EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -2968,16 +3103,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G12WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G12PL1": [
-  { id: 'G12PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath1Length, breadth:bath1Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G12PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G12PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bath1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bath1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bath1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bath1Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G12PR1": [
-  { id: 'G12PR11', resource: 'SqmPPaint', description: 'Primer', length:bath1Length, breadth:bath1Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G12PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G12PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR14', resource: 'SqmPPaint', description: 'backWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G12PT1": [
-  { id: 'G12PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath1Length, breadth:bath1Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G12PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G12PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR14', resource: 'SqmPPaint', description: 'backWall', length:bath1Length, breadth:groundHeight, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G12WP1": [
   { id: 'G12WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath1Length, breadth:bath1Width, area: bath1Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -2993,20 +3137,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G12PTF1": [
-  { id: 'G12PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath1Length, breadth:bath1Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G12PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G12PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G12PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bath1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bath1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bath1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PTF14', resource: 'SqmPPaint', description: 'backWall', length:bath1Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G12PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G12PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Bath-1 Finsishes Rough-in end//
 
 //Ground Bath-2 Finsishes Rough-in start//
 "G13BW1": [  
-  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath2Length, breadth: bath2Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G13BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G13BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G13BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath2Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G13BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G13BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G13EL1": [
 { id: 'G13EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3037,16 +3184,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G13WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G13PL1": [
-  { id: 'G13PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath2Length, breadth:bath2Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G13PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G13PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bath2Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bath2Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bath2Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bath2Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G13PR1": [
-  { id: 'G13PR11', resource: 'SqmPPaint', description: 'Primer', length:bath2Length, breadth:bath2Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G13PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G13PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR14', resource: 'SqmPPaint', description: 'backWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 },   
+  { id: 'G13PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G13PT1": [
-  { id: 'G13PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath2Length, breadth:bath2Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G13PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G13PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR14', resource: 'SqmPPaint', description: 'backWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G13WP1": [
   { id: 'G13WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath2Length, breadth:bath2Width, area: bath2Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3062,20 +3218,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G13PTF1": [
-  { id: 'G13PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath2Length, breadth:bath2Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G13PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G13PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G13PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PTF14', resource: 'SqmPPaint', description: 'backWall', length:bath2Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G13PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G13PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Bath-2 Finsishes Rough-in end//
 
 //Ground Bath-3 Finsishes Rough-in start//
 "G14BW1": [  
-  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath3Length, breadth: bath3Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G14BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G14BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G14BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath3Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G14BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G14BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G14EL1": [
 { id: 'G14EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3106,16 +3265,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G14WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G14PL1": [
-  { id: 'G14PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath3Length, breadth:bath3Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G14PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G14PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bath3Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bath3Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bath3Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bath3Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G14PR1": [
-  { id: 'G14PR11', resource: 'SqmPPaint', description: 'Primer', length:bath3Length, breadth:bath3Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G14PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G14PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR14', resource: 'SqmPPaint', description: 'backWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G14PT1": [
-  { id: 'G14PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath3Length, breadth:bath3Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G14PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G14PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PR14', resource: 'SqmPPaint', description: 'backWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 },   
+  { id: 'G14PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G14WP1": [
   { id: 'G14WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath3Length, breadth:bath3Width, area: bath3Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3131,20 +3299,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G14PTF1": [
-  { id: 'G14PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath3Length, breadth:bath3Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G14PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G14PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G14PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PTF14', resource: 'SqmPPaint', description: 'backWall', length:bath3Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G14PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G14PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Bath-3 Finsishes Rough-in end//
 
 //Ground Bath-4 Finsishes Rough-in start//
 "G15BW1": [  
-  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath4Length, breadth: bath4Width, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G15BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G15BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G15BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:bath4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:bath4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:bath4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:bath4Length, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G15BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G15BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G15EL1": [
 { id: 'G15EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3175,16 +3346,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G15WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G15PL1": [
-  { id: 'G15PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:bath4Length, breadth:bath4Width, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G15PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G15PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:bath4Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:bath4Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:bath4Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:bath4Length, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G15PR1": [
-  { id: 'G15PR11', resource: 'SqmPPaint', description: 'Primer', length:bath4Length, breadth:bath4Width, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G15PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G15PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR14', resource: 'SqmPPaint', description: 'backWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G15PT1": [
-  { id: 'G15PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:bath4Length, breadth:bath4Width, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G15PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G15PR11', resource: 'SqmPPaint', description: 'leftWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR12', resource: 'SqmPPaint', description: 'rightWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR13', resource: 'SqmPPaint', description: 'frontWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR14', resource: 'SqmPPaint', description: 'backWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G15WP1": [
   { id: 'G15WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:bath4Length, breadth:bath4Width, area: bath4Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3200,20 +3380,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G15PTF1": [
-  { id: 'G15PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:bath4Length, breadth:bath4Width,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G15PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G15PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G15PTF11', resource: 'SqmPPaint', description: 'leftWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PTF12', resource: 'SqmPPaint', description: 'rightWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PTF13', resource: 'SqmPPaint', description: 'frontWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PTF14', resource: 'SqmPPaint', description: 'backWall', length:bath4Length, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G15PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G15PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Bath-4 Finsishes Rough-in end//
 
 //Ground Toilet Finsishes Rough-in start//
 "G16BW1": [  
-  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:toiletLength, breadth: toiletWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G16BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G16BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G16BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:toiletLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:toiletLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:toiletLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:toiletLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G16BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G16BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G16EL1": [
 { id: 'G16EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3244,16 +3427,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G16WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G16PL1": [
-  { id: 'G16PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:toiletLength, breadth:toiletWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G16PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G16PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:toiletLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:toiletLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:toiletLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:toiletLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G16PR1": [
-  { id: 'G16PR11', resource: 'SqmPPaint', description: 'Primer', length:toiletLength, breadth:toiletWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G16PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G16PR11', resource: 'SqmPPaint', description: 'leftWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR12', resource: 'SqmPPaint', description: 'rightWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR13', resource: 'SqmPPaint', description: 'frontWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR14', resource: 'SqmPPaint', description: 'backWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G16PT1": [
-  { id: 'G16PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:toiletLength, breadth:toiletWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G16PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G16PR11', resource: 'SqmPPaint', description: 'leftWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR12', resource: 'SqmPPaint', description: 'rightWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR13', resource: 'SqmPPaint', description: 'frontWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR14', resource: 'SqmPPaint', description: 'backWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G16WP1": [
   { id: 'G16WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:toiletLength, breadth:toiletWidth, area: toiletArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3269,20 +3461,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G16PTF1": [
-  { id: 'G16PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:toiletLength, breadth:toiletWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G16PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G16PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G16PTF11', resource: 'SqmPPaint', description: 'leftWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PTF12', resource: 'SqmPPaint', description: 'rightWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PTF13', resource: 'SqmPPaint', description: 'frontWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PTF14', resource: 'SqmPPaint', description: 'backWall', length:toiletLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G16PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G16PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Toilet Finsishes Rough-in end//
 
 //Ground Store Finsishes Rough-in start//
 "G17BW1": [  
-  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:storeLength, breadth: storeWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code               
-  { id: 'G17BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G17BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G17BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:storeLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:storeLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:storeLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G17BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:storeLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code               
+  { id: 'G17BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G17BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G17EL1": [
 { id: 'G17EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3313,16 +3508,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G17WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G17PL1": [
-  { id: 'G17PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:storeLength, breadth:storeWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G17PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G17PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:storeLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:storeLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:storeLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:storeLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G17PR1": [
-  { id: 'G17PR11', resource: 'SqmPPaint', description: 'Primer', length:storeLength, breadth:storeWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G17PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G17PR11', resource: 'SqmPPaint', description: 'leftWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR12', resource: 'SqmPPaint', description: 'rightWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR13', resource: 'SqmPPaint', description: 'frontWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR14', resource: 'SqmPPaint', description: 'backWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G17PT1": [
-  { id: 'G17PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:storeLength, breadth:storeWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G17PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G17PR11', resource: 'SqmPPaint', description: 'leftWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR12', resource: 'SqmPPaint', description: 'rightWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR13', resource: 'SqmPPaint', description: 'frontWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR14', resource: 'SqmPPaint', description: 'backWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G17WP1": [
   { id: 'G17WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:storeLength, breadth:storeWidth, area: storeArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3338,20 +3542,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G17PTF1": [
-  { id: 'G17PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:storeLength, breadth:storeWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G17PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G17PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G17PTF11', resource: 'SqmPPaint', description: 'leftWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PTF12', resource: 'SqmPPaint', description: 'rightWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PTF13', resource: 'SqmPPaint', description: 'frontWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PTF14', resource: 'SqmPPaint', description: 'backWall', length:storeLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G17PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G17PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Store Finsishes Rough-in end//
 
 //Ground Parking Finsishes Rough-in start//
 "G18BW1": [  
-  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:parkingLength, breadth: parkingWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G18BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G18BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G18BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:parkingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:parkingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:parkingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:parkingLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G18BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G18BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G18EL1": [
 { id: 'G18EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3382,16 +3589,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G18WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G18PL1": [
-  { id: 'G18PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:parkingLength, breadth:parkingWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G18PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G18PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:parkingLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:parkingLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:parkingLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:parkingLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G18PR1": [
-  { id: 'G18PR11', resource: 'SqmPPaint', description: 'Primer', length:parkingLength, breadth:parkingWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G18PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G18PR11', resource: 'SqmPPaint', description: 'leftWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR12', resource: 'SqmPPaint', description: 'rightWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR13', resource: 'SqmPPaint', description: 'frontWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR14', resource: 'SqmPPaint', description: 'backWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G18PT1": [
-  { id: 'G18PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:parkingLength, breadth:parkingWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G18PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G18PR11', resource: 'SqmPPaint', description: 'leftWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR12', resource: 'SqmPPaint', description: 'rightWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR13', resource: 'SqmPPaint', description: 'frontWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR14', resource: 'SqmPPaint', description: 'backWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G18WP1": [
   { id: 'G18WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:parkingLength, breadth:parkingWidth, area: parkingArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3407,20 +3623,23 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G18PTF1": [
-  { id: 'G18PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:parkingLength, breadth:parkingWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G18PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G18PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G18PTF11', resource: 'SqmPPaint', description: 'leftWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PTF12', resource: 'SqmPPaint', description: 'rightWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PTF13', resource: 'SqmPPaint', description: 'frontWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PTF14', resource: 'SqmPPaint', description: 'backWall', length:parkingLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G18PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G18PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Parking Finsishes Rough-in end//
 
 //Ground Staircase Finsishes Rough-in start//
 "G19BW1": [  
-  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:staircaseLength, breadth: staircaseWidth, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
-  { id: 'G19BW12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
-  { id: 'G19BW13', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+  { id: 'G19BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:staircaseLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:staircaseLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:staircaseLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:staircaseLength, breadth: groundHeight, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+  { id: 'G19BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+  { id: 'G19BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
   ],
 "G19EL1": [
 { id: 'G19EL11', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 2, totalCost: 0 },    
@@ -3451,16 +3670,25 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   { id: 'G19WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
 ],  
 "G19PL1": [
-  { id: 'G19PL11', resource: 'Cummm12PlasterManual', description: 'Plaster', length:staircaseLength, breadth:staircaseWidth, thickness: 0.016, perimeter:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
-  { id: 'G19PL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+  { id: 'G19PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:staircaseLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:staircaseLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:staircaseLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:staircaseLength, breadth:groundHeight, thickness: 0.016, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
 ],  
 "G19PR1": [
-  { id: 'G19PR11', resource: 'SqmPPaint', description: 'Primer', length:staircaseLength, breadth:staircaseWidth, area: 0, perimeter:0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G19PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G19PR11', resource: 'SqmPPaint', description: 'leftWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR12', resource: 'SqmPPaint', description: 'rightWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR13', resource: 'SqmPPaint', description: 'frontWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR14', resource: 'SqmPPaint', description: 'backWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G19PT1": [
-  { id: 'G19PR11', resource: 'SqmPPaint', description: 'Paint 1st Coat', length:staircaseLength, breadth:staircaseWidth, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G19PR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G19PR11', resource: 'SqmPPaint', description: 'leftWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR12', resource: 'SqmPPaint', description: 'rightWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR13', resource: 'SqmPPaint', description: 'frontWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR14', resource: 'SqmPPaint', description: 'backWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ],  
 "G19WP1": [
   { id: 'G19WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:staircaseLength, breadth:staircaseWidth, area: staircaseArea, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
@@ -3476,9 +3704,12 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 ], 
 
 "G19PTF1": [
-  { id: 'G19PTF11', resource: 'SqmPPaint', description: 'Paint Final Coat', length:staircaseLength, breadth:staircaseWidth,thickness: 3, area: 0, perimeter:0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
-  { id: 'G19PTF12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
-  { id: 'G19PTF13', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G19PTF11', resource: 'SqmPPaint', description: 'leftWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PTF12', resource: 'SqmPPaint', description: 'rightWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PTF13', resource: 'SqmPPaint', description: 'frontWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PTF14', resource: 'SqmPPaint', description: 'backWall', length:staircaseLength, breadth:groundHeight, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+  { id: 'G19PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  { id: 'G19PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
 ], 
 //Ground Staircase Finsishes Rough-in end//
 
