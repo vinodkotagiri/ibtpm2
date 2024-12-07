@@ -149,6 +149,7 @@ const tasks:Task[]=[
     duration:3,
     cost:0,
     numbersRequired:16,
+    required:true,
     strategy:'FS',
     dependencies:['SP2'],
     type:'task',
@@ -238,6 +239,7 @@ const tasks:Task[]=[
     duration:0,
     cost:0,
     numbersRequired:16,
+    required:true,    
     strategy:'FS',
     dependencies:[],
     type:'project',
@@ -5593,7 +5595,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G1BW1'],//Living brickwork FS//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -5834,7 +5836,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G2BW1'],//Kitchen brickwork//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6073,7 +6075,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G3BW1'],//Bedromm1 brickwork//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6314,7 +6316,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G4BW1'],//Bedroom2 Brickwork//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6556,7 +6558,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G5BW1'],//Bedroom3 brickwork//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -6797,7 +6799,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G6BW1'],//Bedroom4 brickwork//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7038,7 +7040,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G7BW1'],//Drawing brickwork//
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7279,7 +7281,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G8BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7297,7 +7299,7 @@ parent:'L3EL0'
   type:'project',
   progress:0,
   hideChildren:false,
-  parent:'GMI1'
+  parent:'GPI1'
 },
 {
   id:'G9EL1',
@@ -7520,7 +7522,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G9BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -7761,7 +7763,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G10BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8002,7 +8004,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G11BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8243,7 +8245,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G12BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8484,7 +8486,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G13BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8725,7 +8727,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G14BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -8966,7 +8968,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G15BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9207,7 +9209,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G16BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9448,7 +9450,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G17BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
@@ -9689,7 +9691,7 @@ parent:'L3EL0'
   duration:1,
   cost:0,
   strategy:'FS',
-  dependencies:['L2SLC1'],//L2 Slab Concrete//
+  dependencies:['G18BW1'],
   type:'task',
   progress:0,
   hideChildren:false,
