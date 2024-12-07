@@ -1246,26 +1246,59 @@ export const KCtop90sftRates = {
 }
 
 export const CabinetRates = { 
-  Kitchen:{
+  PlyW:{
     Sft1: 1100,    
     Sft2: 1500,    
     Sft3: 1800,
     Sft4: 2500,    
-    Sft5: 3250,           
+    Sft5: 3250, 
+    
+    Sqm1: 16000,    
+    Sqm2: 19000,    
+    Sqm3: 22000,
+    Sqm4: 26000,    
+    Sqm5: 28000, 
   }, 
-  Wardrobe:{
-    Sft1: 1300,    
-    Sft2: 1800,    
-    Sft3: 2500,
-    Sft4: 3000,    
-    Sft5: 3750,           
+  HardW:{
+    Sft1: 2500,    
+    Sft2: 3500,    
+    Sft3: 4500,
+    Sft4: 5500,    
+    Sft5: 7500, 
+    
+    Sqm1: 32000,    
+    Sqm2: 35000,    
+    Sqm3: 38000,
+    Sqm4: 42000,    
+    Sqm5: 45000, 
   }, 
+  Metal:{
+    Sft1: 700,    
+    Sft2: 1000,    
+    Sft3: 1200,
+    Sft4: 1800,    
+    Sft5: 2500,           
+
+    Sqm1: 3800,    
+    Sqm2: 4500,    
+    Sqm3: 5000,
+    Sqm4: 6000,    
+    Sqm5: 7500,           
+  }, 
+}
+export const FurnishRates = { 
   Furni:{
     Sft1: 8250,    
     Sft2: 10000,    
     Sft3: 15000,
     Sft4: 25000,    
-    Sft5: 35000,           
+    Sft5: 35000,  
+
+    Sqm1: 8250,    
+    Sqm2: 10000,    
+    Sqm3: 15000,
+    Sqm4: 25000,    
+    Sqm5: 35000,           
   }, 
 }
 export const ExhaustRates = { 
