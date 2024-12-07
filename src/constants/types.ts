@@ -191,153 +191,223 @@ export type Resource = {
   totalCost: number
 }
 
-export type DrawingData = {
-  currentUnits:"imperial"|"SI"
-  plotLength: number,
-  plotWidth: number,
-  plotArea: number,
-  plotPerimeter: number,
-  builtLength: number,
-  builtWidth: number,
-  builtupLength:number,
-  builtupWidth:number
-  builtLength1: number,
-  builtWidth1: number,
-  builtLength2: number,
-  builtWidth2: number,
-  builtLength3: number,
-  builtWidth3: number,
-  builtupArea: number,
-  builtupArea1: number,
-  builtupArea2: number,
-  builtupArea3: number,
-  builtupPerimeter: number,
+// export type DrawingData = {
+//   currentUnits:"imperial"|"SI"
+//   plotLength: number,
+//   plotWidth: number,
+//   plotArea: number,
+//   plotPerimeter: number,
+//   builtLength: number,
+//   builtWidth: number,
+//   builtupLength:number,
+//   builtupWidth:number
+//   builtLength1: number,
+//   builtWidth1: number,
+//   builtLength2: number,
+//   builtWidth2: number,
+//   builtLength3: number,
+//   builtWidth3: number,
+//   builtupArea: number,
+//   builtupArea1: number,
+//   builtupArea2: number,
+//   builtupArea3: number,
+//   builtupPerimeter: number,
   
-  groundHeight: number,     //Room height //Each floor height //For brickwork, plaster / paint /wall tiles
-  level1Height: number,    
-  level2Height: number,    
-  level3Height: number,    
+//   groundHeight: number,     //Room height //Each floor height //For brickwork, plaster / paint /wall tiles
+//   level1Height: number,    
+//   level2Height: number,    
+//   level3Height: number,    
 
-  livingLength: number,     //xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required
-  livingWidth: number,
-  livingArea: number,
-  bedroom1Length: number,
-  bedroom1Width: number,
-  bedroom1Area: number,
-  bedroom2Length: number,
-  bedroom2Width: number,
-  bedroom2Area: number,
-  bedroom3Length: number,
-  bedroom3Width: number,
-  bedroom3Area: number,
-  bedroom4Length: number,
-  bedroom4Width: number,
-  bedroom4Area: number,
-  drawingLength: number,
-  drawingWidth: number,
-  drawingArea: number,
-  kitchenLength: number,
-  kitchenWidth: number,
-  kitchenArea: number,
-  poojaLength: number,
-  poojaWidth: number,
-  poojaArea: number,
-  mediaLength: number,
-  mediaWidth: number,
-  mediaArea: number,
-  bath1Length: number,
-  bath1Width: number,
-  bath1Area: number,
-  bath2Length: number,
-  bath2Width: number,
-  bath2Area: number,
-  bath3Length: number,
-  bath3Width: number,
-  bath3Area: number,
-  bath4Length: number,
-  bath4Width: number,
-  bath4Area: number,
-  toiletLength: number,
-  toiletWidth: number,
-  toiletArea: number,
-  balconyLength: number,
-  balconyWidth: number,
-  balconyArea: number,
-  sitoutLength: number,
-  sitoutWidth: number,
-  sitoutArea: number,
-  storeLength: number,  
-  storeWidth: number,
-  storeArea: number,
-  parkingLength: number,
-  parkingWidth: number,
-  parkingArea: number,
-  staircaseLength: number,
-  staircaseWidth: number,
-  staircaseArea: number,
-//xxxx room wise L&B  xxxxxxx//
-    //xxx//           //Door Frames
-    df1Length: number,  
-    df1Width: number,
-    df1Area: number,
+//   livingLength: number,     //xxxx room wise L&B  xxxxxxx//helps to calculate brickwork, flooring, paint and other materials as required
+//   livingWidth: number,
+//   livingArea: number,
+//   bedroom1Length: number,
+//   bedroom1Width: number,
+//   bedroom1Area: number,
+//   bedroom2Length: number,
+//   bedroom2Width: number,
+//   bedroom2Area: number,
+//   bedroom3Length: number,
+//   bedroom3Width: number,
+//   bedroom3Area: number,
+//   bedroom4Length: number,
+//   bedroom4Width: number,
+//   bedroom4Area: number,
+//   drawingLength: number,
+//   drawingWidth: number,
+//   drawingArea: number,
+//   kitchenLength: number,
+//   kitchenWidth: number,
+//   kitchenArea: number,
+//   poojaLength: number,
+//   poojaWidth: number,
+//   poojaArea: number,
+//   mediaLength: number,
+//   mediaWidth: number,
+//   mediaArea: number,
+//   bath1Length: number,
+//   bath1Width: number,
+//   bath1Area: number,
+//   bath2Length: number,
+//   bath2Width: number,
+//   bath2Area: number,
+//   bath3Length: number,
+//   bath3Width: number,
+//   bath3Area: number,
+//   bath4Length: number,
+//   bath4Width: number,
+//   bath4Area: number,
+//   toiletLength: number,
+//   toiletWidth: number,
+//   toiletArea: number,
+//   balconyLength: number,
+//   balconyWidth: number,
+//   balconyArea: number,
+//   sitoutLength: number,
+//   sitoutWidth: number,
+//   sitoutArea: number,
+//   storeLength: number,  
+//   storeWidth: number,
+//   storeArea: number,
+//   parkingLength: number,
+//   parkingWidth: number,
+//   parkingArea: number,
+//   staircaseLength: number,
+//   staircaseWidth: number,
+//   staircaseArea: number,
+// //xxxx room wise L&B  xxxxxxx//
+//     //xxx//           //Door Frames
+//     df1Length: number,  
+//     df1Width: number,
+//     df1Area: number,
     
-    wf1Length: number,  //Window Frames
-    wf1Width: number,
-    wf1Area: number,
-    ///xxxx//
-    df2Length: number,  
-    df2Width: number,
-    df21Area: number,
+//     wf1Length: number,  //Window Frames
+//     wf1Width: number,
+//     wf1Area: number,
+//     ///xxxx//
+//     df2Length: number,  
+//     df2Width: number,
+//     df21Area: number,
     
-    wf21Length: number,  
-    wf2Width: number,
-    wf2Area: number,
-    ///xxxx//
-    df3Length: number,  
-    df3Width: number,
-    df31Area: number,
+//     wf21Length: number,  
+//     wf2Width: number,
+//     wf2Area: number,
+//     ///xxxx//
+//     df3Length: number,  
+//     df3Width: number,
+//     df31Area: number,
     
-    wf31Length: number,  
-    wf3Width: number,
-    wf3Area: number,
-    ///xxxx//
-//xxx//
-door1Length: number,  //Door
-door1Width: number,
-door1Area: number,
+//     wf31Length: number,  
+//     wf3Width: number,
+//     wf3Area: number,
+//     ///xxxx//
+// //xxx//
+// door1Length: number,  //Door
+// door1Width: number,
+// door1Area: number,
 
-window1Length: number,  
-window1Width: number,
-window1Area: number,
-///xxxx//
-door2Length: number,  
-door2Width: number,
-door21Area: number,
+// window1Length: number,  
+// window1Width: number,
+// window1Area: number,
+// ///xxxx//
+// door2Length: number,  
+// door2Width: number,
+// door21Area: number,
 
-window21Length: number,  
-window2Width: number,
-window2Area: number,
-///xxxx//
-door3Length: number,  
-door3Width: number,
-door31Area: number,
+// window21Length: number,  
+// window2Width: number,
+// window2Area: number,
+// ///xxxx//
+// door3Length: number,  
+// door3Width: number,
+// door31Area: number,
 
-window31Length: number,  
-window3Width: number,
-window3Area: number,
-///xxxx//
+// window31Length: number,  
+// window3Width: number,
+// window3Area: number,
+// ///xxxx//
 
-  excavationArea: number,
-  excavationDepth: number,
-  slabThickness:number
-  groundFloorArea: number,
-  firstFloorArea: number,
-  secondFloorArea: number,
-  thirdFloorArea: number,
-  fourthFloorArea: number,
-  groundFloorWalls: [ { length: number, thickness: number } ],
-  firstFloorWalls: [ { length: number, thickness: number } ],
-  secondFloorWalls: [ { length: number, thickness: number } ],
-  thirdFloorWalls: [ { length: number, thickness: number } ],
-  fourthFloorWalls: [ { length: number, thickness: number } ],
+//   excavationArea: number,
+//   excavationDepth: number,
+//   slabThickness:number
+//   groundFloorArea: number,
+//   firstFloorArea: number,
+//   secondFloorArea: number,
+//   thirdFloorArea: number,
+//   fourthFloorArea: number,
+//   groundFloorWalls: [ { length: number, thickness: number } ],
+//   firstFloorWalls: [ { length: number, thickness: number } ],
+//   secondFloorWalls: [ { length: number, thickness: number } ],
+//   thirdFloorWalls: [ { length: number, thickness: number } ],
+//   fourthFloorWalls: [ { length: number, thickness: number } ],
+// }
+
+export type roomType={
+  name:string
+  length:number
+  width:number
+  area:number
+  leftWallLength?:number
+  rightWallLength?:number
+  frontWallLength?:number
+  backWallLength?:number
+  
+  leftWallThickness?:number
+  rightWallThickness?:number
+  frontWallThickness?:number
+  backWallThickness?:number
+
+  leftWallHeight?:number
+  rightWallHeight?:number
+  frontWallHeight?:number
+  backWallHeight?:number
+}
+export type DrawingData=
+{
+  innerWallThickness: number
+  floorHeight: number
+  plotLength: number
+  plotWidth: number
+  plotArea: number
+  builtupLength: number
+  builtupWidth: number
+  builtupArea: number
+  groundFloor?: {
+    length: number
+    width: number
+    area:number
+    rooms?:[
+      
+    ]
+  },
+  firstFloor?: {
+    length: number
+    width: number
+    area:number
+    rooms:Array<roomType>
+  },
+  secondFloor?: {
+    length: number
+    width: number
+    area:number
+    rooms:Array<roomType>
+  },
+  thirdFloor?: {
+    length: number
+    width: number
+    area:number
+    rooms:Array<roomType>
+  },
+  fourthFloor?: {
+    length: number
+    width: number
+    area:number
+    rooms:Array<roomType>
+  },
+  fifthFloor?: {
+    length: number
+    width: number
+    area:number
+    rooms:Array<roomType>
+  }
 }

@@ -24,33 +24,33 @@ export function loadDrawingData ( token: string, id: string ) {
 
             groundFloor: {
                 length: ( data?.groundFloor.length * conversionFactor || 0 ).toFixed( 2 ),
-                breadth: ( data?.groundFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
+                width: ( data?.groundFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
                 area: ( data?.groundFloor.area * conversionFactor * conversionFactor || 0 ).toFixed( 2 ),
 
             },
             firstFloor: {
                 length: ( data?.firstFloor.length * conversionFactor || 0 ).toFixed( 2 ),
-                breadth: ( data?.firstFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
+                width: ( data?.firstFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
                 area: ( data?.firstFloor.area * conversionFactor * conversionFactor || 0 ).toFixed( 2 ),
             },
             secondFloor: {
                 length: ( data?.secondFloor.length * conversionFactor || 0 ).toFixed( 2 ),
-                breadth: ( data?.secondFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
+                width: ( data?.secondFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
                 area: ( data?.secondFloor.area * conversionFactor * conversionFactor || 0 ).toFixed( 2 ),
             },
             thirdFloor: {
                 length: ( data?.thirdFloor.length * conversionFactor || 0 ).toFixed( 2 ),
-                breadth: ( data?.thirdFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
+                width: ( data?.thirdFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
                 area: ( data?.thirdFloor.area * conversionFactor * conversionFactor || 0 ).toFixed( 2 ),
             },
             fourthFloor: {
                 length: ( data?.fourthFloor.length * conversionFactor || 0 ).toFixed( 2 ),
-                breadth: ( data?.fourthFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
+                width: ( data?.fourthFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
                 area: ( data?.fourthFloor.area * conversionFactor * conversionFactor || 0 ).toFixed( 2 ),
             },
             fifthFloor: {
                 length: ( data?.fifthFloor.length * conversionFactor || 0 ).toFixed( 2 ),
-                breadth: ( data?.fifthFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
+                width: ( data?.fifthFloor.breadth * conversionFactor || 0 ).toFixed( 2 ),
                 area: ( data?.fifthFloor.area * conversionFactor * conversionFactor || 0 ).toFixed( 2 ),
             }
 
@@ -64,43 +64,38 @@ export function loadDrawingData ( token: string, id: string ) {
                 const roomBreadth = room.breadth * conversionFactor
                 const roomName = `GroundFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
-
-                currentRoomData[ `${ roomName }Length` ] = roomLength.toFixed( 2 )
-                currentRoomData[ `${ roomName }Width` ] = roomBreadth.toFixed( 2 )
-                currentRoomData[ `${ roomName }Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
+                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "length" ] = roomLength.toFixed( 2 )
+                currentRoomData[ "width" ] = roomBreadth.toFixed( 2 )
+                currentRoomData[ "area" ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
                 for ( const wall of room?.walls ) {
                     if ( wall.side == 'L' ) {
-                        currentRoomData[ `${ roomName }LeftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }LeftWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }LeftWallHeight` ] = floorHeight
+                        currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `leftWallThickness` ] = innerWallThickness
+                        currentRoomData[ `leftWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'R' ) {
-                        currentRoomData[ `${ roomName }RightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }RightWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }RightWallHeight` ] = floorHeight
+                        currentRoomData[ `rightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `rightWallThickness` ] = innerWallThickness
+                        currentRoomData[ `rightWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'F' ) {
-                        currentRoomData[ `${ roomName }FrontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }FrontWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }FrontWallHeight` ] = floorHeight
+                        currentRoomData[ `frontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `frontWallThickness` ] = innerWallThickness
+                        currentRoomData[ `frontWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'B' ) {
-                        currentRoomData[ `${ roomName }BackWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }BackWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }BackWallHeight` ] = floorHeight
+                        currentRoomData[ `backWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `backWallThickness` ] = innerWallThickness
+                        currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
 
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.groundFloor = {
-                groundFloorLength: drawingData.groundFloor.length,
-                groundFloorWidth: drawingData.groundFloor.breadth,
-                groundFloorArea: drawingData.groundFloor.area,
-                ...roomsData.reduce( ( acc, room ) => ( { ...acc, ...room } ), {} )
-            }
+            drawingData.groundFloor.rooms=roomsData
         } else {
             delete drawingData.groundFloor
         }
@@ -114,42 +109,38 @@ export function loadDrawingData ( token: string, id: string ) {
                 const roomName = `FirstFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
 
-                currentRoomData[ `${ roomName }Length` ] = roomLength.toFixed( 2 )
-                currentRoomData[ `${ roomName }Width` ] = roomBreadth.toFixed( 2 )
-                currentRoomData[ `${ roomName }Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
+                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "length" ] = roomLength.toFixed( 2 )
+                currentRoomData[ "width" ] = roomBreadth.toFixed( 2 )
+                currentRoomData[ "area" ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
                 for ( const wall of room?.walls ) {
                     if ( wall.side == 'L' ) {
-                        currentRoomData[ `${ roomName }LeftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }LeftWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }LeftWallHeight` ] = floorHeight
+                        currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `leftWallThickness` ] = innerWallThickness
+                        currentRoomData[ `leftWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'R' ) {
-                        currentRoomData[ `${ roomName }RightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }RightWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }RightWallHeight` ] = floorHeight
+                        currentRoomData[ `rightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `rightWallThickness` ] = innerWallThickness
+                        currentRoomData[ `rightWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'F' ) {
-                        currentRoomData[ `${ roomName }FrontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }FrontWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }FrontWallHeight` ] = floorHeight
+                        currentRoomData[ `frontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `frontWallThickness` ] = innerWallThickness
+                        currentRoomData[ `frontWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'B' ) {
-                        currentRoomData[ `${ roomName }BackWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }BackWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }BackWallHeight` ] = floorHeight
+                        currentRoomData[ `backWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `backWallThickness` ] = innerWallThickness
+                        currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
 
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.firstFloor = {
-                firstFloorLength: drawingData.firstFloor.length,
-                firstFloorWidth: drawingData.firstFloor.breadth,
-                firstFloorArea: drawingData.firstFloor.area,
-                ...roomsData.reduce( ( acc, room ) => ( { ...acc, ...room } ), {} )
-            }
+            drawingData.firstFloor.rooms=roomsData
         } else {
             delete drawingData.firstFloor
         }
@@ -163,42 +154,38 @@ export function loadDrawingData ( token: string, id: string ) {
                 const roomName = `SecondFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
 
-                currentRoomData[ `${ roomName }Length` ] = roomLength.toFixed( 2 )
-                currentRoomData[ `${ roomName }Width` ] = roomBreadth.toFixed( 2 )
-                currentRoomData[ `${ roomName }Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
+                currentRoomData[ "name" ] = roomName
+                currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
+                currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
+                currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
                 for ( const wall of room?.walls ) {
                     if ( wall.side == 'L' ) {
-                        currentRoomData[ `${ roomName }LeftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }LeftWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }LeftWallHeight` ] = floorHeight
+                        currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `leftWallThickness` ] = innerWallThickness
+                        currentRoomData[ `leftWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'R' ) {
-                        currentRoomData[ `${ roomName }RightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }RightWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }RightWallHeight` ] = floorHeight
+                        currentRoomData[ `rightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `rightWallThickness` ] = innerWallThickness
+                        currentRoomData[ `rightWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'F' ) {
-                        currentRoomData[ `${ roomName }FrontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }FrontWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }FrontWallHeight` ] = floorHeight
+                        currentRoomData[ `frontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `frontWallThickness` ] = innerWallThickness
+                        currentRoomData[ `frontWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'B' ) {
-                        currentRoomData[ `${ roomName }BackWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }BackWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }BackWallHeight` ] = floorHeight
+                        currentRoomData[ `backWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `backWallThickness` ] = innerWallThickness
+                        currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
 
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.secondFloor = {
-                secondFloorLength: drawingData.secondFloor.length,
-                secondFloorWidth: drawingData.secondFloor.breadth,
-                secondFloorArea: drawingData.secondFloor.area,
-                ...roomsData.reduce( ( acc, room ) => ( { ...acc, ...room } ), {} )
-            }
+            drawingData.secondFloor.rooms=roomsData
         } else {
             delete drawingData.secondFloor
         }
@@ -212,42 +199,38 @@ export function loadDrawingData ( token: string, id: string ) {
                 const roomName = `ThirdFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
 
-                currentRoomData[ `${ roomName }Length` ] = roomLength.toFixed( 2 )
-                currentRoomData[ `${ roomName }Width` ] = roomBreadth.toFixed( 2 )
-                currentRoomData[ `${ roomName }Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
+                currentRoomData[ "name" ] = roomName
+                currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
+                currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
+                currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
                 for ( const wall of room?.walls ) {
                     if ( wall.side == 'L' ) {
-                        currentRoomData[ `${ roomName }LeftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }LeftWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }LeftWallHeight` ] = floorHeight
+                        currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `leftWallThickness` ] = innerWallThickness
+                        currentRoomData[ `leftWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'R' ) {
-                        currentRoomData[ `${ roomName }RightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }RightWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }RightWallHeight` ] = floorHeight
+                        currentRoomData[ `rightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `rightWallThickness` ] = innerWallThickness
+                        currentRoomData[ `rightWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'F' ) {
-                        currentRoomData[ `${ roomName }FrontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }FrontWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }FrontWallHeight` ] = floorHeight
+                        currentRoomData[ `frontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `frontWallThickness` ] = innerWallThickness
+                        currentRoomData[ `frontWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'B' ) {
-                        currentRoomData[ `${ roomName }BackWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }BackWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }BackWallHeight` ] = floorHeight
+                        currentRoomData[ `backWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `backWallThickness` ] = innerWallThickness
+                        currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
 
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.thirdFloor = {
-                thirdFloorLength: drawingData.thirdFloor.length,
-                thirdFloorWidth: drawingData.thirdFloor.breadth,
-                thirdFloorArea: drawingData.thirdFloor.area,
-                ...roomsData.reduce( ( acc, room ) => ( { ...acc, ...room } ), {} )
-            }
+            drawingData.thirdFloor.rooms=roomsData
         } else {
             delete drawingData.thirdFloor
         }
@@ -259,43 +242,38 @@ export function loadDrawingData ( token: string, id: string ) {
                 const roomBreadth = room.breadth * conversionFactor
                 const roomName = `FourthFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
-
-                currentRoomData[ `${ roomName }Length` ] = roomLength.toFixed( 2 )
-                currentRoomData[ `${ roomName }Width` ] = roomBreadth.toFixed( 2 )
-                currentRoomData[ `${ roomName }Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
+                currentRoomData[ "name" ] = roomName
+                currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
+                currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
+                currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
                 for ( const wall of room?.walls ) {
                     if ( wall.side == 'L' ) {
-                        currentRoomData[ `${ roomName }LeftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }LeftWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }LeftWallHeight` ] = floorHeight
+                        currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `leftWallThickness` ] = innerWallThickness
+                        currentRoomData[ `leftWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'R' ) {
-                        currentRoomData[ `${ roomName }RightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }RightWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }RightWallHeight` ] = floorHeight
+                        currentRoomData[ `rightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `rightWallThickness` ] = innerWallThickness
+                        currentRoomData[ `rightWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'F' ) {
-                        currentRoomData[ `${ roomName }FrontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }FrontWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }FrontWallHeight` ] = floorHeight
+                        currentRoomData[ `frontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `frontWallThickness` ] = innerWallThickness
+                        currentRoomData[ `frontWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'B' ) {
-                        currentRoomData[ `${ roomName }BackWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }BackWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }BackWallHeight` ] = floorHeight
+                        currentRoomData[ `backWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `backWallThickness` ] = innerWallThickness
+                        currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
 
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.fourthFloor = {
-                fourthFloorLength: drawingData.fourthFloor.length,
-                fourthFloorWidth: drawingData.fourthFloor.breadth,
-                fourthFloorArea: drawingData.fourthFloor.area,
-                ...roomsData.reduce( ( acc, room ) => ( { ...acc, ...room } ), {} )
-            }
+            drawingData.fourthFloor.rooms=roomsData
         } else {
             delete drawingData.fourthFloor
         }
@@ -308,47 +286,48 @@ export function loadDrawingData ( token: string, id: string ) {
                 const roomBreadth = room.breadth * conversionFactor
                 const roomName = `FifthFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
-
-                currentRoomData[ `${ roomName }Length` ] = roomLength.toFixed( 2 )
-                currentRoomData[ `${ roomName }Width` ] = roomBreadth.toFixed( 2 )
-                currentRoomData[ `${ roomName }Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
+                currentRoomData[ "name" ] = roomName
+                currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
+                currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
+                currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
                 for ( const wall of room?.walls ) {
                     if ( wall.side == 'L' ) {
-                        currentRoomData[ `${ roomName }LeftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }LeftWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }LeftWallHeight` ] = floorHeight
+                        currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `leftWallThickness` ] = innerWallThickness
+                        currentRoomData[ `leftWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'R' ) {
-                        currentRoomData[ `${ roomName }RightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }RightWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }RightWallHeight` ] = floorHeight
+                        currentRoomData[ `rightWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `rightWallThickness` ] = innerWallThickness
+                        currentRoomData[ `rightWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'F' ) {
-                        currentRoomData[ `${ roomName }FrontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }FrontWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }FrontWallHeight` ] = floorHeight
+                        currentRoomData[ `frontWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `frontWallThickness` ] = innerWallThickness
+                        currentRoomData[ `frontWallHeight` ] = floorHeight
                     }
                     if ( wall.side == 'B' ) {
-                        currentRoomData[ `${ roomName }BackWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
-                        currentRoomData[ `${ roomName }BackWallThickness` ] = innerWallThickness
-                        currentRoomData[ `${ roomName }BackWallHeight` ] = floorHeight
+                        currentRoomData[ `backWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
+                        currentRoomData[ `backWallThickness` ] = innerWallThickness
+                        currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
 
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.fifthFloor = {
-                fifthFloorLength: drawingData.fifthFloor.length,
-                fifthFloorWidth: drawingData.fifthFloor.breadth,
-                fifthFloorArea: drawingData.fifthFloor.area,
-                ...roomsData.reduce( ( acc, room ) => ( { ...acc, ...room } ), {} )
-            }
+            drawingData.fifthFloor.rooms=roomsData
         } else {
             delete drawingData.fifthFloor
         }
-
+console.log('drawingData',drawingData)
+const obj={}
+        for(const key of Object.keys(drawingData)){
+            obj[key]=0
+        }
+        console.log('obj',obj)
         store.dispatch( updateDrawingData( { drawingData } ) );
     } ).catch( () => { } )
 }
+

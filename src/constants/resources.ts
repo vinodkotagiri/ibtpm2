@@ -46,7 +46,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
   const resources: Record<string, Array<Resource>> = {
 
     "PC2": [
-    { id: 'GTL11', resource: 'UnitDesignIBT', description: 'Design', length:plotLength, breadth:plotWidth, area: 0, rate: IBTRates.Design.Unit, units: 'Unit', quantity: 1, totalCost: 0 },     
+        
     ], 
 
     "PC3": [
@@ -3819,6 +3819,14 @@ function updateQuantities ( resources ) {
         resource.quantity=resource.perimeter*resource.thickness
       }
     }
+    if(resource?.perimeter!=undefined && resource?.length &&resource?.thickness && resource?.breadth ){
+      resource.perimeter=(resource.breadth+resource.thickness)*2
+      resource.area=resource.length*resource.perimeter
+      if(resource?.thickness){
+        resource.quantity=resource.area
+      }
+    }
+    
 
     if(resource?.numbersRequired!=undefined && resource?.numbersRequired>0){
       resource.quantity=resource.numbersRequired*resource.quantity
