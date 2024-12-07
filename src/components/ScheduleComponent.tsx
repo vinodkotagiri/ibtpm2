@@ -4,14 +4,17 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
-import resources from '../constants/resourcesXXX';
+import resources from '../constants/resources';
+import { updateResources } from '../constants/resourcesNew';
 
 const ScheduleComponent: React.FC = () => {
   const [ collapsed, setCollapsed ] = useState<{ [ key: string ]: boolean }>( {} );
-  const { tasks,currencyCode } = useAppSelector( state => state.schedule );
+  const { tasks,currencyCode, drawingData } = useAppSelector( state => state.schedule );
   const dispatch=useAppDispatch()
   const colorPalette = [ '#f0ad4e50', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7' ];
-
+  useEffect(()=>{
+    updateResources(drawingData)
+  },[drawingData])
   const buildTaskTree = ( tasks: Task[] ) => {
     const taskMap: { [ id: string ]: Task & { children: Task[] } } = {};
     const rootTasks: ( Task & { children: Task[] } )[] = [];

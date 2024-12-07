@@ -4,12 +4,12 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { updateTaskField } from '../app/features/scheduleSlice';
-
+import '../constants/resourcesNew'
 const EstimationComponent: React.FC = () => {
   const [collapsed, setCollapsed] = useState<{ [key: string]: boolean }>({});
   const { tasks, currencyCode } = useAppSelector(state => state.schedule);
   const [currentTasks,setCurrentTasks]=useState([])
-
+  
   const [nestedTasks,setNestedTasks]=useState([])
   const dispatch = useAppDispatch();
   const colorPalette = ['#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7'];

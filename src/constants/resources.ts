@@ -2257,6 +2257,9 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     { id: 'G1PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     { id: 'G1PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
   ], 
+
+
+  
   //Ground Living//Finishes Rough-in end//
   
   //Ground Kitchen//Finishes Rough-in start//
@@ -3789,11 +3792,19 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
 
 function updateQuantities ( resources ) {
   for(const resource of resources) {
+    
+    if ( (resource?.length && resource?.breadth) && !resource.thickness ) {
+      resource.quantity = resource.length * resource.breadth
+      resource.quantity = resource.quantity.toFixed( 2 )
+      resource.area=(resource.length*resource.breadth).toFixed(2)
+    }
+
     if ( resource?.length && resource?.breadth && resource.thickness ) {
       resource.quantity = resource.length * resource.breadth * resource.thickness
       resource.quantity = resource.quantity.toFixed( 2 )
       resource.area=(resource.length*resource.breadth).toFixed(2)
     }
+
     if ( resource?.diameter && resource?.noOfBars && resource.length ) {
       const { diameter, noOfBars, length } = resource
       resource.quantity = ( Math.pow( diameter, 2 ) * length * noOfBars ) / 162;
@@ -3815,5 +3826,4 @@ function updateQuantities ( resources ) {
   }
   return resources
 }
-
 export default getResources
