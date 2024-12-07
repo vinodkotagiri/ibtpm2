@@ -10,10 +10,9 @@ const GanttChartComponent = () => {
   // Map tasks to Gantt chart format
   const formatTasks = (): Task[] => {
     return tasks.map(task => {
-      if( `${new Date(task.end || Date.now() + task.duration * 86400000)}`=='Invalid Date'){
-        
-        console.log(task.id,'==>', new Date(task.end || Date.now() + task.duration * 86400000),)
-      }
+      // if( `${new Date(task.end || Date.now() + task.duration * 86400000)}`=='Invalid Date'){        
+      //   console.log(task.id,'==>', new Date(task.end || Date.now() + task.duration * 86400000),)
+      // }
       return ({
       id: task.id,
       name: task.name,

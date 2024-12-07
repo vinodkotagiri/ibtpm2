@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import schedule from "../../constants/schedule";
 import { calculateTotalResourceCost, getCurrencySymbol, updateTaskDates } from "../../helpers/calculations";
 import { CurrencyUnits, DrawingData, Task } from "../../constants/types";
-import getResources from "../../constants/resources";
+import getResources from "../../constants/resourcesXXX";
 import convertUnits from "../../helpers/converisons";
 
 interface ScheduleState {

@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
-import resources from '../constants/resources';
+import resources from '../constants/resourcesXXX';
 
 const ScheduleComponent: React.FC = () => {
   const [ collapsed, setCollapsed ] = useState<{ [ key: string ]: boolean }>( {} );
