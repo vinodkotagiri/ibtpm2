@@ -199,6 +199,8 @@ export type DrawingData = {
   plotPerimeter: number,
   builtLength: number,
   builtWidth: number,
+  builtupLength:number,
+  builtupWidth:number
   builtLength1: number,
   builtWidth1: number,
   builtLength2: number,
