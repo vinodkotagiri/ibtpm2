@@ -1,4 +1,6 @@
-import { BarBenderRates, ConcreteRates, ElecRates, ElectricianRates, EngineerRates, FFMasonRates, FFRates, HelperRates, MasonRates, MechMasonRates, MechRates, MetalFormworkRates, PlumberRates, PlumbRates, SteelRates, WaterRates } from "../constants/rates";
+import { BarBenderRates, ConcreteRates, ElecRates, ElectricianRates, EngineerRates, FFMasonRates, FFRates, HelperRates, MasonRates, MechMasonRates, MechRates, MetalFormworkRates, PlumberRates, PlumbRates, SteelRates, WaterRates,DFinsulationRates,Redclayper1000Rates,
+  PlasterManualRates,PPaintRates,WPRates,FloorRates
+} from "../constants/rates";
 import { DrawingData, Task, TaskType } from "../constants/types";
 
 export function updateTasksFromDrawingData ( tasks, drawingData: DrawingData ): Array<Task> {
