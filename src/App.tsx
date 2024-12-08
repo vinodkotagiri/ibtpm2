@@ -43,7 +43,7 @@ const App = () => {
     <div className='sticky top-0 left-0 z-50 h-[64px]'>
       <NavbarComponent />
     </div>
-    <div>
+    <div className='h-[calc(100vh-64px)]'>
       <Routes>
         {routes.map(({ path, component, name }) => (<Route path={path} Component={component} key={name} />))}
       </Routes>

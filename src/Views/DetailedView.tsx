@@ -22,7 +22,7 @@ const DetailedView = () => {
     setCurrentView(view)
   }
   return (
-    <div className='h-screen w-screen '>
+    <div className='h-full w-full '>
       <AddTaskComponent />
     <ul className="menu bg-base-200 lg:menu-horizontal rounded-box w-full">
       <div className='flex items-center justify-between'>
