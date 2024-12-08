@@ -99,6 +99,8 @@ const scheduleSlice = createSlice( {
         }
         return task
       })
+      const drawingData=state.drawingData
+      state.tasks=updateTasksFromDrawingData(state.tasks,drawingData)
       state.tasks=calculateTotalResourceCost(state.tasks)
     },
     updateDrawingData(state,action){ 

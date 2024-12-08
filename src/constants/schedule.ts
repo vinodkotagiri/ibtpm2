@@ -238,7 +238,7 @@ const tasks:Task[]=[
     duration:0,
     cost:0,
     numbersRequired:16,
-    required:true,    
+  
     strategy:'FS',
     dependencies:[],
     type:'project',
@@ -1050,7 +1050,7 @@ const tasks:Task[]=[
     duration:0,
     cost:0,
     numbersRequired:6,
-    required:true,
+    
     strategy:'FS',
     dependencies:[],
     type:'project',
@@ -1839,7 +1839,7 @@ const tasks:Task[]=[
     duration:0,
     cost:0,
     numbersRequired:16,
-    required:true,
+    
     strategy:'FS',
     dependencies:[],
     type:'project',
@@ -2039,7 +2039,7 @@ const tasks:Task[]=[
       duration:0,
       cost:0,
       numbersRequired:1,
-      required:true,
+      
       strategy:'FS',
       dependencies:[],
       type:'project',
@@ -2275,7 +2275,7 @@ parent:'L1BT2'
   duration:1,
   cost:0,
   numbersRequired:1,
-  required:true,
+  
   strategy:'FS',
   dependencies:['SLB21'],
   type:'task',
@@ -2307,7 +2307,7 @@ parent:'L1BT2'
   duration:1,
   cost:0,
   numbersRequired:1,
-  required:true,
+  
   strategy:'FS',
   dependencies:['SLB4'],
   type:'task',
@@ -2427,7 +2427,7 @@ parent:'L1BT2'
     duration:0,
     cost:0,
     strategy:'FS',
-    required:true,
+    
     dependencies:[],
     type:'project',
     progress:0,
