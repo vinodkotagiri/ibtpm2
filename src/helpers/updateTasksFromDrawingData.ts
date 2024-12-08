@@ -1256,7 +1256,15 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
           type:'task',
           progress:0,
           hideChildren:false,
-          parent:`${level}FRIN${index}`
+          parent:`${level}FRIN${index}`,
+          resources: [  
+          { id: 'G1BW11', resource: 'Cuminch9Redclayper1000', description: 'leftWall', length:leftWall.length, breadth:leftWall.height, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+          { id: 'G1BW12', resource: 'Cuminch9Redclayper1000', description: 'rightWall', length:rightWall.length, breadth:rightWall.height, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+          { id: 'G1BW13', resource: 'Cuminch9Redclayper1000', description: 'frontWall', length:frontWall.length, breadth:frontWall.height, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+          { id: 'G1BW14', resource: 'Cuminch9Redclayper1000', description: 'backWall', length:backWall.length, breadth:backWall.height, thickness: 0.23, area:0, rate: Redclayper1000Rates.inch9.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code             
+          { id: 'G1BW15', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          { id: 'G1BW16', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },  
+          ],
         },  
         {
           id:`${level}FRIN${index}MEP`,
@@ -1284,7 +1292,13 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
           type:'task',
           progress:0,
           hideChildren:false,
-          parent:`${level}FRIN${index}MEP`
+          parent:`${level}FRIN${index}MEP`,
+          resources: [
+          { id: 'G1EL11', resource: 'UnitJunctionBoxElec', description: 'Electrical', rate: ElecRates.JunctionBox.m, units: 'm', quantity: 2, totalCost: 0 },    
+          { id: 'G1EL12', resource: 'mPullwiresconduitsElec', description: 'Electrical', rate: ElecRates.Pullwiresconduits.m, units: 'm', quantity: 12, totalCost: 0 },    
+          { id: 'G1EL13', resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          { id: 'G1EL14', resource: 'HourlyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
+          ],
         },
         {
           id:`${level}FRIN${index}MD`,
@@ -1298,7 +1312,12 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
           type:'task',
           progress:0,
           hideChildren:false,
-          parent:`${level}FRIN${index}MEP`
+          parent:`${level}FRIN${index}MEP`,
+          resources: [
+          { id: 'G1MD11', resource: 'ALDuctperSqmMech', description: 'Mechanical', rate: MechRates.DuctperSqm.AL, units: 'Sqm', quantity: 1, totalCost: 0 },    
+          { id: 'G1MD12', resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          { id: 'G1MD13', resource: 'HourlyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          ],
         },
         {
           id:`${level}FRIN${index}PC`,
@@ -1312,7 +1331,12 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
           type:'task',
           progress:0,
           hideChildren:false,
-          parent:`${level}FRIN${index}MEP`
+          parent:`${level}FRIN${index}MEP`,
+          resources: [
+          { id: 'G1PC11', resource: 'CeraTapsPlumb', description: 'Plumbing', rate: PlumbRates.taps.Cera, units: 'Unit', quantity: 1, totalCost: 0 },    
+          { id: 'G1PC12', resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          { id: 'G1PC13', resource: 'HourlyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          ],
         },
         {
           id:`${level}FRIN${index}FF`,
@@ -1326,7 +1350,12 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
           type:'task',
           progress:0,
           hideChildren:false,
-          parent:`${level}FRIN${index}MEP`
+          parent:`${level}FRIN${index}MEP`,
+          resources: [
+          { id: 'G1FF11', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+          { id: 'G1FF12', resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          { id: 'G1FF13', resource: 'HourlyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+          ],
         },
         
   {
@@ -1341,7 +1370,11 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`${level}FRIN${index}`
+    parent:`${level}FRIN${index}`,
+    resources: [
+    { id: 'G1DFI11', resource: 'WP1TeakDFinsulation', description: 'Door insulation', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G1DFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+    ],  
   },
   {
     id: `L${level}WFI${index}`,
@@ -1355,7 +1388,11 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`${level}FRIN${index}`
+    parent:`${level}FRIN${index}`,
+    resources: [
+    { id: 'G1WFI11', resource: 'WP1TeakDFinsulation', description: 'Window insulation', length: wf1Length, breadth: wf1Width, area: wf1Area,  rate: DFinsulationRates.Teak.WP1, units: 'Unit', quantity: 0, totalCost: 0 },    
+    { id: 'G1WFI13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+    ], 
   },
   {
     id:`L${level}PL${index}`,
@@ -1369,7 +1406,14 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`${level}FRIN${index}`
+    parent:`${level}FRIN${index}`,
+    resources: [
+    { id: 'G1PL11', resource: 'Cummm12PlasterManual', description: 'leftWall', length:leftWall.length, breadth:leftWall.height, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL12', resource: 'Cummm12PlasterManual', description: 'rightWall', length:rightWall.length, breadth:rightWall.height, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL13', resource: 'Cummm12PlasterManual', description: 'frontWall', length:frontWall.length, breadth:frontWall.height, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL14', resource: 'Cummm12PlasterManual', description: 'backWall', length:backWall.length, breadth:backWall.height, thickness: 0.016, area:0, rate: PlasterManualRates.mm18.Cum, units: 'Cum', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PL15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+    ],
   },
   {
     id:`L${level}PR${index}`,
@@ -1383,7 +1427,14 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`${level}FRIN${index}`
+    parent:`${level}FRIN${index}`,
+    resources: [
+    { id: 'C153A1', resource: 'SqmPPaint', description: 'leftWall', length:leftWall.length, breadth:leftWall.height, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A2', resource: 'SqmPPaint', description: 'rightWall', length:rightWall.length, breadth:rightWall.height, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A3', resource: 'SqmPPaint', description: 'frontWall', length:frontWall.length, breadth:frontWall.height, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A4', resource: 'SqmPPaint', description: 'backWall', length:backWall.length, breadth:backWall.height, area: 0, rate: PPaintRates.Interior.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'C153A5', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ], 
   },
   {
     id:`L${level}PTG${index}`,
@@ -1397,7 +1448,14 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`${level}FRIN${index}`
+    parent:`${level}FRIN${index}`,
+    resources: [
+    { id: 'G1PR11', resource: 'SqmPPaint', description: 'leftWall', length:leftWall.length, breadth:leftWall.height, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PR12', resource: 'SqmPPaint', description: 'rightWall', length:rightWall.length, breadth:rightWall.height, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PR13', resource: 'SqmPPaint', description: 'frontWall', length:frontWall.length, breadth:frontWall.height, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PR14', resource: 'SqmPPaint', description: 'backWall', length:backWall.length, breadth:backWall.height, area: 0, rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 },     
+    { id: 'G1PR15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ],  
   }, 
 
   {
@@ -1426,8 +1484,13 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`L${level}FLR${index}`
-  },
+    parent:`L${level}FLR${index}`,
+    resources: [
+      { id: 'G1WP11', resource: 'SqmLiquidWP', description: 'Waterproofing', length:room.Length, breadth:room.Width, area: room.Area, rate: WPRates.Liquid.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+      { id: 'G1WP12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+      ],
+    },
+  
   {
     id:`L${level}GRT${index}`,
     name:'Granite',
@@ -1440,7 +1503,11 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`L${level}FLR${index}`
+    parent:`L${level}FLR${index}`,
+    resources: [
+    { id: 'G1GR11', resource: 'SqmGraniteFloor', description: 'Granite', length:room.Length, breadth:room.Width, area: room.Area, rate: FloorRates.Granite.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1GR12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+  ], 
   },
   {
     id:`L${level}TLG${index}`,
@@ -1454,8 +1521,12 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`L${level}FLR${index}`
-  },
+    parent:`L${level}FLR${index}`,
+    resources: [
+    { id: 'G1TL11', resource: 'SqmVitrifiedFloor', description: 'Vitrified', length:room.Length, breadth:room.Width, area: room.Area, rate: FloorRates.Vitrified.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1TL12', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+     ],  
+    },
   {
     id:`L${level}PFC${index}`,
     name:'Paint Final Coat & Clean-up',
@@ -1468,8 +1539,16 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:`${level}FRIN${index}`
-  },
+    parent:`${level}FRIN${index}`,
+    resources: [
+    { id: 'G1PTF11', resource: 'SqmPPaint', description: 'leftWall', length:leftWall.length, breadth:leftWall.height, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF12', resource: 'SqmPPaint', description: 'rightWall', length:rightWall.length, breadth:rightWall.height, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF13', resource: 'SqmPPaint', description: 'frontWall', length:frontWall.length, breadth:frontWall.height, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF14', resource: 'SqmPPaint', description: 'backWall', length:backWall.length, breadth:backWall.height, area: 0,  rate: PPaintRates.Emulsion.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, 
+    { id: 'G1PTF15', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    { id: 'G1PTF16', resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+    ], 
+    },
       )
     }
     if(roomsData.length>0){
