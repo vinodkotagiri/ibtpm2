@@ -5426,6 +5426,7 @@ parent:'L3EL0'
     hideChildren:false,
     parent:'G1MEP1'
   },
+
   {
     id:'G1DFI1',
     name:'Door Frame Insulation',
@@ -5495,7 +5496,8 @@ parent:'L3EL0'
     progress:0,
     hideChildren:false,
     parent:'GLI1'
-  },  
+  }, 
+
   {
     id:'G1LFLR',
     name:'Flooring',
@@ -5510,7 +5512,6 @@ parent:'L3EL0'
     hideChildren:false,
     parent:'GLI1'
   },
-
   {
     id:'G1WP1',
     name:'Waterproofing',

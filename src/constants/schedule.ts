@@ -3403,6 +3403,4 @@ parent:'L1BT2'
 
 
 ]
-const index=tasks.length-6
-console.log('index',index)
 export default tasks

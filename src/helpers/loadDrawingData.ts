@@ -62,9 +62,9 @@ export function loadDrawingData ( token: string, id: string ) {
             for ( const room of data?.groundFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
                 const roomBreadth = room.breadth * conversionFactor
-                const roomName = `GroundFloor${ room.name.split( '-' ).join( '' ) }`
+                // const roomName = `GroundFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
-                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "name" ] = room.name
                 currentRoomData[ "length" ] = roomLength.toFixed( 2 )
                 currentRoomData[ "width" ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ "area" ] = ( roomLength * roomBreadth ).toFixed( 2 )
@@ -106,10 +106,10 @@ export function loadDrawingData ( token: string, id: string ) {
             for ( const room of data?.firstFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
                 const roomBreadth = room.breadth * conversionFactor
-                const roomName = `FirstFloor${ room.name.split( '-' ).join( '' ) }`
+                // const roomName = `FirstFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
 
-                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "name" ] = room.name
                 currentRoomData[ "length" ] = roomLength.toFixed( 2 )
                 currentRoomData[ "width" ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ "area" ] = ( roomLength * roomBreadth ).toFixed( 2 )
@@ -151,10 +151,10 @@ export function loadDrawingData ( token: string, id: string ) {
             for ( const room of data?.secondFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
                 const roomBreadth = room.breadth * conversionFactor
-                const roomName = `SecondFloor${ room.name.split( '-' ).join( '' ) }`
+                // const roomName = `SecondFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
 
-                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "name" ] = room.name
                 currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
@@ -196,10 +196,10 @@ export function loadDrawingData ( token: string, id: string ) {
             for ( const room of data?.thirdFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
                 const roomBreadth = room.breadth * conversionFactor
-                const roomName = `ThirdFloor${ room.name.split( '-' ).join( '' ) }`
+                // const roomName = `ThirdFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
 
-                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "name" ] = room.name
                 currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
@@ -240,9 +240,9 @@ export function loadDrawingData ( token: string, id: string ) {
             for ( const room of data?.fourthFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
                 const roomBreadth = room.breadth * conversionFactor
-                const roomName = `FourthFloor${ room.name.split( '-' ).join( '' ) }`
+                // const roomName = `FourthFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
-                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "name" ] = room.name
                 currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
@@ -284,9 +284,9 @@ export function loadDrawingData ( token: string, id: string ) {
             for ( const room of data?.fifthFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
                 const roomBreadth = room.breadth * conversionFactor
-                const roomName = `FifthFloor${ room.name.split( '-' ).join( '' ) }`
+                // const roomName = `FifthFloor${ room.name.split( '-' ).join( '' ) }`
                 const currentRoomData = {}
-                currentRoomData[ "name" ] = roomName
+                currentRoomData[ "name" ] = room.name
                 currentRoomData[ `Length` ] = roomLength.toFixed( 2 )
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
