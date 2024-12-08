@@ -330,7 +330,13 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `SL${ level }SB`
+        parent: `SL${ level }SB`,
+        resources: [    
+        { id: 'SSB11', resource: 'SftDia8Steel', description: 'Bottom Distri Bars', breadth: builtWidth1, diameter: 12, noOfBars: 21, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+        { id: 'SSB12', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+        { id: 'SSB13', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SSB14', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
+        ],
       },
       //SLAB MEP 1st Fix START//
       {
@@ -360,7 +366,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `L${ level }MEP`
+        parent: `L${ level }MEP`,
+        resources: [
+        { id: 'SLB31', resource: 'mPVCElec', description: 'Electrical', rate: ElecRates.PVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+        { id: 'SLB32', resource: 'DailyMason', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB33', resource: 'DailyHelper', description: 'Electrical', rate: ElectricianRates.Mason.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+        ],
       },
       {
         id: `SL${ level }ME`,
@@ -375,7 +386,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `L${ level }MEP`
+        parent: `L${ level }MEP`,
+        resources: [
+        { id: 'SLB41', resource: 'mHangersMech', description: 'Mechanical', rate: MechRates.Hangers.m, units: 'm', quantity: 1, totalCost: 0 },    
+        { id: 'SLB42', resource: 'DailyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB43', resource: 'DailyHelper', description: 'Mechanical', rate: MechMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        ],
       },
       {
         id: `SL${ level }PB`,
@@ -390,7 +406,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `L${ level }MEP`
+        parent: `L${ level }MEP`,
+        resources: [
+        { id: 'SLB51', resource: 'mCPVCPlumb', description: 'Plumbing', rate: PlumbRates.CPVC.m, units: 'm', quantity: 10, totalCost: 0 },    
+        { id: 'SLB52', resource: 'DailyMason', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB53', resource: 'DailyHelper', description: 'Plumbing', rate: PlumberRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        ],
       },
       {
         id: `SL${ level }FIF`,
@@ -405,7 +426,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `L${ level }MEP`
+        parent: `L${ level }MEP`,
+        resources: [
+        { id: 'SLB61', resource: 'mHangerssprinklerFF', description: 'FireFighting', rate: FFRates.Hangerssprinkler.m, units: 'm', quantity: 1, totalCost: 0 },    
+        { id: 'SLB62', resource: 'DailyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB63', resource: 'DailyHelper', description: 'FireFighting', rate: FFMasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        ],
       },
       //SLAB MEP 1st Fix END//
       {
@@ -434,7 +460,13 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `SL${ level }ST`
+        parent: `SL${ level }ST`,
+        resources: [  
+        { id: 'SSL21', resource: 'SftDia16Steel', description: 'Bottom Main Bars', length: builtLength1, diameter: 16, noOfBars: 16, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SSL22', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+        { id: 'SSL23', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SSL24', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
+        ],
       },
       {
         id: `SL${ level }SBB2`,
@@ -448,7 +480,13 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `SL${ level }ST`
+        parent: `SL${ level }ST`,
+        resources: [    
+        { id: 'SLB21', resource: 'SftDia12Steel', description: 'Bottom Distri Bars', breadth: builtWidth1, diameter: 12, noOfBars: 21, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+        { id: 'SLB22', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 8, totalCost: 0 },
+        { id: 'SLB23', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB24', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
+        ],
       },
 
       {
@@ -463,7 +501,13 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `SL${ level }`
+        parent: `SL${ level }`,
+        resources: [
+        { id: 'SLB71', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+        { id: 'SLB72', resource: 'CumM30Concrete', description: 'M30Concrete', length: builtLength1, breadth: builtWidth1, thickness: 0.15, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'SLB73', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB74', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },
+        ],
       },
       {
         id: `SL${ level }CUR`,
@@ -477,7 +521,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `SL${ level }`
+        parent: `SL${ level }`,
+        resources: [
+        { id: 'SLB81', resource: 'CumWater', description: 'Curing Water', length: builtLength1, breadth: builtWidth1, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'SLB82', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+        { id: 'SLB83', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
+        ],
       },
       {
         id: `SL${ level }RFW`,
@@ -491,7 +540,11 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `SL${ level }`
+        parent: `SL${ level }`,
+        resources: [      
+        { id: 'SLB91', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB92', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+        ],
       },
 
       //G-L1 Staircase//
@@ -535,7 +588,18 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `STCL${ level }${ level + 1 }`
+        parent: `STCL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'FFG101', resource: 'SftDia12Steel', description: 'Main bars top', length: 1.5, diameter: 12, noOfBars: 7, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG102', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 1.5, diameter: 12, noOfBars: 7, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG103', resource: 'SftDia8Steel', description: 'Distri bars top', length: 0.5, diameter: 8, noOfBars: 9, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG104', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 0.5, diameter: 8, noOfBars: 9, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG105', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 0.7, diameter: 10, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG106', resource: 'SftDia12Steel', description: 'Ld bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG107', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG108', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG109', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 3, totalCost: 0 },  
+        ],
       },
       {
         id: `FFL${ level }${ level + 1 }SF`,
@@ -549,7 +613,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `STCL${ level }${ level + 1 }`
+        parent: `STCL${ level }${ level + 1 }`,
+        resources: [
+        { id: 'SLB11', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'SLB12', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SLB13', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
+        ],
       },
 
       {
@@ -564,7 +633,18 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FFL${ level }${ level + 1 }`
+        parent: `FFL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'FFG141', resource: 'SftDia12Steel', description: 'Main bars top', length: 5.7, diameter: 12, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG142', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 5.7, diameter: 10, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG143', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1.15, diameter: 8, noOfBars: 19, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG144', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 1.15, diameter: 8, noOfBars: 19, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG145', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG146', resource: 'SftDia12Steel', description: 'Ld bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG147', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG148', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG149', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
+        ],
       },
       {
         id: `FFL${ level }${ level + 1 }LN`,
@@ -578,7 +658,18 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FFL${ level }${ level + 1 }`
+        parent: `FFL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'FFG121', resource: 'SftDia12Steel', description: 'Main bars top', length: 2.1, diameter: 12, noOfBars: 9, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG122', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 2.1, diameter: 12, noOfBars:9, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG123', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1.15, diameter: 8, noOfBars: 7, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG124', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 1.15, diameter: 8, noOfBars: 7, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG125', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG126', resource: 'SftDia12Steel', description: 'Ld bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG127', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG128', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG129', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
+],
       },
 
       {
@@ -593,7 +684,15 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FFL${ level }${ level + 1 }`
+        parent: `FFL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'FFG141', resource: 'SftDia16Steel', description: 'Main bars top', length: 2.1, diameter: 16, noOfBars: 2, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG142', resource: 'SftDia16Steel', description: 'Main bars bottom', length: 2.1, diameter: 16, noOfBars: 2, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
+        { id: 'FFG143', resource: 'SftDia8Steel', description: 'Stirrups', length: 0.48, diameter: 8, noOfBars: 9, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG144', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG145', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG146', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+        ],
       },
       {
         id: `FFL${ level }${ level + 1 }STC`,
@@ -607,7 +706,15 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FFL${ level }${ level + 1 }`
+        parent: `FFL${ level }${ level + 1 }`,
+        resources: [
+        { id: 'FFG151', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+        { id: 'FFG152', resource: 'CumM20Concrete', description: 'M20Concrete', length: 5, breadth: 1.6, thickness: 0.175, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'FFG153', resource: 'CumM20Concrete', description: 'M20Concrete', length: 1.3, breadth: 0.9, thickness: 0.9, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'FFG154', resource: 'CumM20Concrete', description: 'M20Concrete', length: 1.3, breadth: 0.9, thickness: 1.3, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'FFG155', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG156', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },
+],
       },
       {
         id: `FFL${ level }${ level + 1 }SCU`,
@@ -621,7 +728,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FFL${ level }${ level + 1 }`
+        parent: `FFL${ level }${ level + 1 }`,
+        resources: [
+        { id: 'FFG161', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'FFG162', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+        { id: 'FFG163', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
+        ],
       },
       {
         id: `FFL${ level }${ level + 1 }SRF`,
@@ -635,7 +747,11 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FFL${ level }${ level + 1 }`
+        parent: `FFL${ level }${ level + 1 }`,
+        resources: [      
+        { id: 'FFG171', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'FFG172', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+        ],
       },
 
       {
@@ -666,7 +782,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [
+        { id: 'SFG121', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:4.5, breadth:1.7, thickness: 0.15, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'SFG122', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG123', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 4, totalCost: 0 },           
+        ],
       },
       {
         id: `FFLL${ level }L${ level + 1 }BSLP`,
@@ -680,7 +801,15 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'SFG131', resource: 'SftDia16Steel', description: 'Main bars top', length: 2.1, diameter: 16, noOfBars: 2, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG132', resource: 'SftDia16Steel', description: 'Main bars bottom', length: 2.1, diameter: 16, noOfBars: 2, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code     
+        { id: 'SFG133', resource: 'SftDia8Steel', description: 'Stirrups', length: 0.48, diameter: 8, noOfBars: 9, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG134', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity:1, totalCost: 0 },
+        { id: 'SFG135', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG136', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+        ],
       },
       {
         id: `FFLL${ level }L${ level + 1 }LSS`,
@@ -694,7 +823,18 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'SFG141', resource: 'SftDia12Steel', description: 'Main bars top', length: 1.2, diameter: 12, noOfBars: 9, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG142', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 1.2, diameter: 12, noOfBars: 9, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG143', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1.2, diameter: 8, noOfBars: 8, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG144', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 1.2, diameter: 8, noOfBars: 8, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG145', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG146', resource: 'SftDia12Steel', description: 'Ld bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG147', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG148', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG149', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+        ],
       },
 
       {
@@ -709,7 +849,18 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'SFG151', resource: 'SftDia12Steel', description: 'Main bars top', length: 5.7, diameter: 12, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG152', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 5.7, diameter: 12, noOfBars: 11, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG153', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1.15, diameter: 8, noOfBars: 18, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG154', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 1.15, diameter: 8, noOfBars: 18, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG155', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG156', resource: 'SftDia12Steel', description: 'Ld bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG157', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG158', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG159', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+        ],
       },
       {
         id: `FFLL${ level }L${ level + 1 }LSSL`,
@@ -723,7 +874,18 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [    
+        { id: 'SFG161', resource: 'SftDia12Steel', description: 'Main bars top', length: 1.5, diameter: 12, noOfBars: 5, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG162', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 1.5, diameter: 12, noOfBars: 5, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG163', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1, diameter: 8, noOfBars: 7, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG164', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 1, diameter: 8, noOfBars: 7, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG165', resource: 'SftDia12Steel', description: 'Anchorage bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG166', resource: 'SftDia12Steel', description: 'Ld bars', length: 0.48, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'SFG167', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG168', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG169', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },  
+        ],
       },
       {
         id: `FFLL${ level }L${ level + 1 }WCON`,
@@ -737,7 +899,15 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [
+        { id: 'SFG171', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+        { id: 'SFG172', resource: 'CumM20Concrete', description: 'M20Concrete', length: 5, breadth: 1.6, thickness: 0.175, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'SFG173', resource: 'CumM20Concrete', description: 'M20Concrete', length: 1.3, breadth: 0.9, thickness: 0.09, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'SFG174', resource: 'CumM20Concrete', description: 'M20Concrete', length: 1.3, breadth: 0.9, thickness: 0.013, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'SFG175', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG176', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 5, totalCost: 0 },
+        ],
       },
       {
         id: `FFLL${ level }L${ level + 1 }LSCU`,
@@ -751,7 +921,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [
+        { id: 'SFG181', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.15,area: 0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'SFG182', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Hour', quantity: 1, totalCost: 0 },
+        { id: 'SFG183', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Hour', quantity: 2, totalCost: 0 },
+        ],
       },
       {
         id: `FFLL${ level }L${ level + 1 }LSRF`,
@@ -765,7 +940,11 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `FSL${ level }${ level + 1 }`
+        parent: `FSL${ level }${ level + 1 }`,
+        resources: [      
+        { id: 'SFG191', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'SFG192', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
+      ],
       },
 
       //G-L1 Staircase
@@ -798,7 +977,17 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [    
+        { id: 'EL111', resource: 'SftDia12Steel', description: 'Main bars top', length: 1.5, diameter: 12, noOfBars: 5, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'EL112', resource: 'SftDia12Steel', description: 'Main bars bottom', length: 1.5, diameter: 12, noOfBars: 5, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'EL113', resource: 'SftDia8Steel', description: 'Distri bars top', length: 1.5, diameter: 8, noOfBars: 7, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'EL114', resource: 'SftDia8Steel', description: 'Distri bars bottom', length: 1.5, diameter: 8, noOfBars: 7, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'FFG15', resource: 'SftDia8Steel', description: 'Stirrups', length: 0.48, diameter: 8, noOfBars: 9, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code   
+        { id: 'EL116', resource: 'DailyBarbender', description: 'BarBender', rate: BarBenderRates.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL117', resource: 'DailyMason', description: 'Steelfixer', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL118', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },  
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }2`,
@@ -813,7 +1002,10 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL121', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },      
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }3`,
@@ -828,7 +1020,13 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL131', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },    
+        { id: 'EL132', resource: 'CumM20Concrete', description: 'M20Concrete', length: 1.3, breadth: 0.9, thickness: 0.15, area:0,  rate: ConcreteRates.M20.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'EL133', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL134', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 1, totalCost: 0 },
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }4`,
@@ -843,7 +1041,14 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL141', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'EL142', resource: 'SftDia16Steel', description: 'Main Bars', length: 3, diameter: 16, noOfBars: 4, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'EL143', resource: 'SftDia12Steel', description: 'Distribution Bars', length: 3, diameter: 12, noOfBars: 2, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+        { id: 'EL144', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL145', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },      
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }5`,
@@ -858,7 +1063,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL150', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:3, breadth:0.23, thickness: 0.23, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'EL151', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL152', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },         
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }6`,
@@ -873,7 +1083,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL168', resource: 'CumM25Concrete', description: 'M25Concrete', length: 3, breadth: 0.23, thickness: 0.23, area:0,  rate: ConcreteRates.M25.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'EL169', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL1610', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+        ],
       },
       //Elevator Beams//
       {
@@ -889,7 +1104,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL171', resource: 'SqmFootingMetalFormwork', description: 'Metal', length:2, breadth:0.23, thickness: 0.45, perimeter:0, rate: MetalFormworkRates.Footing.Sqm, units: 'Sqm', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'EL172', resource: 'HourlyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+        { id: 'EL173', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },           
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }8`,
@@ -904,7 +1124,14 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL181', resource: 'SftDia8Steel', description: 'Stirrups&Hooks', length: 2, diameter: 8, noOfBars:2, rate: SteelRates.Dia8.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'EL182', resource: 'SftDia12Steel', description: 'Top Bars', length: 2, diameter: 12, noOfBars: 4, rate: SteelRates.Dia12.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code 
+        { id: 'EL183', resource: 'SftDia16Steel', description: 'Bottom Bars', length: 2, diameter: 16, noOfBars: 6, rate: SteelRates.Dia16.Kgs, units: 'Kgs', quantity: 0, totalCost: 0 }, // qty and cost will be calculated in code       
+        { id: 'EL184', resource: 'HourlyMason', description: 'Steelfixer', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
+        { id: 'EL185', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },  
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }9`,
@@ -918,7 +1145,10 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [  
+        { id: 'EL191', resource: 'VisitEngineer', description: 'Inspection', rate: EngineerRates.Inspection.Visit, units: 'Day', quantity: 1, totalCost: 0 },  
+        ],
       },
       {
         id: `ELECL${ level }L${ level + 1 }110`,
@@ -933,7 +1163,12 @@ export function updateTasksFromDrawingData ( tasks, drawingData ): Array<Task> {
         type: 'task',
         progress: 0,
         hideChildren: false,
-        parent: `ELECL${ level }L${ level + 1 }`
+        parent: `ELECL${ level }L${ level + 1 }`,
+        resources: [
+        { id: 'EL1101', resource: 'CumM30Concrete', description: 'M30Concrete', length: 2, breadth: 0.23, thickness: 0.45, area:0,  rate: ConcreteRates.M30.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+        { id: 'EL1102', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
+        { id: 'EL1103', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
+        ],
       },
     ]
     finalTasksToPush.push( ...tasksToPush )
