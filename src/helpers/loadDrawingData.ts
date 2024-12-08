@@ -11,6 +11,7 @@ export function loadDrawingData ( token: string, id: string ) {
         const data = response?.data?.drawing?.Data ?? {}
         const innerWallThickness: unknown = ( 0.6 * conversionFactor ).toFixed( 2 )
         const floorHeight: unknown = ( 11 * conversionFactor ).toFixed( 2 )
+     
         const drawingData: any = {
             innerWallThickness: innerWallThickness,
             floorHeight: floorHeight,
@@ -55,7 +56,6 @@ export function loadDrawingData ( token: string, id: string ) {
             }
 
         }
-       
         //Handle ground floor rooms
         if ( data?.groundFloor?.rooms?.length > 0 ) {
             let roomsData = []
@@ -68,8 +68,8 @@ export function loadDrawingData ( token: string, id: string ) {
                 currentRoomData[ "length" ] = roomLength.toFixed( 2 )
                 currentRoomData[ "width" ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ "area" ] = ( roomLength * roomBreadth ).toFixed( 2 )
-
-                for ( const wall of room?.walls ) {
+              
+                for ( const wall of room?.walls??[] ) {
                     if ( wall.side == 'L' ) {
                         currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
                         currentRoomData[ `leftWallThickness` ] = innerWallThickness
@@ -91,15 +91,11 @@ export function loadDrawingData ( token: string, id: string ) {
                         currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
-
-                roomsData.push( currentRoomData )
+                roomsData.push( currentRoomData )                
             }
-
             drawingData.groundFloor.rooms = roomsData
-        } else {
-            delete drawingData.groundFloor
+            
         }
-
         //Handle First floor rooms
         if ( data?.firstFloor?.rooms?.length > 0 ) {
             let roomsData = []
@@ -114,7 +110,7 @@ export function loadDrawingData ( token: string, id: string ) {
                 currentRoomData[ "width" ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ "area" ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
-                for ( const wall of room?.walls ) {
+                for ( const wall of room?.walls??[] ) {
                     if ( wall.side == 'L' ) {
                         currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
                         currentRoomData[ `leftWallThickness` ] = innerWallThickness
@@ -141,9 +137,7 @@ export function loadDrawingData ( token: string, id: string ) {
             }
 
             drawingData.firstFloor.rooms = roomsData
-        } else {
-            delete drawingData.firstFloor
-        }
+        } 
 
         //Handle Second floor rooms
         if ( data?.secondFloor?.rooms?.length > 0 ) {
@@ -159,7 +153,7 @@ export function loadDrawingData ( token: string, id: string ) {
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
-                for ( const wall of room?.walls ) {
+                for ( const wall of room?.walls??[] ) {
                     if ( wall.side == 'L' ) {
                         currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
                         currentRoomData[ `leftWallThickness` ] = innerWallThickness
@@ -186,10 +180,7 @@ export function loadDrawingData ( token: string, id: string ) {
             }
 
             drawingData.secondFloor.rooms = roomsData
-        } else {
-            delete drawingData.secondFloor
-        }
-
+        } 
         //Handle Third floor rooms
         if ( data?.thirdFloor?.rooms?.length > 0 ) {
             let roomsData = []
@@ -204,7 +195,7 @@ export function loadDrawingData ( token: string, id: string ) {
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
-                for ( const wall of room?.walls ) {
+                for ( const wall of room?.walls??[] ) {
                     if ( wall.side == 'L' ) {
                         currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
                         currentRoomData[ `leftWallThickness` ] = innerWallThickness
@@ -231,9 +222,7 @@ export function loadDrawingData ( token: string, id: string ) {
             }
 
             drawingData.thirdFloor.rooms = roomsData
-        } else {
-            delete drawingData.thirdFloor
-        }
+        } 
         //Handle Fourth floor rooms
         if ( data?.fourthFloor?.rooms?.length > 0 ) {
             let roomsData = []
@@ -247,7 +236,7 @@ export function loadDrawingData ( token: string, id: string ) {
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
-                for ( const wall of room?.walls ) {
+                for ( const wall of room?.walls??[] ) {
                     if ( wall.side == 'L' ) {
                         currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
                         currentRoomData[ `leftWallThickness` ] = innerWallThickness
@@ -274,10 +263,7 @@ export function loadDrawingData ( token: string, id: string ) {
             }
 
             drawingData.fourthFloor.rooms = roomsData
-        } else {
-            delete drawingData.fourthFloor
-        }
-
+        } 
         //Handle Fifth floor rooms
         if ( data?.fifthFloor?.rooms?.length > 0 ) {
             let roomsData = []
@@ -291,7 +277,7 @@ export function loadDrawingData ( token: string, id: string ) {
                 currentRoomData[ `Width` ] = roomBreadth.toFixed( 2 )
                 currentRoomData[ `Area` ] = ( roomLength * roomBreadth ).toFixed( 2 )
 
-                for ( const wall of room?.walls ) {
+                for ( const wall of room?.walls??[] ) {
                     if ( wall.side == 'L' ) {
                         currentRoomData[ `leftWallLength` ] = ( wall.length * conversionFactor ).toFixed( 2 )
                         currentRoomData[ `leftWallThickness` ] = innerWallThickness
@@ -313,17 +299,12 @@ export function loadDrawingData ( token: string, id: string ) {
                         currentRoomData[ `backWallHeight` ] = floorHeight
                     }
                 }
-
                 roomsData.push( currentRoomData )
             }
 
             drawingData.fifthFloor.rooms = roomsData
-        } else {
-            delete drawingData.fifthFloor
         }
-        console.log('data',drawingData)
-        const obj = {}
         store.dispatch( updateDrawingData( { drawingData } ) );
-    } ).catch( () => { } )
+    } ).catch( (err) => {console.log('errror',err) } )
 }
 

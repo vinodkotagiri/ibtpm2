@@ -3,7 +3,6 @@ import { DrawingData, Task, TaskType } from "../constants/types";
 
 export function updateTasksFromDrawingData ( tasks, drawingData: DrawingData ): Array<Task> {
   const levels = []
-  console.log('drawingData', drawingData?.secondFloor?.length)
   if ( drawingData?.secondFloor?.rooms?.length>0 ) {
     levels.push( 2 )
   }
@@ -1192,6 +1191,8 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
   const finalTasksToPush = []
   levels.unshift( 0,1 )
 
+  if(!drawingData?.firstFloor?.rooms?.length) levels.pop()
+console.log('leveles:::',levels)
   for ( const level of levels ) {
     const length = drawingData[ levelsMap[ level ] ]?.length
     const width = drawingData[ levelsMap[ level ] ]?.width
