@@ -57,7 +57,7 @@ export function loadDrawingData ( token: string, id: string ) {
         }
 
         //Handle ground floor rooms
-        if ( data?.groundFloor ) {
+        if ( data?.groundFloor?.rooms?.length > 0 ) {
             let roomsData = []
             for ( const room of data?.groundFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
@@ -95,13 +95,13 @@ export function loadDrawingData ( token: string, id: string ) {
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.groundFloor.rooms=roomsData
+            drawingData.groundFloor.rooms = roomsData
         } else {
             delete drawingData.groundFloor
         }
 
         //Handle First floor rooms
-        if ( data?.firstFloor ) {
+        if ( data?.firstFloor?.rooms?.length > 0 ) {
             let roomsData = []
             for ( const room of data?.firstFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
@@ -140,13 +140,13 @@ export function loadDrawingData ( token: string, id: string ) {
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.firstFloor.rooms=roomsData
+            drawingData.firstFloor.rooms = roomsData
         } else {
             delete drawingData.firstFloor
         }
 
-         //Handle Second floor rooms
-         if ( data?.secondFloor ) {
+        //Handle Second floor rooms
+        if ( data?.secondFloor?.rooms?.length > 0 ) {
             let roomsData = []
             for ( const room of data?.secondFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
@@ -185,13 +185,13 @@ export function loadDrawingData ( token: string, id: string ) {
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.secondFloor.rooms=roomsData
+            drawingData.secondFloor.rooms = roomsData
         } else {
             delete drawingData.secondFloor
         }
 
-           //Handle Third floor rooms
-           if ( data?.thirdFloor ) {
+        //Handle Third floor rooms
+        if ( data?.thirdFloor?.rooms?.length > 0 ) {
             let roomsData = []
             for ( const room of data?.thirdFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
@@ -230,12 +230,12 @@ export function loadDrawingData ( token: string, id: string ) {
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.thirdFloor.rooms=roomsData
+            drawingData.thirdFloor.rooms = roomsData
         } else {
             delete drawingData.thirdFloor
         }
-           //Handle Fourth floor rooms
-           if ( data?.fourthFloor ) {
+        //Handle Fourth floor rooms
+        if ( data?.fourthFloor?.rooms?.length > 0 ) {
             let roomsData = []
             for ( const room of data?.fourthFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
@@ -273,13 +273,13 @@ export function loadDrawingData ( token: string, id: string ) {
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.fourthFloor.rooms=roomsData
+            drawingData.fourthFloor.rooms = roomsData
         } else {
             delete drawingData.fourthFloor
         }
 
-           //Handle Fifth floor rooms
-           if ( data?.fifthFloor ) {
+        //Handle Fifth floor rooms
+        if ( data?.fifthFloor?.rooms?.length > 0 ) {
             let roomsData = []
             for ( const room of data?.fifthFloor?.rooms ) {
                 const roomLength = room.length * conversionFactor
@@ -317,16 +317,14 @@ export function loadDrawingData ( token: string, id: string ) {
                 roomsData.push( currentRoomData )
             }
 
-            drawingData.fifthFloor.rooms=roomsData
+            drawingData.fifthFloor.rooms = roomsData
         } else {
             delete drawingData.fifthFloor
         }
-console.log('drawingData',drawingData)
-const obj={}
-        for(const key of Object.keys(drawingData)){
-            obj[key]=0
+        const obj = {}
+        for ( const key of Object.keys( drawingData ) ) {
+            obj[ key ] = 0
         }
-        console.log('obj',obj)
         store.dispatch( updateDrawingData( { drawingData } ) );
     } ).catch( () => { } )
 }
