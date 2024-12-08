@@ -30,7 +30,7 @@ const App = () => {
         token=localStorage.getItem('token')
       }
     }
-
+    console.log('id',id)
     // const id="6753d9fe85ceb8e0120beb56"
     // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWI2M2U0ZWE1ZDNhZmQyY2M0Y2M0OSIsInR5cGUiOjAsImlhdCI6MTczMzU0ODQ3OCwiZXhwIjoxNzM0MTUzMjc4fQ.PS6nAxPL5vNRONurtEnmWOjqZmwBhSlF0RTSQzEeynM"
     if(id&&token){
