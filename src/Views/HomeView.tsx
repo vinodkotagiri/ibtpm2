@@ -1,30 +1,52 @@
+import { useAppSelector } from "../app/hooks";
 import ChartComponent from "../components/ChartComponent";
 import {  AreaChart, BarChart, ComboChart, DonutChart, LineChart, PieChart, SteppedAreaChart } from "../constants/charts";
 
 const HomeView = () => {
+  const {totalTasks}=useAppSelector(state => state.schedule)
   return (
-    <div className="w-screen h-[calc(100vh-64px)] bg-slate-800 px-4 py-1 overflow-y-auto">
+    <div className="w-screen h-[calc(100vh-64px)] bg-slate-800 px-4 py-1 overflow-y-auto text-slate-800 font-semibold">
       {/* Top Section */}
       <div className="w-full flex flex-wrap gap-3 p-3 justify-center overflow-auto">
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#F55C47] flex items-center justify-center">
-          VINOD'S PROJECT
-          LXB=AREA; G+1
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#F55C47] flex items-center justify-center flex-col font-semibold text-slate-600">
+        <div className="text-2xl font-semibold text-slate-600">
+          TOTAL TASKS
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#9FE6A0] flex items-center justify-center">
+        <div className="text-xl">
+          {totalTasks}
+        </div>
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#9FE6A0] flex flex-col items-center justify-center font-semibold text-slate-600">
+        <div className="text-2xl font-semibold text-slate-600">
           TOTAL BUDGET
+        </div>
+        <div className="text-xl">
           &#8377;35,22000
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#E6FF94] flex items-center justify-center">
-          ACTUAL COST OF WORK DONE
-          &#8377;15,0000
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#B3A398] flex items-center justify-center">
-          PREVIOUS PAYMENTS
-          &#8377;10,0000
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#E6FF94] flex items-center justify-center flex-col font-semibold text-slate-600">
+        <div className="text-2xl">
+          TOTAL BUDGET
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#CD8D7A] flex items-center justify-center">
-          REMAINING PAYMENT
-          &#8377;5,0000
+        <div>
+          &#8377;35,22000
+        </div>
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#B3A398] flex items-center justify-center flex-col font-semibold text-slate-600">
+        <div className="text-2xl">
+          TOTAL BUDGET
+        </div>
+        <div>
+          &#8377;35,22000
+        </div>
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#CD8D7A] flex items-center justify-center flex-col font-semibold text-slate-600">
+        <div className="text-2xl">
+          TOTAL BUDGET
+        </div>
+        <div>
+          &#8377;35,22000
+        </div>
         </div>
       </div>
 

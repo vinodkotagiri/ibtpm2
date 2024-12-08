@@ -8,6 +8,8 @@ import { updateTasksFromDrawingData } from "../../helpers/updateTasksFromDrawing
 
 interface ScheduleState {
   tasks:Task[],
+  totalTasks:number
+  totalBudget:number
   currency:CurrencyUnits
   currencyCode:string
   drawingData:DrawingData
@@ -15,6 +17,8 @@ interface ScheduleState {
 }
 const initialState: ScheduleState = {
   tasks:[...schedule],
+  totalTasks:0,
+  totalBudget:0,
   currency:'INR',
   currencyCode:getCurrencySymbol('INR'),
   drawingData:
@@ -102,6 +106,7 @@ const scheduleSlice = createSlice( {
       const drawingData=state.drawingData
       state.tasks=updateTasksFromDrawingData(state.tasks,drawingData)
       state.tasks=calculateTotalResourceCost(state.tasks)
+      state.totalTasks=state.tasks.filter(task=>task.type=='task').length
     },
     updateDrawingData(state,action){ 
       const {drawingData}=action.payload
@@ -161,6 +166,9 @@ const scheduleSlice = createSlice( {
     updateTaskFromDrawing(state){
       const drawingData=state.drawingData
       state.tasks=updateTasksFromDrawingData(state.tasks,drawingData)
+    },
+    updateTotalTasksCount(state){
+      state.totalTasks=state.tasks.filter(task=>task.type=='task').length
     }
   }
 } )
