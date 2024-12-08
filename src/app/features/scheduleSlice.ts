@@ -120,6 +120,7 @@ const scheduleSlice = createSlice( {
         return task
       })
       state.tasks=calculateTotalResourceCost(state.tasks)
+      
     },
     setUnits(state,action){
       state.units=action.payload

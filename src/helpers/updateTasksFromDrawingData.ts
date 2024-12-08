@@ -3,16 +3,17 @@ import { DrawingData, Task, TaskType } from "../constants/types";
 
 export function updateTasksFromDrawingData ( tasks, drawingData: DrawingData ): Array<Task> {
   const levels = []
-  if ( drawingData?.secondFloor ) {
+  console.log('drawingData', drawingData?.secondFloor?.length)
+  if ( drawingData?.secondFloor?.rooms?.length>0 ) {
     levels.push( 2 )
   }
-  if ( drawingData?.thirdFloor ) {
+  if ( drawingData?.thirdFloor?.rooms?.length>0 ) {
     levels.push( 3 )
   }
-  if ( drawingData?.fourthFloor ) {
+  if ( drawingData?.fourthFloor?.rooms?.length>0 ) {
     levels.push( 4 )
   }
-  if ( drawingData?.fifthFloor ) {
+  if ( drawingData?.fifthFloor?.rooms?.length>0 ) {
     levels.push( 5 )
   }
   const lastIndex = tasks?.findIndex( task => task.id == `EL110` )

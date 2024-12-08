@@ -55,7 +55,7 @@ export function loadDrawingData ( token: string, id: string ) {
             }
 
         }
-
+       
         //Handle ground floor rooms
         if ( data?.groundFloor?.rooms?.length > 0 ) {
             let roomsData = []
@@ -321,10 +321,8 @@ export function loadDrawingData ( token: string, id: string ) {
         } else {
             delete drawingData.fifthFloor
         }
+        console.log('data',drawingData)
         const obj = {}
-        for ( const key of Object.keys( drawingData ) ) {
-            obj[ key ] = 0
-        }
         store.dispatch( updateDrawingData( { drawingData } ) );
     } ).catch( () => { } )
 }

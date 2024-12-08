@@ -15,19 +15,20 @@ const App = () => {
     let id='',  token=''
     if(params.get("drawing")){
       id=params.get("drawing")
-      localStorage.setItem('id',params.get("drawing"))
+      
+      sessionStorage.setItem('id',params.get("drawing"))
     }else{
-      if(localStorage.getItem('id')){
-        id=localStorage.getItem('id')
+      if(sessionStorage.getItem('id')){
+        id=sessionStorage.getItem('id')
         console.log('id::::',id)
       }
     }
     if(params.get("token")){
       token=params.get("token")
-      localStorage.setItem('token',params.get("token"))
+      sessionStorage.setItem('token',params.get("token"))
     }else{
-      if(localStorage.getItem('token')){
-        token=localStorage.getItem('token')
+      if(sessionStorage.getItem('token')){
+        token=sessionStorage.getItem('token')
       }
     }
     console.log('id',id)
