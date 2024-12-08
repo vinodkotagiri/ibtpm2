@@ -11,14 +11,14 @@ const NavbarComponent = () => {
       </div>
       <div className='flex gap-3'>
 
-        <label className="input input-bordered flex items-center gap-2 w-[180px] bg-slate-300 font-semibold text-slate-700">
+        <label className="input input-bordered flex items-center gap-2 w-[200px] bg-slate-300 font-semibold text-slate-700">
           Length
-          <input type="text" value={ drawingData?.plotLength +' m'} className='font-bold'/>
+          <input type="text" value={ drawingData?.plotLength +' m ('+Math.ceil(drawingData?.plotLength/0.3048)+' ft)'} className='font-bold'/>
         </label>
 
-        <label className="input input-bordered flex items-center gap-2 w-[180px] bg-slate-300 font-semibold text-slate-700">
+        <label className="input input-bordered flex items-center gap-2 w-[200px] bg-slate-300 font-semibold text-slate-700">
           Width
-          <input type="text"  value={drawingData.plotWidth+' m'} className='font-bold' />
+          <input type="text"  value={drawingData.plotWidth+' m ('+Math.ceil(drawingData?.plotWidth/0.3048)+' ft)'} className='font-bold' />
         </label>
 
       </div>
