@@ -10115,11 +10115,11 @@ parent:'L3EL0'
     duration:1,
     cost:0,
     strategy:'FS',
-    dependencies:['GFI6'],
+    dependencies:['GFEL'],
     type:'task',
     progress:0,
     hideChildren:false,
-    parent:'GFI2'
+    parent:'GFFI'
   },
   {
     id:'GFWA',
@@ -10182,7 +10182,7 @@ parent:'L3EL0'
     name:'Furniture',
     start:'',
     end:'',
-    duration:1,
+    duration:15,
     cost:0,
     strategy:'FS',
     dependencies:['GFEX'],
