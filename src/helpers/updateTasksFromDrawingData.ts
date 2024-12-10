@@ -1642,7 +1642,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FINT`,
 	    resources: [
-	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: window1Length, 	breadth: 			window1Width, area: window1Area,  rate: DoorRates.UPVCSlid.Sft, units: 'Sft', 	quantity: 0, totalCost: 0 },    
+	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: window1Length, breadth: window1Width, area: window1Area, rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
 	    ], 
 	    },
 	    {
@@ -1659,7 +1659,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FINT`,
 	    resources: [
-	    { id: `GFI101${level}${index}`, resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: 			door1Width, area: 	door1Area,  rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 		0 },        
+	    { id: `GFI101${level}${index}`, resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: door1Width, area: door1Area, rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
 	    ],
 	    },
 	    {
@@ -1690,7 +1690,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}MEPFF`,
 	    resources: [
-	    { id: `GFI31${level}${index}`, resource: 'UnitLightFixturesElec', description: 'Electrical', rate: 			ElecRates.LightFixtures.Unit, units: 'Unit', quantity: 2, totalCost: 0 },    
+	    { id: `GFI31${level}${index}`, resource: 'UnitLightFixturesElec', description: 'Electrical', rate: ElecRates.LightFixtures.Unit, units: 'Unit', quantity: 2, totalCost: 0 },    
   	  { id: `GFI32${level}${index}`, resource: 'HourlyMason', description: 'Electrical', rate: ElectricianRates.Mason.Hourly, units: 	'Hour', quantity: 1, totalCost: 0 },
 	    ],
 	    },
@@ -1708,7 +1708,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}MEPFF`,
 	    resources: [
-	    { id: `GFI51{level}${index}`, resource: 'CeraTapsPlumb', description: 'Plumbing', rate: PlumbRates.taps.Cera, 	units: 'Unit', quantity: 2, totalCost: 0 },    
+	    { id: `GFI51{level}${index}`, resource: 'CeraTapsPlumb', description: 'Plumbing', rate: PlumbRates.taps.Cera,	units: 'Unit', quantity: 2, totalCost: 0 },    
 	    { id: `GFI52${level}${index}`, resource: 'HourlyMason', description: 'Plumbing', rate: PlumberRates.Mason.Hourly, units: 'Hour', 	quantity: 1, totalCost: 0 },
 	    ],
 	    },
@@ -1726,8 +1726,8 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}MEPFF`,
 	    resources: [
-	    { id: `GFI41{level}${index}`, resource: 'UnitAirCMech', description: 'Mechanical', rate: MechRates.AirC.Unit, units: 		'Unit', quantity: 1, totalCost: 0 },    
-	    { id: `GFI42${level}${index}`, resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly, 		units: 'Hour', quantity: 1, totalCost: 0 },
+	    { id: `GFI41{level}${index}`, resource: 'UnitAirCMech', description: 'Mechanical', rate: MechRates.AirC.Unit, units: 'Unit', quantity: 1, totalCost: 0 },    
+	    { id: `GFI42${level}${index}`, resource: 'HourlyMason', description: 'Mechanical', rate: MechMasonRates.Mason.Hourly,	units: 'Hour', quantity: 1, totalCost: 0 },
 	    ],  
 	    },
 	    {
@@ -1744,8 +1744,8 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}MEPFF`,
 	    resources: [
-	    { id: `GFI61{level}${index}`, resource: 'UnitsprinklerFF', description: 'FireFighting', rate: 	FFRates.sprinkler.Unit, units: 	'Unit', quantity: 1, totalCost: 0 },    
-	    { id: `GFI62${level}${index}`, resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 	'Hour', quantity: 1, totalCost: 0 },
+	    { id: `GFI61{level}${index}`, resource: 'UnitsprinklerFF', description: 'FireFighting', rate: 	FFRates.sprinkler.Unit, units: 'Unit', quantity: 1, totalCost: 0 },    
+	    { id: `GFI62${level}${index}`, resource: 'HourlyMason', description: 'FireFighting', rate: FFMasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
 	    ],
 	    },
 	    {
@@ -1776,7 +1776,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}FXT`,
 	    resources: [
-	    { id: `GFI111{level}${index}`, resource: 'Sqm2GypFCeiling', description: 'FalseCeiling', length: livingLength, breadth: 	livingWidth, area: livingArea,  rate: FCeilingRates.Gyp.Sqm2, units: 'Sqm', quantity: 1, totalCost: 0 },    
+	    { id: `GFI111{level}${index}`, resource: 'Sqm2GypFCeiling', description: 'FalseCeiling', length: room.length, breadth: room.width, area: room.area, rate: FCeilingRates.Gyp.Sqm2, units: 'Sqm', quantity: 1, totalCost: 0 },    
 	    ],
 	    },
 	    {
@@ -1793,7 +1793,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}FXT`,
 	    resources: [
-	    { id: `GFI12{level}${index}`, resource: 'Unit2RecsedLitCfix', description: 'Lights', length: livingLength, breadth: livingWidth, 	area: 	livingArea,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
+	    { id: `GFI12{level}${index}`, resource: 'Unit2RecsedLitCfix', description: 'Lights', length: room.length, breadth: room.width, area: room.area,  rate: LitWfixRates.Wall.Unit2, units: 'Unit', quantity: 4, totalCost: 0 },        
 	    ],  
 	    },
 	    {
@@ -1810,7 +1810,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}FXT`,
       resources: [
-      { id: `GWFI11{level}${index}`, resource: 'Sft2GraniteKCtop40sft', description: 'Kitchen Countertop L-Shape', length: 0.92, breadth: 2.13, area: 0,  rate: KCtop40sftRates.Granite.Sft2, units: 'Unit', quantity: 1, totalCost: 0 },        
+      { id: `GWFI11{level}${index}`, resource: 'Sft2GraniteKCtop40sft', description: 'Kitchen Countertop L-Shape', length: 0.92, breadth: 2.13, area: 0, rate: KCtop40sftRates.Granite.Sft2, units: 'Unit', quantity: 1, totalCost: 0 },        
       ], 
 	    },
 	    {
