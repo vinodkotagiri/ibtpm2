@@ -1608,7 +1608,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	      hideChildren:false,
 	      parent:`${level}FINT`,
         resources: [          
-	      { id: `GFI71${level}${index}`, resource: 'TW1TeakperftDF', description: 'Door Frame', length: df1Length, breadth: df1Width, area: df1Area,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },
+	      { id: `GFI71${level}${index}`, resource: 'TW1TeakperftDF', description: 'Door Frame', length: 2.3, breadth: 2.7, area: 6.21,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },
         ],
         },
 	      {
@@ -1625,7 +1625,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FINT`,
 	    resources: [
-	    { id: `GFI81${level}${index}`, resource: 'TW1TeakperftDF', description: 'Window Frame', length: wf1Length, breadth: wf1Width, area: wf1Area, rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+	    { id: `GFI81${level}${index}`, resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2.75, breadth: 2.75, area: 7.5, rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
 	    ], 
 	    },
 	    {
@@ -1642,7 +1642,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FINT`,
 	    resources: [
-	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: window1Length, breadth: window1Width, area: window1Area, rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: 2.5, breadth: 2.5, area: 6.25, rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
 	    ], 
 	    },
 	    {
@@ -1659,7 +1659,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FINT`,
 	    resources: [
-	    { id: `GFI101${level}${index}`, resource: 'UnitTeakWoodDoor', description: 'Door', length: door1Length, breadth: door1Width, area: door1Area, rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
+	    { id: `GFI101${level}${index}`, resource: 'UnitTeakWoodDoor', description: 'Door', length: 2.2, breadth: 2.5, area: 5.5, rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
 	    ],
 	    },
 	    {
