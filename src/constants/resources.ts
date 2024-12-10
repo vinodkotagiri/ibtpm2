@@ -760,7 +760,7 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
     //Filling//
 
     "GP1": [
-      { id: 'GP10', resource: 'CumSoilFilling', description: 'Totalarea-deduct', length: builtLength, breadth:builtWidth, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP10', resource: 'CumSoilFilling', description: 'Totalarea-deduct', length: length, breadth: width, thickness: excavationDepth, area:0, rate: FillingRates.Soil.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP11', resource: 'DailyMason', description: 'Filling', rate: MasonRates.Mason.Hourly, units: 'Hour', quantity: 1, totalCost: 0 },
       { id: 'GP12', resource: 'DailyHelper', description: 'Filling', rate: HelperRates.Helper.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
       { id: 'GP13', resource: 'DailyCompaction', description: 'Manual', rate: MachinaryRates.Compaction.Hourly, units: 'Hour', quantity: 2, totalCost: 0 },
@@ -774,13 +774,13 @@ df3Length,  df3Width,  df31Area,  wf31Length,  wf3Width,  wf3Area,
       { id: 'GP24', resource: 'HourlyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     ],
     "GP3": [
-      { id: 'GP30', resource: 'CumM15pccConcrete', description: 'Floor Screed', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: ConcreteRates.M15pcc.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP30', resource: 'CumM15pccConcrete', description: 'Floor Screed', length: length, breadth: width, thickness: 0.1, area:0,  rate: ConcreteRates.M15pcc.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP31', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Daily, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GP32', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     ],
 
     "GP4": [
-      { id: 'GP40', resource: 'CumWater', description: 'Curing Water', length: builtLength, breadth: builtWidth, thickness: 0.1, area:0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
+      { id: 'GP40', resource: 'CumWater', description: 'Curing Water', length: length, breadth: width, thickness: 0.1, area:0,  rate: WaterRates.Water.Cum, units: 'Cum', quantity: 0, totalCost: 0 },
       { id: 'GP31', resource: 'DailyMason', description: 'Mason', rate: MasonRates.Mason.Hourly, units: 'Day', quantity: 1, totalCost: 0 },
       { id: 'GP32', resource: 'DailyHelper', description: 'Helper', rate: HelperRates.Helper.Hourly, units: 'Day', quantity: 2, totalCost: 0 },
     ],
