@@ -1549,7 +1549,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 
   {
     id:`${level}FINT`,
-    name:`INTERIORS`,
+    name:`GROUND INTERIORS`,
     start:'',
     end:'',
     duration:0,
@@ -1561,12 +1561,6 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     hideChildren:false,
     parent:`PROJ`
   },
-    // ]
-    // const roomsData=[]
-    // for(const index in drawingData[levelsMap[level]]?.rooms){
-      
-    //   const room:roomType= drawingData[levelsMap[level]]?.rooms[index]
-    //   roomsData.push(
         {
           id:`${level}FIN${index}`,
           name:`${room.name}`,
@@ -1593,7 +1587,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	      type:'task',
 	      progress:0,
 	      hideChildren:false,
-	      parent:`${level}FINT`,
+	      parent:`${level}FIN${index}`,
         resources: [          
 	      { id: `GFI71${level}${index}`, resource: 'TW1TeakperftDF', description: 'Door Frame', length: 2.3, breadth: 2.7, area: 6.21,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },
         ],
@@ -1610,7 +1604,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    type:'task',
 	    progress:0,
 	    hideChildren:false,
-	    parent:`${level}FINT`,
+	    parent:`${level}FIN${index}`,
 	    resources: [
 	    { id: `GFI81${level}${index}`, resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2.75, breadth: 2.75, area: 7.5, rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
 	    ], 
@@ -1627,7 +1621,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    type:'task',
 	    progress:0,
 	    hideChildren:false,
-	    parent:`${level}FINT`,
+	    parent:`${level}FIN${index}`,
 	    resources: [
 	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: 2.5, breadth: 2.5, area: 6.25, rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
 	    ], 
@@ -1644,7 +1638,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    type:'task',
 	    progress:0,
 	    hideChildren:false,
-	    parent:`${level}FINT`,
+	    parent:`${level}FIN${index}`,
 	    resources: [
 	    { id: `GFI101${level}${index}`, resource: 'UnitTeakWoodDoor', description: 'Door', length: 2.2, breadth: 2.5, area: 5.5, rate: DoorRates.TeakWood.Unit, units: 'Unit', quantity: 1, totalCost: 0 },        
 	    ],
@@ -1661,7 +1655,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    type:'project',
 	    progress:0,
 	    hideChildren:false,
-	    parent:`${level}FINT`
+	    parent:`${level}FIN${index}`
 	    },
 	    {
 	    id:`${level}FIN${index}EL`,
@@ -1747,7 +1741,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    type:'project',
 	    progress:0,
 	    hideChildren:false,
-	    parent:`${level}FINT`
+	    parent:`${level}FIN${index}`
 	    },
 	    {
 	    id:`${level}FIN${index}FC`,
