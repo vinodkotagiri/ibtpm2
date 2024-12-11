@@ -1548,7 +1548,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
   },  
   {
     id:`L${level}FIN`,
-    name:`${levelsMap[ level ]}`.toUpperCase() +" FINISHES-INTERIORS ",
+    name:`${levelsMap[ level ]}`.toUpperCase() +`FINISHES-INTERIORS`,
     start:'',
     end:'',
     duration:0,
@@ -1558,7 +1558,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:'PROJ'
+    parent:`PROJ`
   },
   {
     id:`${level}FINT`,
