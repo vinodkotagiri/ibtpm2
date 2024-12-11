@@ -1546,20 +1546,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     { id: `G1PTF16${level}${index}`, resource: 'DailyHelper', description: 'Clean', rate: HelperRates.Helper.Daily, units: 'Day', quantity: 2, totalCost: 0 },
     ], 
   },  
-  {
-    id:`L${level}FIN`,
-    name:`${levelsMap[ level ]}`.toUpperCase() +`FINISHES-INTERIORS`,
-    start:'',
-    end:'',
-    duration:0,
-    cost:0,
-    strategy:'FS',
-    dependencies:['PROJ'],
-    type:'project',
-    progress:0,
-    hideChildren:false,
-    parent:`PROJ`
-  },
+
   {
     id:`${level}FINT`,
     name:'INTERIORS',
@@ -1572,7 +1559,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:`L${level}FIN`
+    parent:`PROJ`
   },
     // ]
     // const roomsData=[]
