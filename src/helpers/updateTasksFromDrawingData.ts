@@ -1555,11 +1555,11 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     duration:0,
     cost:0,
     strategy:'FS',
-    dependencies:[],
+    dependencies:['PROJ'],
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:`PROJ`
+    parent:'PROJ'
   },
         {
           id:`${level}FIN${index}`,
