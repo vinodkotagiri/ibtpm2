@@ -1583,7 +1583,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	      duration:1,
 	      cost:0,
 	      strategy:'FS',
-	      dependencies:[`L${level}PL${index}`],
+	      dependencies:[`L${level}PL${index}`,`L${level}GRT${index}`],
 	      type:'task',
 	      progress:0,
 	      hideChildren:false,
