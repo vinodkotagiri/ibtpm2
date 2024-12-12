@@ -1196,7 +1196,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     let tasksToPush = [
       {
         id:`L${level}RFIN`,
-        name:`${levelsMap[ level ]}`.toUpperCase() +" FINISHES-ROUGH-IN",
+        name:`${levelsMap[ level ]}`.toUpperCase() + "FINISHES",
         start:'',
         end:'',
         duration:0,
