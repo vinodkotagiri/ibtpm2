@@ -1589,7 +1589,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	      hideChildren:false,
 	      parent:`${level}FIN${index}`,
         resources: [          
-	      { id: `GFI71${level}${index}`, resource: 'TW1TeakperftDF', description: 'Door Frame', length: 2.3, breadth: 2.7, area: 6.21,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 0, totalCost: 0 },
+	      { id: `GFI71${level}${index}`, resource: 'TW1TeakperftDF', description: 'Door Frame', length: 2.3, breadth: 2.7, area: 6.21,  rate: DFRates.Teakperft.TW2, units: 'Sqm', quantity: 1, totalCost: 0 },
         ],
         },
 	      {
@@ -1606,7 +1606,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}`,
 	    resources: [
-	    { id: `GFI81${level}${index}`, resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2.75, breadth: 2.75, area: 7.5, rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 0, totalCost: 0 },    
+	    { id: `GFI81${level}${index}`, resource: 'TW1TeakperftDF', description: 'Window Frame', length: 2.75, breadth: 2.75, area: 7.5, rate: DFRates.Teakperft.TW2, units: 'Sft', quantity: 1, totalCost: 0 },    
 	    ], 
 	    },
 	    {
@@ -1623,7 +1623,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 	    hideChildren:false,
 	    parent:`${level}FIN${index}`,
 	    resources: [
-	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: 2.5, breadth: 2.5, area: 6.25, rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 0, totalCost: 0 },    
+	    { id: `GFI91${level}${index}`, resource: 'SftUPVCSlidDoor', description: 'Window', length: 2.5, breadth: 2.5, area: 6.25, rate: DoorRates.UPVCSlid.Sft, units: 'Sft', quantity: 1, totalCost: 0 },    
 	    ], 
 	    },
 	    {
