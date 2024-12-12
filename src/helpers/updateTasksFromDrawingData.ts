@@ -1196,7 +1196,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     let tasksToPush = [
       {
         id:`L${level}RFIN`,
-        name:`${levelsMap[ level ]}`.toUpperCase() +" FINISHES-ROUGH-IN",
+        name:`${levelsMap[ level ]}`.toUpperCase() + "FINISHES",
         start:'',
         end:'',
         duration:0,
@@ -1549,7 +1549,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
 
   {
     id:`${level}FINT`,
-    name:`GROUND FLOOR FINISHES INTERIORS`,
+    name:`FINISHES INTERIORS`,
     start:'',
     end:'',
     duration:0,
@@ -1559,7 +1559,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:`PROJ`
+    parent:`L${level}RFIN`
   },
         {
           id:`${level}FIN${index}`,
