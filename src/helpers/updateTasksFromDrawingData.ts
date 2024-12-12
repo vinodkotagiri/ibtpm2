@@ -1548,7 +1548,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
   },  
 
   {
-    id:`${level}FINT`,
+    id:`${level}FINT${index}`,
     name:`GROUND FLOOR FINISHES INTERIORS`,
     start:'',
     end:'',
