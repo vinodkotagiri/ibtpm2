@@ -1548,8 +1548,8 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
   },  
 
   {
-    id:`${level}FINT`,
-    name:`FINISHES INTERIORS`,
+    id:`${level}FINT${index}`,
+    name:`GROUND FLOOR FINISHES INTERIORS`,
     start:'',
     end:'',
     duration:0,
@@ -1559,7 +1559,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
     type:'project',
     progress:0,
     hideChildren:false,
-    parent:`L${level}RFIN`
+    parent:`PROJ`
   },
         {
           id:`${level}FIN${index}`,
