@@ -1573,7 +1573,7 @@ function updateFinishes ( tasks, drawingData: DrawingData, levelsMap, levels ) {
           type:'project',
           progress:0,
           hideChildren:false,
-          parent:`${level}FINT`
+          parent:`${level}FINT${index}`
         },
 	      {
 	      id:`${level}FIN${index}DF`,
