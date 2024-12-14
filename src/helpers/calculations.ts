@@ -171,6 +171,26 @@ export const getCurrencySymbol = ( currencyCode: string ): string => {
   return currencies[ currencyCode ] || currencyCode;
 };
 
+export const updateProjectProgress = ( tasks: Task[] ):Array<Task>=> {
+  for ( let i = tasks.length - 1; i >= 0; i-- ) {
+    if(tasks[i].type=='project'){
+      const childTasks = tasks.filter( t => t.parent === tasks[ i ].id && t.type=='task'); 
+      if ( childTasks.length ) {
+        const totalTaksCompleted=childTasks.filter(task=>task.progress==1).length
+        const percentage=(totalTaksCompleted/childTasks.length)*100
+        tasks[i].progress=(percentage).toFixed(2)
+      }
+      const childProjects = tasks.filter( t => t.parent === tasks[ i ].id && t.type=='project'); 
+      if(childProjects.length){
+        const totalProjectsCompleted=childProjects.filter(project=>project.progress==100).length
+        const percentage=(totalProjectsCompleted/childProjects.length)*100
+        tasks[i].progress=(percentage).toFixed(2)
+      }
+    }
+  }
+  return tasks
+}
+
 
 
 

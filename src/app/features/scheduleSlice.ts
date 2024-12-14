@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import schedule from "../../constants/schedule";
-import { calculateTotalResourceCost, getCurrencySymbol, updateTaskDates } from "../../helpers/calculations";
+import { calculateTotalResourceCost, getCurrencySymbol, updateProjectProgress, updateTaskDates } from "../../helpers/calculations";
 import { CurrencyUnits, DrawingData, Task } from "../../constants/types";
 import getResources from "../../constants/resources";
 import convertUnits from "../../helpers/converisons";
@@ -170,9 +170,19 @@ const scheduleSlice = createSlice( {
     },
     updateTotalTasksCount(state){
       state.totalTasks=state.tasks.filter(task=>task.type=='task').length
+    },
+    updateTaskProgress(state,action){
+      const {id,progress}=action.payload
+      state.tasks=state.tasks.map(task=>{
+        if(task.id===id){
+          task.progress=progress
+        }
+        return task
+      })
+      state.tasks=updateProjectProgress(state.tasks)
     }
   }
 } )
 
-export const {updateTasksDuration,updateTaskFromDrawing,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
+export const {updateTaskProgress,updateTasksDuration,updateTaskFromDrawing,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
 export default scheduleSlice.reducer

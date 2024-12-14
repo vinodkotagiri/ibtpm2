@@ -3,7 +3,7 @@ import { Task } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { updateTaskFromDrawing, updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
+import { updateTaskFromDrawing, updateTaskProgress, updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
 
 const ScheduleComponent: React.FC = () => {
   const [collapsed, setCollapsed] = useState<{ [key: string]: boolean }>({});
@@ -13,7 +13,6 @@ const ScheduleComponent: React.FC = () => {
   useEffect(() => {
     // updateResources(drawingData)
     if (drawingData.plotLength && drawingData.plotWidth && drawingData.plotArea) {
-      console.log('updatinf tasks from drawings')
       dispatch(updateTaskFromDrawing())
     }
   }, [drawingData])
@@ -64,9 +63,9 @@ const ScheduleComponent: React.FC = () => {
 
       return (
         <React.Fragment key={task.id}>
-          <tr style={{ backgroundColor: task.type == 'project' ? color : '#fff' }}>
+          <tr style={{ backgroundColor: task.type == 'project' ? color : '#fff', height:'16px',fontStyle:task.type == 'task' ? 'italic' : '' }} className='text-slate-800'>
             <td style={{ paddingLeft: `${level * 20}px`, width: '10%' }}>
-              <span className="ml-2">{task.id}</span>
+              <span className="ml-2 font-semibold">{task.id}</span>
               {task.children.length > 0 && (
                 <FontAwesomeIcon icon={collapsed[task.id] ? faChevronCircleDown : faChevronCircleUp} className='ml-2 cursor-pointer' size='lg' color='#00000095' onClick={() => toggleCollapse(task.id)} />
               )}
@@ -74,18 +73,24 @@ const ScheduleComponent: React.FC = () => {
             {/* <td className='font-semibold italic capitalize' style={{color:task.type==='project'?"blue":"green"}}>{task.type}</td> */}
             <td className='w-[100px]'>{task.name}</td>
             {task.cost ? <td className='font-semibold w-[90px]'>{currencyCode + ' ' + task.cost.toFixed(2)}</td> : <td></td>}
-            <td className='w-[90px]'>
-              <input className='input input-ghost cursor-pointer disabled:border-none disabled:bg-transparent w-[90px]' type='number' value={task.duration} onChange={(e) => handleDurationChange(e, task.id)} disabled={task.type == 'project' || !task.start} />
+            <td className='w-[90px] h-[20px]'>
+              <input className='input h-[20px] input-ghost cursor-pointer disabled:border-none disabled:bg-transparent w-[90px]' type='number' value={task.duration} onChange={(e) => handleDurationChange(e, task.id)} disabled={task.type == 'project' || !task.start} />
             </td>
-            <td className='w-[80px]'>
+            <td className='w-[80px] h-[20px]'>
               <div className="tooltip  tooltip-right z-50" data-tip="Please select start date">
-                <input type='date' className='input input-ghost cursor-pointer' onChange={e => handleStartDateChange(task.id, e.target.value)} value={task.start} />
+                <input type='date' className='input h-[20px] input-ghost cursor-pointer' onChange={e => handleStartDateChange(task.id, e.target.value)} value={task.start} />
               </div>
             </td>
-            <td className='w-[80px]'><input disabled type='date' className='input input-ghost disabled:border-none disabled:bg-transparent disabled:cursor-auto disabled:text-black' value={task.end} /></td>
+            <td className='w-[80px] h-[20px]'><input disabled type='date' className='input  h-[20px] input-ghost disabled:border-none disabled:bg-transparent disabled:cursor-auto disabled:text-black' value={task.end} /></td>
 
             <td className='w-[48px]'>{task.strategy}</td>
-            <td className='w-[48px]'>{task.progress}</td>
+            <td className='w-[48px]'>
+              {task.type=='task'?
+              <input className='bordercheckbox bordercheckbox-lg cursor-pointer' type='checkbox' checked={task.progress?true:false} onChange={e => dispatch(updateTaskProgress({ id: task.id, progress: e.target.checked?1:0 }))}/>
+              :task.progress+' %'
+              }
+              
+            </td>
 
           </tr>
           {!collapsed[task.id] &&
@@ -113,7 +118,6 @@ const ScheduleComponent: React.FC = () => {
             <th>End</th>
             <th>Strategy</th>
             <th>Progress</th>
-
           </tr>
         </thead>
         <tbody>{renderTasks(nestedTasks)}</tbody>
