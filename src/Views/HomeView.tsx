@@ -26,26 +26,26 @@ const HomeView = () => {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#E6FF94] flex items-center justify-center flex-col font-semibold text-slate-600">
         <div className="text-2xl">
-          TOTAL BUDGET
+          ACTUAL COST
         </div>
         <div>
-          &#8377;35,22000
+          &#8377;0
         </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#B3A398] flex items-center justify-center flex-col font-semibold text-slate-600">
         <div className="text-2xl">
-          TOTAL BUDGET
+          AMOUNT PAID
         </div>
         <div>
-          &#8377;35,22000
+          &#8377;0
         </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#CD8D7A] flex items-center justify-center flex-col font-semibold text-slate-600">
         <div className="text-2xl">
-          TOTAL BUDGET
+          AMOUNT DUE
         </div>
         <div>
-          &#8377;35,22000
+          &#8377;0
         </div>
         </div>
       </div>
