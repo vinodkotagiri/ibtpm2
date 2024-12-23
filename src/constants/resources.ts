@@ -55,7 +55,7 @@ function getResources(
   drawingData: DrawingData,
   taskResources: Array<Resource> = null
 ): Array<Resource> {
-  console.log("drawingData", drawingData);
+
   const {
     plotLength,
     plotWidth,
