@@ -23208,7 +23208,7 @@ function updateQuantities(resources) {
       const { diameter, noOfBars, length } = resource;
       resource.quantity = (Math.pow(diameter, 2) * length * noOfBars) / 162;
       resource.quantity = resource.quantity.toFixed(2);
-      // resource.area=(resource.length*resource.breadth).toFixed(2)
+      resource.area=(resource.length*resource.breadth).toFixed(2)
     }
 
     if (resource?.perimeter != undefined && resource?.length && resource?.breadth) {
@@ -23217,6 +23217,7 @@ function updateQuantities(resources) {
       if (resource?.thickness) {
         resource.quantity = resource.perimeter * resource.thickness;
       }
+      resource.quantity=resource.area
     }
 
     if (resource?.numbersRequired != undefined && resource?.numbersRequired > 0) {

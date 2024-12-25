@@ -164,6 +164,12 @@ export function calculateTotalResourceCost ( tasks: Task[] ): Task[] {
       }
     }
   }
+
+  const mainProjs=tasks.filter(task=>task.parent=='PROJ')
+  
+  const totalProjectCost=mainProjs.map(proj=>proj.cost).reduce((acc,curr)=>acc+curr,0)
+  console.log('totalProjectCost',totalProjectCost)
+  tasks[0].cost=totalProjectCost
   return tasks;
 }
 
