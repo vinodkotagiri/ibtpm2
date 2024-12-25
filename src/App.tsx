@@ -5,6 +5,7 @@ import { loadDrawingData } from './helpers/loadDrawingData'
 import { useEffect, useState } from 'react'
 import { useAppDispatch } from './app/hooks'
 import { updateAllResources } from './app/features/scheduleSlice'
+import { getUserDetails } from './app/services/axios'
 
 const App = () => {
   const [params,setParams]=useSearchParams()
@@ -20,7 +21,6 @@ const App = () => {
     }else{
       if(sessionStorage.getItem('id')){
         id=sessionStorage.getItem('id')
-        console.log('id::::',id)
       }
     }
     if(params.get("token")){
@@ -31,9 +31,15 @@ const App = () => {
         token=sessionStorage.getItem('token')
       }
     }
-    console.log('id',id)
-    // const id="6753d9fe85ceb8e0120beb56"
-    // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWI2M2U0ZWE1ZDNhZmQyY2M0Y2M0OSIsInR5cGUiOjAsImlhdCI6MTczMzU0ODQ3OCwiZXhwIjoxNzM0MTUzMjc4fQ.PS6nAxPL5vNRONurtEnmWOjqZmwBhSlF0RTSQzEeynM"
+
+    if(token){
+      getUserDetails(token).then(res=>{
+        if(res?.data?.userDetails?.userInfo){
+          sessionStorage.setItem('user',JSON.stringify(res?.data?.userDetails?.userInfo))
+        }
+      }).catch(err=>console.log('Error',err))
+    }
+
     if(id&&token){
       loadDrawingData(token,id)
       dispatch(updateAllResources())
@@ -44,9 +50,21 @@ const App = () => {
       <NavbarComponent />
     </div>
     <div className='h-[calc(100vh-64px)]'>
-      <Routes>
-        {routes.map(({ path, component, name }) => (<Route path={path} Component={component} key={name} />))}
-      </Routes>
+    <Routes>
+          {routes.map(({ path, component, children, name }) => (
+            <Route key={name} path={path} Component={component}>
+              {/* Render child routes if they exist */}
+              {children &&
+                children.map(({ path, component, name,index }) => {
+                  {
+                    return index?
+                     (<Route index Component={component} />)
+                   : (<Route key={name} path={path} Component={component} />)
+                  }
+                })}
+            </Route>
+          ))}
+        </Routes>
     </div>
   </div>
   )

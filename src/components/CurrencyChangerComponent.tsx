@@ -10,7 +10,7 @@ const CurrencyChangerComponent = () => {
     dispatch(setCurrency(e.target.value))
   }
   return (
-    <div>
+    <div className='z-20'>
       <select
         className='select select-ghost font-semibold select-bordered'
         defaultValue='INR' // Set the default selected value here

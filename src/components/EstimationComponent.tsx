@@ -12,7 +12,7 @@ const EstimationComponent: React.FC = () => {
   
   const [nestedTasks,setNestedTasks]=useState([])
   const dispatch = useAppDispatch();
-  const colorPalette = ['#f0ad4e', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7'];
+  const colorPalette = ['#f0ad4e50', '#5bc0de50', '#d9534f50', '#5cb85c50', '#337ab750'];
   
   useEffect(()=>{
     setCurrentTasks(tasks)
@@ -85,19 +85,19 @@ const EstimationComponent: React.FC = () => {
     // const resourceColor = getShade(color, level + 1); // Slightly lighter shade for resources
 
     return resources.map(resource => (
-      <tr key={resource.id} style={{backgroundColor:'#fff'}}>
-        <td>{resource.id}</td>
+      <tr key={resource.id} style={{backgroundColor:'#fff',height:'16px',background:color, fontStyle:'italic'}}>
+        <td style={{ paddingLeft: `${level * 20}px`, width: '10%' }}>{resource.id}</td>
         <td></td> {/* Empty cell for alignment */}
         <td>{resource.resource}</td>
         <td>{resource.description}</td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.length} disabled={!resource?.length} onChange={e => handleChange(e,resource.id,'length')}/></td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.breadth} disabled={!resource?.length} onChange={e => handleChange(e,resource.id,'breadth')}/></td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.thickness} disabled={!resource?.thickness} onChange={e => handleChange(e,resource.id,'thickness')}/></td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.diameter} disabled={!resource?.diameter} onChange={e => handleChange(e,resource.id,'diameter')}/></td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.noOfBars} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'noOfBars')}/></td>
+        <td ><input className='w-[100px] h-[16px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.length} disabled={!resource?.length} onChange={e => handleChange(e,resource.id,'length')}/></td>
+        <td ><input className='w-[100px] h-[16px]  input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.breadth} disabled={!resource?.length} onChange={e => handleChange(e,resource.id,'breadth')}/></td>
+        <td ><input className='w-[100px] h-[16px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.thickness} disabled={!resource?.thickness} onChange={e => handleChange(e,resource.id,'thickness')}/></td>
+        <td ><input className='w-[100px] h-[16px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.diameter} disabled={!resource?.diameter} onChange={e => handleChange(e,resource.id,'diameter')}/></td>
+        <td ><input className='w-[100px] h-[16px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.noOfBars} disabled={!resource?.noOfBars} onChange={e => handleChange(e,resource.id,'noOfBars')}/></td>
         <td>{resource.area}</td>
         <td>{resource.perimeter}</td>
-        <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.numbersRequired} disabled={!resource?.numbersRequired} onChange={e => handleChange(e,resource.id,'numbersRequired')}/></td>
+        <td ><input className='w-[100px] h-[16px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={resource?.numbersRequired} disabled={!resource?.numbersRequired} onChange={e => handleChange(e,resource.id,'numbersRequired')}/></td>
         <td>{resource.quantity}</td>
         <td>{resource.rate}</td>
         <td>{resource.units}</td>
@@ -119,18 +119,19 @@ const EstimationComponent: React.FC = () => {
 
       return (
         <React.Fragment key={task.id}>
-          <tr style={{ backgroundColor: task.type === 'project' ? color : '#fff' }}>
+          <tr style={{ backgroundColor: task.type === 'project' ? color : '#fff', height:'16px' }}>
             <td>
-              <span>{task.id}</span>
-              {task.children.length > 0 && (
+              
+              {task.children.length > 0 ? (
                 <FontAwesomeIcon
                   icon={collapsed[task.id] ? faChevronCircleDown : faChevronCircleUp}
-                  className="ml-2 cursor-pointer"
+                  className="mr-2 cursor-pointer"
                   size="lg"
                   color="#00000095"
                   onClick={() => toggleCollapse(task.id)}
                 />
-              )}
+              ): null}
+              <span className='font-bold text-slate-600' style={task.children.length <= 0?{marginLeft:'30px'}:{}}>{task.id}</span>
             </td>
             <td>{task.name}</td>
             <td></td> {/* Empty cell for alignment */}
@@ -142,7 +143,7 @@ const EstimationComponent: React.FC = () => {
             <td></td>
             <td></td>
             <td></td>
-            <td ><input className='w-[100px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={task?.numbersRequired} disabled={!task?.numbersRequired} onChange={e => handleChange(e,task.id,'numbersRequired','project')}/></td>
+            <td ><input className='w-[100px] h-[16px] input input-ghost input-bordered cursor-pointer disabled:bg-transparent disabled:border-none' type='number' value={task?.numbersRequired} disabled={!task?.numbersRequired} onChange={e => handleChange(e,task.id,'numbersRequired','project')}/></td>
             <td></td>
             <td></td>
             <td></td>
@@ -165,7 +166,7 @@ const EstimationComponent: React.FC = () => {
 
   return (
     <div className="overflow-scroll table-container w-screen min-h-screen pb-24 relative" style={{ overflow: 'auto', maxHeight: '90vh' }}>
-      <table className="table table-lg w-full h-full overflow-auto table-zebra">
+      <table className="table table-lg w-full h-full overflow-auto table-border">
         <thead>
           <tr className="sticky-header" >
             <th>Resource ID</th>

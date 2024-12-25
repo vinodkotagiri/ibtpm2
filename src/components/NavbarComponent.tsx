@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../app/hooks'
 
 const NavbarComponent = () => {
   const navigate = useNavigate()
   const { drawingData } = useAppSelector( state => state.schedule )
   return (
-    <div className="navbar  bg-light-primary z-50">
+    <div className="navbar  bg-light-primary z-[9999]">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">IBT</a>
+        <NavLink to='/' className="btn btn-ghost text-xl">IBT</NavLink>
       </div>
       <div className='flex gap-3'>
 
@@ -22,7 +22,7 @@ const NavbarComponent = () => {
         </label>
 
       </div>
-      <div className="flex-none gap-2">
+      <div className="flex-none gap-2 z-50">
         <div className='mx-3 h-full flex items-center justify-center'>
           <button className='btn btn-primary' onClick={ () => { navigate( '/schedule' ) } }>Schedule</button>
           {/* <UnitsToggler/> */ }
@@ -41,13 +41,18 @@ const NavbarComponent = () => {
           <ul
             tabIndex={ 0 }
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li>
-              <a className="justify-between">
-                Profile
+               <li>
+              <NavLink className="justify-between" to='/dashboard/estimates'>
+                Estimates
                 <span className="badge">New</span>
-              </a>
+              </NavLink>
             </li>
-            <li><a>Settings</a></li>
+            <li>
+              <NavLink className="justify-between" to='/dashboard/profile'>
+                Profile
+              </NavLink>
+            </li>
+            <li><NavLink to='/dashboard/settings'>Settings</NavLink></li>
             <li><a>Logout</a></li>
           </ul>
         </div>

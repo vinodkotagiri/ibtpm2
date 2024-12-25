@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import schedule from "../../constants/schedule";
-import { calculateTotalResourceCost, getCurrencySymbol, updateTaskDates } from "../../helpers/calculations";
+import { calculateTotalResourceCost, getCurrencySymbol, updateProjectProgress, updateTaskDates } from "../../helpers/calculations";
 import { CurrencyUnits, DrawingData, Task } from "../../constants/types";
 import getResources from "../../constants/resources";
-import convertUnits from "../../helpers/converisons";
 import { updateTasksFromDrawingData } from "../../helpers/updateTasksFromDrawingData";
 
 interface ScheduleState {
@@ -13,7 +12,8 @@ interface ScheduleState {
   currency:CurrencyUnits
   currencyCode:string
   drawingData:DrawingData
-  units:'imperial'|'SI'
+  units:'imperial'|'SI',
+  chartsData:Object
 }
 const initialState: ScheduleState = {
   tasks:[...schedule],
@@ -28,6 +28,7 @@ const initialState: ScheduleState = {
       plotLength: 0,
       plotWidth: 0,
       plotArea: 0,
+      excavationDepth:0,
       builtupLength: 0,
       builtupWidth: 0,
       builtupArea: 0,
@@ -68,7 +69,13 @@ const initialState: ScheduleState = {
         rooms:[]
       }
   },
-  units:'imperial'
+  units:'imperial',
+  chartsData:{
+    totalTasks:0,
+    completed:0,
+    totalBudget:0,
+    totalEstimate:0,
+  },
 }
 const scheduleSlice = createSlice( {
   initialState,
@@ -170,9 +177,19 @@ const scheduleSlice = createSlice( {
     },
     updateTotalTasksCount(state){
       state.totalTasks=state.tasks.filter(task=>task.type=='task').length
+    },
+    updateTaskProgress(state,action){
+      const {id,progress}=action.payload
+      state.tasks=state.tasks.map(task=>{
+        if(task.id===id){
+          task.progress=progress
+        }
+        return task
+      })
+      state.tasks=updateProjectProgress(state.tasks)
     }
   }
 } )
 
-export const {updateTasksDuration,updateTaskFromDrawing,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
+export const {updateTaskProgress,updateTasksDuration,updateTaskFromDrawing,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
 export default scheduleSlice.reducer
