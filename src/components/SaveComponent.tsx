@@ -1,12 +1,21 @@
 import toast from "react-hot-toast"
 import { handleSaveData } from "../helpers/saveData"
 
-const SaveComponent = () => {
-  async function handleSave () {
-    await handleSaveData()
-    toast.success("Project saved successfully")
+const SaveComponent = ({ estimateName, setEstimateName }) => {
+  async function handleSave() {
+    if (!estimateName) toast.error("Estimate Name is required")
+    handleSaveData(estimateName).then(res => {
+      if (res.message && res.Status != true) {
+        toast.error(res.message)
+      } 
+    }
+    ).catch(err => {
+      console.log(err)
+      toast.error("Project not saved")
+    })
+
   }
-  function handleCancel () {
+  function handleCancel() {
     toast.error("Project not saved")
   }
   return (

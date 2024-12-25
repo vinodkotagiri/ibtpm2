@@ -5,6 +5,7 @@ import { loadDrawingData } from './helpers/loadDrawingData'
 import { useEffect, useState } from 'react'
 import { useAppDispatch } from './app/hooks'
 import { updateAllResources } from './app/features/scheduleSlice'
+import { getUserDetails } from './app/services/axios'
 
 const App = () => {
   const [params,setParams]=useSearchParams()
@@ -30,7 +31,15 @@ const App = () => {
         token=sessionStorage.getItem('token')
       }
     }
-   
+
+    if(token){
+      getUserDetails(token).then(res=>{
+        if(res?.data?.userDetails?.userInfo){
+          sessionStorage.setItem('user',JSON.stringify(res?.data?.userDetails?.userInfo))
+        }
+      }).catch(err=>console.log('Error',err))
+    }
+
     if(id&&token){
       loadDrawingData(token,id)
       dispatch(updateAllResources())
