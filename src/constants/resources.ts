@@ -80,6 +80,7 @@ function getResources(
     PC2: [
       {
         id: "GTL11",
+        type: "Precon",
         resource: "UnitDesignIBT",
         description: "Design",
         length: plotLength,
@@ -95,6 +96,7 @@ function getResources(
     PC3: [
       {
         id: "GTL11",
+        type: "Precon",
         resource: "UnitEstimateIBT",
         description: "Estimate",
         length: plotLength,
@@ -110,6 +112,7 @@ function getResources(
     PC4: [
       {
         id: "GTL11",
+        type: "Precon",
         resource: "UnitCityapprIBT",
         description: "Municipal approval",
         length: plotLength,
@@ -125,6 +128,7 @@ function getResources(
     SP1: [
       {
         id: "C0",
+        type: "Precon",
         resource: "DailyMason",
         description: "Survery",
         rate: FencingRates.Fencing.Sft,
@@ -141,6 +145,7 @@ function getResources(
     SP2: [
       {
         id: "C1",
+        type: "Precon",
         resource: "DailyMason",
         description: "Fencing",
         rate: FencingRates.Fencing.Sqm,
@@ -155,6 +160,7 @@ function getResources(
       },
       {
         id: "C2",
+        type: "Precon",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -166,6 +172,7 @@ function getResources(
     SP3: [
       {
         id: "C04",
+        type: "Excavation",
         resource: "CumExcavatorExcavatonMachine",
         description: "Excavation",
         length: 2.5,
@@ -179,6 +186,7 @@ function getResources(
       },
       {
         id: "C4",
+        type: "Excavation",
         resource: "MonthlyMachinery",
         description: "Cum",
         rate: MachinaryRates.Dozer.Daily,
@@ -188,6 +196,7 @@ function getResources(
       },
       {
         id: "C5",
+        type: "Excavation",
         resource: "DailyMason",
         description: "Excavation",
         rate: MasonRates.Mason.Daily,
@@ -197,6 +206,7 @@ function getResources(
       },
       {
         id: "C6",
+        type: "Excavation",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Daily,
@@ -208,6 +218,7 @@ function getResources(
     SP4: [
       {
         id: "C7",
+        type: "Excavation",
         resource: "DailyMason",
         description: "Shoring",
         rate: ShoringRates.Shoring.Sft,
@@ -221,6 +232,7 @@ function getResources(
       },
       {
         id: "C8",
+        type: "Excavation",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -232,6 +244,7 @@ function getResources(
     SP5: [
       {
         id: "C9",
+        type: "Termite",
         resource: "DailyMason",
         description: "Termite",
         rate: TermiteRates.Termite.Sft,
@@ -244,6 +257,7 @@ function getResources(
       },
       {
         id: "C10",
+        type: "Termite",
         resource: "DailyHelper",
         description: "Termite",
         rate: HelperRates.Helper.Daily,
@@ -255,6 +269,7 @@ function getResources(
     SP6: [
       {
         id: "C11",
+        type: "Curing",
         resource: "SftWater",
         description: "Curing Water",
         rate: WaterRates.Water.Sft,
@@ -268,6 +283,7 @@ function getResources(
       },
       {
         id: "C12",
+        type: "Mason",
         resource: "DailyMason",
         description: "M15",
         rate: MasonRates.Mason.Daily,
@@ -277,6 +293,7 @@ function getResources(
       },
       {
         id: "C13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "M15",
         rate: HelperRates.Helper.Daily,
@@ -288,6 +305,7 @@ function getResources(
     FT01: [
       {
         id: "F1",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Concrete Screed",
         rate: ConcreteRates.M15pcc.Cum,
@@ -301,6 +319,7 @@ function getResources(
       },
       {
         id: "F2",
+        type: "Mason",
         resource: "HourlyMason",
         description: "M15",
         rate: MasonRates.Mason.Hourly,
@@ -310,6 +329,7 @@ function getResources(
       },
       {
         id: "F3",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "M15",
         rate: HelperRates.Helper.Hourly,
@@ -321,7 +341,8 @@ function getResources(
     FT02: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 0.5,
         diameter: 8,
@@ -333,7 +354,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia10Steel",
+        type: "Dia10",
+        resource: "KgsDia10Steel",
         description: "Main Bars",
         length: 1.2,
         diameter: 10,
@@ -345,7 +367,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 1.2,
         diameter: 12,
@@ -357,6 +380,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -366,6 +390,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -377,6 +402,7 @@ function getResources(
     FT03: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingWoodFormwork",
         description: "Wood",
         length: 1.2,
@@ -390,6 +416,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -399,6 +426,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -410,6 +438,7 @@ function getResources(
     FT04: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "Concrete",
         length: 1.2,
@@ -423,6 +452,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -432,6 +462,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -444,6 +475,7 @@ function getResources(
     FT201: [
       {
         id: "F15",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Pcc",
         length: 1.5,
@@ -457,6 +489,7 @@ function getResources(
       },
       {
         id: "F16",
+        type: "Mason",
         resource: "HourlyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -466,6 +499,7 @@ function getResources(
       },
       {
         id: "F17",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -477,7 +511,8 @@ function getResources(
     FT202: [
       {
         id: "F4",
-        resource: "SftDia6Steel",
+        type: "Dia6",
+        resource: "KgsDia6Steel",
         description: "Stirrups&Hooks",
         length: 0.6,
         diameter: 8,
@@ -489,7 +524,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia10Steel",
+        type: "Dia10",
+        resource: "KgsDia10Steel",
         description: "Main Bars",
         length: 1.5,
         diameter: 10,
@@ -501,7 +537,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 1.5,
         diameter: 12,
@@ -513,6 +550,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -522,6 +560,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -533,6 +572,7 @@ function getResources(
     FT203: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingWoodFormwork",
         description: "Wood",
         length: 1.5,
@@ -546,6 +586,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -555,6 +596,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -566,6 +608,7 @@ function getResources(
     FT204: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "Concrete",
         length: 1.5,
@@ -579,6 +622,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -588,6 +632,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -600,6 +645,7 @@ function getResources(
     FT301: [
       {
         id: "F15",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Pcc",
         length: 1.8,
@@ -613,6 +659,7 @@ function getResources(
       },
       {
         id: "F16",
+        type: "Mason",
         resource: "HourlyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -622,6 +669,7 @@ function getResources(
       },
       {
         id: "F17",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -633,7 +681,8 @@ function getResources(
     FT302: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 0.7,
         diameter: 8,
@@ -645,7 +694,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia10Steel",
+        type: "Dia10",
+        resource: "KgsDia10Steel",
         description: "Main Bars",
         length: 1.8,
         diameter: 12,
@@ -657,7 +707,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 1.8,
         diameter: 12,
@@ -669,6 +720,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -678,6 +730,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -689,6 +742,7 @@ function getResources(
     FT303: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingWoodFormwork",
         description: "Wood",
         length: 1.8,
@@ -702,6 +756,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -711,6 +766,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -722,6 +778,7 @@ function getResources(
     FT304: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "Concrete",
         length: 1.8,
@@ -735,6 +792,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -744,6 +802,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -756,6 +815,7 @@ function getResources(
     FT401: [
       {
         id: "F15",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Pcc",
         length: 2.0,
@@ -769,6 +829,7 @@ function getResources(
       },
       {
         id: "F16",
+        type: "Mason",
         resource: "HourlyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -778,6 +839,7 @@ function getResources(
       },
       {
         id: "F17",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -789,7 +851,8 @@ function getResources(
     FT402: [
       {
         id: "F4",
-        resource: "SftDia12Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 0.7,
         diameter: 8,
@@ -801,7 +864,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: 2.0,
         diameter: 10,
@@ -813,7 +877,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 2.0,
         diameter: 12,
@@ -825,6 +890,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -834,6 +900,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -845,6 +912,7 @@ function getResources(
     FT403: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingWoodFormwork",
         description: "Wood",
         length: 2.0,
@@ -858,6 +926,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -867,6 +936,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -878,6 +948,7 @@ function getResources(
     FT404: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "Concrete",
         length: 2.0,
@@ -891,6 +962,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -900,6 +972,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -912,6 +985,7 @@ function getResources(
     FT501: [
       {
         id: "F15",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Pcc",
         length: 2.5,
@@ -925,6 +999,7 @@ function getResources(
       },
       {
         id: "F16",
+        type: "Mason",
         resource: "HourlyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -934,6 +1009,7 @@ function getResources(
       },
       {
         id: "F17",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -945,7 +1021,8 @@ function getResources(
     FT502: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 0.8,
         diameter: 8,
@@ -957,7 +1034,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: 2.5,
         diameter: 12,
@@ -969,7 +1047,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 2.5,
         diameter: 12,
@@ -981,6 +1060,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -990,6 +1070,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1001,6 +1082,7 @@ function getResources(
     FT503: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingWoodFormwork",
         description: "Wood",
         length: 2.5,
@@ -1014,6 +1096,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1023,6 +1106,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1034,6 +1118,7 @@ function getResources(
     FT504: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "Concrete",
         length: 2.5,
@@ -1047,6 +1132,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1056,6 +1142,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1068,6 +1155,7 @@ function getResources(
     FT601: [
       {
         id: "F15",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Pcc",
         length: 3.0,
@@ -1081,6 +1169,7 @@ function getResources(
       },
       {
         id: "F16",
+        type: "Mason",
         resource: "HourlyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -1090,6 +1179,7 @@ function getResources(
       },
       {
         id: "F17",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -1102,7 +1192,8 @@ function getResources(
     FT602: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 1.0,
         diameter: 8,
@@ -1114,7 +1205,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia10Steel",
+        type: "Dia10",
+        resource: "KgsDia10Steel",
         description: "Main Bars",
         length: 3.0,
         diameter: 10,
@@ -1126,7 +1218,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3.0,
         diameter: 12,
@@ -1138,6 +1231,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1147,6 +1241,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1159,6 +1254,7 @@ function getResources(
     FT603: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingWoodFormwork",
         description: "Wood",
         length: 3.0,
@@ -1172,6 +1268,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1181,6 +1278,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1192,6 +1290,7 @@ function getResources(
     FT604: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "Concrete",
         length: 3.0,
@@ -1205,6 +1304,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1214,6 +1314,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1229,6 +1330,7 @@ function getResources(
     C11: [
       {
         id: "F224",
+        type: "Soil",
         resource: "CumSoilFilling",
         description: "sumofallpits",
         length: 2.5,
@@ -1242,6 +1344,7 @@ function getResources(
       },
       {
         id: "F225",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -1251,6 +1354,7 @@ function getResources(
       },
       {
         id: "F226",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1260,6 +1364,7 @@ function getResources(
       },
       {
         id: "F227",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -1269,6 +1374,7 @@ function getResources(
       },
       {
         id: "F228",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -1283,6 +1389,7 @@ function getResources(
     PT1L1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupLength,
@@ -1296,6 +1403,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -1305,6 +1413,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1314,6 +1423,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -1323,6 +1433,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -1334,7 +1445,8 @@ function getResources(
     PT1L2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -1346,7 +1458,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupWidth,
         diameter: 12,
@@ -1358,7 +1471,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupLength,
         diameter: 16,
@@ -1370,6 +1484,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1379,6 +1494,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1388,6 +1504,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -1397,6 +1514,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1408,6 +1526,7 @@ function getResources(
     PT1L3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupLength,
@@ -1421,6 +1540,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1430,6 +1550,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1441,6 +1562,7 @@ function getResources(
     PT1L4: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: builtupWidth,
@@ -1454,6 +1576,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1463,6 +1586,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1475,6 +1599,7 @@ function getResources(
     PT2L1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupWidth,
@@ -1488,6 +1613,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -1497,6 +1623,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -1506,6 +1633,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Mason",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -1515,6 +1643,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -1526,7 +1655,8 @@ function getResources(
     PT2L2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -1538,7 +1668,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupWidth,
         diameter: 12,
@@ -1550,7 +1681,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupLength,
         diameter: 16,
@@ -1562,6 +1694,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1571,6 +1704,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1580,6 +1714,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -1589,6 +1724,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1600,6 +1736,7 @@ function getResources(
     PT2L3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupLength,
@@ -1613,6 +1750,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1622,6 +1760,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1633,6 +1772,7 @@ function getResources(
     PT2L4: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: builtupLength,
@@ -1646,6 +1786,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1655,6 +1796,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1667,6 +1809,7 @@ function getResources(
     PT3L1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupLength,
@@ -1680,6 +1823,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -1689,6 +1833,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1698,6 +1843,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -1707,6 +1853,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -1718,7 +1865,8 @@ function getResources(
     PT3L2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -1730,7 +1878,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupWidth,
         diameter: 12,
@@ -1742,7 +1891,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupLength,
         diameter: 16,
@@ -1754,6 +1904,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1763,6 +1914,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1772,6 +1924,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -1781,6 +1934,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1792,6 +1946,7 @@ function getResources(
     PT3L3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupLength,
@@ -1805,6 +1960,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1814,6 +1970,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1825,6 +1982,7 @@ function getResources(
     PT3L4: [
       {
         id: "F12",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: builtupLength,
@@ -1838,6 +1996,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1847,6 +2006,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1859,6 +2019,7 @@ function getResources(
     PT4L1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupLength,
@@ -1872,6 +2033,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -1881,6 +2043,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -1890,6 +2053,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -1899,6 +2063,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -1910,7 +2075,8 @@ function getResources(
     PT4L2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -1922,7 +2088,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupWidth,
         diameter: 12,
@@ -1934,7 +2101,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupLength,
         diameter: 16,
@@ -1946,6 +2114,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -1955,6 +2124,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1964,6 +2134,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -1973,6 +2144,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -1984,6 +2156,7 @@ function getResources(
     PT4L3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupLength,
@@ -1997,6 +2170,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2006,6 +2180,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2017,6 +2192,7 @@ function getResources(
     PT4L4: [
       {
         id: "F12",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: builtupLength,
@@ -2030,6 +2206,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2039,6 +2216,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2055,6 +2233,7 @@ function getResources(
     PT1B1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupWidth,
@@ -2068,6 +2247,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2077,6 +2257,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -2086,6 +2267,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -2095,6 +2277,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -2106,7 +2289,8 @@ function getResources(
     PT1B2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -2118,7 +2302,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupLength,
         diameter: 12,
@@ -2130,7 +2315,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupWidth,
         diameter: 16,
@@ -2142,6 +2328,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2151,6 +2338,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2160,6 +2348,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -2169,6 +2358,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2180,6 +2370,7 @@ function getResources(
     PT1B3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupWidth,
@@ -2193,6 +2384,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2202,6 +2394,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2213,6 +2406,7 @@ function getResources(
     PT1B4: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: builtupWidth,
@@ -2226,6 +2420,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2235,6 +2430,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2247,6 +2443,7 @@ function getResources(
     PT2B1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupWidth,
@@ -2260,6 +2457,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2269,6 +2467,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -2278,6 +2477,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -2287,6 +2487,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -2298,7 +2499,8 @@ function getResources(
     PT2B2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -2310,7 +2512,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupLength,
         diameter: 12,
@@ -2322,7 +2525,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupWidth,
         diameter: 16,
@@ -2334,6 +2538,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2343,6 +2548,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2352,6 +2558,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -2361,6 +2568,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2372,6 +2580,7 @@ function getResources(
     PT2B3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupWidth,
@@ -2385,6 +2594,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2394,6 +2604,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2405,6 +2616,7 @@ function getResources(
     PT2B4: [
       {
         id: "F12",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: builtupWidth,
@@ -2418,6 +2630,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2427,6 +2640,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2439,6 +2653,7 @@ function getResources(
     PT3B1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupWidth,
@@ -2452,6 +2667,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2461,6 +2677,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -2470,6 +2687,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -2479,6 +2697,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -2490,7 +2709,8 @@ function getResources(
     PT3B2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -2502,7 +2722,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupLength,
         diameter: 12,
@@ -2514,7 +2735,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupWidth,
         diameter: 16,
@@ -2526,6 +2748,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2535,6 +2758,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2544,6 +2768,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -2553,6 +2778,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2564,6 +2790,7 @@ function getResources(
     PT3B3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupWidth,
@@ -2577,6 +2804,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2586,6 +2814,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2597,6 +2826,7 @@ function getResources(
     PT3B4: [
       {
         id: "F12",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 0,
@@ -2610,6 +2840,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2619,6 +2850,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2631,6 +2863,7 @@ function getResources(
     PT4B1: [
       {
         id: "PL1",
+        type: "Stone",
         resource: "CumStoneFilling",
         description: "Filling",
         length: builtupWidth,
@@ -2644,6 +2877,7 @@ function getResources(
       },
       {
         id: "PL2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2653,6 +2887,7 @@ function getResources(
       },
       {
         id: "PL3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -2662,6 +2897,7 @@ function getResources(
       },
       {
         id: "PL4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -2671,6 +2907,7 @@ function getResources(
       },
       {
         id: "PL5",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -2682,7 +2919,8 @@ function getResources(
     PT4B2: [
       {
         id: "F4",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -2694,7 +2932,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F5",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main Bars",
         length: builtupLength,
         diameter: 12,
@@ -2706,7 +2945,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F6",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Distribution Bars",
         length: builtupWidth,
         diameter: 16,
@@ -2718,6 +2958,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F7",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2727,6 +2968,7 @@ function getResources(
       },
       {
         id: "F8",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2736,6 +2978,7 @@ function getResources(
       },
       {
         id: "PL10",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -2745,6 +2988,7 @@ function getResources(
       },
       {
         id: "PL11",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2756,6 +3000,7 @@ function getResources(
     PT4B3: [
       {
         id: "F9",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: builtupWidth,
@@ -2769,6 +3014,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "F10",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2778,6 +3024,7 @@ function getResources(
       },
       {
         id: "F11",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2789,6 +3036,7 @@ function getResources(
     PT4B4: [
       {
         id: "F12",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: builtupWidth,
@@ -2802,6 +3050,7 @@ function getResources(
       },
       {
         id: "F13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2811,6 +3060,7 @@ function getResources(
       },
       {
         id: "F14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2825,6 +3075,7 @@ function getResources(
     STO: [
       {
         id: "STO",
+        type: "Excavation",
         resource: "CumExcavatorExcavatonMachine",
         description: "Excavation",
         length: 5,
@@ -2838,6 +3089,7 @@ function getResources(
       },
       {
         id: "ST1",
+        type: "Excavation",
         resource: "CumExcavationManual",
         description: "Excavation",
         length: 5,
@@ -2851,6 +3103,7 @@ function getResources(
       },
       {
         id: "ST2",
+        type: "Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2860,6 +3113,7 @@ function getResources(
       },
       {
         id: "ST3",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -2869,6 +3123,7 @@ function getResources(
       },
       {
         id: "ST4",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -2878,6 +3133,7 @@ function getResources(
       },
       {
         id: "ST5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -2889,6 +3145,7 @@ function getResources(
     ST1: [
       {
         id: "ST11",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "M15Concrete",
         length: 6,
@@ -2902,6 +3159,7 @@ function getResources(
       },
       {
         id: "ST12",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -2911,6 +3169,7 @@ function getResources(
       },
       {
         id: "ST13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -2922,6 +3181,7 @@ function getResources(
     ST2: [
       {
         id: "ST21",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "Brickwork",
         length: 6,
@@ -2935,6 +3195,7 @@ function getResources(
       },
       {
         id: "ST22",
+        type: "Brickwork Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2944,6 +3205,7 @@ function getResources(
       },
       {
         id: "ST23",
+        type: "Brickwork Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -2953,6 +3215,7 @@ function getResources(
       },
       {
         id: "ST24",
+        type: "Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -2962,6 +3225,7 @@ function getResources(
       },
       {
         id: "ST25",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -2973,6 +3237,7 @@ function getResources(
     ST3: [
       {
         id: "ST31",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "Brickwork",
         length: 6,
@@ -2986,6 +3251,7 @@ function getResources(
       },
       {
         id: "ST32",
+        type: "Brickwork-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -2995,6 +3261,7 @@ function getResources(
       },
       {
         id: "ST33",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3004,6 +3271,7 @@ function getResources(
       },
       {
         id: "ST34",
+        type: "Brickwork-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3013,6 +3281,7 @@ function getResources(
       },
       {
         id: "ST35",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3024,6 +3293,7 @@ function getResources(
     ST4: [
       {
         id: "ST41",
+        type: "Brickwork",
         resource: "Cuminch6Redclayper1000",
         description: "Baffle",
         length: 6,
@@ -3037,6 +3307,7 @@ function getResources(
       },
       {
         id: "ST42",
+        type: "Brickwork-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -3046,6 +3317,7 @@ function getResources(
       },
       {
         id: "ST43",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3055,6 +3327,7 @@ function getResources(
       },
       {
         id: "ST44",
+        type: "Brickwork-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3064,6 +3337,7 @@ function getResources(
       },
       {
         id: "ST45",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3075,6 +3349,7 @@ function getResources(
     ST5: [
       {
         id: "ST51",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "Plaster",
         length: 6,
@@ -3088,6 +3363,7 @@ function getResources(
       },
       {
         id: "ST52",
+        type: "Plaster-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -3097,6 +3373,7 @@ function getResources(
       },
       {
         id: "ST53",
+        type: "Plaster-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3106,6 +3383,7 @@ function getResources(
       },
       {
         id: "ST54",
+        type: "Plaster-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3115,6 +3393,7 @@ function getResources(
       },
       {
         id: "ST55",
+        type: "Plaster-Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3126,6 +3405,7 @@ function getResources(
     ST6: [
       {
         id: "ST61",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 0,
@@ -3139,6 +3419,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST62",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3148,6 +3429,7 @@ function getResources(
       },
       {
         id: "ST63",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3158,7 +3440,8 @@ function getResources(
 
       {
         id: "ST71",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -3170,7 +3453,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST72",
-        resource: "SftDia10Steel",
+        type: "Dia8",
+        resource: "KgsDia10Steel",
         description: "Main Bars",
         length: 6,
         diameter: 10,
@@ -3182,7 +3466,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST73",
-        resource: "SftDia10Steel",
+        type: "Dia8",
+        resource: "KgsDia10Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 10,
@@ -3194,6 +3479,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST76",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -3203,6 +3489,7 @@ function getResources(
       },
       {
         id: "ST77",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3212,6 +3499,7 @@ function getResources(
       },
       {
         id: "ST78",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 6,
@@ -3225,6 +3513,7 @@ function getResources(
       },
       {
         id: "ST79",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3234,6 +3523,7 @@ function getResources(
       },
       {
         id: "ST710",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3246,6 +3536,7 @@ function getResources(
     DC1: [
       {
         id: "DC11",
+        type: "Sewer-Conduit",
         resource: "mmm100SewerS40PVC",
         description: "Sewer",
         length: 5,
@@ -3257,6 +3548,7 @@ function getResources(
       },
       {
         id: "DC12",
+        type: "Sewer-Mason",
         resource: "DailyMason",
         description: "Sewer",
         rate: MasonRates.Mason.Hourly,
@@ -3266,6 +3558,7 @@ function getResources(
       },
       {
         id: "DC13",
+        type: "Sewer-Helper",
         resource: "DailyHelper",
         description: "Sewer",
         rate: HelperRates.Helper.Hourly,
@@ -3277,6 +3570,7 @@ function getResources(
     DC2: [
       {
         id: "DC22",
+        type: "Sewer-Mason",
         resource: "DailyMason",
         description: "Sewer",
         rate: MasonRates.Mason.Hourly,
@@ -3286,6 +3580,7 @@ function getResources(
       },
       {
         id: "DC23",
+        type: "Sewer-Helper",
         resource: "DailyHelper",
         description: "Sewer",
         rate: HelperRates.Helper.Hourly,
@@ -3302,6 +3597,7 @@ function getResources(
     WT1: [
       {
         id: "STO",
+        type: "Excavation",
         resource: "CumExcavatorExcavatonMachine",
         description: "Excavation",
         length: 5,
@@ -3315,6 +3611,7 @@ function getResources(
       },
       {
         id: "ST1",
+        type: "Excavation",
         resource: "CumExcavationManual",
         description: "Excavation",
         length: 5,
@@ -3328,6 +3625,7 @@ function getResources(
       },
       {
         id: "ST2",
+        type: "Excavation-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -3337,6 +3635,7 @@ function getResources(
       },
       {
         id: "ST3",
+        type: "Excavation-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3346,6 +3645,7 @@ function getResources(
       },
       {
         id: "ST4",
+        type: "Excavation-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3355,6 +3655,7 @@ function getResources(
       },
       {
         id: "ST5",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3366,6 +3667,7 @@ function getResources(
     WT2: [
       {
         id: "ST11",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "M15Concrete",
         length: 6,
@@ -3379,6 +3681,7 @@ function getResources(
       },
       {
         id: "ST12",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3388,6 +3691,7 @@ function getResources(
       },
       {
         id: "ST13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3399,6 +3703,7 @@ function getResources(
     WT3: [
       {
         id: "ST21",
+        type: "Brickwork",
         resource: "Cuminch6Redclayper1000",
         description: "Brickwork",
         length: 6,
@@ -3412,6 +3717,7 @@ function getResources(
       },
       {
         id: "ST22",
+        type: "Brickwork-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -3421,6 +3727,7 @@ function getResources(
       },
       {
         id: "ST23",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3430,6 +3737,7 @@ function getResources(
       },
       {
         id: "ST24",
+        type: "Brickwork-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3439,6 +3747,7 @@ function getResources(
       },
       {
         id: "ST25",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3450,6 +3759,7 @@ function getResources(
     WT4: [
       {
         id: "ST31",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "Brickwork",
         length: 6,
@@ -3463,6 +3773,7 @@ function getResources(
       },
       {
         id: "ST32",
+        type: "Brickwork-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -3472,6 +3783,7 @@ function getResources(
       },
       {
         id: "ST33",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3481,6 +3793,7 @@ function getResources(
       },
       {
         id: "ST34",
+        type: "Brickwork-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3490,6 +3803,7 @@ function getResources(
       },
       {
         id: "ST35",
+        type: "Brickwork-Helper",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3501,6 +3815,7 @@ function getResources(
     WT5: [
       {
         id: "ST41",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "Plaster",
         length: 6,
@@ -3514,6 +3829,7 @@ function getResources(
       },
       {
         id: "ST42",
+        type: "Plaster-Mason",
         resource: "DailyMason",
         description: "PCC",
         rate: MasonRates.Mason.Hourly,
@@ -3523,6 +3839,7 @@ function getResources(
       },
       {
         id: "ST43",
+        type: "Plaster-Helper",
         resource: "DailyHelper",
         description: "Clean-up",
         rate: HelperRates.Helper.Hourly,
@@ -3532,6 +3849,7 @@ function getResources(
       },
       {
         id: "ST44",
+        type: "Plaster-Helper",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3541,6 +3859,7 @@ function getResources(
       },
       {
         id: "ST45",
+        type: "Plaster-Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3552,6 +3871,7 @@ function getResources(
     WT6: [
       {
         id: "ST61",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 0,
@@ -3565,6 +3885,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST62",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3574,6 +3895,7 @@ function getResources(
       },
       {
         id: "ST63",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3584,7 +3906,8 @@ function getResources(
 
       {
         id: "ST71",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 12,
         diameter: 8,
@@ -3596,7 +3919,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST72",
-        resource: "SftDia10Steel",
+        type: "Dia10",
+        resource: "KgsDia10Steel",
         description: "Main Bars",
         length: 6,
         diameter: 10,
@@ -3608,7 +3932,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST73",
-        resource: "SftDia10Steel",
+        type: "Dia10",
+        resource: "KgsDia10Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 10,
@@ -3620,6 +3945,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "ST76",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -3629,6 +3955,7 @@ function getResources(
       },
       {
         id: "ST77",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3638,6 +3965,7 @@ function getResources(
       },
       {
         id: "ST78",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 6,
@@ -3651,6 +3979,7 @@ function getResources(
       },
       {
         id: "ST79",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3660,6 +3989,7 @@ function getResources(
       },
       {
         id: "ST710",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3674,6 +4004,7 @@ function getResources(
     WTPL2: [
       {
         id: "WTP11",
+        type: "Plumbing",
         resource: "ftmm20CPVC",
         description: "Plumbing",
         length: 5,
@@ -3685,6 +4016,7 @@ function getResources(
       },
       {
         id: "WTP12",
+        type: "Plumbing-Mason",
         resource: "DailyMason",
         description: "Plumbing",
         rate: MasonRates.Mason.Hourly,
@@ -3694,6 +4026,7 @@ function getResources(
       },
       {
         id: "WTP13",
+        type: "Plumbing-Helper",
         resource: "DailyHelper",
         description: "Plumbing",
         rate: HelperRates.Helper.Hourly,
@@ -3705,6 +4038,7 @@ function getResources(
     WTPL3: [
       {
         id: "WTP21",
+        type: "Plumbing",
         resource: "ftmm32CPVC",
         description: "Plumbing",
         length: 5,
@@ -3716,6 +4050,7 @@ function getResources(
       },
       {
         id: "WTP22",
+        type: "Plumbing-Mason",
         resource: "DailyMason",
         description: "Plumbing",
         rate: MasonRates.Mason.Hourly,
@@ -3725,6 +4060,7 @@ function getResources(
       },
       {
         id: "WTP23",
+        type: "Plumbing-Helper",
         resource: "DailyHelper",
         description: "Plumbing",
         rate: HelperRates.Helper.Hourly,
@@ -3740,6 +4076,7 @@ function getResources(
     GP1: [
       {
         id: "GP10",
+        type: "Soil",
         resource: "CumSoilFilling",
         description: "Totalarea-deduct",
         length: length,
@@ -3753,6 +4090,7 @@ function getResources(
       },
       {
         id: "GP11",
+        type: "Filling",
         resource: "DailyMason",
         description: "Filling",
         rate: MasonRates.Mason.Hourly,
@@ -3762,6 +4100,7 @@ function getResources(
       },
       {
         id: "GP12",
+        type: "Filling",
         resource: "DailyHelper",
         description: "Filling",
         rate: HelperRates.Helper.Hourly,
@@ -3771,6 +4110,7 @@ function getResources(
       },
       {
         id: "GP13",
+        type: "Filling",
         resource: "DailyCompaction",
         description: "Manual",
         rate: MachinaryRates.Compaction.Hourly,
@@ -3780,6 +4120,7 @@ function getResources(
       },
       {
         id: "GP14",
+        type: "Curing",
         resource: "DailyHelper",
         description: "Curing",
         rate: HelperRates.Helper.Hourly,
@@ -3791,7 +4132,8 @@ function getResources(
     GP2: [
       {
         id: "GP20",
-        resource: "SftDia8Steel",
+        type: "Curing",
+        resource: "KgsDia8Steel",
         description: "Main Bars",
         length: 12,
         diameter: 8,
@@ -3803,7 +4145,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "GP21",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distribution Bars",
         length: 12,
         diameter: 6,
@@ -3815,6 +4158,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "GP22",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -3824,6 +4168,7 @@ function getResources(
       },
       {
         id: "GP23",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -3833,6 +4178,7 @@ function getResources(
       },
       {
         id: "GP24",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -3844,6 +4190,7 @@ function getResources(
     GP3: [
       {
         id: "GP30",
+        type: "M15",
         resource: "CumM15pccConcrete",
         description: "Floor Screed",
         length: length,
@@ -3857,6 +4204,7 @@ function getResources(
       },
       {
         id: "GP31",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -3866,6 +4214,7 @@ function getResources(
       },
       {
         id: "GP32",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -3878,6 +4227,7 @@ function getResources(
     GP4: [
       {
         id: "GP40",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: length,
@@ -3891,6 +4241,7 @@ function getResources(
       },
       {
         id: "GP31",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3900,6 +4251,7 @@ function getResources(
       },
       {
         id: "GP32",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3915,7 +4267,8 @@ function getResources(
     GCT11: [
       {
         id: "GCT11",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -3927,7 +4280,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "GCT12",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -3939,7 +4293,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "GCT13",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -3951,6 +4306,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "GCT14",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -3960,6 +4316,7 @@ function getResources(
       },
       {
         id: "GCT15",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -3971,6 +4328,7 @@ function getResources(
     GCT12: [
       {
         id: "GCT110",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -3984,6 +4342,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "GCT111",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -3993,6 +4352,7 @@ function getResources(
       },
       {
         id: "GCT112",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4004,6 +4364,7 @@ function getResources(
     GCT13: [
       {
         id: "ST78",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -4017,6 +4378,7 @@ function getResources(
       },
       {
         id: "ST79",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4026,6 +4388,7 @@ function getResources(
       },
       {
         id: "ST710",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4040,7 +4403,8 @@ function getResources(
     CT21: [
       {
         id: "CT211",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -4052,7 +4416,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT212",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -4064,7 +4429,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT213",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -4076,6 +4442,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT214",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -4085,6 +4452,7 @@ function getResources(
       },
       {
         id: "CT215",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4096,6 +4464,7 @@ function getResources(
     CT22: [
       {
         id: "CT221",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -4109,6 +4478,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT222",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4118,6 +4488,7 @@ function getResources(
       },
       {
         id: "CT223",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4129,6 +4500,7 @@ function getResources(
     CT23: [
       {
         id: "CT231",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -4142,6 +4514,7 @@ function getResources(
       },
       {
         id: "CT232",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4151,6 +4524,7 @@ function getResources(
       },
       {
         id: "CT233",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4165,7 +4539,8 @@ function getResources(
     CT31: [
       {
         id: "CT311",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -4177,7 +4552,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT312",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -4189,7 +4565,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT313",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -4201,6 +4578,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT314",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -4210,6 +4588,7 @@ function getResources(
       },
       {
         id: "CT315",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4221,6 +4600,7 @@ function getResources(
     CT32: [
       {
         id: "CT321",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -4234,6 +4614,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "CT322",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4243,6 +4624,7 @@ function getResources(
       },
       {
         id: "CT323",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4254,6 +4636,7 @@ function getResources(
     CT33: [
       {
         id: "CT331",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -4267,6 +4650,7 @@ function getResources(
       },
       {
         id: "CT332",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4276,6 +4660,7 @@ function getResources(
       },
       {
         id: "CT333",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4290,6 +4675,7 @@ function getResources(
     BT11: [
       {
         id: "BT111",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3.2,
@@ -4303,6 +4689,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT112",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4312,6 +4699,7 @@ function getResources(
       },
       {
         id: "BT113",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4323,7 +4711,8 @@ function getResources(
     BT12: [
       {
         id: "BT121",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -4335,7 +4724,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT122",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -4347,7 +4737,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT123",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -4359,6 +4750,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT124",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -4368,6 +4760,7 @@ function getResources(
       },
       {
         id: "BT125",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4379,6 +4772,7 @@ function getResources(
     BT13: [
       {
         id: "BT131",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -4390,6 +4784,7 @@ function getResources(
     BT14: [
       {
         id: "BT141",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -4403,6 +4798,7 @@ function getResources(
       },
       {
         id: "BT142",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4412,6 +4808,7 @@ function getResources(
       },
       {
         id: "BT143",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4425,6 +4822,7 @@ function getResources(
     BT21: [
       {
         id: "BT211",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3.2,
@@ -4438,6 +4836,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT212",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4447,6 +4846,7 @@ function getResources(
       },
       {
         id: "BT213",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4458,7 +4858,8 @@ function getResources(
     BT22: [
       {
         id: "BT221",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -4470,7 +4871,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT222",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -4482,7 +4884,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT223",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -4494,6 +4897,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "BT224",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -4503,6 +4907,7 @@ function getResources(
       },
       {
         id: "BT225",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4514,6 +4919,7 @@ function getResources(
     BT23: [
       {
         id: "BT231",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -4525,6 +4931,7 @@ function getResources(
     BT24: [
       {
         id: "BT241",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -4538,6 +4945,7 @@ function getResources(
       },
       {
         id: "BT242",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -4547,6 +4955,7 @@ function getResources(
       },
       {
         id: "BT243",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -4563,6 +4972,7 @@ function getResources(
     SLB1: [
       {
         id: "SLB11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: firstFloor.length,
@@ -4576,6 +4986,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SLB12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -4585,6 +4996,7 @@ function getResources(
       },
       {
         id: "SLB13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4596,7 +5008,8 @@ function getResources(
     SSL1: [
       {
         id: "SSL11",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: firstFloor.length,
         diameter: 16,
@@ -4608,6 +5021,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SSL12",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -4617,6 +5031,7 @@ function getResources(
       },
       {
         id: "SSL13",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -4626,6 +5041,7 @@ function getResources(
       },
       {
         id: "SSL14",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4637,7 +5053,8 @@ function getResources(
     SSB1: [
       {
         id: "SSB11",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Bottom Distri Bars",
         breadth: firstFloor.width,
         diameter: 12,
@@ -4649,6 +5066,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SSB12",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -4658,6 +5076,7 @@ function getResources(
       },
       {
         id: "SSB13",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -4667,6 +5086,7 @@ function getResources(
       },
       {
         id: "SSB14",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4681,6 +5101,7 @@ function getResources(
     SLB3: [
       {
         id: "SLB31",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -4690,6 +5111,7 @@ function getResources(
       },
       {
         id: "SLB32",
+        type: "Electrical-Mason",
         resource: "DailyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Daily,
@@ -4699,6 +5121,7 @@ function getResources(
       },
       {
         id: "SLB33",
+        type: "Electrical-mason",
         resource: "DailyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Daily,
@@ -4710,6 +5133,7 @@ function getResources(
     SLB4: [
       {
         id: "SLB41",
+        type: "Mechanical",
         resource: "mHangersMech",
         description: "Mechanical",
         rate: MechRates.Hangers.m,
@@ -4719,6 +5143,7 @@ function getResources(
       },
       {
         id: "SLB42",
+        type: "Mechanical-Mason",
         resource: "DailyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Daily,
@@ -4728,6 +5153,7 @@ function getResources(
       },
       {
         id: "SLB43",
+        type: "Mechanical-Mason",
         resource: "DailyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Daily,
@@ -4739,6 +5165,7 @@ function getResources(
     SLB5: [
       {
         id: "SLB51",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -4748,6 +5175,7 @@ function getResources(
       },
       {
         id: "SLB52",
+        type: "Plumbing-Mason",
         resource: "DailyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Daily,
@@ -4757,6 +5185,7 @@ function getResources(
       },
       {
         id: "SLB53",
+        type: "Plumbing-Mason",
         resource: "DailyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Daily,
@@ -4768,6 +5197,7 @@ function getResources(
     SLB6: [
       {
         id: "SLB61",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -4777,6 +5207,7 @@ function getResources(
       },
       {
         id: "SLB62",
+        type: "FireFighting-Mason",
         resource: "DailyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Daily,
@@ -4786,6 +5217,7 @@ function getResources(
       },
       {
         id: "SLB63",
+        type: "FireFighting-Mason",
         resource: "DailyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Daily,
@@ -4800,7 +5232,8 @@ function getResources(
     SSL2: [
       {
         id: "SSL21",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: firstFloor.length,
         diameter: 16,
@@ -4812,6 +5245,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SSL22",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -4821,6 +5255,7 @@ function getResources(
       },
       {
         id: "SSL23",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -4830,6 +5265,7 @@ function getResources(
       },
       {
         id: "SSL24",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4841,7 +5277,8 @@ function getResources(
     SLB2: [
       {
         id: "SLB21",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Bottom Distri Bars",
         breadth: firstFloor.width,
         diameter: 12,
@@ -4853,6 +5290,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SLB22",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -4862,6 +5300,7 @@ function getResources(
       },
       {
         id: "SLB23",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -4871,6 +5310,7 @@ function getResources(
       },
       {
         id: "SLB24",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4885,6 +5325,7 @@ function getResources(
     SLB7: [
       {
         id: "SLB71",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -4894,6 +5335,7 @@ function getResources(
       },
       {
         id: "SLB72",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: firstFloor.length,
@@ -4907,6 +5349,7 @@ function getResources(
       },
       {
         id: "SLB73",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -4916,6 +5359,7 @@ function getResources(
       },
       {
         id: "SLB74",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4928,6 +5372,7 @@ function getResources(
     SLB8: [
       {
         id: "SLB81",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: firstFloor.length,
@@ -4941,6 +5386,7 @@ function getResources(
       },
       {
         id: "SLB82",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -4950,6 +5396,7 @@ function getResources(
       },
       {
         id: "SLB83",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4962,6 +5409,7 @@ function getResources(
     SLB9: [
       {
         id: "SLB91",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -4971,6 +5419,7 @@ function getResources(
       },
       {
         id: "SLB92",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -4985,7 +5434,8 @@ function getResources(
     FFG10: [
       {
         id: "FFG101",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.5,
         diameter: 12,
@@ -4997,7 +5447,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG102",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.5,
         diameter: 12,
@@ -5009,7 +5460,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG103",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 0.5,
         diameter: 8,
@@ -5021,7 +5473,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG104",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 0.5,
         diameter: 8,
@@ -5033,7 +5486,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG105",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.7,
         diameter: 10,
@@ -5045,7 +5499,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG106",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -5057,6 +5512,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG107",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5066,6 +5522,7 @@ function getResources(
       },
       {
         id: "FFG108",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5075,6 +5532,7 @@ function getResources(
       },
       {
         id: "FFG109",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5088,6 +5546,7 @@ function getResources(
     FFG11: [
       {
         id: "SLB11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4.5,
@@ -5101,6 +5560,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SLB12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -5110,6 +5570,7 @@ function getResources(
       },
       {
         id: "SLB13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5124,7 +5585,8 @@ function getResources(
     FFG12: [
       {
         id: "FFG141",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 5.7,
         diameter: 12,
@@ -5136,7 +5598,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG142",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 5.7,
         diameter: 10,
@@ -5148,7 +5611,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG143",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -5160,7 +5624,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG144",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -5172,7 +5637,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG145",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -5184,7 +5650,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG146",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -5196,6 +5663,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG147",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5205,6 +5673,7 @@ function getResources(
       },
       {
         id: "FFG148",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5214,6 +5683,7 @@ function getResources(
       },
       {
         id: "FFG149",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5228,7 +5698,8 @@ function getResources(
     FFG13: [
       {
         id: "FFG121",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 12,
@@ -5240,7 +5711,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG122",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 12,
@@ -5252,7 +5724,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG123",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -5264,7 +5737,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG124",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -5276,7 +5750,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG125",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -5288,7 +5763,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG126",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -5300,6 +5776,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG127",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5309,6 +5786,7 @@ function getResources(
       },
       {
         id: "FFG128",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5318,6 +5796,7 @@ function getResources(
       },
       {
         id: "FFG129",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5332,7 +5811,8 @@ function getResources(
     FFG14: [
       {
         id: "FFG141",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 16,
@@ -5344,7 +5824,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG142",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 16,
@@ -5356,7 +5837,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG143",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -5368,6 +5850,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG144",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5377,6 +5860,7 @@ function getResources(
       },
       {
         id: "FFG145",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5386,6 +5870,7 @@ function getResources(
       },
       {
         id: "FFG146",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5399,6 +5884,7 @@ function getResources(
     FFG15: [
       {
         id: "FFG151",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -5408,6 +5894,7 @@ function getResources(
       },
       {
         id: "FFG152",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 5,
@@ -5421,6 +5908,7 @@ function getResources(
       },
       {
         id: "FFG153",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -5434,6 +5922,7 @@ function getResources(
       },
       {
         id: "FFG154",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -5447,6 +5936,7 @@ function getResources(
       },
       {
         id: "FFG155",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -5456,6 +5946,7 @@ function getResources(
       },
       {
         id: "FFG156",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5468,6 +5959,7 @@ function getResources(
     FFG16: [
       {
         id: "FFG161",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: builtupLength,
@@ -5481,6 +5973,7 @@ function getResources(
       },
       {
         id: "FFG162",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -5490,6 +5983,7 @@ function getResources(
       },
       {
         id: "FFG163",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5502,6 +5996,7 @@ function getResources(
     FFG17: [
       {
         id: "FFG171",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -5511,6 +6006,7 @@ function getResources(
       },
       {
         id: "FFG172",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5523,6 +6019,7 @@ function getResources(
     SFG12: [
       {
         id: "SFG121",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4.5,
@@ -5536,6 +6033,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG122",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -5545,6 +6043,7 @@ function getResources(
       },
       {
         id: "SFG123",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5557,7 +6056,8 @@ function getResources(
     SFG13: [
       {
         id: "SFG131",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 16,
@@ -5569,7 +6069,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG132",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 16,
@@ -5581,7 +6082,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG133",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -5593,6 +6095,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG134",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5602,6 +6105,7 @@ function getResources(
       },
       {
         id: "SFG135",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5611,6 +6115,7 @@ function getResources(
       },
       {
         id: "SFG136",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5625,7 +6130,8 @@ function getResources(
     SFG14: [
       {
         id: "SFG141",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.2,
         diameter: 12,
@@ -5637,7 +6143,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG142",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.2,
         diameter: 12,
@@ -5649,7 +6156,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG143",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.2,
         diameter: 8,
@@ -5661,7 +6169,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG144",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.2,
         diameter: 8,
@@ -5673,7 +6182,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG145",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -5685,7 +6195,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG146",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -5697,6 +6208,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG147",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5706,6 +6218,7 @@ function getResources(
       },
       {
         id: "SFG148",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5715,6 +6228,7 @@ function getResources(
       },
       {
         id: "SFG149",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5728,7 +6242,8 @@ function getResources(
     SFG15: [
       {
         id: "SFG151",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 5.7,
         diameter: 12,
@@ -5740,7 +6255,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG152",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 5.7,
         diameter: 12,
@@ -5752,7 +6268,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG153",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -5764,7 +6281,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG154",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -5776,7 +6294,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG155",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -5788,7 +6307,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG156",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -5800,6 +6320,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG157",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5809,6 +6330,7 @@ function getResources(
       },
       {
         id: "SFG158",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5818,6 +6340,7 @@ function getResources(
       },
       {
         id: "SFG159",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5831,7 +6354,8 @@ function getResources(
     SFG16: [
       {
         id: "SFG161",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.5,
         diameter: 12,
@@ -5843,7 +6367,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG162",
-        resource: "SftDia12Steel",
+        type: "Dia25",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.5,
         diameter: 12,
@@ -5855,7 +6380,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG163",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1,
         diameter: 8,
@@ -5867,7 +6393,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG164",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1,
         diameter: 8,
@@ -5879,7 +6406,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG165",
-        resource: "SftDia12Steel",
+        type: "Dia25",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -5891,7 +6419,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG166",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -5903,6 +6432,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "SFG167",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -5912,6 +6442,7 @@ function getResources(
       },
       {
         id: "SFG168",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -5921,6 +6452,7 @@ function getResources(
       },
       {
         id: "SFG169",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -5935,6 +6467,7 @@ function getResources(
     SFG17: [
       {
         id: "SFG171",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -5944,6 +6477,7 @@ function getResources(
       },
       {
         id: "SFG172",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 5,
@@ -5957,6 +6491,7 @@ function getResources(
       },
       {
         id: "SFG173",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -5970,6 +6505,7 @@ function getResources(
       },
       {
         id: "SFG174",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -5983,6 +6519,7 @@ function getResources(
       },
       {
         id: "SFG175",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -5992,6 +6529,7 @@ function getResources(
       },
       {
         id: "SFG176",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -6004,6 +6542,7 @@ function getResources(
     SFG18: [
       {
         id: "SFG181",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: builtupLength,
@@ -6017,6 +6556,7 @@ function getResources(
       },
       {
         id: "SFG182",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -6026,6 +6566,7 @@ function getResources(
       },
       {
         id: "SFG183",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -6038,6 +6579,7 @@ function getResources(
     SFG19: [
       {
         id: "SFG191",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -6047,6 +6589,7 @@ function getResources(
       },
       {
         id: "SFG192",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -6063,7 +6606,8 @@ function getResources(
     EL11: [
       {
         id: "EL111",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.5,
         diameter: 12,
@@ -6075,7 +6619,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL112",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.5,
         diameter: 12,
@@ -6087,7 +6632,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL113",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.5,
         diameter: 8,
@@ -6099,7 +6645,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL114",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.5,
         diameter: 8,
@@ -6111,7 +6658,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "FFG15",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -6123,6 +6671,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL116",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -6132,6 +6681,7 @@ function getResources(
       },
       {
         id: "EL117",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -6141,6 +6691,7 @@ function getResources(
       },
       {
         id: "EL118",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -6155,6 +6706,7 @@ function getResources(
     EL12: [
       {
         id: "EL121",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -6166,6 +6718,7 @@ function getResources(
     EL13: [
       {
         id: "EL131",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -6175,6 +6728,7 @@ function getResources(
       },
       {
         id: "EL132",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -6188,6 +6742,7 @@ function getResources(
       },
       {
         id: "EL133",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -6197,6 +6752,7 @@ function getResources(
       },
       {
         id: "EL134",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -6211,7 +6767,8 @@ function getResources(
     EL14: [
       {
         id: "EL141",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -6223,7 +6780,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL142",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -6235,7 +6793,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL143",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -6247,6 +6806,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL144",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -6256,6 +6816,7 @@ function getResources(
       },
       {
         id: "EL145",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6267,6 +6828,7 @@ function getResources(
     EL15: [
       {
         id: "EL150",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -6280,6 +6842,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL151",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6287,8 +6850,9 @@ function getResources(
         quantity: 1,
         totalCost: 0
       },
-      {
+      {        
         id: "EL152",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6300,6 +6864,7 @@ function getResources(
     EL16: [
       {
         id: "EL168",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -6313,6 +6878,7 @@ function getResources(
       },
       {
         id: "EL169",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6322,6 +6888,7 @@ function getResources(
       },
       {
         id: "EL1610",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6336,6 +6903,7 @@ function getResources(
     EL17: [
       {
         id: "EL171",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 2,
@@ -6349,6 +6917,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL172",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6358,6 +6927,7 @@ function getResources(
       },
       {
         id: "EL173",
+        type: "Helper",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6369,7 +6939,8 @@ function getResources(
     EL18: [
       {
         id: "EL181",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -6381,7 +6952,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL182",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 2,
         diameter: 12,
@@ -6393,7 +6965,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL183",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 2,
         diameter: 16,
@@ -6405,6 +6978,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "EL184",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -6414,6 +6988,7 @@ function getResources(
       },
       {
         id: "EL185",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6425,6 +7000,7 @@ function getResources(
     EL19: [
       {
         id: "EL191",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -6436,6 +7012,7 @@ function getResources(
     EL110: [
       {
         id: "EL1101",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 2,
@@ -6449,6 +7026,7 @@ function getResources(
       },
       {
         id: "EL1102",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6458,6 +7036,7 @@ function getResources(
       },
       {
         id: "EL1103",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6474,7 +7053,8 @@ function getResources(
     L2T11: [
       {
         id: "L2T111",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -6486,7 +7066,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T112",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -6498,7 +7079,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T113",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -6510,6 +7092,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T114",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -6519,6 +7102,7 @@ function getResources(
       },
       {
         id: "L2T115",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6530,6 +7114,7 @@ function getResources(
     L2T12: [
       {
         id: "L2T120",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -6543,6 +7128,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T121",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6552,6 +7138,7 @@ function getResources(
       },
       {
         id: "L2T122",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6563,6 +7150,7 @@ function getResources(
     L2T13: [
       {
         id: "L2T138",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -6576,6 +7164,7 @@ function getResources(
       },
       {
         id: "L2T139",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6585,6 +7174,7 @@ function getResources(
       },
       {
         id: "L2T1310",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6599,7 +7189,8 @@ function getResources(
     L2T21: [
       {
         id: "L2T211",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -6611,7 +7202,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T212",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -6623,7 +7215,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T213",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -6635,6 +7228,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T214",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -6644,6 +7238,7 @@ function getResources(
       },
       {
         id: "L2T215",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6655,6 +7250,7 @@ function getResources(
     L2T22: [
       {
         id: "L2T221",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -6668,6 +7264,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T222",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6677,6 +7274,7 @@ function getResources(
       },
       {
         id: "L2T223",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6688,6 +7286,7 @@ function getResources(
     L2T23: [
       {
         id: "L2T231",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -6701,6 +7300,7 @@ function getResources(
       },
       {
         id: "L2T232",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6710,6 +7310,7 @@ function getResources(
       },
       {
         id: "L2T233",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6724,7 +7325,8 @@ function getResources(
     L2T31: [
       {
         id: "L2T311",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -6736,7 +7338,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T312",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -6748,7 +7351,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T313",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -6760,6 +7364,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T314",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -6769,6 +7374,7 @@ function getResources(
       },
       {
         id: "L2T315",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6780,6 +7386,7 @@ function getResources(
     L2T32: [
       {
         id: "L2T321",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -6793,6 +7400,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2T322",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6802,6 +7410,7 @@ function getResources(
       },
       {
         id: "L2T323",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6813,6 +7422,7 @@ function getResources(
     L2T33: [
       {
         id: "L2T331",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -6826,6 +7436,7 @@ function getResources(
       },
       {
         id: "L2T332",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6835,6 +7446,7 @@ function getResources(
       },
       {
         id: "L2T333",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6849,6 +7461,7 @@ function getResources(
     L2BT11: [
       {
         id: "L2BT111",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3.2,
@@ -6862,6 +7475,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT112",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6871,6 +7485,7 @@ function getResources(
       },
       {
         id: "L2BT113",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6882,7 +7497,8 @@ function getResources(
     L2BT12: [
       {
         id: "L2BT121",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -6894,7 +7510,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT122",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -6906,7 +7523,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT123",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -6918,6 +7536,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT124",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -6927,6 +7546,7 @@ function getResources(
       },
       {
         id: "L2BT125",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6938,6 +7558,7 @@ function getResources(
     L2BT13: [
       {
         id: "L2BT131",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -6949,6 +7570,7 @@ function getResources(
     L2BT14: [
       {
         id: "L2BT141",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -6962,6 +7584,7 @@ function getResources(
       },
       {
         id: "L2BT142",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -6971,6 +7594,7 @@ function getResources(
       },
       {
         id: "L2BT143",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -6984,6 +7608,7 @@ function getResources(
     L2BT21: [
       {
         id: "L2BT211",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3.2,
@@ -6997,6 +7622,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT212",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -7006,6 +7632,7 @@ function getResources(
       },
       {
         id: "L2BT213",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -7017,7 +7644,8 @@ function getResources(
     L2BT22: [
       {
         id: "L2BT221",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -7029,7 +7657,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT222",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -7041,7 +7670,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT223",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -7053,6 +7683,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2BT224",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -7062,6 +7693,7 @@ function getResources(
       },
       {
         id: "L2BT225",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -7073,6 +7705,7 @@ function getResources(
     L2BT23: [
       {
         id: "L2BT231",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -7084,6 +7717,7 @@ function getResources(
     L2BT24: [
       {
         id: "L2BT241",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -7097,6 +7731,7 @@ function getResources(
       },
       {
         id: "L2BT242",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -7106,6 +7741,7 @@ function getResources(
       },
       {
         id: "L2BT243",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -7122,6 +7758,7 @@ function getResources(
     L2SLB1: [
       {
         id: "L2SLB11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: secondFloor.length,
@@ -7135,6 +7772,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SLB12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -7144,6 +7782,7 @@ function getResources(
       },
       {
         id: "L2SLB13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7155,7 +7794,8 @@ function getResources(
     L2SSL1: [
       {
         id: "L2SSL11",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: secondFloor.length,
         diameter: 16,
@@ -7167,6 +7807,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SSL12",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7176,6 +7817,7 @@ function getResources(
       },
       {
         id: "L2SSL13",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7185,6 +7827,7 @@ function getResources(
       },
       {
         id: "L2SSL14",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7196,7 +7839,8 @@ function getResources(
     L2SSB1: [
       {
         id: "L2SSB11",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Bottom Distri Bars",
         breadth: secondFloor.width,
         diameter: 12,
@@ -7208,6 +7852,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SSB12",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7217,6 +7862,7 @@ function getResources(
       },
       {
         id: "L2SSB13",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7226,6 +7872,7 @@ function getResources(
       },
       {
         id: "L2SSB14",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7240,6 +7887,7 @@ function getResources(
     L2SLB3: [
       {
         id: "L2SLB31",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -7249,6 +7897,7 @@ function getResources(
       },
       {
         id: "L2SLB32",
+        type: "Electrical-Mason",
         resource: "DailyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Daily,
@@ -7258,6 +7907,7 @@ function getResources(
       },
       {
         id: "L2SLB33",
+        type: "Electrical-Helper",
         resource: "DailyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Daily,
@@ -7269,6 +7919,7 @@ function getResources(
     L2SLB4: [
       {
         id: "L2SLB41",
+        type: "Mechanical",
         resource: "mHangersMech",
         description: "Mechanical",
         rate: MechRates.Hangers.m,
@@ -7278,6 +7929,7 @@ function getResources(
       },
       {
         id: "L2SLB42",
+        type: "Mechanical-Mason",
         resource: "DailyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Daily,
@@ -7287,6 +7939,7 @@ function getResources(
       },
       {
         id: "L2SLB43",
+        type: "Mechanical-Helper",
         resource: "DailyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Daily,
@@ -7298,6 +7951,7 @@ function getResources(
     L2SLB5: [
       {
         id: "L2SLB51",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -7307,6 +7961,7 @@ function getResources(
       },
       {
         id: "L2SLB52",
+        type: "Plumbing-Mason",
         resource: "DailyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Daily,
@@ -7316,6 +7971,7 @@ function getResources(
       },
       {
         id: "L2SLB53",
+        type: "Plumbing-Mason",
         resource: "DailyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Daily,
@@ -7327,6 +7983,7 @@ function getResources(
     L2SLB6: [
       {
         id: "L2SLB61",
+        type: "FireFighting-Mason",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -7336,6 +7993,7 @@ function getResources(
       },
       {
         id: "L2SLB62",
+        type: "FireFighting-Mason",
         resource: "DailyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Daily,
@@ -7345,6 +8003,7 @@ function getResources(
       },
       {
         id: "L2SLB63",
+        type: "FireFighting-Mason",
         resource: "DailyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Daily,
@@ -7359,7 +8018,8 @@ function getResources(
     L2SSL2: [
       {
         id: "L2SSL21",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: secondFloor.length,
         diameter: 16,
@@ -7371,6 +8031,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SSL22",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7380,6 +8041,7 @@ function getResources(
       },
       {
         id: "L2SSL23",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7389,6 +8051,7 @@ function getResources(
       },
       {
         id: "L2SSL24",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7400,7 +8063,8 @@ function getResources(
     L2SLB2: [
       {
         id: "L2SLB21",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Bottom Distri Bars",
         breadth: secondFloor.width,
         diameter: 12,
@@ -7412,6 +8076,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SLB22",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7421,6 +8086,7 @@ function getResources(
       },
       {
         id: "L2SLB23",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7430,6 +8096,7 @@ function getResources(
       },
       {
         id: "L2SLB24",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7444,6 +8111,7 @@ function getResources(
     L2SLC1: [
       {
         id: "L2SLC11",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -7453,6 +8121,7 @@ function getResources(
       },
       {
         id: "L2SLC12",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: secondFloor.length,
@@ -7466,6 +8135,7 @@ function getResources(
       },
       {
         id: "L2SLC13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -7475,6 +8145,7 @@ function getResources(
       },
       {
         id: "L2SLC14",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7487,6 +8158,7 @@ function getResources(
     L2SLC2: [
       {
         id: "L2SLC21",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: secondFloor.length,
@@ -7500,6 +8172,7 @@ function getResources(
       },
       {
         id: "L2SLC22",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -7509,6 +8182,7 @@ function getResources(
       },
       {
         id: "L2SLC23",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7521,6 +8195,7 @@ function getResources(
     L2SLC3: [
       {
         id: "L2SLC31",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -7530,6 +8205,7 @@ function getResources(
       },
       {
         id: "L2SLC32",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7544,6 +8220,7 @@ function getResources(
     L2FF1: [
       {
         id: "L2FF11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4.5,
@@ -7557,6 +8234,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -7566,6 +8244,7 @@ function getResources(
       },
       {
         id: "L2FF13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7579,7 +8258,8 @@ function getResources(
     L2FF2: [
       {
         id: "L2FF21",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 12,
@@ -7591,7 +8271,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF22",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 12,
@@ -7603,7 +8284,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF23",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -7615,7 +8297,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF24",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -7627,7 +8310,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF25",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -7639,7 +8323,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF26",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -7651,6 +8336,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF27",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7660,6 +8346,7 @@ function getResources(
       },
       {
         id: "L2FF28",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7674,7 +8361,8 @@ function getResources(
     L2FF3: [
       {
         id: "L2FF31",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 5.7,
         diameter: 12,
@@ -7686,7 +8374,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF32",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 5.7,
         diameter: 10,
@@ -7698,7 +8387,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF33",
-        resource: "SftDia8Steel",
+        type: "Dia12",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -7710,7 +8400,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF34",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -7722,7 +8413,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF35",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -7734,7 +8426,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF36",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -7746,6 +8439,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF37",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7755,6 +8449,7 @@ function getResources(
       },
       {
         id: "L2FF38",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7769,7 +8464,8 @@ function getResources(
     L2FF4: [
       {
         id: "L2FF41",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 12,
@@ -7781,7 +8477,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF42",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 12,
@@ -7793,7 +8490,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF43",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -7805,7 +8503,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF44",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -7817,7 +8516,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF45",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -7829,7 +8529,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF46",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -7841,6 +8542,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF47",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7850,6 +8552,7 @@ function getResources(
       },
       {
         id: "L2FF48",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7864,7 +8567,8 @@ function getResources(
     L2FF5: [
       {
         id: "L2FF51",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 16,
@@ -7876,7 +8580,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF52",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 16,
@@ -7888,7 +8593,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF53",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -7900,6 +8606,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2FF54",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -7909,6 +8616,7 @@ function getResources(
       },
       {
         id: "L2FF55",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -7922,6 +8630,7 @@ function getResources(
     L2FF6: [
       {
         id: "L2FF61",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -7931,6 +8640,7 @@ function getResources(
       },
       {
         id: "L2FF62",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 5,
@@ -7944,6 +8654,7 @@ function getResources(
       },
       {
         id: "L2FF63",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -7955,8 +8666,9 @@ function getResources(
         quantity: 0,
         totalCost: 0
       },
-      {
+      {        
         id: "L2FF64",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -7970,6 +8682,7 @@ function getResources(
       },
       {
         id: "L2FF65",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -7979,6 +8692,7 @@ function getResources(
       },
       {
         id: "L2FF66",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -7991,6 +8705,7 @@ function getResources(
     L2FF7: [
       {
         id: "L2FF71",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: builtupLength,
@@ -8004,6 +8719,7 @@ function getResources(
       },
       {
         id: "L2FF72",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -8013,6 +8729,7 @@ function getResources(
       },
       {
         id: "L2FF73",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8025,6 +8742,7 @@ function getResources(
     L2FFG18: [
       {
         id: "L2FFG181",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -8034,6 +8752,7 @@ function getResources(
       },
       {
         id: "L2FFG182",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8046,6 +8765,7 @@ function getResources(
     L2SF1: [
       {
         id: "L2SF11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4.5,
@@ -8059,6 +8779,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -8068,6 +8789,7 @@ function getResources(
       },
       {
         id: "L2SF13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8080,7 +8802,8 @@ function getResources(
     L2SF2: [
       {
         id: "L2SF21",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 16,
@@ -8092,7 +8815,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF22",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 16,
@@ -8104,7 +8828,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF23",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -8116,6 +8841,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF24",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -8125,6 +8851,7 @@ function getResources(
       },
       {
         id: "L2SF25",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -8134,6 +8861,7 @@ function getResources(
       },
       {
         id: "L2SF26",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8148,7 +8876,8 @@ function getResources(
     L2SF3: [
       {
         id: "L2SF31",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.2,
         diameter: 12,
@@ -8160,7 +8889,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF32",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.2,
         diameter: 12,
@@ -8172,7 +8902,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF33",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.2,
         diameter: 8,
@@ -8184,7 +8915,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF34",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.2,
         diameter: 8,
@@ -8196,7 +8928,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF35",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -8208,7 +8941,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF36",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -8220,6 +8954,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF37",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -8229,6 +8964,7 @@ function getResources(
       },
       {
         id: "L2SF38",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -8238,6 +8974,7 @@ function getResources(
       },
       {
         id: "L2SF39",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8251,7 +8988,8 @@ function getResources(
     L2SF4: [
       {
         id: "L2SF41",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 5.7,
         diameter: 12,
@@ -8263,7 +9001,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF42",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 5.7,
         diameter: 12,
@@ -8275,7 +9014,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF43",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -8287,7 +9027,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF44",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -8299,7 +9040,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF45",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -8311,7 +9053,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF46",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -8322,7 +9065,8 @@ function getResources(
         totalCost: 0
       }, // qty and cost will be calculated in code
       {
-        id: "L2SF47",
+        id: "L2SF47",        
+        type: "Steelfixer",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -8332,6 +9076,7 @@ function getResources(
       },
       {
         id: "L2SF48",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -8341,6 +9086,7 @@ function getResources(
       },
       {
         id: "L2SF49",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8354,7 +9100,8 @@ function getResources(
     L2SF5: [
       {
         id: "L2SF51",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.5,
         diameter: 12,
@@ -8366,7 +9113,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF52",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.5,
         diameter: 12,
@@ -8378,7 +9126,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF53",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1,
         diameter: 8,
@@ -8390,7 +9139,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF54",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1,
         diameter: 8,
@@ -8402,7 +9152,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF55",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -8414,7 +9165,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF56",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -8426,6 +9178,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2SF57",
+        type: "BarBender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -8435,6 +9188,7 @@ function getResources(
       },
       {
         id: "L2SF58",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -8444,6 +9198,7 @@ function getResources(
       },
       {
         id: "L2SF59",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8458,6 +9213,7 @@ function getResources(
     L2SF6: [
       {
         id: "L2SF61",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -8467,6 +9223,7 @@ function getResources(
       },
       {
         id: "L2SF62",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 5,
@@ -8480,6 +9237,7 @@ function getResources(
       },
       {
         id: "L2SF63",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -8493,6 +9251,7 @@ function getResources(
       },
       {
         id: "L2SF64",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -8506,6 +9265,7 @@ function getResources(
       },
       {
         id: "L2SF65",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -8515,6 +9275,7 @@ function getResources(
       },
       {
         id: "L2SF66",
+        type: "Mason",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8527,6 +9288,7 @@ function getResources(
     L2SF7: [
       {
         id: "L2SF71",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: builtupLength,
@@ -8540,6 +9302,7 @@ function getResources(
       },
       {
         id: "L2SF72",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -8547,8 +9310,9 @@ function getResources(
         quantity: 1,
         totalCost: 0
       },
-      {
+      {        
         id: "L2SF73",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8561,6 +9325,7 @@ function getResources(
     L2SF8: [
       {
         id: "L2SF81",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -8570,6 +9335,7 @@ function getResources(
       },
       {
         id: "L2SF82",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -8586,7 +9352,8 @@ function getResources(
     L2EL4: [
       {
         id: "L2EL41",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",        
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -8598,7 +9365,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL42",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -8610,7 +9378,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL43",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -8622,6 +9391,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL44",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -8631,6 +9401,7 @@ function getResources(
       },
       {
         id: "L2EL45",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8642,6 +9413,7 @@ function getResources(
     L2EL5: [
       {
         id: "L2EL50",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -8655,6 +9427,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL51",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -8664,6 +9437,7 @@ function getResources(
       },
       {
         id: "L2EL52",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8675,6 +9449,7 @@ function getResources(
     L2EL6: [
       {
         id: "L2EL68",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -8688,6 +9463,7 @@ function getResources(
       },
       {
         id: "L2EL69",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -8697,6 +9473,7 @@ function getResources(
       },
       {
         id: "L2EL610",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8711,6 +9488,7 @@ function getResources(
     L2EL7: [
       {
         id: "L2EL71",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 2,
@@ -8724,6 +9502,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL72",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -8733,6 +9512,7 @@ function getResources(
       },
       {
         id: "L2EL73",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8744,7 +9524,8 @@ function getResources(
     L2EL8: [
       {
         id: "L2EL81",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -8756,7 +9537,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL82",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 2,
         diameter: 12,
@@ -8768,7 +9550,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL83",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 2,
         diameter: 16,
@@ -8780,6 +9563,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L2EL84",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -8789,6 +9573,7 @@ function getResources(
       },
       {
         id: "L2EL85",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8800,6 +9585,7 @@ function getResources(
     L2EL9: [
       {
         id: "L2EL91",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -8811,6 +9597,7 @@ function getResources(
     L2EL10: [
       {
         id: "L2EL101",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 2,
@@ -8824,6 +9611,7 @@ function getResources(
       },
       {
         id: "L2EL102",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -8833,6 +9621,7 @@ function getResources(
       },
       {
         id: "L2EL103",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8851,7 +9640,8 @@ function getResources(
     L3T11: [
       {
         id: "L3T111",
-        resource: "SftDia8Steel",
+        type: "Dia8",        
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -8863,7 +9653,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T112",
-        resource: "SftDia16Steel",
+        type: "Dia16",        
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -8875,7 +9666,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T113",
-        resource: "SftDia12Steel",
+        type: "Dia12", 
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -8887,6 +9679,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T114",
+        type: "Steelfixer", 
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -8896,6 +9689,7 @@ function getResources(
       },
       {
         id: "L3T115",
+        type: "Steelfixer", 
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8907,6 +9701,7 @@ function getResources(
     L3T12: [
       {
         id: "L3T120",
+        type: "Formwork", 
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -8920,6 +9715,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T121",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -8929,6 +9725,7 @@ function getResources(
       },
       {
         id: "L3T122",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8940,6 +9737,7 @@ function getResources(
     L3T13: [
       {
         id: "L3T138",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -8953,6 +9751,7 @@ function getResources(
       },
       {
         id: "L3T139",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -8962,6 +9761,7 @@ function getResources(
       },
       {
         id: "L3T1310",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -8976,7 +9776,8 @@ function getResources(
     L3T21: [
       {
         id: "L3T211",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -8988,7 +9789,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T212",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -9000,7 +9802,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T213",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -9012,6 +9815,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T214",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -9021,6 +9825,7 @@ function getResources(
       },
       {
         id: "L3T215",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9032,6 +9837,7 @@ function getResources(
     L3T22: [
       {
         id: "L3T221",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -9045,6 +9851,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T222",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9054,6 +9861,7 @@ function getResources(
       },
       {
         id: "L3T223",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9065,6 +9873,7 @@ function getResources(
     L3T23: [
       {
         id: "L3T231",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -9078,6 +9887,7 @@ function getResources(
       },
       {
         id: "L3T232",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9087,6 +9897,7 @@ function getResources(
       },
       {
         id: "L3T233",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9101,7 +9912,8 @@ function getResources(
     L3T31: [
       {
         id: "L3T311",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -9112,8 +9924,9 @@ function getResources(
         totalCost: 0
       }, // qty and cost will be calculated in code
       {
-        id: "L3T312",
-        resource: "SftDia16Steel",
+        id: "L3T312",        
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -9125,7 +9938,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T313",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -9137,6 +9951,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3T314",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -9146,6 +9961,7 @@ function getResources(
       },
       {
         id: "L3T315",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9157,6 +9973,7 @@ function getResources(
     L3T32: [
       {
         id: "L3T321",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -9167,9 +9984,11 @@ function getResources(
         units: "Sqm",
         quantity: 0,
         totalCost: 0
-      }, // qty and cost will be calculated in code
+      }, 
+      //qty and cost will be calculated in code
       {
         id: "L3T322",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9179,6 +9998,7 @@ function getResources(
       },
       {
         id: "L3T323",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9190,6 +10010,7 @@ function getResources(
     L3T33: [
       {
         id: "L3T331",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -9203,6 +10024,7 @@ function getResources(
       },
       {
         id: "L3T332",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9212,6 +10034,7 @@ function getResources(
       },
       {
         id: "L3T333",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9226,6 +10049,7 @@ function getResources(
     L3BT11: [
       {
         id: "L3BT111",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3.2,
@@ -9239,6 +10063,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT112",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9248,6 +10073,7 @@ function getResources(
       },
       {
         id: "L3BT113",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9259,7 +10085,8 @@ function getResources(
     L3BT12: [
       {
         id: "L3BT121",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -9271,7 +10098,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT122",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -9283,7 +10111,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT123",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -9295,6 +10124,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT124",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -9304,6 +10134,7 @@ function getResources(
       },
       {
         id: "L3BT125",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9315,6 +10146,7 @@ function getResources(
     L3BT13: [
       {
         id: "L3BT131",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -9326,6 +10158,7 @@ function getResources(
     L3BT14: [
       {
         id: "L3BT141",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -9339,6 +10172,7 @@ function getResources(
       },
       {
         id: "L3BT142",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9348,6 +10182,7 @@ function getResources(
       },
       {
         id: "L3BT143",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9361,6 +10196,7 @@ function getResources(
     L3BT21: [
       {
         id: "L3BT211",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3.2,
@@ -9374,6 +10210,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT212",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9383,6 +10220,7 @@ function getResources(
       },
       {
         id: "L3BT213",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9394,7 +10232,8 @@ function getResources(
     L3BT22: [
       {
         id: "L3BT221",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -9406,7 +10245,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT222",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -9418,7 +10258,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT223",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -9430,6 +10271,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3BT224",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -9439,6 +10281,7 @@ function getResources(
       },
       {
         id: "L3BT225",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9450,6 +10293,7 @@ function getResources(
     L3BT23: [
       {
         id: "L3BT231",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -9461,6 +10305,7 @@ function getResources(
     L3BT24: [
       {
         id: "L3BT241",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -9474,6 +10319,7 @@ function getResources(
       },
       {
         id: "L3BT242",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -9483,6 +10329,7 @@ function getResources(
       },
       {
         id: "L3BT243",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -9499,6 +10346,7 @@ function getResources(
     L3SLB1: [
       {
         id: "L3SLB11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: thirdFloor.length,
@@ -9512,6 +10360,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SLB12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -9521,6 +10370,7 @@ function getResources(
       },
       {
         id: "L3SLB13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9532,7 +10382,8 @@ function getResources(
     L3SSL1: [
       {
         id: "L3SSL11",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: thirdFloor.length,
         diameter: 16,
@@ -9544,6 +10395,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SSL12",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -9553,6 +10405,7 @@ function getResources(
       },
       {
         id: "L3SSL13",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -9562,6 +10415,7 @@ function getResources(
       },
       {
         id: "L3SSL14",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9573,7 +10427,8 @@ function getResources(
     L3SSB1: [
       {
         id: "L3SSB11",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Bottom Distri Bars",
         breadth: thirdFloor.width,
         diameter: 12,
@@ -9585,6 +10440,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SSB12",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -9594,6 +10450,7 @@ function getResources(
       },
       {
         id: "L3SSB13",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -9603,6 +10460,7 @@ function getResources(
       },
       {
         id: "L3SSB14",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9617,6 +10475,7 @@ function getResources(
     L3SLB3: [
       {
         id: "L3SLB31",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -9626,6 +10485,7 @@ function getResources(
       },
       {
         id: "L3SLB32",
+        type: "Electrician",
         resource: "DailyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Daily,
@@ -9635,6 +10495,7 @@ function getResources(
       },
       {
         id: "L3SLB33",
+        type: "Electrician",
         resource: "DailyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Daily,
@@ -9646,6 +10507,7 @@ function getResources(
     L3SLB4: [
       {
         id: "L3SLB41",
+        type: "Mechanical",
         resource: "mHangersMech",
         description: "Mechanical",
         rate: MechRates.Hangers.m,
@@ -9655,6 +10517,7 @@ function getResources(
       },
       {
         id: "L3SLB42",
+        type: "Mechanical-Mason",
         resource: "DailyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Daily,
@@ -9664,6 +10527,7 @@ function getResources(
       },
       {
         id: "L3SLB43",
+        type: "Mechanical-Helper",
         resource: "DailyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Daily,
@@ -9675,6 +10539,7 @@ function getResources(
     L3SLB5: [
       {
         id: "L3SLB51",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -9684,6 +10549,7 @@ function getResources(
       },
       {
         id: "L3SLB52",
+        type: "Plumber",
         resource: "DailyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Daily,
@@ -9693,6 +10559,7 @@ function getResources(
       },
       {
         id: "L3SLB53",
+        type: "Plumber",
         resource: "DailyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Daily,
@@ -9704,6 +10571,7 @@ function getResources(
     L3SLB6: [
       {
         id: "L3SLB61",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -9713,6 +10581,7 @@ function getResources(
       },
       {
         id: "L3SLB62",
+        type: "FireFighting-Mason",
         resource: "DailyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Daily,
@@ -9722,6 +10591,7 @@ function getResources(
       },
       {
         id: "L3SLB63",
+        type: "FireFighting-Helper",
         resource: "DailyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Daily,
@@ -9736,7 +10606,8 @@ function getResources(
     L3SSL2: [
       {
         id: "L3SSL21",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: thirdFloor.length,
         diameter: 16,
@@ -9748,6 +10619,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SSL22",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -9757,6 +10629,7 @@ function getResources(
       },
       {
         id: "L3SSL23",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -9766,6 +10639,7 @@ function getResources(
       },
       {
         id: "L3SSL24",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9777,7 +10651,8 @@ function getResources(
     L3SLB2: [
       {
         id: "L3SLB21",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Bottom Distri Bars",
         breadth: thirdFloor.width,
         diameter: 12,
@@ -9789,6 +10664,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SLB22",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -9798,6 +10674,7 @@ function getResources(
       },
       {
         id: "L3SLB23",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -9807,6 +10684,7 @@ function getResources(
       },
       {
         id: "L3SLB24",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9821,6 +10699,7 @@ function getResources(
     L3SLC1: [
       {
         id: "L3SLC11",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -9830,6 +10709,7 @@ function getResources(
       },
       {
         id: "L3SLC12",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: thirdFloor.length,
@@ -9843,6 +10723,7 @@ function getResources(
       },
       {
         id: "L3SLC13",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -9852,6 +10733,7 @@ function getResources(
       },
       {
         id: "L3SLC14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9864,6 +10746,7 @@ function getResources(
     L3SLC2: [
       {
         id: "L3SLC21",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: thirdFloor.length,
@@ -9877,6 +10760,7 @@ function getResources(
       },
       {
         id: "L3SLC22",
+        type: "Helper",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -9886,6 +10770,7 @@ function getResources(
       },
       {
         id: "L3SLC23",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9898,6 +10783,7 @@ function getResources(
     L3SLC3: [
       {
         id: "L3SLC31",
+        type: "Dia16",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -9907,6 +10793,7 @@ function getResources(
       },
       {
         id: "L3SLC32",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9921,6 +10808,7 @@ function getResources(
     L3FF1: [
       {
         id: "L3FF11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4.5,
@@ -9934,6 +10822,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -9943,6 +10832,7 @@ function getResources(
       },
       {
         id: "L3FF13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -9957,7 +10847,8 @@ function getResources(
     L3FF2: [
       {
         id: "L3FF21",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 12,
@@ -9969,7 +10860,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF22",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 12,
@@ -9981,7 +10873,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF23",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -9993,7 +10886,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF24",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -10005,7 +10899,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF25",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -10017,7 +10912,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF26",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -10029,6 +10925,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF27",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10038,6 +10935,7 @@ function getResources(
       },
       {
         id: "L3FF28",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10052,7 +10950,8 @@ function getResources(
     L3FF3: [
       {
         id: "L3FF31",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 5.7,
         diameter: 12,
@@ -10064,7 +10963,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF32",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 5.7,
         diameter: 10,
@@ -10076,7 +10976,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF33",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -10088,7 +10989,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF34",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -10100,7 +11002,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF35",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -10112,7 +11015,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF36",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -10124,6 +11028,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF37",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10133,6 +11038,7 @@ function getResources(
       },
       {
         id: "L3FF38",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10147,7 +11053,8 @@ function getResources(
     L3FF4: [
       {
         id: "L3FF41",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 12,
@@ -10159,7 +11066,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF42",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 12,
@@ -10171,7 +11079,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF43",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -10183,7 +11092,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF44",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -10195,7 +11105,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF45",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -10207,7 +11118,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF46",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -10219,6 +11131,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF47",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10228,6 +11141,7 @@ function getResources(
       },
       {
         id: "L3FF48",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10242,7 +11156,8 @@ function getResources(
     L3FF5: [
       {
         id: "L3FF51",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 16,
@@ -10254,7 +11169,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF52",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 16,
@@ -10266,7 +11182,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF53",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -10278,6 +11195,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3FF54",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10287,6 +11205,7 @@ function getResources(
       },
       {
         id: "L3FF55",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10300,6 +11219,7 @@ function getResources(
     L3FF6: [
       {
         id: "L3FF61",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -10309,6 +11229,7 @@ function getResources(
       },
       {
         id: "L3FF62",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 5,
@@ -10322,6 +11243,7 @@ function getResources(
       },
       {
         id: "L3FF63",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -10335,6 +11257,7 @@ function getResources(
       },
       {
         id: "L3FF64",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -10348,6 +11271,7 @@ function getResources(
       },
       {
         id: "L3FF65",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10357,6 +11281,7 @@ function getResources(
       },
       {
         id: "L3FF66",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10369,6 +11294,7 @@ function getResources(
     L3FF7: [
       {
         id: "L3FF71",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: builtupLength,
@@ -10382,6 +11308,7 @@ function getResources(
       },
       {
         id: "L3FF72",
+        type: "Helper",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10391,6 +11318,7 @@ function getResources(
       },
       {
         id: "L3FF73",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10402,6 +11330,7 @@ function getResources(
     L3FF8: [
       {
         id: "L3FF81",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10411,6 +11340,7 @@ function getResources(
       },
       {
         id: "L3FF82",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10423,6 +11353,7 @@ function getResources(
     L3SF1: [
       {
         id: "L3SF11",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4.5,
@@ -10436,6 +11367,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF12",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10445,6 +11377,7 @@ function getResources(
       },
       {
         id: "L3SF13",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10457,7 +11390,8 @@ function getResources(
     L3SF2: [
       {
         id: "L3SF21",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars top",
         length: 2.1,
         diameter: 16,
@@ -10469,7 +11403,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF22",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main bars bottom",
         length: 2.1,
         diameter: 16,
@@ -10481,7 +11416,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF23",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups",
         length: 0.48,
         diameter: 8,
@@ -10493,6 +11429,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF24",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10502,6 +11439,7 @@ function getResources(
       },
       {
         id: "L3SF25",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10511,6 +11449,7 @@ function getResources(
       },
       {
         id: "L3SF26",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10525,7 +11464,8 @@ function getResources(
     L3SF3: [
       {
         id: "L3SF31",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.2,
         diameter: 12,
@@ -10537,7 +11477,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF32",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.2,
         diameter: 12,
@@ -10549,7 +11490,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF33",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.2,
         diameter: 8,
@@ -10561,7 +11503,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF34",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.2,
         diameter: 8,
@@ -10573,7 +11516,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF35",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -10585,7 +11529,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF36",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -10597,6 +11542,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF37",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10606,6 +11552,7 @@ function getResources(
       },
       {
         id: "L3SF38",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10615,6 +11562,7 @@ function getResources(
       },
       {
         id: "L3SF39",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10628,7 +11576,8 @@ function getResources(
     L3SF4: [
       {
         id: "L3SF41",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 5.7,
         diameter: 12,
@@ -10640,7 +11589,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF42",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 5.7,
         diameter: 12,
@@ -10652,7 +11602,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF43",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1.15,
         diameter: 8,
@@ -10664,7 +11615,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF44",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1.15,
         diameter: 8,
@@ -10676,7 +11628,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF45",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -10688,7 +11641,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF46",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -10700,6 +11654,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF47",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10709,6 +11664,7 @@ function getResources(
       },
       {
         id: "L3SF48",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10718,6 +11674,7 @@ function getResources(
       },
       {
         id: "L3SF49",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10731,7 +11688,8 @@ function getResources(
     L3SF5: [
       {
         id: "L3SF51",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars top",
         length: 1.5,
         diameter: 12,
@@ -10743,7 +11701,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF52",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Main bars bottom",
         length: 1.5,
         diameter: 12,
@@ -10755,7 +11714,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF53",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars top",
         length: 1,
         diameter: 8,
@@ -10767,7 +11727,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF54",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Distri bars bottom",
         length: 1,
         diameter: 8,
@@ -10779,7 +11740,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF55",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 0.48,
         diameter: 12,
@@ -10791,7 +11753,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF56",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 0.48,
         diameter: 12,
@@ -10803,6 +11766,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3SF57",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -10812,6 +11776,7 @@ function getResources(
       },
       {
         id: "L3SF58",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -10821,6 +11786,7 @@ function getResources(
       },
       {
         id: "L3SF59",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10835,6 +11801,7 @@ function getResources(
     L3SF6: [
       {
         id: "L3SF61",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -10844,6 +11811,7 @@ function getResources(
       },
       {
         id: "L3SF62",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 5,
@@ -10857,6 +11825,7 @@ function getResources(
       },
       {
         id: "L3SF63",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -10870,6 +11839,7 @@ function getResources(
       },
       {
         id: "L3SF64",
+        type: "M20",
         resource: "CumM20Concrete",
         description: "M20Concrete",
         length: 1.3,
@@ -10883,6 +11853,7 @@ function getResources(
       },
       {
         id: "L3SF65",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10892,6 +11863,7 @@ function getResources(
       },
       {
         id: "L3SF66",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10904,6 +11876,7 @@ function getResources(
     L3SF7: [
       {
         id: "L3SF71",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: builtupLength,
@@ -10917,6 +11890,7 @@ function getResources(
       },
       {
         id: "L3SF72",
+        type: "Helper",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10926,6 +11900,7 @@ function getResources(
       },
       {
         id: "L3SF73",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10938,6 +11913,7 @@ function getResources(
     L3SF8: [
       {
         id: "L3SF81",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -10947,6 +11923,7 @@ function getResources(
       },
       {
         id: "L3SF82",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -10963,7 +11940,8 @@ function getResources(
     L3EL4: [
       {
         id: "L3EL41",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -10975,7 +11953,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL42",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -10987,7 +11966,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL43",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -10999,6 +11979,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL44",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -11008,6 +11989,7 @@ function getResources(
       },
       {
         id: "L3EL45",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11019,6 +12001,7 @@ function getResources(
     L3EL5: [
       {
         id: "L3EL50",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -11032,6 +12015,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL51",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11041,6 +12025,7 @@ function getResources(
       },
       {
         id: "L3EL52",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11052,6 +12037,7 @@ function getResources(
     L3EL6: [
       {
         id: "L3EL61",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -11065,6 +12051,7 @@ function getResources(
       },
       {
         id: "L3EL62",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11074,6 +12061,7 @@ function getResources(
       },
       {
         id: "L3EL63",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11088,6 +12076,7 @@ function getResources(
     L3EL7: [
       {
         id: "L3EL71",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 2,
@@ -11101,6 +12090,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL72",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11110,6 +12100,7 @@ function getResources(
       },
       {
         id: "L3EL73",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11121,7 +12112,8 @@ function getResources(
     L3EL8: [
       {
         id: "L3EL81",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -11133,7 +12125,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL82",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 2,
         diameter: 12,
@@ -11145,7 +12138,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL83",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 2,
         diameter: 16,
@@ -11157,6 +12151,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "L3EL84",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -11166,6 +12161,7 @@ function getResources(
       },
       {
         id: "L3EL85",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11177,6 +12173,7 @@ function getResources(
     L3EL9: [
       {
         id: "L3EL9",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -11188,6 +12185,7 @@ function getResources(
     L3EL10: [
       {
         id: "L3EL101",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 2,
@@ -11201,6 +12199,7 @@ function getResources(
       },
       {
         id: "L3EL102",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11210,6 +12209,7 @@ function getResources(
       },
       {
         id: "L3EL103",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11226,7 +12226,8 @@ function getResources(
     OT1: [
       {
         id: "OT11",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -11238,7 +12239,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT12",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -11250,7 +12252,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT13",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -11262,6 +12265,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT14",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -11271,6 +12275,7 @@ function getResources(
       },
       {
         id: "OT15",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11282,6 +12287,7 @@ function getResources(
     OT2: [
       {
         id: "OT21",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -11295,6 +12301,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT22",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11304,6 +12311,7 @@ function getResources(
       },
       {
         id: "OT23",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11315,6 +12323,7 @@ function getResources(
     OT3: [
       {
         id: "OT31",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -11328,6 +12337,7 @@ function getResources(
       },
       {
         id: "OT32",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11337,6 +12347,7 @@ function getResources(
       },
       {
         id: "OT33",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11351,6 +12362,7 @@ function getResources(
     OT4: [
       {
         id: "OT41",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -11364,6 +12376,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT42",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11373,6 +12386,7 @@ function getResources(
       },
       {
         id: "OT43",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11384,7 +12398,8 @@ function getResources(
     OT5: [
       {
         id: "OT51",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -11396,7 +12411,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT52",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -11408,7 +12424,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT53",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -11420,6 +12437,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT54",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -11429,6 +12447,7 @@ function getResources(
       },
       {
         id: "OT55",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11440,6 +12459,7 @@ function getResources(
     OT6: [
       {
         id: "OT61",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -11449,6 +12469,7 @@ function getResources(
       },
       {
         id: "OT62",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -11462,6 +12483,7 @@ function getResources(
       },
       {
         id: "OT63",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11471,6 +12493,7 @@ function getResources(
       },
       {
         id: "OT64",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11486,6 +12509,7 @@ function getResources(
     OT7: [
       {
         id: "OT71",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4,
@@ -11499,6 +12523,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT72",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -11508,6 +12533,7 @@ function getResources(
       },
       {
         id: "OT73",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11520,7 +12546,8 @@ function getResources(
     OT8: [
       {
         id: "OT81",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: 4,
         diameter: 12,
@@ -11532,7 +12559,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT82",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Distri Bars",
         length: 3,
         diameter: 8,
@@ -11545,7 +12573,8 @@ function getResources(
 
       {
         id: "OT83",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Top Main Bars",
         length: 4,
         diameter: 12,
@@ -11557,7 +12586,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT84",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Distri Bars",
         breadth: 3,
         diameter: 8,
@@ -11569,6 +12599,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT85",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -11578,6 +12609,7 @@ function getResources(
       },
       {
         id: "OT86",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -11587,6 +12619,7 @@ function getResources(
       },
       {
         id: "OT87",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11601,6 +12634,7 @@ function getResources(
     OT9: [
       {
         id: "OT91",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -11610,6 +12644,7 @@ function getResources(
       },
       {
         id: "OT92",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 4,
@@ -11623,6 +12658,7 @@ function getResources(
       },
       {
         id: "OT93",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -11632,6 +12668,7 @@ function getResources(
       },
       {
         id: "OT94",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11644,6 +12681,7 @@ function getResources(
     OT10: [
       {
         id: "OT101",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: 4,
@@ -11657,6 +12695,7 @@ function getResources(
       },
       {
         id: "OT102",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11669,7 +12708,8 @@ function getResources(
     OT11: [
       {
         id: "OT111",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: 4,
         diameter: 12,
@@ -11681,7 +12721,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT112",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Distri Bars",
         length: 3,
         diameter: 8,
@@ -11694,7 +12735,8 @@ function getResources(
 
       {
         id: "OT113",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Top Main Bars",
         length: 4,
         diameter: 12,
@@ -11706,7 +12748,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT114",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Distri Bars",
         breadth: 3,
         diameter: 8,
@@ -11718,7 +12761,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT115",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Anchorage bars",
         length: 1.2,
         diameter: 12,
@@ -11730,7 +12774,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT116",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Ld bars",
         length: 1.2,
         diameter: 12,
@@ -11742,6 +12787,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT117",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -11751,6 +12797,7 @@ function getResources(
       },
       {
         id: "OT118",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -11760,6 +12807,7 @@ function getResources(
       },
       {
         id: "OT119",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11771,6 +12819,7 @@ function getResources(
     OT12: [
       {
         id: "OT121",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4,
@@ -11784,6 +12833,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OT122",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -11793,6 +12843,7 @@ function getResources(
       },
       {
         id: "OT123",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11804,6 +12855,7 @@ function getResources(
     OT13: [
       {
         id: "OT131",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -11813,6 +12865,7 @@ function getResources(
       },
       {
         id: "OT132",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 4,
@@ -11826,6 +12879,7 @@ function getResources(
       },
       {
         id: "OT133",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -11835,6 +12889,7 @@ function getResources(
       },
       {
         id: "OT134",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11846,6 +12901,7 @@ function getResources(
     OT14: [
       {
         id: "OT14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -11861,7 +12917,8 @@ function getResources(
     OTBW1: [
       {
         id: "OTBW11",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -11873,7 +12930,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW12",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Main Bars",
         length: 3,
         diameter: 16,
@@ -11885,7 +12943,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW13",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Distribution Bars",
         length: 3,
         diameter: 12,
@@ -11897,6 +12956,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW14",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -11906,6 +12966,7 @@ function getResources(
       },
       {
         id: "OTBW15",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11917,6 +12978,7 @@ function getResources(
     OTBW2: [
       {
         id: "OTBW21",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -11930,6 +12992,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW22",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11939,6 +13002,7 @@ function getResources(
       },
       {
         id: "OTBW23",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11950,6 +13014,7 @@ function getResources(
     OTBW3: [
       {
         id: "OTBW31",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 3,
@@ -11963,6 +13028,7 @@ function getResources(
       },
       {
         id: "OTBW32",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -11972,6 +13038,7 @@ function getResources(
       },
       {
         id: "OTBW33",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -11986,6 +13053,7 @@ function getResources(
     OTBW4: [
       {
         id: "OTBW41",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 3,
@@ -11999,6 +13067,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW42",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -12008,6 +13077,7 @@ function getResources(
       },
       {
         id: "OTBW43",
+        type: "Carpenter",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -12019,7 +13089,8 @@ function getResources(
     OTBW5: [
       {
         id: "OTBW51",
-        resource: "SftDia8Steel",
+        type: "Dia8",
+        resource: "KgsDia8Steel",
         description: "Stirrups&Hooks",
         length: 2,
         diameter: 8,
@@ -12031,7 +13102,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW52",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Bars",
         length: 3,
         diameter: 12,
@@ -12043,7 +13115,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW53",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Bars",
         length: 3,
         diameter: 16,
@@ -12055,6 +13128,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW54",
+        type: "Steelfixer",
         resource: "HourlyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Hourly,
@@ -12064,6 +13138,7 @@ function getResources(
       },
       {
         id: "OTBW55",
+        type: "Steelfixer",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -12075,6 +13150,7 @@ function getResources(
     OTBW6: [
       {
         id: "OTBW61",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -12084,6 +13160,7 @@ function getResources(
       },
       {
         id: "OTBW62",
+        type: "M30",
         resource: "CumM30Concrete",
         description: "M30Concrete",
         length: 3,
@@ -12097,6 +13174,7 @@ function getResources(
       },
       {
         id: "OTBW63",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -12106,6 +13184,7 @@ function getResources(
       },
       {
         id: "OTBW64",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -12120,6 +13199,7 @@ function getResources(
     OTBW7: [
       {
         id: "OTBW71",
+        type: "Formwork",
         resource: "SqmFootingMetalFormwork",
         description: "Metal",
         length: 4,
@@ -12133,6 +13213,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW72",
+        type: "Carpenter",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -12142,6 +13223,7 @@ function getResources(
       },
       {
         id: "OTBW73",
+        type: "Carpenter",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12153,7 +13235,8 @@ function getResources(
     OTBW8: [
       {
         id: "OTBW81",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Main Bars",
         length: 4,
         diameter: 12,
@@ -12165,7 +13248,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW82",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Bottom Distri Bars",
         length: 3,
         diameter: 8,
@@ -12178,7 +13262,8 @@ function getResources(
 
       {
         id: "OTBW83",
-        resource: "SftDia16Steel",
+        type: "Dia16",
+        resource: "KgsDia16Steel",
         description: "Top Main Bars",
         length: 4,
         diameter: 12,
@@ -12190,7 +13275,8 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW84",
-        resource: "SftDia12Steel",
+        type: "Dia12",
+        resource: "KgsDia12Steel",
         description: "Top Distri Bars",
         breadth: 3,
         diameter: 8,
@@ -12202,6 +13288,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW85",
+        type: "Barbender",
         resource: "DailyBarbender",
         description: "BarBender",
         rate: BarBenderRates.Daily,
@@ -12211,6 +13298,7 @@ function getResources(
       },
       {
         id: "OTBW86",
+        type: "Steelfixer",
         resource: "DailyMason",
         description: "Steelfixer",
         rate: MasonRates.Mason.Daily,
@@ -12220,6 +13308,7 @@ function getResources(
       },
       {
         id: "OTBW87",
+        type: "Steelfixer",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12234,6 +13323,7 @@ function getResources(
     OTBW9: [
       {
         id: "OTBW91",
+        type: "Inspection",
         resource: "VisitEngineer",
         description: "Inspection",
         rate: EngineerRates.Inspection.Visit,
@@ -12243,6 +13333,7 @@ function getResources(
       },
       {
         id: "OTBW92",
+        type: "M25",
         resource: "CumM25Concrete",
         description: "M25Concrete",
         length: 4,
@@ -12256,6 +13347,7 @@ function getResources(
       },
       {
         id: "OTBW93",
+        type: "Mason",
         resource: "DailyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -12265,6 +13357,7 @@ function getResources(
       },
       {
         id: "OTBW94",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12277,6 +13370,7 @@ function getResources(
     OTBW10: [
       {
         id: "OTBW101",
+        type: "Curing",
         resource: "CumWater",
         description: "Curing Water",
         length: 4,
@@ -12290,6 +13384,7 @@ function getResources(
       },
       {
         id: "OTBW102",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12301,6 +13396,7 @@ function getResources(
     OTBW11: [
       {
         id: "OTBW11",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12313,6 +13409,7 @@ function getResources(
     OTBW12: [
       {
         id: "OTBW121",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "Brickwork Walls",
         length: 4,
@@ -12326,6 +13423,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW122",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12337,6 +13435,7 @@ function getResources(
     OTBW13: [
       {
         id: "OTBW131",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "Plaster",
         length: 4,
@@ -12350,6 +13449,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "OTBW132",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Daily,
@@ -12359,6 +13459,7 @@ function getResources(
       },
       {
         id: "OTBW133",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12370,6 +13471,7 @@ function getResources(
     OTBW14: [
       {
         id: "OTBW14",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12381,6 +13483,7 @@ function getResources(
     OTBW15: [
       {
         id: "OTBW15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12397,6 +13500,7 @@ function getResources(
     G1BW1: [
       {
         id: "G1BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -12410,6 +13514,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G1BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -12423,6 +13528,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G1BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -12436,6 +13542,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G1BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -12449,6 +13556,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G1BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -12458,6 +13566,7 @@ function getResources(
       },
       {
         id: "G1BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -12469,6 +13578,7 @@ function getResources(
     G1EL1: [
       {
         id: "G1EL11",
+        type: "Electrical",
         resource: "UnitJunctionBoxElec",
         description: "Electrical",
         rate: ElecRates.JunctionBox.m,
@@ -12478,6 +13588,7 @@ function getResources(
       },
       {
         id: "G1EL12",
+        type: "Electrical",
         resource: "mPullwiresconduitsElec",
         description: "Electrical",
         rate: ElecRates.Pullwiresconduits.m,
@@ -12487,6 +13598,7 @@ function getResources(
       },
       {
         id: "G1EL13",
+        type: "Electrical",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -12496,6 +13608,7 @@ function getResources(
       },
       {
         id: "G1EL14",
+        type: "Electrical",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -12507,6 +13620,7 @@ function getResources(
     G1MD1: [
       {
         id: "G1MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -12516,6 +13630,7 @@ function getResources(
       },
       {
         id: "G1MD12",
+        type: "Mechanical",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -12525,6 +13640,7 @@ function getResources(
       },
       {
         id: "G1MD13",
+        type: "Mechanical",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -12536,6 +13652,7 @@ function getResources(
     G1PC1: [
       {
         id: "G1PC11",
+        type: "Plumbing",
         resource: "CeraTapsPlumb",
         description: "Plumbing",
         rate: PlumbRates.taps.Cera,
@@ -12545,6 +13662,7 @@ function getResources(
       },
       {
         id: "G1PC12",
+        type: "Plumbing",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -12554,6 +13672,7 @@ function getResources(
       },
       {
         id: "G1PC13",
+        type: "Plumbing",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -12565,6 +13684,7 @@ function getResources(
     G1FF1: [
       {
         id: "G1FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -12574,6 +13694,7 @@ function getResources(
       },
       {
         id: "G1FF12",
+        type: "FireFighting",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -12583,6 +13704,7 @@ function getResources(
       },
       {
         id: "G1FF13",
+        type: "FireFighting",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -12594,6 +13716,7 @@ function getResources(
     G1DFI1: [
       {
         id: "G1DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -12606,6 +13729,7 @@ function getResources(
       },
       {
         id: "G1DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12617,6 +13741,7 @@ function getResources(
     G1WFI1: [
       {
         id: "G1WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -12629,6 +13754,7 @@ function getResources(
       },
       {
         id: "G1WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12640,6 +13766,7 @@ function getResources(
     G1PL1: [
       {
         id: "G1PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -12653,6 +13780,7 @@ function getResources(
       },
       {
         id: "G1PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -12666,6 +13794,7 @@ function getResources(
       },
       {
         id: "G1PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -12679,6 +13808,7 @@ function getResources(
       },
       {
         id: "G1PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -12692,6 +13822,7 @@ function getResources(
       },
       {
         id: "G1PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12703,6 +13834,7 @@ function getResources(
     G1PR1: [
       {
         id: "C153A1",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -12715,6 +13847,7 @@ function getResources(
       },
       {
         id: "C153A2",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -12727,6 +13860,7 @@ function getResources(
       },
       {
         id: "C153A3",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -12739,6 +13873,7 @@ function getResources(
       },
       {
         id: "C153A4",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -12751,6 +13886,7 @@ function getResources(
       },
       {
         id: "C153A5",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12762,6 +13898,7 @@ function getResources(
     G1PT1: [
       {
         id: "G1PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -12774,6 +13911,7 @@ function getResources(
       },
       {
         id: "G1PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -12786,6 +13924,7 @@ function getResources(
       },
       {
         id: "G1PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -12798,6 +13937,7 @@ function getResources(
       },
       {
         id: "G1PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -12810,6 +13950,7 @@ function getResources(
       },
       {
         id: "G1PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12821,6 +13962,7 @@ function getResources(
     G1WP1: [
       {
         id: "G1WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 4,
@@ -12833,6 +13975,7 @@ function getResources(
       },
       {
         id: "G1WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12844,6 +13987,7 @@ function getResources(
     G1GR1: [
       {
         id: "G1GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 4,
@@ -12856,6 +14000,7 @@ function getResources(
       },
       {
         id: "G1GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12867,6 +14012,7 @@ function getResources(
     G1TL1: [
       {
         id: "G1TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 4,
@@ -12879,6 +14025,7 @@ function getResources(
       },
       {
         id: "G1TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12891,6 +14038,7 @@ function getResources(
     G1PTF1: [
       {
         id: "G1PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -12903,6 +14051,7 @@ function getResources(
       },
       {
         id: "G1PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -12915,6 +14064,7 @@ function getResources(
       },
       {
         id: "G1PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -12927,6 +14077,7 @@ function getResources(
       },
       {
         id: "G1PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -12939,6 +14090,7 @@ function getResources(
       },
       {
         id: "G1PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -12948,6 +14100,7 @@ function getResources(
       },
       {
         id: "G1PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -12962,6 +14115,7 @@ function getResources(
     G2BW1: [
       {
         id: "G2BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -12975,6 +14129,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G2BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -12988,6 +14143,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G2BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -13001,6 +14157,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G2BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -13014,6 +14171,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G2BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -13023,6 +14181,7 @@ function getResources(
       },
       {
         id: "G2BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -13034,6 +14193,7 @@ function getResources(
     G2EL1: [
       {
         id: "G2EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -13043,6 +14203,7 @@ function getResources(
       },
       {
         id: "G2EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -13052,6 +14213,7 @@ function getResources(
       },
       {
         id: "G2EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -13063,6 +14225,7 @@ function getResources(
     G2MD1: [
       {
         id: "G2MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -13072,6 +14235,7 @@ function getResources(
       },
       {
         id: "G2MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -13081,6 +14245,7 @@ function getResources(
       },
       {
         id: "G2MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -13092,6 +14257,7 @@ function getResources(
     G2PC1: [
       {
         id: "G2PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -13101,6 +14267,7 @@ function getResources(
       },
       {
         id: "G2PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -13110,6 +14277,7 @@ function getResources(
       },
       {
         id: "G2PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -13121,6 +14289,7 @@ function getResources(
     G2FF1: [
       {
         id: "G2FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -13130,6 +14299,7 @@ function getResources(
       },
       {
         id: "G2FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -13139,6 +14309,7 @@ function getResources(
       },
       {
         id: "G2FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -13150,6 +14321,7 @@ function getResources(
     G2DFI1: [
       {
         id: "G2DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -13162,6 +14334,7 @@ function getResources(
       },
       {
         id: "G2DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13173,6 +14346,7 @@ function getResources(
     G2WFI1: [
       {
         id: "G2WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -13185,6 +14359,7 @@ function getResources(
       },
       {
         id: "G2WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13196,6 +14371,7 @@ function getResources(
     G2PL1: [
       {
         id: "G2PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -13208,6 +14384,7 @@ function getResources(
       },
       {
         id: "G2PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -13220,6 +14397,7 @@ function getResources(
       },
       {
         id: "G2PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -13232,6 +14410,7 @@ function getResources(
       },
       {
         id: "G2PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -13244,6 +14423,7 @@ function getResources(
       },
       {
         id: "G2PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13255,6 +14435,7 @@ function getResources(
     G2PR1: [
       {
         id: "G2PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -13267,6 +14448,7 @@ function getResources(
       },
       {
         id: "G2PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -13279,6 +14461,7 @@ function getResources(
       },
       {
         id: "G2PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -13291,6 +14474,7 @@ function getResources(
       },
       {
         id: "G2PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -13303,6 +14487,7 @@ function getResources(
       },
       {
         id: "G2PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13314,6 +14499,7 @@ function getResources(
     G2PT1: [
       {
         id: "G2PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -13326,6 +14512,7 @@ function getResources(
       },
       {
         id: "G2PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -13338,6 +14525,7 @@ function getResources(
       },
       {
         id: "G2PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -13350,6 +14538,7 @@ function getResources(
       },
       {
         id: "G2PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -13362,6 +14551,7 @@ function getResources(
       },
       {
         id: "G2PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13373,6 +14563,7 @@ function getResources(
     G2WP1: [
       {
         id: "G2WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 3,
@@ -13385,6 +14576,7 @@ function getResources(
       },
       {
         id: "G2WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13396,6 +14588,7 @@ function getResources(
     G2GR1: [
       {
         id: "G2GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 3,
@@ -13408,6 +14601,7 @@ function getResources(
       },
       {
         id: "G2GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13419,6 +14613,7 @@ function getResources(
     G2TL1: [
       {
         id: "G2TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 3,
@@ -13431,6 +14626,7 @@ function getResources(
       },
       {
         id: "G2TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13443,6 +14639,7 @@ function getResources(
     G2PTF1: [
       {
         id: "G2PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -13455,6 +14652,7 @@ function getResources(
       },
       {
         id: "G2PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -13467,6 +14665,7 @@ function getResources(
       },
       {
         id: "G2PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -13479,6 +14678,7 @@ function getResources(
       },
       {
         id: "G2PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -13491,6 +14691,7 @@ function getResources(
       },
       {
         id: "G2PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13500,6 +14701,7 @@ function getResources(
       },
       {
         id: "G2PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -13514,6 +14716,7 @@ function getResources(
     G3BW1: [
       {
         id: "G3BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -13527,6 +14730,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G3BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -13540,6 +14744,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G3BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -13553,6 +14758,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G3BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -13566,6 +14772,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G3BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -13575,6 +14782,7 @@ function getResources(
       },
       {
         id: "G3BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -13586,6 +14794,7 @@ function getResources(
     G3EL1: [
       {
         id: "G3EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -13595,6 +14804,7 @@ function getResources(
       },
       {
         id: "G3EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -13604,6 +14814,7 @@ function getResources(
       },
       {
         id: "G3EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -13615,6 +14826,7 @@ function getResources(
     G3MD1: [
       {
         id: "G3MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -13624,6 +14836,7 @@ function getResources(
       },
       {
         id: "G3MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -13633,6 +14846,7 @@ function getResources(
       },
       {
         id: "G3MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -13644,6 +14858,7 @@ function getResources(
     G3PC1: [
       {
         id: "G3PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -13653,6 +14868,7 @@ function getResources(
       },
       {
         id: "G3PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -13662,6 +14878,7 @@ function getResources(
       },
       {
         id: "G3PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -13673,6 +14890,7 @@ function getResources(
     G3FF1: [
       {
         id: "G3FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -13682,6 +14900,7 @@ function getResources(
       },
       {
         id: "G3FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -13691,6 +14910,7 @@ function getResources(
       },
       {
         id: "G3FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -13702,6 +14922,7 @@ function getResources(
     G3DFI1: [
       {
         id: "G3DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -13714,6 +14935,7 @@ function getResources(
       },
       {
         id: "G3DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13725,6 +14947,7 @@ function getResources(
     G3WFI1: [
       {
         id: "G3WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -13737,6 +14960,7 @@ function getResources(
       },
       {
         id: "G3WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13748,6 +14972,7 @@ function getResources(
     G3PL1: [
       {
         id: "G3PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -13760,6 +14985,7 @@ function getResources(
       },
       {
         id: "G3PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -13772,6 +14998,7 @@ function getResources(
       },
       {
         id: "G3PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -13784,6 +15011,7 @@ function getResources(
       },
       {
         id: "G3PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -13796,6 +15024,7 @@ function getResources(
       },
       {
         id: "G3PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13807,6 +15036,7 @@ function getResources(
     G3PR1: [
       {
         id: "G3PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -13819,6 +15049,7 @@ function getResources(
       },
       {
         id: "G3PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -13831,6 +15062,7 @@ function getResources(
       },
       {
         id: "G3PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -13843,6 +15075,7 @@ function getResources(
       },
       {
         id: "G3PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -13855,6 +15088,7 @@ function getResources(
       },
       {
         id: "G3PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13866,6 +15100,7 @@ function getResources(
     G3PT1: [
       {
         id: "G3PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -13878,6 +15113,7 @@ function getResources(
       },
       {
         id: "G3PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -13890,6 +15126,7 @@ function getResources(
       },
       {
         id: "G3PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -13902,6 +15139,7 @@ function getResources(
       },
       {
         id: "G3PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -13914,6 +15152,7 @@ function getResources(
       },
       {
         id: "G3PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13925,6 +15164,7 @@ function getResources(
     G3WP1: [
       {
         id: "G3WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 3,
@@ -13937,6 +15177,7 @@ function getResources(
       },
       {
         id: "G3WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13948,6 +15189,7 @@ function getResources(
     G3GR1: [
       {
         id: "G3GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 3,
@@ -13960,6 +15202,7 @@ function getResources(
       },
       {
         id: "G3GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13971,6 +15214,7 @@ function getResources(
     G3TL1: [
       {
         id: "G3TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 3,
@@ -13983,6 +15227,7 @@ function getResources(
       },
       {
         id: "G3TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -13995,6 +15240,7 @@ function getResources(
     G3PTF1: [
       {
         id: "G3PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -14008,6 +15254,7 @@ function getResources(
       },
       {
         id: "G3PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -14021,6 +15268,7 @@ function getResources(
       },
       {
         id: "G3PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -14034,6 +15282,7 @@ function getResources(
       },
       {
         id: "G3PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -14047,6 +15296,7 @@ function getResources(
       },
       {
         id: "G3PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14056,6 +15306,7 @@ function getResources(
       },
       {
         id: "G3PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -14070,6 +15321,7 @@ function getResources(
     G4BW1: [
       {
         id: "G4BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -14083,6 +15335,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G4BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -14096,6 +15349,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G4BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -14109,6 +15363,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G4BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -14122,6 +15377,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G4BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -14131,6 +15387,7 @@ function getResources(
       },
       {
         id: "G4BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -14142,6 +15399,7 @@ function getResources(
     G4EL1: [
       {
         id: "G4EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -14151,6 +15409,7 @@ function getResources(
       },
       {
         id: "G4EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -14160,6 +15419,7 @@ function getResources(
       },
       {
         id: "G4EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -14171,6 +15431,7 @@ function getResources(
     G4MD1: [
       {
         id: "G4MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -14180,6 +15441,7 @@ function getResources(
       },
       {
         id: "G4MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -14189,6 +15451,7 @@ function getResources(
       },
       {
         id: "G4MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -14200,6 +15463,7 @@ function getResources(
     G4PC1: [
       {
         id: "G4PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -14209,6 +15473,7 @@ function getResources(
       },
       {
         id: "G4PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -14218,6 +15483,7 @@ function getResources(
       },
       {
         id: "G4PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -14229,6 +15495,7 @@ function getResources(
     G4FF1: [
       {
         id: "G4FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -14238,6 +15505,7 @@ function getResources(
       },
       {
         id: "G4FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -14247,6 +15515,7 @@ function getResources(
       },
       {
         id: "G4FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -14258,6 +15527,7 @@ function getResources(
     G4DFI1: [
       {
         id: "G4DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -14270,6 +15540,7 @@ function getResources(
       },
       {
         id: "G4DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14281,6 +15552,7 @@ function getResources(
     G4WFI1: [
       {
         id: "G4WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -14293,6 +15565,7 @@ function getResources(
       },
       {
         id: "G4WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14304,6 +15577,7 @@ function getResources(
     G4PL1: [
       {
         id: "G4PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -14316,6 +15590,7 @@ function getResources(
       },
       {
         id: "G4PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -14328,6 +15603,7 @@ function getResources(
       },
       {
         id: "G4PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -14340,6 +15616,7 @@ function getResources(
       },
       {
         id: "G4PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -14352,6 +15629,7 @@ function getResources(
       },
       {
         id: "G4PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14363,6 +15641,7 @@ function getResources(
     G4PR1: [
       {
         id: "G4PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -14375,6 +15654,7 @@ function getResources(
       },
       {
         id: "G4PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -14387,6 +15667,7 @@ function getResources(
       },
       {
         id: "G4PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -14399,6 +15680,7 @@ function getResources(
       },
       {
         id: "G4PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -14411,6 +15693,7 @@ function getResources(
       },
       {
         id: "G4PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14422,6 +15705,7 @@ function getResources(
     G4PT1: [
       {
         id: "G4PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -14434,6 +15718,7 @@ function getResources(
       },
       {
         id: "G4PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -14446,6 +15731,7 @@ function getResources(
       },
       {
         id: "G4PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -14458,6 +15744,7 @@ function getResources(
       },
       {
         id: "G4PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -14470,6 +15757,7 @@ function getResources(
       },
       {
         id: "G4PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14481,6 +15769,7 @@ function getResources(
     G4WP1: [
       {
         id: "G4WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 3,
@@ -14493,6 +15782,7 @@ function getResources(
       },
       {
         id: "G4WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14504,6 +15794,7 @@ function getResources(
     G4GR1: [
       {
         id: "G4GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 3,
@@ -14516,6 +15807,7 @@ function getResources(
       },
       {
         id: "G4GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14527,6 +15819,7 @@ function getResources(
     G4TL1: [
       {
         id: "G4TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 3,
@@ -14539,6 +15832,7 @@ function getResources(
       },
       {
         id: "G4TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14551,6 +15845,7 @@ function getResources(
     G4PTF1: [
       {
         id: "G4PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -14563,6 +15858,7 @@ function getResources(
       },
       {
         id: "G4PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -14575,6 +15871,7 @@ function getResources(
       },
       {
         id: "G4PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -14587,6 +15884,7 @@ function getResources(
       },
       {
         id: "G4PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -14599,6 +15897,7 @@ function getResources(
       },
       {
         id: "G4PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14608,6 +15907,7 @@ function getResources(
       },
       {
         id: "G4PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -14622,6 +15922,7 @@ function getResources(
     G5BW1: [
       {
         id: "G5BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -14635,6 +15936,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G5BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -14648,6 +15950,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G5BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -14661,6 +15964,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G5BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -14674,6 +15978,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G5BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -14683,6 +15988,7 @@ function getResources(
       },
       {
         id: "G5BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -14694,6 +16000,7 @@ function getResources(
     G5EL1: [
       {
         id: "G5EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -14703,6 +16010,7 @@ function getResources(
       },
       {
         id: "G5EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -14712,6 +16020,7 @@ function getResources(
       },
       {
         id: "G5EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -14723,6 +16032,7 @@ function getResources(
     G5MD1: [
       {
         id: "G5MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -14732,6 +16042,7 @@ function getResources(
       },
       {
         id: "G5MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -14741,6 +16052,7 @@ function getResources(
       },
       {
         id: "G5MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -14752,6 +16064,7 @@ function getResources(
     G5PC1: [
       {
         id: "G5PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -14761,6 +16074,7 @@ function getResources(
       },
       {
         id: "G5PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -14770,6 +16084,7 @@ function getResources(
       },
       {
         id: "G5PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -14781,6 +16096,7 @@ function getResources(
     G5FF1: [
       {
         id: "G5FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -14790,6 +16106,7 @@ function getResources(
       },
       {
         id: "G5FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -14799,6 +16116,7 @@ function getResources(
       },
       {
         id: "G5FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -14810,6 +16128,7 @@ function getResources(
     G5DFI1: [
       {
         id: "G5DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -14822,6 +16141,7 @@ function getResources(
       },
       {
         id: "G5DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14833,6 +16153,7 @@ function getResources(
     G5WFI1: [
       {
         id: "G5WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -14845,6 +16166,7 @@ function getResources(
       },
       {
         id: "G5WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14856,6 +16178,7 @@ function getResources(
     G5PL1: [
       {
         id: "G5PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -14868,6 +16191,7 @@ function getResources(
       },
       {
         id: "G5PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -14880,6 +16204,7 @@ function getResources(
       },
       {
         id: "G5PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -14892,6 +16217,7 @@ function getResources(
       },
       {
         id: "G5PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -14904,6 +16230,7 @@ function getResources(
       },
       {
         id: "G5PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14915,6 +16242,7 @@ function getResources(
     G5PR1: [
       {
         id: "G5PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -14927,6 +16255,7 @@ function getResources(
       },
       {
         id: "G5PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -14939,6 +16268,7 @@ function getResources(
       },
       {
         id: "G5PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -14951,6 +16281,7 @@ function getResources(
       },
       {
         id: "G5PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -14963,6 +16294,7 @@ function getResources(
       },
       {
         id: "G5PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -14974,6 +16306,7 @@ function getResources(
     G5PT1: [
       {
         id: "G5PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -14986,6 +16319,7 @@ function getResources(
       },
       {
         id: "G5PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -14998,6 +16332,7 @@ function getResources(
       },
       {
         id: "G5PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -15010,6 +16345,7 @@ function getResources(
       },
       {
         id: "G5PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -15022,6 +16358,7 @@ function getResources(
       },
       {
         id: "G5PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15033,6 +16370,7 @@ function getResources(
     G5WP1: [
       {
         id: "G5WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 3,
@@ -15045,6 +16383,7 @@ function getResources(
       },
       {
         id: "G5WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15056,6 +16395,7 @@ function getResources(
     G5GR1: [
       {
         id: "G5GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 3,
@@ -15068,6 +16408,7 @@ function getResources(
       },
       {
         id: "G5GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15079,6 +16420,7 @@ function getResources(
     G5TL1: [
       {
         id: "G5TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 3,
@@ -15091,6 +16433,7 @@ function getResources(
       },
       {
         id: "G5TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15102,6 +16445,7 @@ function getResources(
     G5PTF1: [
       {
         id: "G5PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -15114,6 +16458,7 @@ function getResources(
       },
       {
         id: "G5PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -15126,6 +16471,7 @@ function getResources(
       },
       {
         id: "G5PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -15138,6 +16484,7 @@ function getResources(
       },
       {
         id: "G5PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -15150,6 +16497,7 @@ function getResources(
       },
       {
         id: "G5PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15159,6 +16507,7 @@ function getResources(
       },
       {
         id: "G5PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -15173,6 +16522,7 @@ function getResources(
     G6BW1: [
       {
         id: "G6BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: 3,
@@ -15186,6 +16536,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G6BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: 3,
@@ -15199,6 +16550,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G6BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: 3,
@@ -15212,6 +16564,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G6BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: 3,
@@ -15225,6 +16578,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G6BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -15234,6 +16588,7 @@ function getResources(
       },
       {
         id: "G6BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -15245,6 +16600,7 @@ function getResources(
     G6EL1: [
       {
         id: "G6EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -15254,6 +16610,7 @@ function getResources(
       },
       {
         id: "G6EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -15263,6 +16620,7 @@ function getResources(
       },
       {
         id: "G6EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -15274,6 +16632,7 @@ function getResources(
     G6MD1: [
       {
         id: "G6MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -15283,6 +16642,7 @@ function getResources(
       },
       {
         id: "G6MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -15292,6 +16652,7 @@ function getResources(
       },
       {
         id: "G6MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -15303,6 +16664,7 @@ function getResources(
     G6PC1: [
       {
         id: "G6PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -15312,6 +16674,7 @@ function getResources(
       },
       {
         id: "G6PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -15321,6 +16684,7 @@ function getResources(
       },
       {
         id: "G6PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -15332,6 +16696,7 @@ function getResources(
     G6FF1: [
       {
         id: "G6FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -15341,6 +16706,7 @@ function getResources(
       },
       {
         id: "G6FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -15350,6 +16716,7 @@ function getResources(
       },
       {
         id: "G6FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -15361,6 +16728,7 @@ function getResources(
     G6DFI1: [
       {
         id: "G6DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -15373,6 +16741,7 @@ function getResources(
       },
       {
         id: "G6DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15384,6 +16753,7 @@ function getResources(
     G6WFI1: [
       {
         id: "G6WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -15396,6 +16766,7 @@ function getResources(
       },
       {
         id: "G6WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15407,6 +16778,7 @@ function getResources(
     G6PL1: [
       {
         id: "G6PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -15419,6 +16791,7 @@ function getResources(
       },
       {
         id: "G6PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -15431,6 +16804,7 @@ function getResources(
       },
       {
         id: "G6PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -15443,6 +16817,7 @@ function getResources(
       },
       {
         id: "G6PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -15455,6 +16830,7 @@ function getResources(
       },
       {
         id: "G6PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15466,6 +16842,7 @@ function getResources(
     G6PR1: [
       {
         id: "G6PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -15478,6 +16855,7 @@ function getResources(
       },
       {
         id: "G6PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -15490,6 +16868,7 @@ function getResources(
       },
       {
         id: "G6PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -15502,6 +16881,7 @@ function getResources(
       },
       {
         id: "G6PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -15514,6 +16894,7 @@ function getResources(
       },
       {
         id: "G6PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15525,6 +16906,7 @@ function getResources(
     G6PT1: [
       {
         id: "G6PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -15537,6 +16919,7 @@ function getResources(
       },
       {
         id: "G6PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -15549,6 +16932,7 @@ function getResources(
       },
       {
         id: "G6PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -15561,6 +16945,7 @@ function getResources(
       },
       {
         id: "G6PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -15573,6 +16958,7 @@ function getResources(
       },
       {
         id: "G6PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15584,6 +16970,7 @@ function getResources(
     G6WP1: [
       {
         id: "G6WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 3,
@@ -15596,6 +16983,7 @@ function getResources(
       },
       {
         id: "G6WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15607,6 +16995,7 @@ function getResources(
     G6GR1: [
       {
         id: "G6GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 3,
@@ -15619,6 +17008,7 @@ function getResources(
       },
       {
         id: "G6GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15630,6 +17020,7 @@ function getResources(
     G6TL1: [
       {
         id: "G6TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 3,
@@ -15642,6 +17033,7 @@ function getResources(
       },
       {
         id: "G6TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15654,6 +17046,7 @@ function getResources(
     G6PTF1: [
       {
         id: "G6PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -15666,6 +17059,7 @@ function getResources(
       },
       {
         id: "G6PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -15678,6 +17072,7 @@ function getResources(
       },
       {
         id: "G6PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -15690,6 +17085,7 @@ function getResources(
       },
       {
         id: "G6PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -15702,6 +17098,7 @@ function getResources(
       },
       {
         id: "G6PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15711,6 +17108,7 @@ function getResources(
       },
       {
         id: "G6PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -15725,6 +17123,7 @@ function getResources(
     G7BW1: [
       {
         id: "G7BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -15738,6 +17137,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G7BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -15751,6 +17151,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G7BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -15764,6 +17165,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G7BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -15777,6 +17179,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G7BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -15786,6 +17189,7 @@ function getResources(
       },
       {
         id: "G7BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -15797,6 +17201,7 @@ function getResources(
     G7EL1: [
       {
         id: "G7EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -15806,6 +17211,7 @@ function getResources(
       },
       {
         id: "G7EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -15815,6 +17221,7 @@ function getResources(
       },
       {
         id: "G7EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -15826,6 +17233,7 @@ function getResources(
     G7MD1: [
       {
         id: "G7MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -15835,6 +17243,7 @@ function getResources(
       },
       {
         id: "G7MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -15844,6 +17253,7 @@ function getResources(
       },
       {
         id: "G7MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -15855,6 +17265,7 @@ function getResources(
     G7PC1: [
       {
         id: "G7PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -15864,6 +17275,7 @@ function getResources(
       },
       {
         id: "G7PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -15873,6 +17285,7 @@ function getResources(
       },
       {
         id: "G7PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -15884,6 +17297,7 @@ function getResources(
     G7FF1: [
       {
         id: "G7FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -15893,6 +17307,7 @@ function getResources(
       },
       {
         id: "G7FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -15902,6 +17317,7 @@ function getResources(
       },
       {
         id: "G7FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -15913,6 +17329,7 @@ function getResources(
     G7DFI1: [
       {
         id: "G7DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -15925,6 +17342,7 @@ function getResources(
       },
       {
         id: "G7DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15936,6 +17354,7 @@ function getResources(
     G7WFI1: [
       {
         id: "G7WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -15948,6 +17367,7 @@ function getResources(
       },
       {
         id: "G7WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -15959,6 +17379,7 @@ function getResources(
     G7PL1: [
       {
         id: "G7PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -15971,6 +17392,7 @@ function getResources(
       },
       {
         id: "G7PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -15983,6 +17405,7 @@ function getResources(
       },
       {
         id: "G7PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -15995,6 +17418,7 @@ function getResources(
       },
       {
         id: "G7PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -16007,6 +17431,7 @@ function getResources(
       },
       {
         id: "G7PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16018,6 +17443,7 @@ function getResources(
     G7PR1: [
       {
         id: "G7PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -16030,6 +17456,7 @@ function getResources(
       },
       {
         id: "G7PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -16042,6 +17469,7 @@ function getResources(
       },
       {
         id: "G7PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -16054,6 +17482,7 @@ function getResources(
       },
       {
         id: "G7PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -16066,6 +17495,7 @@ function getResources(
       },
       {
         id: "G7PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16077,6 +17507,7 @@ function getResources(
     G7PT1: [
       {
         id: "G7PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -16089,6 +17520,7 @@ function getResources(
       },
       {
         id: "G7PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -16101,6 +17533,7 @@ function getResources(
       },
       {
         id: "G7PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -16113,6 +17546,7 @@ function getResources(
       },
       {
         id: "G7PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -16125,6 +17559,7 @@ function getResources(
       },
       {
         id: "G7PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16136,6 +17571,7 @@ function getResources(
     G7WP1: [
       {
         id: "G7WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 2,
@@ -16148,6 +17584,7 @@ function getResources(
       },
       {
         id: "G7WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16159,6 +17596,7 @@ function getResources(
     G7GR1: [
       {
         id: "G7GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 2,
@@ -16171,6 +17609,7 @@ function getResources(
       },
       {
         id: "G7GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16182,6 +17621,7 @@ function getResources(
     G7TL1: [
       {
         id: "G7TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 2,
@@ -16194,6 +17634,7 @@ function getResources(
       },
       {
         id: "G7TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16206,6 +17647,7 @@ function getResources(
     G7PTF1: [
       {
         id: "G7PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -16218,6 +17660,7 @@ function getResources(
       },
       {
         id: "G7PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -16230,6 +17673,7 @@ function getResources(
       },
       {
         id: "G7PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -16242,6 +17686,7 @@ function getResources(
       },
       {
         id: "G7PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -16254,6 +17699,7 @@ function getResources(
       },
       {
         id: "G7PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16263,6 +17709,7 @@ function getResources(
       },
       {
         id: "G7PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -16277,6 +17724,7 @@ function getResources(
     G8BW1: [
       {
         id: "G8BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -16290,6 +17738,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G8BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -16303,6 +17752,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G8BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -16316,6 +17766,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G8BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -16329,6 +17780,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G8BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -16338,6 +17790,7 @@ function getResources(
       },
       {
         id: "G8BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -16349,6 +17802,7 @@ function getResources(
     G8EL1: [
       {
         id: "G8EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -16358,6 +17812,7 @@ function getResources(
       },
       {
         id: "G8EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -16367,6 +17822,7 @@ function getResources(
       },
       {
         id: "G8EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -16378,6 +17834,7 @@ function getResources(
     G8MD1: [
       {
         id: "G8MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -16387,6 +17844,7 @@ function getResources(
       },
       {
         id: "G8MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -16396,6 +17854,7 @@ function getResources(
       },
       {
         id: "G8MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -16407,6 +17866,7 @@ function getResources(
     G8PC1: [
       {
         id: "G8PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -16416,6 +17876,7 @@ function getResources(
       },
       {
         id: "G8PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -16425,6 +17886,7 @@ function getResources(
       },
       {
         id: "G8PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -16436,6 +17898,7 @@ function getResources(
     G8FF1: [
       {
         id: "G8FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -16445,6 +17908,7 @@ function getResources(
       },
       {
         id: "G8FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -16454,6 +17918,7 @@ function getResources(
       },
       {
         id: "G8FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -16465,6 +17930,7 @@ function getResources(
     G8DFI1: [
       {
         id: "G8DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -16477,6 +17943,7 @@ function getResources(
       },
       {
         id: "G8DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16488,6 +17955,7 @@ function getResources(
     G8WFI1: [
       {
         id: "G8WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -16500,6 +17968,7 @@ function getResources(
       },
       {
         id: "G8WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16511,6 +17980,7 @@ function getResources(
     G8PL1: [
       {
         id: "G8PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -16523,6 +17993,7 @@ function getResources(
       },
       {
         id: "G8PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -16535,6 +18006,7 @@ function getResources(
       },
       {
         id: "G8PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -16547,6 +18019,7 @@ function getResources(
       },
       {
         id: "G8PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -16559,6 +18032,7 @@ function getResources(
       },
       {
         id: "G8PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16570,6 +18044,7 @@ function getResources(
     G8PR1: [
       {
         id: "G8PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -16582,6 +18057,7 @@ function getResources(
       },
       {
         id: "G8PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -16594,6 +18070,7 @@ function getResources(
       },
       {
         id: "G8PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -16606,6 +18083,7 @@ function getResources(
       },
       {
         id: "G8PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -16618,6 +18096,7 @@ function getResources(
       },
       {
         id: "G8PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16629,6 +18108,7 @@ function getResources(
     G8PT1: [
       {
         id: "G8PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -16641,6 +18121,7 @@ function getResources(
       },
       {
         id: "G8PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -16653,6 +18134,7 @@ function getResources(
       },
       {
         id: "G8PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -16665,6 +18147,7 @@ function getResources(
       },
       {
         id: "G8PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -16677,6 +18160,7 @@ function getResources(
       },
       {
         id: "G8PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16688,6 +18172,7 @@ function getResources(
     G8WP1: [
       {
         id: "G8WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 3,
@@ -16700,6 +18185,7 @@ function getResources(
       },
       {
         id: "G8WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16711,6 +18197,7 @@ function getResources(
     G8GR1: [
       {
         id: "G8GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 3,
@@ -16723,6 +18210,7 @@ function getResources(
       },
       {
         id: "G8GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16734,6 +18222,7 @@ function getResources(
     G8TL1: [
       {
         id: "G8TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 3,
@@ -16746,6 +18235,7 @@ function getResources(
       },
       {
         id: "G8TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16758,6 +18248,7 @@ function getResources(
     G8PTF1: [
       {
         id: "G8PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -16770,6 +18261,7 @@ function getResources(
       },
       {
         id: "G8PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -16782,6 +18274,7 @@ function getResources(
       },
       {
         id: "G8PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -16794,6 +18287,7 @@ function getResources(
       },
       {
         id: "G8PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -16806,6 +18300,7 @@ function getResources(
       },
       {
         id: "G8PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -16815,6 +18310,7 @@ function getResources(
       },
       {
         id: "G8PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -16829,6 +18325,7 @@ function getResources(
     G9BW1: [
       {
         id: "G9BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -16842,6 +18339,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G9BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -16855,6 +18353,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G9BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -16868,6 +18367,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G9BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -16881,6 +18381,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G9BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -16890,6 +18391,7 @@ function getResources(
       },
       {
         id: "G9BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -16901,6 +18403,7 @@ function getResources(
     G9EL1: [
       {
         id: "G9EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -16910,6 +18413,7 @@ function getResources(
       },
       {
         id: "G9EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -16919,6 +18423,7 @@ function getResources(
       },
       {
         id: "G9EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -16930,6 +18435,7 @@ function getResources(
     G9MD1: [
       {
         id: "G9MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -16939,6 +18445,7 @@ function getResources(
       },
       {
         id: "G9MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -16948,6 +18455,7 @@ function getResources(
       },
       {
         id: "G9MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -16959,6 +18467,7 @@ function getResources(
     G9PC1: [
       {
         id: "G9PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -16968,6 +18477,7 @@ function getResources(
       },
       {
         id: "G9PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -16977,6 +18487,7 @@ function getResources(
       },
       {
         id: "G9PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -16988,6 +18499,7 @@ function getResources(
     G9FF1: [
       {
         id: "G9FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -16997,6 +18509,7 @@ function getResources(
       },
       {
         id: "G9FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -17006,6 +18519,7 @@ function getResources(
       },
       {
         id: "G9FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -17017,6 +18531,7 @@ function getResources(
     G9DFI1: [
       {
         id: "G9DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -17029,6 +18544,7 @@ function getResources(
       },
       {
         id: "G9DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17040,6 +18556,7 @@ function getResources(
     G9WFI1: [
       {
         id: "G9WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -17052,6 +18569,7 @@ function getResources(
       },
       {
         id: "G9WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17063,6 +18581,7 @@ function getResources(
     G9PL1: [
       {
         id: "G9PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -17075,6 +18594,7 @@ function getResources(
       },
       {
         id: "G9PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -17087,6 +18607,7 @@ function getResources(
       },
       {
         id: "G9PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -17099,6 +18620,7 @@ function getResources(
       },
       {
         id: "G9PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -17111,6 +18633,7 @@ function getResources(
       },
       {
         id: "G9PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17122,6 +18645,7 @@ function getResources(
     G9PR1: [
       {
         id: "G9PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -17134,6 +18658,7 @@ function getResources(
       },
       {
         id: "G9PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -17146,6 +18671,7 @@ function getResources(
       },
       {
         id: "G9PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -17158,6 +18684,7 @@ function getResources(
       },
       {
         id: "G9PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -17170,6 +18697,7 @@ function getResources(
       },
       {
         id: "G9PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17181,6 +18709,7 @@ function getResources(
     G9PT1: [
       {
         id: "G9PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -17193,6 +18722,7 @@ function getResources(
       },
       {
         id: "G9PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -17205,6 +18735,7 @@ function getResources(
       },
       {
         id: "G9PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -17217,6 +18748,7 @@ function getResources(
       },
       {
         id: "G9PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -17229,6 +18761,7 @@ function getResources(
       },
       {
         id: "G9PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17240,6 +18773,7 @@ function getResources(
     G9WP1: [
       {
         id: "G9WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1.2,
@@ -17252,6 +18786,7 @@ function getResources(
       },
       {
         id: "G9WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17263,6 +18798,7 @@ function getResources(
     G9GR1: [
       {
         id: "G9GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1.2,
@@ -17275,6 +18811,7 @@ function getResources(
       },
       {
         id: "G9GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17286,6 +18823,7 @@ function getResources(
     G9TL1: [
       {
         id: "G9TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1.2,
@@ -17298,6 +18836,7 @@ function getResources(
       },
       {
         id: "G9TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17310,6 +18849,7 @@ function getResources(
     G9PTF1: [
       {
         id: "G9PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -17322,6 +18862,7 @@ function getResources(
       },
       {
         id: "G9PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -17334,6 +18875,7 @@ function getResources(
       },
       {
         id: "G9PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -17346,6 +18888,7 @@ function getResources(
       },
       {
         id: "G9PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -17358,6 +18901,7 @@ function getResources(
       },
       {
         id: "G9PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17367,6 +18911,7 @@ function getResources(
       },
       {
         id: "G9PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -17381,6 +18926,7 @@ function getResources(
     G10BW1: [
       {
         id: "G10BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -17394,6 +18940,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G10BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -17407,6 +18954,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G10BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -17420,6 +18968,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G10BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -17433,6 +18982,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G10BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -17442,6 +18992,7 @@ function getResources(
       },
       {
         id: "G10BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -17453,6 +19004,7 @@ function getResources(
     G10EL1: [
       {
         id: "G10EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -17462,6 +19014,7 @@ function getResources(
       },
       {
         id: "G10EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -17471,6 +19024,7 @@ function getResources(
       },
       {
         id: "G10EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -17482,6 +19036,7 @@ function getResources(
     G10MD1: [
       {
         id: "G10MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -17491,6 +19046,7 @@ function getResources(
       },
       {
         id: "G10MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -17500,6 +19056,7 @@ function getResources(
       },
       {
         id: "G10MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -17511,6 +19068,7 @@ function getResources(
     G10PC1: [
       {
         id: "G10PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -17520,6 +19078,7 @@ function getResources(
       },
       {
         id: "G10PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -17529,6 +19088,7 @@ function getResources(
       },
       {
         id: "G10PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -17540,6 +19100,7 @@ function getResources(
     G10FF1: [
       {
         id: "G10FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -17549,6 +19110,7 @@ function getResources(
       },
       {
         id: "G10FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -17558,6 +19120,7 @@ function getResources(
       },
       {
         id: "G10FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -17569,6 +19132,7 @@ function getResources(
     G10DFI1: [
       {
         id: "G10DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -17581,6 +19145,7 @@ function getResources(
       },
       {
         id: "G10DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17592,6 +19157,7 @@ function getResources(
     G10WFI1: [
       {
         id: "G10WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -17604,6 +19170,7 @@ function getResources(
       },
       {
         id: "G10WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17615,6 +19182,7 @@ function getResources(
     G10PL1: [
       {
         id: "G10PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -17627,6 +19195,7 @@ function getResources(
       },
       {
         id: "G10PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -17639,6 +19208,7 @@ function getResources(
       },
       {
         id: "G10PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -17651,6 +19221,7 @@ function getResources(
       },
       {
         id: "G10PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -17663,6 +19234,7 @@ function getResources(
       },
       {
         id: "G10PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17674,6 +19246,7 @@ function getResources(
     G10PR1: [
       {
         id: "G10PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -17686,6 +19259,7 @@ function getResources(
       },
       {
         id: "G10PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -17698,6 +19272,7 @@ function getResources(
       },
       {
         id: "G10PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -17710,6 +19285,7 @@ function getResources(
       },
       {
         id: "G10PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -17722,6 +19298,7 @@ function getResources(
       },
       {
         id: "G10PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17733,6 +19310,7 @@ function getResources(
     G10PT1: [
       {
         id: "G10PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -17745,6 +19323,7 @@ function getResources(
       },
       {
         id: "G10PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -17757,6 +19336,7 @@ function getResources(
       },
       {
         id: "G10PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -17769,6 +19349,7 @@ function getResources(
       },
       {
         id: "G10PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -17781,6 +19362,7 @@ function getResources(
       },
       {
         id: "G10PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17792,6 +19374,7 @@ function getResources(
     G10WP1: [
       {
         id: "G10WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -17804,6 +19387,7 @@ function getResources(
       },
       {
         id: "G10WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17815,6 +19399,7 @@ function getResources(
     G10GR1: [
       {
         id: "G10GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -17827,6 +19412,7 @@ function getResources(
       },
       {
         id: "G10GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17838,6 +19424,7 @@ function getResources(
     G10TL1: [
       {
         id: "G10TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -17850,6 +19437,7 @@ function getResources(
       },
       {
         id: "G10TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17862,6 +19450,7 @@ function getResources(
     G10PTF1: [
       {
         id: "G10PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -17874,6 +19463,7 @@ function getResources(
       },
       {
         id: "G10PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -17886,6 +19476,7 @@ function getResources(
       },
       {
         id: "G10PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -17898,6 +19489,7 @@ function getResources(
       },
       {
         id: "G10PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -17910,6 +19502,7 @@ function getResources(
       },
       {
         id: "G10PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -17919,6 +19512,7 @@ function getResources(
       },
       {
         id: "G10PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -17933,6 +19527,7 @@ function getResources(
     G11BW1: [
       {
         id: "G11BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -17946,6 +19541,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G11BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -17959,6 +19555,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G11BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -17972,6 +19569,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G11BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -17985,6 +19583,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G11BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -17994,6 +19593,7 @@ function getResources(
       },
       {
         id: "G11BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -18005,6 +19605,7 @@ function getResources(
     G11EL1: [
       {
         id: "G11EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -18014,6 +19615,7 @@ function getResources(
       },
       {
         id: "G11EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -18023,6 +19625,7 @@ function getResources(
       },
       {
         id: "G11EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -18034,6 +19637,7 @@ function getResources(
     G11MD1: [
       {
         id: "G11MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -18043,6 +19647,7 @@ function getResources(
       },
       {
         id: "G11MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -18052,6 +19657,7 @@ function getResources(
       },
       {
         id: "G11MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -18063,6 +19669,7 @@ function getResources(
     G11PC1: [
       {
         id: "G11PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -18072,6 +19679,7 @@ function getResources(
       },
       {
         id: "G11PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -18081,6 +19689,7 @@ function getResources(
       },
       {
         id: "G11PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -18092,6 +19701,7 @@ function getResources(
     G11FF1: [
       {
         id: "G11FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -18101,6 +19711,7 @@ function getResources(
       },
       {
         id: "G11FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -18110,6 +19721,7 @@ function getResources(
       },
       {
         id: "G11FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -18121,6 +19733,7 @@ function getResources(
     G11DFI1: [
       {
         id: "G11DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -18133,6 +19746,7 @@ function getResources(
       },
       {
         id: "G11DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18144,6 +19758,7 @@ function getResources(
     G11WFI1: [
       {
         id: "G11WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -18156,6 +19771,7 @@ function getResources(
       },
       {
         id: "G11WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18167,6 +19783,7 @@ function getResources(
     G11PL1: [
       {
         id: "G11PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -18179,6 +19796,7 @@ function getResources(
       },
       {
         id: "G11PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -18191,6 +19809,7 @@ function getResources(
       },
       {
         id: "G11PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -18203,6 +19822,7 @@ function getResources(
       },
       {
         id: "G11PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -18215,6 +19835,7 @@ function getResources(
       },
       {
         id: "G11PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18226,6 +19847,7 @@ function getResources(
     G11PR1: [
       {
         id: "G11PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -18238,6 +19860,7 @@ function getResources(
       },
       {
         id: "G11PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -18250,6 +19873,7 @@ function getResources(
       },
       {
         id: "G11PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -18262,6 +19886,7 @@ function getResources(
       },
       {
         id: "G11PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -18274,6 +19899,7 @@ function getResources(
       },
       {
         id: "G11PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18285,6 +19911,7 @@ function getResources(
     G11PT1: [
       {
         id: "G11PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -18297,6 +19924,7 @@ function getResources(
       },
       {
         id: "G11PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -18309,6 +19937,7 @@ function getResources(
       },
       {
         id: "G11PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -18321,6 +19950,7 @@ function getResources(
       },
       {
         id: "G11PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -18333,6 +19963,7 @@ function getResources(
       },
       {
         id: "G11PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18344,6 +19975,7 @@ function getResources(
     G11WP1: [
       {
         id: "G11WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -18356,6 +19988,7 @@ function getResources(
       },
       {
         id: "G11WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18367,6 +20000,7 @@ function getResources(
     G11GR1: [
       {
         id: "G11GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -18379,6 +20013,7 @@ function getResources(
       },
       {
         id: "G11GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18390,6 +20025,7 @@ function getResources(
     G11TL1: [
       {
         id: "G11TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -18402,6 +20038,7 @@ function getResources(
       },
       {
         id: "G11TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18414,6 +20051,7 @@ function getResources(
     G11PTF1: [
       {
         id: "G11PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -18426,6 +20064,7 @@ function getResources(
       },
       {
         id: "G11PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -18438,6 +20077,7 @@ function getResources(
       },
       {
         id: "G11PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -18450,6 +20090,7 @@ function getResources(
       },
       {
         id: "G11PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -18462,6 +20103,7 @@ function getResources(
       },
       {
         id: "G11PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18471,6 +20113,7 @@ function getResources(
       },
       {
         id: "G11PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -18485,6 +20128,7 @@ function getResources(
     G12BW1: [
       {
         id: "G12BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -18498,6 +20142,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G12BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -18511,6 +20156,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G12BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -18524,6 +20170,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G12BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -18537,6 +20184,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G12BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -18546,6 +20194,7 @@ function getResources(
       },
       {
         id: "G12BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -18557,6 +20206,7 @@ function getResources(
     G12EL1: [
       {
         id: "G12EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -18566,6 +20216,7 @@ function getResources(
       },
       {
         id: "G12EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -18575,6 +20226,7 @@ function getResources(
       },
       {
         id: "G12EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -18586,6 +20238,7 @@ function getResources(
     G12MD1: [
       {
         id: "G12MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -18595,6 +20248,7 @@ function getResources(
       },
       {
         id: "G12MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -18604,6 +20258,7 @@ function getResources(
       },
       {
         id: "G12MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -18615,6 +20270,7 @@ function getResources(
     G12PC1: [
       {
         id: "G12PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -18624,6 +20280,7 @@ function getResources(
       },
       {
         id: "G12PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -18633,6 +20290,7 @@ function getResources(
       },
       {
         id: "G12PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -18644,6 +20302,7 @@ function getResources(
     G12FF1: [
       {
         id: "G12FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -18653,6 +20312,7 @@ function getResources(
       },
       {
         id: "G12FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -18662,6 +20322,7 @@ function getResources(
       },
       {
         id: "G12FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -18673,6 +20334,7 @@ function getResources(
     G12DFI1: [
       {
         id: "G12DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -18685,6 +20347,7 @@ function getResources(
       },
       {
         id: "G12DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18696,6 +20359,7 @@ function getResources(
     G12WFI1: [
       {
         id: "G12WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -18708,6 +20372,7 @@ function getResources(
       },
       {
         id: "G12WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18719,6 +20384,7 @@ function getResources(
     G12PL1: [
       {
         id: "G12PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -18731,6 +20397,7 @@ function getResources(
       },
       {
         id: "G12PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -18743,6 +20410,7 @@ function getResources(
       },
       {
         id: "G12PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -18755,6 +20423,7 @@ function getResources(
       },
       {
         id: "G12PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -18767,6 +20436,7 @@ function getResources(
       },
       {
         id: "G12PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18778,6 +20448,7 @@ function getResources(
     G12PR1: [
       {
         id: "G12PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -18790,6 +20461,7 @@ function getResources(
       },
       {
         id: "G12PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -18802,6 +20474,7 @@ function getResources(
       },
       {
         id: "G12PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -18814,6 +20487,7 @@ function getResources(
       },
       {
         id: "G12PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -18826,6 +20500,7 @@ function getResources(
       },
       {
         id: "G12PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18837,6 +20512,7 @@ function getResources(
     G12PT1: [
       {
         id: "G12PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -18849,6 +20525,7 @@ function getResources(
       },
       {
         id: "G12PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -18861,6 +20538,7 @@ function getResources(
       },
       {
         id: "G12PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -18873,6 +20551,7 @@ function getResources(
       },
       {
         id: "G12PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -18885,6 +20564,7 @@ function getResources(
       },
       {
         id: "G12PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18896,6 +20576,7 @@ function getResources(
     G12WP1: [
       {
         id: "G12WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -18908,6 +20589,7 @@ function getResources(
       },
       {
         id: "G12WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18919,6 +20601,7 @@ function getResources(
     G12GR1: [
       {
         id: "G12GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -18931,6 +20614,7 @@ function getResources(
       },
       {
         id: "G12GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18942,6 +20626,7 @@ function getResources(
     G12TL1: [
       {
         id: "G12TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -18954,6 +20639,7 @@ function getResources(
       },
       {
         id: "G12TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -18966,6 +20652,7 @@ function getResources(
     G12PTF1: [
       {
         id: "G12PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -18978,6 +20665,7 @@ function getResources(
       },
       {
         id: "G12PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -18990,6 +20678,7 @@ function getResources(
       },
       {
         id: "G12PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -19002,6 +20691,7 @@ function getResources(
       },
       {
         id: "G12PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -19014,6 +20704,7 @@ function getResources(
       },
       {
         id: "G12PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19023,6 +20714,7 @@ function getResources(
       },
       {
         id: "G12PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -19037,6 +20729,7 @@ function getResources(
     G13BW1: [
       {
         id: "G13BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -19050,6 +20743,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G13BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -19063,6 +20757,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G13BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -19076,6 +20771,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G13BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -19089,6 +20785,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G13BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -19098,6 +20795,7 @@ function getResources(
       },
       {
         id: "G13BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -19109,6 +20807,7 @@ function getResources(
     G13EL1: [
       {
         id: "G13EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -19118,6 +20817,7 @@ function getResources(
       },
       {
         id: "G13EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -19127,6 +20827,7 @@ function getResources(
       },
       {
         id: "G13EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -19138,6 +20839,7 @@ function getResources(
     G13MD1: [
       {
         id: "G13MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -19147,6 +20849,7 @@ function getResources(
       },
       {
         id: "G13MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -19156,6 +20859,7 @@ function getResources(
       },
       {
         id: "G13MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -19167,6 +20871,7 @@ function getResources(
     G13PC1: [
       {
         id: "G13PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -19176,6 +20881,7 @@ function getResources(
       },
       {
         id: "G13PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -19185,6 +20891,7 @@ function getResources(
       },
       {
         id: "G13PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -19196,6 +20903,7 @@ function getResources(
     G13FF1: [
       {
         id: "G13FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -19205,6 +20913,7 @@ function getResources(
       },
       {
         id: "G13FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -19214,6 +20923,7 @@ function getResources(
       },
       {
         id: "G13FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -19225,6 +20935,7 @@ function getResources(
     G13DFI1: [
       {
         id: "G13DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -19237,6 +20948,7 @@ function getResources(
       },
       {
         id: "G13DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19248,6 +20960,7 @@ function getResources(
     G13WFI1: [
       {
         id: "G13WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -19260,6 +20973,7 @@ function getResources(
       },
       {
         id: "G13WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19271,6 +20985,7 @@ function getResources(
     G13PL1: [
       {
         id: "G13PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -19283,6 +20998,7 @@ function getResources(
       },
       {
         id: "G13PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -19295,6 +21011,7 @@ function getResources(
       },
       {
         id: "G13PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -19307,6 +21024,7 @@ function getResources(
       },
       {
         id: "G13PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -19319,6 +21037,7 @@ function getResources(
       },
       {
         id: "G13PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19330,6 +21049,7 @@ function getResources(
     G13PR1: [
       {
         id: "G13PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -19342,6 +21062,7 @@ function getResources(
       },
       {
         id: "G13PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -19354,6 +21075,7 @@ function getResources(
       },
       {
         id: "G13PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -19366,6 +21088,7 @@ function getResources(
       },
       {
         id: "G13PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -19378,6 +21101,7 @@ function getResources(
       },
       {
         id: "G13PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19389,6 +21113,7 @@ function getResources(
     G13PT1: [
       {
         id: "G13PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -19401,6 +21126,7 @@ function getResources(
       },
       {
         id: "G13PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -19413,6 +21139,7 @@ function getResources(
       },
       {
         id: "G13PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -19425,6 +21152,7 @@ function getResources(
       },
       {
         id: "G13PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -19437,6 +21165,7 @@ function getResources(
       },
       {
         id: "G13PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19448,6 +21177,7 @@ function getResources(
     G13WP1: [
       {
         id: "G13WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -19460,6 +21190,7 @@ function getResources(
       },
       {
         id: "G13WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19471,6 +21202,7 @@ function getResources(
     G13GR1: [
       {
         id: "G13GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -19483,6 +21215,7 @@ function getResources(
       },
       {
         id: "G13GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19494,6 +21227,7 @@ function getResources(
     G13TL1: [
       {
         id: "G13TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -19506,6 +21240,7 @@ function getResources(
       },
       {
         id: "G13TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19518,6 +21253,7 @@ function getResources(
     G13PTF1: [
       {
         id: "G13PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -19530,6 +21266,7 @@ function getResources(
       },
       {
         id: "G13PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -19542,6 +21279,7 @@ function getResources(
       },
       {
         id: "G13PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -19554,6 +21292,7 @@ function getResources(
       },
       {
         id: "G13PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -19566,6 +21305,7 @@ function getResources(
       },
       {
         id: "G13PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19575,6 +21315,7 @@ function getResources(
       },
       {
         id: "G13PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -19589,6 +21330,7 @@ function getResources(
     G14BW1: [
       {
         id: "G14BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -19602,6 +21344,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G14BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -19615,6 +21358,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G14BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -19628,6 +21372,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G14BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -19641,6 +21386,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G14BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -19650,6 +21396,7 @@ function getResources(
       },
       {
         id: "G14BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -19661,6 +21408,7 @@ function getResources(
     G14EL1: [
       {
         id: "G14EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -19670,6 +21418,7 @@ function getResources(
       },
       {
         id: "G14EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -19679,6 +21428,7 @@ function getResources(
       },
       {
         id: "G14EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -19690,6 +21440,7 @@ function getResources(
     G14MD1: [
       {
         id: "G14MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -19699,6 +21450,7 @@ function getResources(
       },
       {
         id: "G14MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -19708,6 +21460,7 @@ function getResources(
       },
       {
         id: "G14MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -19719,6 +21472,7 @@ function getResources(
     G14PC1: [
       {
         id: "G14PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -19728,6 +21482,7 @@ function getResources(
       },
       {
         id: "G14PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -19737,6 +21492,7 @@ function getResources(
       },
       {
         id: "G14PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -19748,6 +21504,7 @@ function getResources(
     G14FF1: [
       {
         id: "G14FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -19757,6 +21514,7 @@ function getResources(
       },
       {
         id: "G14FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -19766,6 +21524,7 @@ function getResources(
       },
       {
         id: "G14FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -19777,6 +21536,7 @@ function getResources(
     G14DFI1: [
       {
         id: "G14DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -19789,6 +21549,7 @@ function getResources(
       },
       {
         id: "G14DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19800,6 +21561,7 @@ function getResources(
     G14WFI1: [
       {
         id: "G14WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -19812,6 +21574,7 @@ function getResources(
       },
       {
         id: "G14WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19823,6 +21586,7 @@ function getResources(
     G14PL1: [
       {
         id: "G14PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -19835,6 +21599,7 @@ function getResources(
       },
       {
         id: "G14PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -19847,6 +21612,7 @@ function getResources(
       },
       {
         id: "G14PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -19859,6 +21625,7 @@ function getResources(
       },
       {
         id: "G14PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -19871,6 +21638,7 @@ function getResources(
       },
       {
         id: "G14PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19882,6 +21650,7 @@ function getResources(
     G14PR1: [
       {
         id: "G14PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -19894,6 +21663,7 @@ function getResources(
       },
       {
         id: "G14PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -19906,6 +21676,7 @@ function getResources(
       },
       {
         id: "G14PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -19918,6 +21689,7 @@ function getResources(
       },
       {
         id: "G14PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -19930,6 +21702,7 @@ function getResources(
       },
       {
         id: "G14PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -19941,6 +21714,7 @@ function getResources(
     G14PT1: [
       {
         id: "G14PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -19953,6 +21727,7 @@ function getResources(
       },
       {
         id: "G14PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -19965,6 +21740,7 @@ function getResources(
       },
       {
         id: "G14PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -19977,6 +21753,7 @@ function getResources(
       },
       {
         id: "G14PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -19989,6 +21766,7 @@ function getResources(
       },
       {
         id: "G14PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20000,6 +21778,7 @@ function getResources(
     G14WP1: [
       {
         id: "G14WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -20012,6 +21791,7 @@ function getResources(
       },
       {
         id: "G14WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20023,6 +21803,7 @@ function getResources(
     G14GR1: [
       {
         id: "G14GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -20035,6 +21816,7 @@ function getResources(
       },
       {
         id: "G14GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20046,6 +21828,7 @@ function getResources(
     G14TL1: [
       {
         id: "G14TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -20058,6 +21841,7 @@ function getResources(
       },
       {
         id: "G14TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20070,6 +21854,7 @@ function getResources(
     G14PTF1: [
       {
         id: "G14PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -20082,6 +21867,7 @@ function getResources(
       },
       {
         id: "G14PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -20094,6 +21880,7 @@ function getResources(
       },
       {
         id: "G14PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -20106,6 +21893,7 @@ function getResources(
       },
       {
         id: "G14PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -20118,6 +21906,7 @@ function getResources(
       },
       {
         id: "G14PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20127,6 +21916,7 @@ function getResources(
       },
       {
         id: "G14PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -20141,6 +21931,7 @@ function getResources(
     G15BW1: [
       {
         id: "G15BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -20154,6 +21945,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G15BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -20167,6 +21959,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G15BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -20180,6 +21973,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G15BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -20193,6 +21987,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G15BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -20202,6 +21997,7 @@ function getResources(
       },
       {
         id: "G15BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -20213,6 +22009,7 @@ function getResources(
     G15EL1: [
       {
         id: "G15EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -20222,6 +22019,7 @@ function getResources(
       },
       {
         id: "G15EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -20231,6 +22029,7 @@ function getResources(
       },
       {
         id: "G15EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -20242,6 +22041,7 @@ function getResources(
     G15MD1: [
       {
         id: "G15MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -20251,6 +22051,7 @@ function getResources(
       },
       {
         id: "G15MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -20260,6 +22061,7 @@ function getResources(
       },
       {
         id: "G15MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -20271,6 +22073,7 @@ function getResources(
     G15PC1: [
       {
         id: "G15PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -20280,6 +22083,7 @@ function getResources(
       },
       {
         id: "G15PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -20289,6 +22093,7 @@ function getResources(
       },
       {
         id: "G15PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -20300,6 +22105,7 @@ function getResources(
     G15FF1: [
       {
         id: "G15FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -20309,6 +22115,7 @@ function getResources(
       },
       {
         id: "G15FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -20318,6 +22125,7 @@ function getResources(
       },
       {
         id: "G15FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -20329,6 +22137,7 @@ function getResources(
     G15DFI1: [
       {
         id: "G15DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -20341,6 +22150,7 @@ function getResources(
       },
       {
         id: "G15DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20352,6 +22162,7 @@ function getResources(
     G15WFI1: [
       {
         id: "G15WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -20364,6 +22175,7 @@ function getResources(
       },
       {
         id: "G15WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20375,6 +22187,7 @@ function getResources(
     G15PL1: [
       {
         id: "G15PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -20387,6 +22200,7 @@ function getResources(
       },
       {
         id: "G15PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -20399,6 +22213,7 @@ function getResources(
       },
       {
         id: "G15PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -20411,6 +22226,7 @@ function getResources(
       },
       {
         id: "G15PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -20423,6 +22239,7 @@ function getResources(
       },
       {
         id: "G15PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20434,6 +22251,7 @@ function getResources(
     G15PR1: [
       {
         id: "G15PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -20446,6 +22264,7 @@ function getResources(
       },
       {
         id: "G15PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -20458,6 +22277,7 @@ function getResources(
       },
       {
         id: "G15PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -20470,6 +22290,7 @@ function getResources(
       },
       {
         id: "G15PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -20482,6 +22303,7 @@ function getResources(
       },
       {
         id: "G15PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20493,6 +22315,7 @@ function getResources(
     G15PT1: [
       {
         id: "G15PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -20505,6 +22328,7 @@ function getResources(
       },
       {
         id: "G15PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -20517,6 +22341,7 @@ function getResources(
       },
       {
         id: "G15PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -20529,6 +22354,7 @@ function getResources(
       },
       {
         id: "G15PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -20541,6 +22367,7 @@ function getResources(
       },
       {
         id: "G15PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20552,6 +22379,7 @@ function getResources(
     G15WP1: [
       {
         id: "G15WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -20564,6 +22392,7 @@ function getResources(
       },
       {
         id: "G15WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20575,6 +22404,7 @@ function getResources(
     G15GR1: [
       {
         id: "G15GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -20587,6 +22417,7 @@ function getResources(
       },
       {
         id: "G15GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20598,6 +22429,7 @@ function getResources(
     G15TL1: [
       {
         id: "G15TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -20610,6 +22442,7 @@ function getResources(
       },
       {
         id: "G15TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20622,6 +22455,7 @@ function getResources(
     G15PTF1: [
       {
         id: "G15PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -20634,6 +22468,7 @@ function getResources(
       },
       {
         id: "G15PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -20646,6 +22481,7 @@ function getResources(
       },
       {
         id: "G15PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -20658,6 +22494,7 @@ function getResources(
       },
       {
         id: "G15PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -20670,6 +22507,7 @@ function getResources(
       },
       {
         id: "G15PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20679,6 +22517,7 @@ function getResources(
       },
       {
         id: "G15PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -20693,6 +22532,7 @@ function getResources(
     G16BW1: [
       {
         id: "G16BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -20706,6 +22546,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G16BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -20719,6 +22560,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G16BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -20732,6 +22574,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G16BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -20745,6 +22588,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G16BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -20754,6 +22598,7 @@ function getResources(
       },
       {
         id: "G16BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -20765,6 +22610,7 @@ function getResources(
     G16EL1: [
       {
         id: "G16EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -20774,6 +22620,7 @@ function getResources(
       },
       {
         id: "G16EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -20783,6 +22630,7 @@ function getResources(
       },
       {
         id: "G16EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -20794,6 +22642,7 @@ function getResources(
     G16MD1: [
       {
         id: "G16MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -20803,6 +22652,7 @@ function getResources(
       },
       {
         id: "G16MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -20812,6 +22662,7 @@ function getResources(
       },
       {
         id: "G16MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -20823,6 +22674,7 @@ function getResources(
     G16PC1: [
       {
         id: "G16PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -20832,6 +22684,7 @@ function getResources(
       },
       {
         id: "G16PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -20841,6 +22694,7 @@ function getResources(
       },
       {
         id: "G16PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -20852,6 +22706,7 @@ function getResources(
     G16FF1: [
       {
         id: "G16FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -20861,6 +22716,7 @@ function getResources(
       },
       {
         id: "G16FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -20870,6 +22726,7 @@ function getResources(
       },
       {
         id: "G16FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -20881,6 +22738,7 @@ function getResources(
     G16DFI1: [
       {
         id: "G16DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -20893,6 +22751,7 @@ function getResources(
       },
       {
         id: "G16DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20904,6 +22763,7 @@ function getResources(
     G16WFI1: [
       {
         id: "G16WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -20916,6 +22776,7 @@ function getResources(
       },
       {
         id: "G16WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20927,6 +22788,7 @@ function getResources(
     G16PL1: [
       {
         id: "G16PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -20939,6 +22801,7 @@ function getResources(
       },
       {
         id: "G16PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -20951,6 +22814,7 @@ function getResources(
       },
       {
         id: "G16PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -20963,6 +22827,7 @@ function getResources(
       },
       {
         id: "G16PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -20975,6 +22840,7 @@ function getResources(
       },
       {
         id: "G16PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -20986,6 +22852,7 @@ function getResources(
     G16PR1: [
       {
         id: "G16PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -20998,6 +22865,7 @@ function getResources(
       },
       {
         id: "G16PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -21010,6 +22878,7 @@ function getResources(
       },
       {
         id: "G16PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -21022,6 +22891,7 @@ function getResources(
       },
       {
         id: "G16PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -21034,6 +22904,7 @@ function getResources(
       },
       {
         id: "G16PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21045,6 +22916,7 @@ function getResources(
     G16PT1: [
       {
         id: "G16PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -21057,6 +22929,7 @@ function getResources(
       },
       {
         id: "G16PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -21069,6 +22942,7 @@ function getResources(
       },
       {
         id: "G16PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -21081,6 +22955,7 @@ function getResources(
       },
       {
         id: "G16PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -21093,6 +22968,7 @@ function getResources(
       },
       {
         id: "G16PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21104,6 +22980,7 @@ function getResources(
     G16WP1: [
       {
         id: "G16WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 0.5,
@@ -21116,6 +22993,7 @@ function getResources(
       },
       {
         id: "G16WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21127,6 +23005,7 @@ function getResources(
     G16GR1: [
       {
         id: "G16GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 0.5,
@@ -21139,6 +23018,7 @@ function getResources(
       },
       {
         id: "G16GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21150,6 +23030,7 @@ function getResources(
     G16TL1: [
       {
         id: "G16TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 0.5,
@@ -21162,6 +23043,7 @@ function getResources(
       },
       {
         id: "G16TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21174,6 +23056,7 @@ function getResources(
     G16PTF1: [
       {
         id: "G16PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -21186,6 +23069,7 @@ function getResources(
       },
       {
         id: "G16PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -21198,6 +23082,7 @@ function getResources(
       },
       {
         id: "G16PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -21210,6 +23095,7 @@ function getResources(
       },
       {
         id: "G16PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -21222,6 +23108,7 @@ function getResources(
       },
       {
         id: "G16PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21231,6 +23118,7 @@ function getResources(
       },
       {
         id: "G16PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -21245,6 +23133,7 @@ function getResources(
     G17BW1: [
       {
         id: "G17BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -21258,6 +23147,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G17BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -21271,6 +23161,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G17BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -21284,6 +23175,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G17BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -21297,6 +23189,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G17BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -21306,6 +23199,7 @@ function getResources(
       },
       {
         id: "G17BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -21317,6 +23211,7 @@ function getResources(
     G17EL1: [
       {
         id: "G17EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -21326,6 +23221,7 @@ function getResources(
       },
       {
         id: "G17EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -21335,6 +23231,7 @@ function getResources(
       },
       {
         id: "G17EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -21346,6 +23243,7 @@ function getResources(
     G17MD1: [
       {
         id: "G17MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -21355,6 +23253,7 @@ function getResources(
       },
       {
         id: "G17MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -21364,6 +23263,7 @@ function getResources(
       },
       {
         id: "G17MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -21375,6 +23275,7 @@ function getResources(
     G17PC1: [
       {
         id: "G17PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -21384,6 +23285,7 @@ function getResources(
       },
       {
         id: "G17PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -21393,6 +23295,7 @@ function getResources(
       },
       {
         id: "G17PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -21404,6 +23307,7 @@ function getResources(
     G17FF1: [
       {
         id: "G17FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -21413,6 +23317,7 @@ function getResources(
       },
       {
         id: "G17FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -21422,6 +23327,7 @@ function getResources(
       },
       {
         id: "G17FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -21433,6 +23339,7 @@ function getResources(
     G17DFI1: [
       {
         id: "G17DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -21445,6 +23352,7 @@ function getResources(
       },
       {
         id: "G17DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21456,6 +23364,7 @@ function getResources(
     G17WFI1: [
       {
         id: "G17WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -21468,6 +23377,7 @@ function getResources(
       },
       {
         id: "G17WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21479,6 +23389,7 @@ function getResources(
     G17PL1: [
       {
         id: "G17PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -21491,6 +23402,7 @@ function getResources(
       },
       {
         id: "G17PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -21503,6 +23415,7 @@ function getResources(
       },
       {
         id: "G17PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -21515,6 +23428,7 @@ function getResources(
       },
       {
         id: "G17PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -21527,6 +23441,7 @@ function getResources(
       },
       {
         id: "G17PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21538,6 +23453,7 @@ function getResources(
     G17PR1: [
       {
         id: "G17PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -21550,6 +23466,7 @@ function getResources(
       },
       {
         id: "G17PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -21562,6 +23479,7 @@ function getResources(
       },
       {
         id: "G17PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -21574,6 +23492,7 @@ function getResources(
       },
       {
         id: "G17PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -21586,6 +23505,7 @@ function getResources(
       },
       {
         id: "G17PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21597,6 +23517,7 @@ function getResources(
     G17PT1: [
       {
         id: "G17PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -21609,6 +23530,7 @@ function getResources(
       },
       {
         id: "G17PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -21621,6 +23543,7 @@ function getResources(
       },
       {
         id: "G17PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -21633,6 +23556,7 @@ function getResources(
       },
       {
         id: "G17PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -21645,6 +23569,7 @@ function getResources(
       },
       {
         id: "G17PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21656,6 +23581,7 @@ function getResources(
     G17WP1: [
       {
         id: "G17WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 0.5,
@@ -21668,6 +23594,7 @@ function getResources(
       },
       {
         id: "G17WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21679,6 +23606,7 @@ function getResources(
     G17GR1: [
       {
         id: "G17GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 0.5,
@@ -21691,6 +23619,7 @@ function getResources(
       },
       {
         id: "G17GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21702,6 +23631,7 @@ function getResources(
     G17TL1: [
       {
         id: "G17TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 0.5,
@@ -21714,6 +23644,7 @@ function getResources(
       },
       {
         id: "G17TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21726,6 +23657,7 @@ function getResources(
     G17PTF1: [
       {
         id: "G17PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -21738,6 +23670,7 @@ function getResources(
       },
       {
         id: "G17PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -21750,6 +23683,7 @@ function getResources(
       },
       {
         id: "G17PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -21762,6 +23696,7 @@ function getResources(
       },
       {
         id: "G17PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -21774,6 +23709,7 @@ function getResources(
       },
       {
         id: "G17PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -21783,6 +23719,7 @@ function getResources(
       },
       {
         id: "G17PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -21797,6 +23734,7 @@ function getResources(
     G18BW1: [
       {
         id: "G18BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -21810,6 +23748,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G18BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -21823,6 +23762,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G18BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -21836,6 +23776,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G18BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -21849,6 +23790,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G18BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -21858,6 +23800,7 @@ function getResources(
       },
       {
         id: "G18BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -21869,6 +23812,7 @@ function getResources(
     G18EL1: [
       {
         id: "G18EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -21878,6 +23822,7 @@ function getResources(
       },
       {
         id: "G18EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -21887,6 +23832,7 @@ function getResources(
       },
       {
         id: "G18EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -21898,6 +23844,7 @@ function getResources(
     G18MD1: [
       {
         id: "G18MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -21907,6 +23854,7 @@ function getResources(
       },
       {
         id: "G18MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -21916,6 +23864,7 @@ function getResources(
       },
       {
         id: "G18MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -21927,6 +23876,7 @@ function getResources(
     G18PC1: [
       {
         id: "G18PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -21936,6 +23886,7 @@ function getResources(
       },
       {
         id: "G18PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -21945,6 +23896,7 @@ function getResources(
       },
       {
         id: "G18PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -21956,6 +23908,7 @@ function getResources(
     G18FF1: [
       {
         id: "G18FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -21965,6 +23918,7 @@ function getResources(
       },
       {
         id: "G18FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -21974,6 +23928,7 @@ function getResources(
       },
       {
         id: "G18FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -21985,6 +23940,7 @@ function getResources(
     G18DFI1: [
       {
         id: "G18DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -21997,6 +23953,7 @@ function getResources(
       },
       {
         id: "G18DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22008,6 +23965,7 @@ function getResources(
     G18WFI1: [
       {
         id: "G18WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -22020,6 +23978,7 @@ function getResources(
       },
       {
         id: "G18WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22031,6 +23990,7 @@ function getResources(
     G18PL1: [
       {
         id: "G18PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -22043,6 +24003,7 @@ function getResources(
       },
       {
         id: "G18PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -22055,6 +24016,7 @@ function getResources(
       },
       {
         id: "G18PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -22067,6 +24029,7 @@ function getResources(
       },
       {
         id: "G18PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -22079,6 +24042,7 @@ function getResources(
       },
       {
         id: "G18PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22090,6 +24054,7 @@ function getResources(
     G18PR1: [
       {
         id: "G18PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -22102,6 +24067,7 @@ function getResources(
       },
       {
         id: "G18PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -22114,6 +24080,7 @@ function getResources(
       },
       {
         id: "G18PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -22126,6 +24093,7 @@ function getResources(
       },
       {
         id: "G18PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -22138,6 +24106,7 @@ function getResources(
       },
       {
         id: "G18PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22149,6 +24118,7 @@ function getResources(
     G18PT1: [
       {
         id: "G18PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -22161,6 +24131,7 @@ function getResources(
       },
       {
         id: "G18PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -22173,6 +24144,7 @@ function getResources(
       },
       {
         id: "G18PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -22185,6 +24157,7 @@ function getResources(
       },
       {
         id: "G18PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -22197,6 +24170,7 @@ function getResources(
       },
       {
         id: "G18PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22208,6 +24182,7 @@ function getResources(
     G18WP1: [
       {
         id: "G18WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -22220,6 +24195,7 @@ function getResources(
       },
       {
         id: "G18WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22231,6 +24207,7 @@ function getResources(
     G18GR1: [
       {
         id: "G18GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -22243,6 +24220,7 @@ function getResources(
       },
       {
         id: "G18GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22254,6 +24232,7 @@ function getResources(
     G18TL1: [
       {
         id: "G18TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -22266,6 +24245,7 @@ function getResources(
       },
       {
         id: "G18TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22278,6 +24258,7 @@ function getResources(
     G18PTF1: [
       {
         id: "G18PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -22290,6 +24271,7 @@ function getResources(
       },
       {
         id: "G18PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -22302,6 +24284,7 @@ function getResources(
       },
       {
         id: "G18PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -22314,6 +24297,7 @@ function getResources(
       },
       {
         id: "G18PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -22326,6 +24310,7 @@ function getResources(
       },
       {
         id: "G18PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22335,6 +24320,7 @@ function getResources(
       },
       {
         id: "G18PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -22349,6 +24335,7 @@ function getResources(
     G19BW1: [
       {
         id: "G19BW11",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "leftWall",
         length: leftWall.length,
@@ -22362,6 +24349,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G19BW12",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "rightWall",
         length: rightWall.length,
@@ -22375,6 +24363,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G19BW13",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "frontWall",
         length: frontWall.length,
@@ -22388,6 +24377,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G19BW14",
+        type: "Brickwork",
         resource: "Cuminch9Redclayper1000",
         description: "backWall",
         length: backWall.length,
@@ -22401,6 +24391,7 @@ function getResources(
       }, // qty and cost will be calculated in code
       {
         id: "G19BW15",
+        type: "Mason",
         resource: "HourlyMason",
         description: "Mason",
         rate: MasonRates.Mason.Hourly,
@@ -22410,6 +24401,7 @@ function getResources(
       },
       {
         id: "G19BW16",
+        type: "Mason",
         resource: "HourlyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Hourly,
@@ -22421,6 +24413,7 @@ function getResources(
     G19EL1: [
       {
         id: "G19EL11",
+        type: "Electrical",
         resource: "mPVCElec",
         description: "Electrical",
         rate: ElecRates.PVC.m,
@@ -22430,6 +24423,7 @@ function getResources(
       },
       {
         id: "G19EL12",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -22439,6 +24433,7 @@ function getResources(
       },
       {
         id: "G19EL13",
+        type: "Electrical-Helper",
         resource: "HourlyHelper",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -22450,6 +24445,7 @@ function getResources(
     G19MD1: [
       {
         id: "G19MD11",
+        type: "Mechanical",
         resource: "ALDuctperSqmMech",
         description: "Mechanical",
         rate: MechRates.DuctperSqm.AL,
@@ -22459,6 +24455,7 @@ function getResources(
       },
       {
         id: "G19MD12",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -22468,6 +24465,7 @@ function getResources(
       },
       {
         id: "G19MD13",
+        type: "Mechanical-Helper",
         resource: "HourlyHelper",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -22479,6 +24477,7 @@ function getResources(
     G19PC1: [
       {
         id: "G19PC11",
+        type: "Plumbing",
         resource: "mCPVCPlumb",
         description: "Plumbing",
         rate: PlumbRates.CPVC.m,
@@ -22488,6 +24487,7 @@ function getResources(
       },
       {
         id: "G19PC12",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -22497,6 +24497,7 @@ function getResources(
       },
       {
         id: "G19PC13",
+        type: "Plumbing-Helper",
         resource: "HourlyHelper",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -22508,6 +24509,7 @@ function getResources(
     G19FF1: [
       {
         id: "G19FF11",
+        type: "FireFighting",
         resource: "mHangerssprinklerFF",
         description: "FireFighting",
         rate: FFRates.Hangerssprinkler.m,
@@ -22517,6 +24519,7 @@ function getResources(
       },
       {
         id: "G19FF12",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -22526,6 +24529,7 @@ function getResources(
       },
       {
         id: "G19FF13",
+        type: "FireFighting-Helper",
         resource: "HourlyHelper",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -22537,6 +24541,7 @@ function getResources(
     G19DFI1: [
       {
         id: "G19DFI11",
+        type: "Door Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Door insulation",
         length: 3,
@@ -22549,6 +24554,7 @@ function getResources(
       },
       {
         id: "G19DFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22560,6 +24566,7 @@ function getResources(
     G19WFI1: [
       {
         id: "G19WFI11",
+        type: "Window Insulation",
         resource: "WP1TeakDFinsulation",
         description: "Window insulation",
         length: 1.2,
@@ -22572,6 +24579,7 @@ function getResources(
       },
       {
         id: "G19WFI13",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22583,6 +24591,7 @@ function getResources(
     G19PL1: [
       {
         id: "G19PL11",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "leftWall",
         length: leftWall.length,
@@ -22595,6 +24604,7 @@ function getResources(
       },
       {
         id: "G19PL12",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "rightWall",
         length: rightWall.length,
@@ -22607,6 +24617,7 @@ function getResources(
       },
       {
         id: "G19PL13",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "frontWall",
         length: frontWall.length,
@@ -22619,6 +24630,7 @@ function getResources(
       },
       {
         id: "G19PL14",
+        type: "Plaster",
         resource: "Cummm12PlasterManual",
         description: "backWall",
         length: backWall.length,
@@ -22631,6 +24643,7 @@ function getResources(
       },
       {
         id: "G19PL15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22642,6 +24655,7 @@ function getResources(
     G19PR1: [
       {
         id: "G19PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -22654,6 +24668,7 @@ function getResources(
       },
       {
         id: "G19PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -22666,6 +24681,7 @@ function getResources(
       },
       {
         id: "G19PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -22678,6 +24694,7 @@ function getResources(
       },
       {
         id: "G19PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -22690,6 +24707,7 @@ function getResources(
       },
       {
         id: "G19PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22701,6 +24719,7 @@ function getResources(
     G19PT1: [
       {
         id: "G19PR11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -22713,6 +24732,7 @@ function getResources(
       },
       {
         id: "G19PR12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -22725,6 +24745,7 @@ function getResources(
       },
       {
         id: "G19PR13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -22737,6 +24758,7 @@ function getResources(
       },
       {
         id: "G19PR14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -22749,6 +24771,7 @@ function getResources(
       },
       {
         id: "G19PR15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22760,6 +24783,7 @@ function getResources(
     G19WP1: [
       {
         id: "G19WP11",
+        type: "Water Proofing",
         resource: "SqmLiquidWP",
         description: "Waterproofing",
         length: 1,
@@ -22772,6 +24796,7 @@ function getResources(
       },
       {
         id: "G19WP12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22783,6 +24808,7 @@ function getResources(
     G19GR1: [
       {
         id: "G19GR11",
+        type: "Granite",
         resource: "SqmGraniteFloor",
         description: "Granite",
         length: 1,
@@ -22795,6 +24821,7 @@ function getResources(
       },
       {
         id: "G19GR12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22806,6 +24833,7 @@ function getResources(
     G19TL1: [
       {
         id: "G19TL11",
+        type: "Vitrified",
         resource: "SqmVitrifiedFloor",
         description: "Vitrified",
         length: 1,
@@ -22818,6 +24846,7 @@ function getResources(
       },
       {
         id: "G19TL12",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22830,6 +24859,7 @@ function getResources(
     G19PTF1: [
       {
         id: "G19PTF11",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "leftWall",
         length: leftWall.length,
@@ -22842,6 +24872,7 @@ function getResources(
       },
       {
         id: "G19PTF12",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "rightWall",
         length: rightWall.length,
@@ -22854,6 +24885,7 @@ function getResources(
       },
       {
         id: "G19PTF13",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "frontWall",
         length: frontWall.length,
@@ -22866,6 +24898,7 @@ function getResources(
       },
       {
         id: "G19PTF14",
+        type: "Paint",
         resource: "SqmPPaint",
         description: "backWall",
         length: backWall.length,
@@ -22878,6 +24911,7 @@ function getResources(
       },
       {
         id: "G19PTF15",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Helper",
         rate: HelperRates.Helper.Daily,
@@ -22887,6 +24921,7 @@ function getResources(
       },
       {
         id: "G19PTF16",
+        type: "Helper",
         resource: "DailyHelper",
         description: "Clean",
         rate: HelperRates.Helper.Daily,
@@ -22905,6 +24940,7 @@ function getResources(
     GFI3: [
       {
         id: "GFI71",
+        type: "Door Frame",
         resource: "TW1TeakperftDF",
         description: "Door Frame",
         length: 3,
@@ -22919,6 +24955,7 @@ function getResources(
     GFI4: [
       {
         id: "GFI81",
+        type: "Window Frame",
         resource: "TW1TeakperftDF",
         description: "Window Frame",
         length: 1.2,
@@ -22933,6 +24970,7 @@ function getResources(
     GFI5: [
       {
         id: "GFI91",
+        type: "Door",
         resource: "SftUPVCSlidDoor",
         description: "Window",
         length: 1,
@@ -22947,6 +24985,7 @@ function getResources(
     GFI6: [
       {
         id: "GFI101",
+        type: "Door",
         resource: "UnitTeakWoodDoor",
         description: "Door",
         length: 1,
@@ -22961,6 +25000,7 @@ function getResources(
     GFEL: [
       {
         id: "GFI31",
+        type: "LightFixtures",
         resource: "UnitLightFixturesElec",
         description: "Electrical",
         rate: ElecRates.LightFixtures.Unit,
@@ -22970,6 +25010,7 @@ function getResources(
       },
       {
         id: "GFI32",
+        type: "Electrical-Mason",
         resource: "HourlyMason",
         description: "Electrical",
         rate: ElectricianRates.Mason.Hourly,
@@ -22981,6 +25022,7 @@ function getResources(
     GFPL: [
       {
         id: "GFI51",
+        type: "Tap",
         resource: "CeraTapsPlumb",
         description: "Plumbing",
         rate: PlumbRates.taps.Cera,
@@ -22990,6 +25032,7 @@ function getResources(
       },
       {
         id: "GFI52",
+        type: "Plumbing-Mason",
         resource: "HourlyMason",
         description: "Plumbing",
         rate: PlumberRates.Mason.Hourly,
@@ -23001,6 +25044,7 @@ function getResources(
     GFME: [
       {
         id: "GFI41",
+        type: "AC",
         resource: "UnitAirCMech",
         description: "Mechanical",
         rate: MechRates.AirC.Unit,
@@ -23010,6 +25054,7 @@ function getResources(
       },
       {
         id: "GFI42",
+        type: "Mechanical-Mason",
         resource: "HourlyMason",
         description: "Mechanical",
         rate: MechMasonRates.Mason.Hourly,
@@ -23021,6 +25066,7 @@ function getResources(
     GFFF: [
       {
         id: "GFI61",
+        type: "Sprinkler",
         resource: "UnitsprinklerFF",
         description: "FireFighting",
         rate: FFRates.sprinkler.Unit,
@@ -23030,6 +25076,7 @@ function getResources(
       },
       {
         id: "GFI62",
+        type: "FireFighting-Mason",
         resource: "HourlyMason",
         description: "FireFighting",
         rate: FFMasonRates.Mason.Hourly,
@@ -23041,6 +25088,7 @@ function getResources(
     GFFC: [
       {
         id: "GFI111",
+        type: "FalseCeiling",
         resource: "Sqm2GypFCeiling",
         description: "FalseCeiling",
         length: 4,
@@ -23055,6 +25103,7 @@ function getResources(
     GFLF: [
       {
         id: "GFI12",
+        type: "Lights",
         resource: "Unit2RecsedLitCfix",
         description: "Lights",
         length: 4,
@@ -23069,6 +25118,7 @@ function getResources(
     GFWA: [
       {
         id: "GWFI11",
+        type: "Countertop",
         resource: "Sft2GraniteKCtop40sft",
         description: "Kitchen Countertop L-Shape",
         length: 0.92,
@@ -23083,6 +25133,7 @@ function getResources(
     GFSD: [
       {
         id: "GFI13",
+        type: "Slide-Door",
         resource: "UnitUPVCSlidDoor",
         description: "Slide-Door",
         length: 0.92,
@@ -23097,6 +25148,7 @@ function getResources(
     GFJY: [
       {
         id: "GFI15",
+        type: "Cabinet",
         resource: "Sqm2PlyWCabinet",
         description: "Cabinet",
         length: 2.5,
@@ -23111,6 +25163,7 @@ function getResources(
     GFEX: [
       {
         id: "GFI16",
+        type: "Exhaust",
         resource: "Unit2KitchenExhaust",
         description: "Exhaust",
         rate: ExhaustRates.Kitchen.Unit2,
@@ -23122,6 +25175,7 @@ function getResources(
     GFFU: [
       {
         id: "GFI17",
+        type: "Furniture",
         resource: "Sqm2FurniFurnish",
         description: "Furniture",
         length: 2,
@@ -23136,6 +25190,7 @@ function getResources(
     CL01: [
       {
         id: "CL011",
+        type: "Closing",
         resource: "OthFFixFinal",
         description: "FinalFix",
         rate: FinalRates.FFix.Oth,
@@ -23145,6 +25200,7 @@ function getResources(
       },
       {
         id: "CL012",
+        type: "Lights",
         resource: "Unit2RecsedLitCfix",
         description: "Lights",
         length: 0.92,
@@ -23159,6 +25215,7 @@ function getResources(
     CL04: [
       {
         id: "CL041",
+        type: "Closing",
         resource: "SnagClearConting",
         description: "Snag&Desnag",
         rate: ContingRates.Clear.Snag,
@@ -23168,6 +25225,7 @@ function getResources(
       },
       {
         id: "CL042",
+        type: "Lights",
         resource: "Unit2RecsedLitCfix",
         description: "Lights",
         length: 0.92,
