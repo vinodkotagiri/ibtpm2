@@ -812,6 +812,7 @@ export type Task = {
 
 export type Resource = {
   id: string;
+  type?: string;
   resource: ResourceType;
   description: string;
   rate: number;

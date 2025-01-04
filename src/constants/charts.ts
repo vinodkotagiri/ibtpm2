@@ -27,7 +27,7 @@ export const LineChart: IChart = {
   ],
   
   options: {
-    title: "Project Summary",
+    title: "Project Summary",    
     hAxis: {
       title: "Time (months)",
       textStyle: {
@@ -87,14 +87,14 @@ export const BarChart: IChart = {
   chartType: "BarChart",
   data: [
     ["Category", "Hours"],
-    ["Mason", 1],
-    ["Steel Fixer", 4],
-    ["Helper", 5],
-    ["Operator", 1],
-    ["Carpenter", 3]
+    ["Steel", 2],
+    ["Concrete", 5],
+    ["Formwork", 2],
+    ["Bricks- Red Clay", 4],
+    ["Plaster", 3]
   ],
   options: {
-    title: "Daily Worker Activities",
+    title: "Material Quantities",
     backgroundColor: "transparent",
     titleTextStyle: {
       color: "#bbb",
