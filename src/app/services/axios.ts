@@ -91,3 +91,38 @@ export async function getUserDetails(token){
     }
   } )
 }
+
+export async function loginUser ( data ) {
+  const RegisteredIP = await getIpAddress()
+  data={...data,RegisteredIP}
+  return new Promise( ( resolve, reject ) => {
+    instance.post( `/auth/signin`, data )
+      .then( result => resolve( result ) )
+      .catch( err => reject( err ) )
+  } )
+}
+
+
+export async function getIpAddress () {
+  return new Promise( ( resolve, reject ) => {
+    axios.get( 'https://api.ipify.org' )
+      .then( result => resolve( result.data ) )
+      .catch( err => reject( err ) )
+  } )
+}
+
+export const setBearerToken = () => {
+  if ( window.localStorage.getItem( 'token' ) ) {
+    const token = window.localStorage.getItem( 'token' )
+    instance.defaults.headers[ 'Authorization' ] = `Bearer ${ token }`
+  }
+}
+
+export async function signupUser ( data ) {
+  const RegisteredIP = await getIpAddress()
+  return new Promise( ( resolve, reject ) => {
+    instance.post( `/auth/signup`, {...data,RegisteredIP} )
+      .then( result => resolve( result ) )
+      .catch( err => reject( err ) )
+  } )
+}
