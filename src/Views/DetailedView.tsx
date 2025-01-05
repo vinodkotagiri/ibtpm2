@@ -24,25 +24,8 @@ const DetailedView = () => {
     if(!hasStartDate && view!=0) return toast.error('Please add start date')
     setCurrentView(view)
   }
-console.log('estimateName',estimateName)
-  useEffect(()=>{
-    const resourceTypes={}
-    for(const task of tasks){
-      if(task?.resources){
-      for(const resource of task?.resources){
-        if(resource.type){
 
-          if(resourceTypes[resource.type]){
-            resourceTypes[resource.type]+=resource.quantity
-          }else{
-            resourceTypes[resource.type]=0
-          }
-        }
-      }
-    }
-    }
-    console.log("resourceTypes::",JSON.stringify(resourceTypes))
-  },[tasks])
+  
   return (
     <div className='h-full w-full '>
       <AddTaskComponent />

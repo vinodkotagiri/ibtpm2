@@ -1,3 +1,4 @@
+
 import { currencies } from '../constants/currency';
 import { Strategy, Task } from '../constants/types';
 
@@ -199,4 +200,24 @@ export const updateProjectProgress = ( tasks: Task[] ):Array<Task>=> {
 
 
 
+
+export const getResourceQuantities = (items )=> {
+  const groupedByNameAndUnits = items.reduce((acc: { [key: string]: number }, item) => {
+    const key = `${item.name}-${item.units}`; // Composite key: name and units
+    if (acc[key]) {
+      acc[key] += item.quantity;
+    } else {
+      acc[key] = item.quantity;
+    }
+    return acc;
+  }, {});
+
+  // Convert the grouped data into an array of objects with name, units, and total quantity
+const result = Object.entries(groupedByNameAndUnits).map(([key, totalQuantity]) => {
+  const [name, units] = key.split('-');
+  return { name, units, totalQuantity };
+}).filter(item=>item!=undefined);
+
+return result
+}
 

@@ -32,7 +32,6 @@ const ScheduleComponent = ({setEstimateName}) => {
     }
   }, [])
 
-console.log('loading',loading)
   useEffect(() => {
     // updateResources(drawingData)
     if (drawingData.plotLength && drawingData.plotWidth && drawingData.plotArea) {

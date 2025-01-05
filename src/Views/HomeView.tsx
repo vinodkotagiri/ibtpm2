@@ -1,14 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAppSelector } from "../app/hooks";
 import ChartComponent from "../components/ChartComponent";
-import {  AreaChart, BarChart, ComboChart, DonutChart, LineChart, PieChart, SteppedAreaChart } from "../constants/charts";
+import { AreaChart, BarChart, ComboChart, DonutChart, LineChart, PieChart, SteppedAreaChart } from "../constants/charts";
+import { getResourceQuantities } from "../helpers/calculations";
 
 const HomeView = () => {
-  const {totalTasks,tasks}=useAppSelector(state => state.schedule)
+  const { totalTasks, tasks } = useAppSelector(state => state.schedule)
+const [resourceQuantities,setResourceQuantities]=useState([])
 
-  
-  
-  
+  useEffect(() => {
+    const resourceTypes = []
+    for (const task of tasks) {
+      if (task?.resources) {
+        for (const resource of task?.resources) {
+          resourceTypes.push({name:resource?.type,units:resource?.units,quantity:parseFloat(resource?.quantity)??0})
+        }
+      }
+    }
+
+    if(resourceTypes.length){
+      const resources=getResourceQuantities(resourceTypes)
+      setResourceQuantities(resources)
+    }
+    
+  }, [tasks])
+
 
 
   return (
@@ -16,44 +32,44 @@ const HomeView = () => {
       {/* Top Section */}
       <div className="w-full flex flex-wrap gap-3 p-3 justify-center overflow-auto">
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#F55C47] flex items-center justify-center flex-col font-semibold text-slate-600">
-        <div className="text-2xl font-semibold text-slate-600">
-          TOTAL TASKS
-        </div>
-        <div className="text-xl">
-          {totalTasks}
-        </div>
+          <div className="text-2xl font-semibold text-slate-600">
+            TOTAL TASKS
+          </div>
+          <div className="text-xl">
+            {totalTasks}
+          </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#9FE6A0] flex flex-col items-center justify-center font-semibold text-slate-600">
-        <div className="text-2xl font-semibold text-slate-600">
-          TOTAL BUDGET
-        </div>
-        <div className="text-xl">
-          &#8377;35,22000
-        </div>
+          <div className="text-2xl font-semibold text-slate-600">
+            TOTAL BUDGET
+          </div>
+          <div className="text-xl">
+            &#8377;35,22000
+          </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#E6FF94] flex items-center justify-center flex-col font-semibold text-slate-600">
-        <div className="text-2xl">
-          ACTUAL COST
-        </div>
-        <div>
-          &#8377;0
-        </div>
+          <div className="text-2xl">
+            ACTUAL COST
+          </div>
+          <div>
+            &#8377;0
+          </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#B3A398] flex items-center justify-center flex-col font-semibold text-slate-600">
-        <div className="text-2xl">
-          AMOUNT PAID
-        </div>
-        <div>
-          &#8377;0
-        </div>
+          <div className="text-2xl">
+            AMOUNT PAID
+          </div>
+          <div>
+            &#8377;0
+          </div>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 min-h-[80px] rounded-md shadow-md bg-[#CD8D7A] flex items-center justify-center flex-col font-semibold text-slate-600">
-        <div className="text-2xl">
-          AMOUNT DUE
-        </div>
-        <div>
-          &#8377;0
-        </div>
+          <div className="text-2xl">
+            AMOUNT DUE
+          </div>
+          <div>
+            &#8377;0
+          </div>
         </div>
       </div>
 
@@ -68,7 +84,7 @@ const HomeView = () => {
             <ChartComponent chart={PieChart} />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4 h-full  shadow-sm rounded-2xl shadow-purple-500">
-          <ChartComponent chart={BarChart} />
+            <ChartComponent chart={BarChart} resourceQuantities={resourceQuantities}/>
           </div>
           {/* <div className="w-full sm:w-1/2 lg:w-1/4 h-full shadow-sm rounded-2xl shadow-purple-500 ">
           <ChartComponent chart={AreaChart} />
@@ -78,13 +94,13 @@ const HomeView = () => {
         {/* Empty Content Row */}
         <div className="w-full h-1/2 flex  items-center gap-2">
           <div className="w-full sm:w-1/2 lg:w-1/3 h-full shadow-sm rounded-2xl shadow-purple-500">
-          <ChartComponent chart={ComboChart} />
+            <ChartComponent chart={ComboChart} />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 h-full shadow-sm rounded-2xl shadow-purple-500">
-          <ChartComponent chart={DonutChart} />
+            <ChartComponent chart={DonutChart} />
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 h-full shadow-sm rounded-2xl shadow-purple-500">
-          <ChartComponent chart={SteppedAreaChart} /> 
+            <ChartComponent chart={SteppedAreaChart} />
           </div>
         </div>
       </div>
