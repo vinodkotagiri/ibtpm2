@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import { useAppSelector } from "../app/hooks";
 import ChartComponent from "../components/ChartComponent";
 import {  AreaChart, BarChart, ComboChart, DonutChart, LineChart, PieChart, SteppedAreaChart } from "../constants/charts";
 
 const HomeView = () => {
-  const {totalTasks}=useAppSelector(state => state.schedule)
+  const {totalTasks,tasks}=useAppSelector(state => state.schedule)
+
+  
+  
+  
+
+
   return (
     <div className="w-screen h-[calc(100vh-64px)] bg-slate-800 px-4 py-1 overflow-y-auto text-slate-800 font-semibold">
       {/* Top Section */}

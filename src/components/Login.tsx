@@ -39,12 +39,16 @@ const Login = () => {
       setIsLoading(true)
         loginUser({Email:credentials.email,Password:credentials.password}).then(response=>{
         const {userInfo,token}=response.data
-        window.sessionStorage.setItem('token',token)
-        window.sessionStorage.setItem('user',JSON.stringify(userInfo))
+        window.localStorage.setItem('token',token)
+        window.localStorage.setItem('user',JSON.stringify(userInfo))
         dispatch(setAuthentication({isAuthenticated:true,userInfo}))
         setIsLoading(false)
         toast.success(`Logged in as ${credentials.email}` )
-        navigate('/')
+        if(window.localStorage.getItem('id')&& window.localStorage.getItem('token')){
+          window.location.replace(window.location.origin+'/?drawing='+window.localStorage.getItem('id')+'&token='+window.localStorage.getItem('token'))
+        }else{
+          navigate('/')
+        }
       }).catch((err)=>{
         setIsLoading(false)
         toast.error(err.response.data.error)

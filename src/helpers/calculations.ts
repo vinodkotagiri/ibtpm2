@@ -9,7 +9,7 @@ export function updateTaskDates ( tasks: Task[], updateDurations = false ): Task
   }
 
   let previousStartDate = tasks[ 0 ].start;
-  let previousEndDate = calculateEndDate( tasks[ 0 ].start, tasks[ 0 ].duration );
+  let previousEndDate = calculateEndDate( tasks[ 0 ].start, tasks[ 0 ].duration??0 );
 
   for ( let i = 1; i < tasks.length; i++ ) {
     const task = tasks[ i ];

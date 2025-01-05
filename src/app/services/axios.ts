@@ -26,12 +26,17 @@ export async function getDrawing ( drawingId:string,token:string ) {
 export async function saveEstimate ( data,token ) {
   return new Promise( ( resolve, reject ) => {
     try {
-      instance.post( `/project/create-estimate`,data,{headers:{
-        Authorization:`Bearer ${token}`
+      const formData=new FormData()
+      formData.append('file', new Blob([JSON.stringify(data)], { type: 'application/json' })); 
+
+      instance.post( `/project/create-estimate`,formData,{headers:{
+        Authorization:`Bearer ${token}`,
+        "Content-Type": 'multipart/form-data'
       }} )
         .then( result => resolve( result ) )
         .catch( err => reject( err ) )
     } catch ( err ) {
+      console.log('Error:',err)
       reject( err )
     }
   } )
@@ -40,8 +45,11 @@ export async function saveEstimate ( data,token ) {
 export async function updateEstimate ( data,token ) {
   return new Promise( ( resolve, reject ) => {
     try {
-      instance.post( `/project/update-estimate`,data,{headers:{
-        Authorization:`Bearer ${token}`
+      const formData=new FormData()
+      formData.append('file', new Blob([JSON.stringify(data)], { type: 'application/json' })); 
+      instance.post( `/project/update-estimate`,formData,{headers:{
+        Authorization:`Bearer ${token}`,
+         "Content-Type": 'multipart/form-data'
       }} )
         .then( result => resolve( result ) )
         .catch( err => reject( err ) )
@@ -52,6 +60,7 @@ export async function updateEstimate ( data,token ) {
 }
 
 export async function getEstimate (estimateId,token) {
+  if(!token) token=window.localStorage.getItem('token')
   return new Promise( ( resolve, reject ) => {
     try {
       instance.get( `/project/get-estimate/${estimateId}`,{headers:{

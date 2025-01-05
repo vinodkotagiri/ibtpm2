@@ -187,9 +187,13 @@ const scheduleSlice = createSlice( {
         return task
       })
       state.tasks=updateProjectProgress(state.tasks)
+    },
+    updateEstimateRestore(state,action){
+      const {Data}=action.payload
+      return Data
     }
   }
 } )
 
-export const {updateTaskProgress,updateTasksDuration,updateTaskFromDrawing,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
+export const {updateTaskProgress,updateEstimateRestore,updateTasksDuration,updateTaskFromDrawing,updateTaskStartDate,addNewTask,setCurrency,updateAllResources,updateDrawingData,setUnits,updateTaskField} = scheduleSlice.actions
 export default scheduleSlice.reducer

@@ -6,18 +6,18 @@ export function handleSaveData(estimateName) {
   return new Promise((resolve, reject) => {
     try {
       const state = store.getState();
-      const token = sessionStorage.getItem("token");
-      const estimateData = JSON.parse(sessionStorage.getItem("estimateData") || "{}");
-      if (estimateData.estimateId) {
-        updateEstimate({ Data: state, estimateId: estimateData.estimateId }, token).then((res) => {
+      const token = localStorage.getItem("token");
+      const estimateId = localStorage.getItem("estimateId")??''
+      if (estimateId) {
+        updateEstimate({ Data: state, estimateId: estimateId }, token).then((res) => {
           toast.success(`Estimate ${estimateName} updated succesfully`)
-          return resolve(estimateData);
+          return resolve(estimateId);
         });
       } else {
-        saveEstimate({ Name: estimateName, Data: state, User: JSON.parse(sessionStorage.getItem("user"))._id }, token)
+        saveEstimate({ Name: estimateName, Data: state, User: JSON.parse(localStorage.getItem("user"))._id }, token)
           .then((res) => {
             if (res.data.estimateId) {
-              sessionStorage.setItem("estimateData", JSON.stringify(res?.data));
+              localStorage.setItem("estimateId", JSON.stringify(res?.data?.estimateId));
             }
             resolve(res.data);
           })

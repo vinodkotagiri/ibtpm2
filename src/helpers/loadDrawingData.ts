@@ -1,6 +1,8 @@
 import { updateDrawingData } from "../app/features/scheduleSlice";
 import store from "../app/store";
 import { getDrawing } from "../app/services/axios.ts";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export function loadDrawingData(token: string, id: string) {
   getDrawing(id, token)
@@ -305,5 +307,11 @@ export function loadDrawingData(token: string, id: string) {
     })
     .catch((err) => {
       console.log("errror", err);
+      window.localStorage.removeItem('token');  
+      toast.error('Error fetching drawing data: Session Expired!')
+      setTimeout(()=>{
+        window.location.href='/auth'
+      },700)
     });
+    return
 }

@@ -3,13 +3,36 @@ import { Task } from '../constants/types';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { updateTaskFromDrawing, updateTaskProgress, updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
+import { updateEstimateRestore, updateTaskFromDrawing, updateTaskProgress, updateTasksDuration, updateTaskStartDate } from '../app/features/scheduleSlice';
+import { useSearchParams } from 'react-router-dom';
+import { getEstimate } from '../app/services/axios';
+import Loader from './Loader';
 
-const ScheduleComponent: React.FC = () => {
+const ScheduleComponent = ({setEstimateName}) => {
+  const [params, setParams] = useSearchParams()
+  const [loading, setLoading] = useState(false)
   const [collapsed, setCollapsed] = useState<{ [key: string]: boolean }>({});
   const { tasks, currencyCode, drawingData } = useAppSelector(state => state.schedule);
   const dispatch = useAppDispatch()
   const colorPalette = ['#f0ad4e50', '#5bc0de', '#d9534f', '#5cb85c', '#337ab7'];
+
+  useEffect(() => {
+    const estimate = params.get('estimate')
+    if (estimate) {
+      getEstimate(estimate, null).then((res) => {
+        console.log('res.data.estimate.Name', res.data.estimate.Name)
+        if (res.data.estimate._id) {
+          localStorage.setItem("estimateId", JSON.stringify(res.data.estimate._id));
+        }
+        setEstimateName(res.data.estimate.Name)
+        if (res.data?.estimate?.Data?.schedule) {
+          dispatch(updateEstimateRestore({ Data: res.data.estimate.Data.schedule }))
+        }
+      })
+    }
+  }, [])
+
+console.log('loading',loading)
   useEffect(() => {
     // updateResources(drawingData)
     if (drawingData.plotLength && drawingData.plotWidth && drawingData.plotArea) {
@@ -63,7 +86,8 @@ const ScheduleComponent: React.FC = () => {
 
       return (
         <React.Fragment key={task.id}>
-          <tr style={{ backgroundColor: task.type == 'project' ? color : '#fff', height:'16px',fontStyle:task.type == 'task' ? 'italic' : '' }} className='text-slate-800'>
+          {loading ? <Loader /> : null}
+          <tr style={{ backgroundColor: task.type == 'project' ? color : '#fff', height: '16px', fontStyle: task.type == 'task' ? 'italic' : '' }} className='text-slate-800'>
             <td style={{ paddingLeft: `${level * 20}px`, width: '10%' }}>
               <span className="ml-2 font-semibold">{task.id}</span>
               {task.children.length > 0 && (
@@ -85,11 +109,11 @@ const ScheduleComponent: React.FC = () => {
 
             <td className='w-[48px]'>{task.strategy}</td>
             <td className='w-[48px]'>
-              {task.type=='task'?
-              <input className='bordercheckbox bordercheckbox-lg cursor-pointer' type='checkbox' checked={task.progress?true:false} onChange={e => dispatch(updateTaskProgress({ id: task.id, progress: e.target.checked?1:0 }))}/>
-              :task.progress+' %'
+              {task.type == 'task' ?
+                <input className='bordercheckbox bordercheckbox-lg cursor-pointer' type='checkbox' checked={task.progress ? true : false} onChange={e => dispatch(updateTaskProgress({ id: task.id, progress: e.target.checked ? 1 : 0 }))} />
+                : task.progress + ' %'
               }
-              
+
             </td>
 
           </tr>
