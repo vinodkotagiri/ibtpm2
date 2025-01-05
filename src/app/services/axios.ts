@@ -1,5 +1,7 @@
 import axios from 'axios';
 const BASE_SERVER_URL='https://node.ibuiltup.in/api/v1';
+import stringify from 'json-stringify-pretty-compact';
+import pako from 'pako';
 // const BASE_SERVER_URL='http://localhost:5500/api/v1';
 const instance = axios.create( {
   baseURL:BASE_SERVER_URL ,
@@ -25,9 +27,12 @@ export async function getDrawing ( drawingId:string,token:string ) {
 
 export async function saveEstimate ( data,token ) {
   return new Promise( ( resolve, reject ) => {
+
     try {
-      const formData=new FormData()
-      formData.append('file', new Blob([JSON.stringify(data)], { type: 'application/json' })); 
+      const minifiedData = stringify(data);
+      const compressedData = pako.deflate(minifiedData, { level: 9 });
+      const formData = new FormData();
+      formData.append('file', new Blob([compressedData], { type: 'application/octet-stream' }));
 
       instance.post( `/project/create-estimate`,formData,{headers:{
         Authorization:`Bearer ${token}`,
@@ -43,10 +48,13 @@ export async function saveEstimate ( data,token ) {
 }
 
 export async function updateEstimate ( data,token ) {
+ 
   return new Promise( ( resolve, reject ) => {
     try {
-      const formData=new FormData()
-      formData.append('file', new Blob([JSON.stringify(data)], { type: 'application/json' })); 
+      const minifiedData = stringify(data);
+      const compressedData = pako.deflate(minifiedData, { level: 9 });
+      const formData = new FormData();
+      formData.append('file', new Blob([compressedData], { type: 'application/octet-stream' }));
       instance.post( `/project/update-estimate`,formData,{headers:{
         Authorization:`Bearer ${token}`,
          "Content-Type": 'multipart/form-data'
@@ -135,3 +143,4 @@ export async function signupUser ( data ) {
       .catch( err => reject( err ) )
   } )
 }
+
