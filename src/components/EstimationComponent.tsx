@@ -85,7 +85,7 @@ const EstimationComponent: React.FC = () => {
     // const resourceColor = getShade(color, level + 1); // Slightly lighter shade for resources
 
     return resources.map(resource => (
-      <tr key={resource.id} style={{backgroundColor:'#fff',height:'16px',background:color, fontStyle:'italic'}}>
+      <tr key={resource.id} style={{backgroundColor:'#fff',height:'16px', fontStyle:'italic'}}>
         <td style={{ paddingLeft: `${level * 20}px`, width: '10%' }}>{resource.id}</td>
         <td></td> {/* Empty cell for alignment */}
         <td>{resource.resource}</td>
