@@ -327,41 +327,49 @@ export const ConcreteRates = {
   M10pcc:{
     Sft: 0.05,
     Cum: 3500,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M15pcc:{    
     Sft: 0.05,
     Cum: 4000,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M20:{    
     Sft: 0.05,
     Cum: 4500,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M25:{    
     Sft: 0.05,
     Cum: 5000,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M30:{    
     Sft: 0.05,
     Cum: 5500,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M35:{    
     Sft: 0.05,
     Cum: 6000,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M40:{    
     Sft: 0.05,
     Cum: 6500,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
   M45:{    
     Sft: 0.05,
     Cum: 7000,
+    Product:https://www.bhagyalaxmiagencies.com/ready-mix-concrete.html#rmc-ready-mix-concrete,
     MT: 1.2
   },
 
@@ -371,48 +379,56 @@ export const SteelRates = {
   Dia6:{
     Sft: 0.05,
     Kgs: 50,
+    Product:https://sugnatmt.com/price-table-1/,
     Ton: 65000,
     MT: 1.2
   },
   Dia8:{    
     Sft: 0.05,
     Kgs: 55,
+    Product:https://www.buildersmart.in/tmt-steel/8mm-20950,
     Ton: 75000,
     MT: 1.2
   },
   Dia10:{    
     Sft: 0.05,
     Kgs: 60,
+    Product:https://www.buildersmart.in/tmt-steel/sarvottam-fe-500-grade-16mm,
     Ton: 85000,
     MT: 1.2
   },
   Dia12:{    
     Sft: 0.05,
     Kgs: 65,
+    Product:https://www.buildersmart.in/sarvottam-fe-500-grade-12mm,
     Ton: 95000,
     MT: 1.2
   },
   Dia14:{    
     Sft: 0.05,
     Kgs: 70,
+    Product:https://sugnatmt.com/price-table-1/,
     Ton: 105000,
     MT: 1.2
   },
   Dia16:{    
     Sft: 0.05,
     Kgs: 75,
+    Product:https://www.buildersmart.in/tmt-steel/sarvottam-fe-500-grade-16mm,
     Ton: 115000,
     MT: 1.2
   },
   Dia18:{    
     Sft: 0.05,
     Kgs: 80,
+    Product:https://sugnatmt.com/price-table-1/,
     Ton: 120000,
     MT: 1.2
   },
   Dia20:{    
     Sft: 0.05,
     Kgs: 85,
+    Product:https://www.buildersmart.in/tmt-steel/s-s-gold-fe-500-grade-20mm
     Ton: 1.2,
     MT: 1.2
   },
@@ -591,70 +607,85 @@ export const DeductRates = {
 export const Redclayper1000Rates = {
   inch6:{
     Sft: 70,    
-    Cum: 7500
+    Cum: 7500,
+    Product:https://www.ssnconstructions.in/products.php,
   },
   inch9:{    
     Sft: 100,    
-    Cum: 8800
+    Cum: 8800,
+    Product:https://www.m2b.in/product-page/red-clay-brick?srsltid=AfmBOop2OcTuycYi2YWJJB3-lBQH3BfXxlA6AhPZPMrcSzHL9nLQZ7V8,
   },  
   inch12:{    
     Sft: 129,    
-    Cum: 9500  
+    Cum: 9500,
+    Product:https://www.ssnconstructions.in/products.php,  
   }  
 }
 export const FlyAshper1000Rates = {
   inch6:{
     Sft: 60,    
-    Cum: 6500
+    Cum: 6500,
+    Product:https://brickcart.in/product/fly-ash-brick/
   },
   inch9:{    
     Sft: 80,    
-    Cum: 4800
+    Cum: 4800,
+    Product:https://brickcart.in/product/fly-ash-brick/
   },  
   inch12:{    
     Sft: 100,    
-    Cum: 5500  
+    Cum: 5500,
+    Product:https://brickcart.in/product/fly-ash-brick/  
   }  
 }
 export const CCBlockper1000Rates = {
   inch6:{
     Sft: 45,    
-    Cum: 3500
+    Cum: 3500,
+    Product:https://www.aajjo.com/product/cement-bricks-9-in-x-4-in-x-3-in-in-hyderabad-buildmate-projects-pvt-ltd
   },
   inch8:{    
     Sft: 70,    
-    Cum: 4400
+    Cum: 4400,
+    Product:https://www.aajjo.com/product/cement-bricks-9-in-x-4-in-x-3-in-in-hyderabad-buildmate-projects-pvt-ltd
   },  
   inch12:{    
     Sft: 90,    
-    Cum: 5500  
+    Cum: 5500,
+    Product:https://www.aajjo.com/product/cement-bricks-9-in-x-4-in-x-3-in-in-hyderabad-buildmate-projects-pvt-ltd  
   }  
 }
 
 export const PlasterManualRates = {
   mm6:{
     Sft: 15,        
-    Cum: 5200
+    Cum: 5200,
+    Product:https://hyderabadbuilders.in/types-of-plastering-gypsum-vs-cement-plaster/
   },
   mm8:{
     Sft: 20,         
-    Cum: 6800
+    Cum: 6800,
+    Product:https://hyderabadbuilders.in/types-of-plastering-gypsum-vs-cement-plaster/
   },    
   mm12:{    
     Sft: 22,         
-    Cum: 7800
+    Cum: 7800,
+    Product:https://hyderabadbuilders.in/types-of-plastering-gypsum-vs-cement-plaster/
   },  
   mm15:{    
     Sft: 28,        
-    Cum: 9800  
+    Cum: 9800,
+    Product:https://hyderabadbuilders.in/types-of-plastering-gypsum-vs-cement-plaster/  
   },
   mm18:{    
     Sft: 35,        
-    Cum: 12500  
+    Cum: 12500,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost 
   },  
   mm22:{    
     Sft: 45,        
-    Cum: 15000  
+    Cum: 15000,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost
   }  
 }
 
@@ -662,33 +693,39 @@ export const PlasterMachineRates = {
   mm6:{
     Sft: 9,    
     Sqm: 100,    
-    Cum: 5500
+    Cum: 5500,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost
   },
   mm8:{
     Sft: 12,    
     Sqm: 120,    
-    Cum: 7000
+    Cum: 7000,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost
   },
   
   mm10:{    
     Sft: 13,    
     Sqm: 130,    
-    Cum: 7500
+    Cum: 7500,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost
   },  
   mm12:{    
     Sft: 18,    
     Sqm: 180,    
-    Cum: 8500
+    Cum: 8500,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost
   },  
   mm15:{    
     Sft: 18,    
     Sqm: 180,    
-    Cum: 9000  
+    Cum: 9000,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost  
   },
   mm20:{    
     Sft: 22,    
     Sqm: 220,    
-    Cum: 10000  
+    Cum: 10000,
+    Product:https://www.panchaminteriors.com/wall-plaster-material-and-labour-cost  
   }  
 }
 
@@ -878,26 +915,33 @@ export const PPaintRates = {//prmer and paint togather//
   Interior:{
     Sft: 5, 
     Sqm: 50,
+    Product:https://aapkapainter.com/resources/painting-cost-calculator
   },
   Exterior:{
     Sft: 8, 
     Sqm: 85,
+    Product:https://asianpaints.com/resources/tools/paint-budget-calculator.html
+    
   }, 
   Whitewash:{
     Sft: 8, 
     Sqm: 95,
+    Product:https://asianpaints.com/resources/tools/paint-budget-calculator.html
   }, 
   Emulsion:{
     Sft: 15, 
     Sqm: 150,
+    Product:https://asianpaints.com/resources/tools/paint-budget-calculator.html
   }, 
   Enamel:{
     Sft: 17, 
     Sqm: 190,
+    Product:https://asianpaints.com/resources/tools/paint-budget-calculator.html
   }, 
   Textured:{
     Sft: 35, 
     Sqm: 400,
+    Product:https://aapkapainter.com/resources/painting-cost-calculator
   }, 
 }
 //waterproofing prior flooring//
@@ -905,42 +949,52 @@ export const WPRates = {
   Cement:{  //Cementitious  //Economical and commonly used; consists of polymer-modified cement coatings.
     Sft: 20,   //Bathrooms, Kitchens, Balconies	
     Sqm: 200,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   },
   Liquid:{   //Flexible waterproofing using acrylic or polyurethane-based liquid; forms a seamless barrier.
     Sft: 30, //Bathrooms, Kitchens, Roofs	
     Sqm: 310,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   Bitumin:{ //Bituminous //Economical option; includes bituminous coatings or membranes; not suitable for interiors due to smell.
     Sft: 25, //Roofs, Basements	
     Sqm: 325,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   Polyurth :{  //Polyurethane//Premium, highly durable, and elastic; excellent for areas prone to waterlogging.
     Sft: 50,    //Swimming Pools, Basements, Roofs	
     Sqm: 550,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   EPDMembr:{   //EPDMembrane //Ethylene Propylene Diene Monomer rubber membranes; excellent for large surface areas and durability.
     Sft: 65,   //Swimming Pools, Roof Gardens
     Sqm: 650,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   Crystal :{   //Crystalline //Enhances concrete density; forms crystals that block water passage.
     Sft: 35, //Concrete Tanks, Basements	
     Sqm: 450,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   Injectgrout :{  //Injection grout //Used for treating cracks and joints in concrete; suitable for repairs.
     Sft: 100,   //Bathrooms, Basements, Cracks	
     Sqm: 1000,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   Hybrid :{           //Hybrid Systems (PU + Cement)//Combines flexibility and adhesion of PU with the hardness of cementitious coatings; premium option.
     Sft: 60,          //Bathrooms, Swimming Pools, Basements	
     Sqm: 650,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   SelfAdWP :{   //self adhesive water proofing  //Bitumen-based adhesive sheets; easy to apply and highly reliable for flat surfaces.
     Sft: 80,      //Roofs, Basements, Wet Zones	
     Sqm: 800,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
   NanoCoatWP :{   //Nano Coating Water Proofing  //Advanced technology for high durability and water repellency; environmentally friendly.
     Sft: 70,        ///Bathrooms, Kitchens	
     Sqm: 800,
+    Product:https://waterseal.in/waterproofing-cost-per-square-feet/
   }, 
 }
 //Flooring materials 
@@ -948,42 +1002,52 @@ export const FloorRates = {  //IS:15622 - Ceramic and vitrified tiles for floori
   Ceramic:{         //Economical option for floors and walls; available in various designs.//  IS:1443 - Standard for laying and fixing natural stone slabs.
     Sft: 5, 
     Sqm: 50,
+    Product:https://www.hindustanmarbleandgranite.co.in/designer-tiles.html
   },
   Vitrified:{     //Durable, low porosity, suitable for high-traffic areas; glossy or matte.
     Sft: 8, 
     Sqm: 85,
+    Product:https://mytyles.com/tiles?gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfSw52MdPW7HOthEMpWIkKkagLZcThwE1L8Nky7jYOpQ5XblsubRVFkaAuaWEALw_wcB
   }, 
   Porcelain:{     //Harder and more durable than ceramic; ideal for moisture-prone areas.
     Sft: 8, 
     Sqm: 95,
+    Product:https://thetileshouse.com/material/porcelain/?srsltid=AfmBOoqZno_JerowOgGf-BY52Qb8dF16vP7ShSUA3dSBIFep7K02unTI
   }, 
   Marble:{        //Natural stone; premium option; requires polishing for a luxurious finish.
     Sft: 15, 
     Sqm: 150,
+    Product:https://www.orientbell.com/tiles/white-marble-tiles?srsltid=AfmBOoq1OpRMXr2ZbYAh9TygCwGbDBCBRaGsUy6F90mY4MmAoLntbtsO
   }, 
   Granite:{       //Strong, durable, ideal for kitchens, staircases, and high-traffic areas.
     Sft: 17, 
     Sqm: 190,
+    Product:https://www.rkmarblesindia.com/granite-price/?srsltid=AfmBOoqXegjcm2yxxGiNV8LI34scQeEgWZkaSizKjF3qn2CuIq97HU3b
   }, 
   Kota:{          //Affordable natural stone; suitable for indoor and outdoor areas.
     Sft: 35, 
     Sqm: 400,
+    Product:https://kotalimestone.com/kota-stone-tiles
   }, 
   Quartz:{        //Engineered stone; offers a premium look with high durability.
     Sft: 15, 
     Sqm: 150,
+    Product:https://buildnext.in/15-mm-thick-3150-mm-x-1450-mm-grigio-londra-quartz-flooring-slab-grey-566041
   }, 
   Wooden:{        //Aesthetic appeal, moderate durability; not suitable for moisture-prone areas.
     Sft: 17, 
     Sqm: 190,
+    Product:https://royaletouche.com/woodenfloors/product/832-a-bennet-oak-2/
   }, 
   Vinly:{         //Economical, water-resistant; ideal for kitchens and bathrooms.
     Sft: 35, 
     Sqm: 400,
+    Product:https://royaletouche.com/woodenfloors/product/832-a-bennet-oak-2/
   }, 
   Terracotta :{   //Rustic look, suitable for balconies and courtyards.
     Sft: 35, 
     Sqm: 400,
+    Product:https://kotalimestone.com/kota-stone-tiles
   }, 
 }
 export const DoorRates = {
