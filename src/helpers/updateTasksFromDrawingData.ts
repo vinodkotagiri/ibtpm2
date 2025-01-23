@@ -3893,6 +3893,7 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
     roomsData = [];
     for (const index in drawingData[levelsMap[level]]?.rooms) {
       const room: roomType = drawingData[levelsMap[level]]?.rooms[index];
+     
       roomsData.push(
         {
           id: `${level}FINTER${index}`,
@@ -4202,7 +4203,7 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
           parent: `${level}FINTER${index}FXT`,
           resources: [
             {
-              id: `GFI111{level}${index}`,
+              id: `GFI111${level}${index}`,
               resource: "Sqm2GypFCeiling",
               description: "FalseCeiling",
               length: room.length,
@@ -4242,9 +4243,13 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
               totalCost: 0
             }
           ]
-        },
-        {
-          id: `${level}FINTER{index}CT`,
+        }
+      )
+       
+
+      if(room.name.toLowerCase().includes("kitchen")){
+        roomsData.push( {
+          id: `${level}FINTER${index}CT`,
           name: "Counter-Top",
           start: "",
           end: "",
@@ -4270,8 +4275,10 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
               totalCost: 0
             }
           ]
-        },
-        {
+        })
+      }
+
+        roomsData.push({
           id: `${level}FINTER${index}SD`,
           name: "Sliding-Door",
           start: "",
@@ -4279,7 +4286,7 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
           duration: 2,
           cost: 0,
           strategy: "FS",
-          dependencies: [`${level}FINTER${index}CT`],
+          dependencies: [],
           type: "task",
           progress: 0,
           hideChildren: false,
@@ -4327,59 +4334,6 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
             }
           ]
         },
-        {
-          id: `${level}FINTER${index}EX`,
-          name: "Exhaust Chimney",
-          start: "",
-          end: "",
-          duration: 1,
-          cost: 0,
-          strategy: "FS",
-          dependencies: [`${level}FINTER${index}JY`, `${level}FINTER${index}FF`],
-          type: "task",
-          progress: 0,
-          hideChildren: false,
-          parent: `${level}FINTER${index}FXT`,
-          resources: [
-            {
-              id: `GFI16${level}${index}`,
-              resource: "Unit2KitchenExhaust",
-              description: "Exhaust",
-              rate: ExhaustRates.Kitchen.Unit2,
-              units: "Unit",
-              quantity: 1,
-              totalCost: 0
-            }
-          ]
-        },
-        {
-          id: `${level}FINTER${index}FR`,
-          name: "Furniture",
-          start: "",
-          end: "",
-          duration: 15,
-          cost: 0,
-          strategy: "FS",
-          dependencies: [`${level}FINTER${index}JY`, `L${level}FLR${index}`],
-          type: "task",
-          progress: 0,
-          hideChildren: false,
-          parent: `${level}FINTER${index}FXT`,
-          resources: [
-            {
-              id: `GFI17${level}${index}`,
-              resource: "Sqm2FurniFurnish",
-              description: "Furniture",
-              length: 2,
-              breadth: 2.5,
-              area: 0,
-              rate: FurnishRates.Furni.Sqm3,
-              units: "Sqm",
-              quantity: 1,
-              totalCost: 0
-            }
-          ]
-        }
       );
     }
     if (roomsData.length > 0) {
