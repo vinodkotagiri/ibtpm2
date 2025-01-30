@@ -1,3 +1,4 @@
+
 import { currencies } from '../constants/currency';
 import { Strategy, Task } from '../constants/types';
 
@@ -9,7 +10,7 @@ export function updateTaskDates ( tasks: Task[], updateDurations = false ): Task
   }
 
   let previousStartDate = tasks[ 0 ].start;
-  let previousEndDate = calculateEndDate( tasks[ 0 ].start, tasks[ 0 ].duration );
+  let previousEndDate = calculateEndDate( tasks[ 0 ].start, tasks[ 0 ].duration??0 );
 
   for ( let i = 1; i < tasks.length; i++ ) {
     const task = tasks[ i ];
@@ -199,4 +200,24 @@ export const updateProjectProgress = ( tasks: Task[] ):Array<Task>=> {
 
 
 
+
+export const getResourceQuantities = (items )=> {
+  const groupedByNameAndUnits = items.reduce((acc: { [key: string]: number }, item) => {
+    const key = `${item.name}-${item.units}`; // Composite key: name and units
+    if (acc[key]) {
+      acc[key] += item.quantity;
+    } else {
+      acc[key] = item.quantity;
+    }
+    return acc;
+  }, {});
+
+  // Convert the grouped data into an array of objects with name, units, and total quantity
+const result = Object.entries(groupedByNameAndUnits).map(([key, totalQuantity]) => {
+  const [name, units] = key.split('-');
+  return { name, units, totalQuantity };
+}).filter(item=>item!=undefined);
+
+return result
+}
 

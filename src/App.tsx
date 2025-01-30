@@ -2,10 +2,11 @@ import NavbarComponent from './components/NavbarComponent'
 import { Route, Routes, useSearchParams } from 'react-router-dom'
 import { routes } from './routes'
 import { loadDrawingData } from './helpers/loadDrawingData'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useAppDispatch } from './app/hooks'
 import { updateAllResources } from './app/features/scheduleSlice'
 import { getUserDetails } from './app/services/axios'
+import Loader from './components/Loader'
 
 const App = () => {
   const [params,setParams]=useSearchParams()
@@ -17,35 +18,38 @@ const App = () => {
     if(params.get("drawing")){
       id=params.get("drawing")
       
-      sessionStorage.setItem('id',params.get("drawing"))
+      localStorage.setItem('id',params.get("drawing"))
     }else{
-      if(sessionStorage.getItem('id')){
-        id=sessionStorage.getItem('id')
+      if(localStorage.getItem('id')){
+        id=localStorage.getItem('id')
       }
     }
     if(params.get("token")){
       token=params.get("token")
-      sessionStorage.setItem('token',params.get("token"))
+      localStorage.setItem('token',params.get("token"))
     }else{
-      if(sessionStorage.getItem('token')){
-        token=sessionStorage.getItem('token')
+      if(localStorage.getItem('token')){
+        token=localStorage.getItem('token')
       }
     }
 
     if(token){
       getUserDetails(token).then(res=>{
         if(res?.data?.userDetails?.userInfo){
-          sessionStorage.setItem('user',JSON.stringify(res?.data?.userDetails?.userInfo))
+          localStorage.setItem('user',JSON.stringify(res?.data?.userDetails?.userInfo))
         }
-      }).catch(err=>console.log('Error',err))
+      })
     }
 
-    if(id&&token){
+    if(id&&token&&!params.get("estimate")){
       loadDrawingData(token,id)
       dispatch(updateAllResources())
     }
   }, [])
-  return (<div className='h-screen min-w-screen overflow-hidden'>
+
+  return (
+    <Suspense fallback={<Loader/>}>
+  <div className='h-screen min-w-screen overflow-hidden'>
     <div className='sticky top-0 left-0 z-50 h-[64px]'>
       <NavbarComponent />
     </div>
@@ -67,6 +71,7 @@ const App = () => {
         </Routes>
     </div>
   </div>
+  </Suspense>
   )
 }
 

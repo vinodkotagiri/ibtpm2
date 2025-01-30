@@ -44,7 +44,7 @@ const navigate=useNavigate()
         </li>
       </ul>
     </aside>
-    <div className="flex-1 bg-red-200 p-3">
+    <div className="flex-1 bg-slate-200 p-3">
       <Outlet/>
     </div>
     </div>

@@ -94,7 +94,8 @@ export const BarChart: IChart = {
     ["Plaster", 3]
   ],
   options: {
-    title: "Material Quantities",
+    title: "Quantities",
+      subtitle: "Total Quantity for Each Name and Unit",
     backgroundColor: "transparent",
     titleTextStyle: {
       color: "#bbb",
@@ -104,7 +105,7 @@ export const BarChart: IChart = {
       position: "none" // Bar charts often display without legends to save space
     },
     hAxis: {
-      title: "Hours",
+      title: "Quantity",
       minValue: 0,
       textStyle: {
         color: "#ddd"
