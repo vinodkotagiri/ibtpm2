@@ -133,33 +133,60 @@ const scheduleSlice = createSlice( {
       state.units=action.payload
       updateDrawingData({drawingData:state.drawingData})
     },
-    updateTaskField(state,action){
-      const {id,field,value,type}=action.payload
-      state.tasks=state.tasks.map(task=>{
-        if(task.id===id&&type=='project'){
-          task[field]=value
-        }
-        if(task?.resources?.length){
-          task.resources=task.resources.map(resource=>{
-            if(resource.id===id){
-              resource[field]=value
-            }
-            return resource
-          })
-        }
-        return task
-      })
-      state.tasks=state.tasks.map(task=>{
-        if(task.resources?.length){
-          task.resources=getResources(task.id,state.drawingData,task.resources)
-        }else{
-          task.resources=getResources(task.id,state.drawingData)
-        }
-        return task
-      })
+  // In scheduleSlice reducers:
+updateTaskField(state, action) {
+  const {id, field, value, type} = action.payload;
+  
+  if (field === 'batchUpdate') {
+    // Handle structural element batch updates
+    state.tasks = state.tasks.map(task => {
+      if (task.id === id) {
+        return {
+          ...task,
+          selectedElementId: value.selectedElementId,
+          elementCost: value.elementCost,
+          dimensions: value.dimensions,
+          elementType: value.elementType,
+          rate: value.rate,
+          totalCost: value.elementCost,
+          ...(task.id.startsWith('F0') && { selectedName: value.selectedName })
+        };
+      }
+      // Update parent costs
+      if (task.children?.some(child => child.id === id)) {
+        const childrenCosts = task.children.reduce((sum, child) => 
+          sum + (child.elementCost || 0), 0);
+        return {...task, totalCost: childrenCosts};
+      }
+      return task;
+    });
+  } else {
+    // Keep existing single field update logic
+    state.tasks = state.tasks.map(task => {
+      if (task.id === id && type === 'project') {
+        task[field] = value;
+      }
+      if (task?.resources?.length) {
+        task.resources = task.resources.map(resource => {
+          if (resource.id === id) {
+            resource[field] = value;
+          }
+          return resource;
+        });
+      }
+      return task;
+    });
+  }
 
-      state.tasks=calculateTotalResourceCost(state.tasks)
-    },
+  // Recalculate resources and final costs
+  state.tasks = state.tasks.map(task => {
+    if (task.resources?.length) {
+      task.resources = getResources(task.id, state.drawingData, task.resources);
+    }
+    return task;
+  });
+  state.tasks = calculateTotalResourceCost(state.tasks);
+},
     updateTasksDuration(state,action){
       const {id,duration}=action.payload
       state.tasks=state.tasks.map(task=>{

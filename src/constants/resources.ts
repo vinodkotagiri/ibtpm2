@@ -25172,6 +25172,21 @@ function getResources(
         totalCost: 0
       }
     ],
+    GFFU: [
+      {
+        id: "GFI17",
+        type: "Furniture",
+        resource: "Sqm2FurniFurnish",
+        description: "Furniture",
+        length: 2,
+        breadth: 2.5,
+        area: 0,
+        rate: FurnishRates.Furni.Sqm3,
+        units: "Sqm",
+        quantity: 1,
+        totalCost: 0
+      }
+    ],
     CL01: [
       {
         id: "CL011",
