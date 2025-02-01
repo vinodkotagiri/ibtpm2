@@ -794,6 +794,7 @@ export type CurrencyUnits =
   | "YER";
 
 export type Task = {
+  children: any;
   id: string;
   name: string;
   start: string;

@@ -10164,6 +10164,20 @@ parent:'L3EL0'
     parent:'GFFI'
   },
   {
+    id:'GFEX',
+    name:'Exhaust Chimney',
+    start:'',
+    end:'',
+    duration:1,
+    cost:0,
+    strategy:'FS',
+    dependencies:['GFJY'],
+    type:'task',
+    progress:0,
+    hideChildren:false,
+    parent:'GFFI'
+  },
+  {
     id:'GFFU',
     name:'Furniture',
     start:'',
