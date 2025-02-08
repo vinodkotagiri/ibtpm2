@@ -1,5 +1,5 @@
 import NavbarComponent from './components/NavbarComponent'
-import { Route, Routes, useSearchParams } from 'react-router-dom'
+import { Route, Routes, useNavigate, useSearchParams } from 'react-router-dom'
 import { routes } from './routes'
 import { loadDrawingData } from './helpers/loadDrawingData'
 import { Suspense, useEffect, useState } from 'react'
@@ -7,10 +7,11 @@ import { useAppDispatch } from './app/hooks'
 import { updateAllResources } from './app/features/scheduleSlice'
 import { getUserDetails } from './app/services/axios'
 import Loader from './components/Loader'
+import toast from 'react-hot-toast'
 
 const App = () => {
   const [params,setParams]=useSearchParams()
-
+  const navigate=useNavigate()
 
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -35,8 +36,13 @@ const App = () => {
 
     if(token){
       getUserDetails(token).then(res=>{
+        console.log('resLL',res)
         if(res?.data?.userDetails?.userInfo){
           localStorage.setItem('user',JSON.stringify(res?.data?.userDetails?.userInfo))
+        }else{
+          window.localStorage.removeItem('token');
+          toast.error('Session expired please login again')
+          navigate('/auth')
         }
       })
     }

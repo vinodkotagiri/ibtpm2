@@ -4244,34 +4244,6 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
           ]
         },
         {
-          id: `${level}FINTER{index}CT`,
-          name: "Counter-Top",
-          start: "",
-          end: "",
-          duration: 2,
-          cost: 0,
-          strategy: "FS",
-          dependencies: [`${level}FINTER${index}LF`],
-          type: "task",
-          progress: 0,
-          hideChildren: false,
-          parent: `${level}FINTER${index}FXT`,
-          resources: [
-            {
-              id: `GWFI11{level}${index}`,
-              resource: "Sft2GraniteKCtop40sft",
-              description: "Kitchen Countertop L-Shape",
-              length: 0.92,
-              breadth: 2.13,
-              area: 0,
-              rate: KCtop40sftRates.Granite.Sft2,
-              units: "Unit",
-              quantity: 1,
-              totalCost: 0
-            }
-          ]
-        },
-        {
           id: `${level}FINTER${index}SD`,
           name: "Sliding-Door",
           start: "",
@@ -4326,62 +4298,42 @@ function updateFinishes(tasks, drawingData: DrawingData, levelsMap, levels) {
               totalCost: 0
             }
           ]
-        },
-        {
-          id: `${level}FINTER${index}EX`,
-          name: "Exhaust Chimney",
-          start: "",
-          end: "",
-          duration: 1,
-          cost: 0,
-          strategy: "FS",
-          dependencies: [`${level}FINTER${index}JY`, `${level}FINTER${index}FF`],
-          type: "task",
-          progress: 0,
-          hideChildren: false,
-          parent: `${level}FINTER${index}FXT`,
-          resources: [
-            {
-              id: `GFI16${level}${index}`,
-              resource: "Unit2KitchenExhaust",
-              description: "Exhaust",
-              rate: ExhaustRates.Kitchen.Unit2,
-              units: "Unit",
-              quantity: 1,
-              totalCost: 0
-            }
-          ]
-        },
-        {
-          id: `${level}FINTER${index}FR`,
-          name: "Furniture",
-          start: "",
-          end: "",
-          duration: 15,
-          cost: 0,
-          strategy: "FS",
-          dependencies: [`${level}FINTER${index}JY`, `L${level}FLR${index}`],
-          type: "task",
-          progress: 0,
-          hideChildren: false,
-          parent: `${level}FINTER${index}FXT`,
-          resources: [
-            {
-              id: `GFI17${level}${index}`,
-              resource: "Sqm2FurniFurnish",
-              description: "Furniture",
-              length: 2,
-              breadth: 2.5,
-              area: 0,
-              rate: FurnishRates.Furni.Sqm3,
-              units: "Sqm",
-              quantity: 1,
-              totalCost: 0
-            }
-          ]
         }
       );
+      if(room.name.toLowerCase().includes("kitchen")){
+        console.log('room.name',room.name)
+        roomsData.push(
+          {
+            id: `${level}FINTER{index}CT`,
+            name: "Counter-Top",
+            start: "",
+            end: "",
+            duration: 2,
+            cost: 0,
+            strategy: "FS",
+            dependencies: [`${level}FINTER${index}LF`],
+            type: "task",
+            progress: 0,
+            hideChildren: false,
+            parent: `${level}FINTER${index}FXT`,
+            resources: [
+              {
+                id: `GWFI11{level}${index}`,
+                resource: "Sft2GraniteKCtop40sft",
+                description: "Kitchen Countertop L-Shape",
+                length: 0.92,
+                breadth: 2.13,
+                area: 0,
+                rate: KCtop40sftRates.Granite.Sft2,
+                units: "Unit",
+                quantity: 1,
+                totalCost: 0
+              }
+            ]
+          },)
+      }
     }
+
     if (roomsData.length > 0) {
       tasksToPush.push(...roomsData);
     }

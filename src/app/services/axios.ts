@@ -75,9 +75,9 @@ export async function getEstimate (estimateId,token) {
         Authorization:`Bearer ${token}`
       }} )
         .then( result => resolve( result ) )
-        .catch( err => reject( err ) )
+        .catch( err => resolve( {err:err} ) )
     } catch ( err ) {
-      reject( err )
+      resolve( {err:err} )
     }
   } )
 }
@@ -102,9 +102,9 @@ export async function getUserDetails(token){
         Authorization:`Bearer ${token}`
       }} )
         .then( result => resolve( result ) )
-        .catch( err => reject( err ) )
+        .catch( err => resolve(  {err:err} ) )
     } catch ( err ) {
-      reject( err )
+      resolve( {err:err} )
     }
   } )
 }

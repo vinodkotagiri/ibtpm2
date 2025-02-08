@@ -19,8 +19,9 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import type { ColumnsType } from 'antd/es/table';
 import dayjs from 'dayjs';
 import { getEstimate } from '../app/services/axios';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import './Schedule.css';
+import toast from 'react-hot-toast';
 
 const { Option } = Select;
 
@@ -30,6 +31,7 @@ const ScheduleComponent = ({ setEstimateName }) => {
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [selectedTaskTypes, setSelectedTaskTypes] = useState<string[]>([]);
   const { tasks, currencyCode, drawingData } = useAppSelector(state => state.schedule);
+  const navigate=useNavigate()
   const dispatch = useAppDispatch();
 
   // Load estimate data
@@ -39,6 +41,12 @@ const ScheduleComponent = ({ setEstimateName }) => {
       setLoading(true);
       getEstimate(estimate, null)
         .then((res:any) => {
+          if(res.err){
+            window.localStorage.removeItem('token')
+            toast.error(res.err?.message)
+            navigate('/auth')
+
+          }
           if (res.data.estimate._id) {
             localStorage.setItem("estimateId", JSON.stringify(res.data.estimate._id));
           }
@@ -46,6 +54,7 @@ const ScheduleComponent = ({ setEstimateName }) => {
           if (res.data?.estimate?.Data?.schedule) {
             dispatch(updateEstimateRestore({ Data: res.data.estimate.Data.schedule }));
           }
+
         })
         .finally(() => setLoading(false));
     }
