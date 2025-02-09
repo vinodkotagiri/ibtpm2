@@ -591,70 +591,70 @@ export const DeductRates = {
 export const Redclayper1000Rates = {
   inch6:{
     Sft: 70,    
-    Cum: 7500,
+    Cum: 7500
   },
   inch9:{    
     Sft: 100,    
-    Cum: 8800,
+    Cum: 8800
   },  
   inch12:{    
     Sft: 129,    
-    Cum: 9500,
+    Cum: 9500  
   }  
 }
 export const FlyAshper1000Rates = {
   inch6:{
     Sft: 60,    
-    Cum: 6500,
+    Cum: 6500
   },
   inch9:{    
     Sft: 80,    
-    Cum: 4800,
+    Cum: 4800
   },  
   inch12:{    
     Sft: 100,    
-    Cum: 5500,
+    Cum: 5500  
   }  
 }
 export const CCBlockper1000Rates = {
   inch6:{
     Sft: 45,    
-    Cum: 3500,
+    Cum: 3500
   },
   inch8:{    
     Sft: 70,    
-    Cum: 4400,
+    Cum: 4400
   },  
   inch12:{    
     Sft: 90,    
-    Cum: 5500,
+    Cum: 5500  
   }  
 }
 
 export const PlasterManualRates = {
   mm6:{
     Sft: 15,        
-    Cum: 5200,
+    Cum: 5200
   },
   mm8:{
     Sft: 20,         
-    Cum: 6800,
+    Cum: 6800
   },    
   mm12:{    
     Sft: 22,         
-    Cum: 7800,
+    Cum: 7800
   },  
   mm15:{    
     Sft: 28,        
-    Cum: 9800,
+    Cum: 9800  
   },
   mm18:{    
     Sft: 35,        
-    Cum: 12500,
+    Cum: 12500  
   },  
   mm22:{    
     Sft: 45,        
-    Cum: 15000,
+    Cum: 15000  
   }  
 }
 
@@ -662,33 +662,33 @@ export const PlasterMachineRates = {
   mm6:{
     Sft: 9,    
     Sqm: 100,    
-    Cum: 5500,
+    Cum: 5500
   },
   mm8:{
     Sft: 12,    
     Sqm: 120,    
-    Cum: 7000,
+    Cum: 7000
   },
   
   mm10:{    
     Sft: 13,    
     Sqm: 130,    
-    Cum: 7500,
+    Cum: 7500
   },  
   mm12:{    
     Sft: 18,    
     Sqm: 180,    
-    Cum: 8500,
+    Cum: 8500
   },  
   mm15:{    
     Sft: 18,    
     Sqm: 180,    
-    Cum: 9000,
+    Cum: 9000  
   },
   mm20:{    
     Sft: 22,    
     Sqm: 220,    
-    Cum: 10000,
+    Cum: 10000  
   }  
 }
 
@@ -882,7 +882,6 @@ export const PPaintRates = {//prmer and paint togather//
   Exterior:{
     Sft: 8, 
     Sqm: 85,
-    
   }, 
   Whitewash:{
     Sft: 8, 
